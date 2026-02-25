@@ -1,6 +1,8 @@
 # 📬 Connect with Me
 
-[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [📚 Impact](impact.md)
+[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🤖 AI & Digital](digital.md) | [🛠️ Instrumentation](instrumentation.md) | [📚 Impact](impact.md) | [📜 Patents](patents.md) | [📬 Contact](contact.md)
+
+---
 
 ---
 
