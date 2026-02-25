@@ -1,10 +1,8 @@
-# 📬 Connect with Me
-
 [🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🤖 AI & Digital](digital.md) | [🛠️ Instrumentation](instrumentation.md) | [📚 Impact](impact.md) | [📜 Patents](patents.md) | [📬 Contact](contact.md)
 
 ---
 
-### Get in Touch
+### 📬 Get in Touch
 Click the buttons below to reach me or view my professional profiles.
 
 | Channel | Interactive Link (Click to Action) |
