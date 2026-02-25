@@ -1,16 +1,38 @@
 [🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🤖 AI & Digital](digital.md) | [🛠️ Instrumentation](instrumentation.md) | [📚 Impact](impact.md) | [📜 Patents](patents.md) | [📬 Contact](contact.md)
 
 ---
-# 🔬 Research Experience & Expertise
+
+# 👨‍🔬 Professional Experience
+
+### 🇪🇸 Post-Doctoral Fellow
+**University of Salamanca, Spain** | *Sep 2024 – Present*
+* **Department:** Department of Physics
+* **Focus:** Advanced physics research and material characterization within the Edificio Multiusos I+D+i framework.
 
 ---
 
-### 🏫 Professional Journey
-* **Current:** Post-Doctoral Fellow, USAL–Nanolab, Departamento de Física Fundamental
-University of Salamanca, Salamanca 37008, Spain (2024–Present).
-* **Previous:** Post-Doctoral Fellow, Shamoon College of Engineering, Israel (2022–2024).
-* **Research Associate:** INST Mohali, India (2021–2022).
-* **Education:** PhD (2021) from INST Mohali, India.
+### 🇮🇱 Post-Doctoral Fellow
+**Shamoon College of Engineering (SCE), Beer Sheva, Israel** | *Nov 2022 – Aug 2024*
+* **Project Title:** Dip-pen nanolithography printing over screen-printed electrodes for real-time electrochemical sensing of heavy metals.
+* **Key Expertise:** Nanofabrication, sensor development, and real-time environmental monitoring.
+
+---
+
+### 🇮🇳 Research Associate (Institute Postdoc Fellow)
+**Institute of Nano Science and Technology (INST), Mohali, India** | *Jun 2021 – Oct 2022*
+* **Project Title:** Understanding the role of 2D materials for field emission.
+* **Key Expertise:** 2D materials synthesis and high-vacuum field emission characterization.
+
+---
+
+### 🎓 Ph.D. in Nanotechnology
+**Institute of Nano Science and Technology (INST), Mohali, India**
+* **Thesis Title:** Nanostructured Metal Borides: Synthesis and their Applications.
+* **Supervisors:** Dr. Menaka Jha and Prof. Ashok K. Ganguli.
+* **Focus:** Developing novel chemical-assisted solid-state routes for metal hexaborides and exploring their electronic and thermal properties.
+
+---
+[🔙 Back to Home Page](https://krishnay447.github.io)
 
 ---
 
