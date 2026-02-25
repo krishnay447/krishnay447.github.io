@@ -35,8 +35,6 @@ Welcome to my professional academic website. I am a physicist specializing in Na
 
 ---
 
----
-
 ### 📍 Current Focus
 Currently advancing the characterization of two‑dimensional (2D) transition metal dichalcogenides (TMDs), establishing a scalable platform for Schottky barrier quantification using KPFM, and fabricating Schottky‑junction solar cells at the **University of Salamanca**, Spain.
 
