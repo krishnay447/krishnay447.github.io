@@ -12,11 +12,11 @@ Welcome to my professional academic website. I am a physicist specializing in Na
 
 ### 📸 Research & Lab Gallery
 <div align="center">
-  <img src="photo1.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 1">
-  <img src="photo3.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 3">
+  <img src="photo3.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 1">
+  <img src="photo4.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 3">
 </div>
 <div align="center">
-  <img src="photo4.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 4">
+  <img src="photo1.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 4">
 </div>
 
 ---
