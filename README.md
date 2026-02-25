@@ -11,13 +11,29 @@ Welcome to my professional academic website. I am a physicist specializing in Na
 ---
 
 ### 📸 Research & Lab Gallery
+
 <div align="center">
-  <img src="photo3.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 1">
-  <img src="photo4.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 3">
+  <table style="border: none; border-collapse: collapse;">
+    <tr>
+      <td style="padding: 10px; border: none;">
+        <img src="photo1.jpg" width="400" style="border-radius: 10px;" alt="Research Image 1">
+      </td>
+      <td style="padding: 10px; border: none;">
+        <img src="photo3.jpg" width="400" style="border-radius: 10px;" alt="Research Image 3">
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: none;">
+        <img src="photo4.jpg" width="400" style="border-radius: 10px;" alt="Research Image 4">
+      </td>
+      <td style="padding: 10px; border: none;">
+        <img src="photo5.jpg" width="400" style="border-radius: 10px;" alt="Research Image 5">
+      </td>
+    </tr>
+  </table>
 </div>
-<div align="center">
-  <img src="photo1.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 4">
-</div>
+
+---
 
 ---
 
