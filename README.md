@@ -1,3 +1,4 @@
+[🏠 Home](https://krishnay447.github.io) | [📚 Publications](publications.md) | [📜 Patents & Awards](patents.md) | [🤖 AI & Software](software.md)
 # Dr. Krishna Kumar Yadav
 ### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
 
