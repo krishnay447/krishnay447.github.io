@@ -14,7 +14,7 @@ Click the buttons below to reach me or view my professional profiles.
 | 🎓 **Google Scholar** | <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-View_Profile-red?style=for-the-badge&logo=google-scholar&logoColor=white"></a> |
 | 🆔 **ORCID iD** | <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-0000--0002--9063--7851-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"></a> |
 
----
+--
 
 ### 📍 Location
 **Department of Physics** Edificio Multiusos I+D+i  
@@ -23,7 +23,9 @@ Universidad de Salamanca, C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸
 ---
 
 <div align="right">
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkrishnay447.github.io&count_bg=%23007ACC&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=VISITORS&edge_flat=false" alt="Visitor Count">
+  <a href="https://github.com/krishnay447">
+    <img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitor Count" />
+  </a>
 </div>
 
 <br>
