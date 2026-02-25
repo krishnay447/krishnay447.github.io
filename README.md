@@ -6,10 +6,10 @@ Welcome to my professional academic website. I am a physicist specializing in Na
 ---
 
 ## 🔬 Research Experience
-**Current Position:** Post-Doctoral Fellow, Department of Physics, University of Salamanca, Spain (Sep 2024 – Present)
-**Previous Postdoc:** Post-Doctoral Fellow, Shamoon College of Engineering, Beer Sheva, Israel (Nov 2022 – Aug 2024)
-**Research Associate:** Institute Postdoc Fellow at Institute of Nano Science and Technology (INST), Mohali, India (June 2021 – Oct 2022)
-[cite_start]**Education:** PhD (2021) from Institute Postdoc Fellow at Institute of Nano Science and Technology (INST), Mohali, Punjab, India[cite: 38].
+**Current Position:** Post-Doctoral Fellow, Department of Physics, University of Salamanca, Spain (Sep 2024 – Present).
+**Previous Postdoc:** Post-Doctoral Fellow, Shamoon College of Engineering, Beer Sheva, Israel (Nov 2022 – Aug 2024).
+**Research Associate:** Institute Postdoc Fellow at Institute of Nano Science and Technology (INST), Mohali, India (June 2021 – Oct 2022).
+**Education:** PhD (2021) at Institute of Nano Science and Technology (INST), Mohali, Punjab, India.
 
 ## 🤖 AI & Digital Innovation
 **Software Development:** Leveraged **Artificial Intelligence** to develop custom software tools for scientific calculations, including automated **photocurrent response analysis**.
