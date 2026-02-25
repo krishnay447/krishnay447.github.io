@@ -23,8 +23,8 @@ Universidad de Salamanca, C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸
 ---
 
 <div align="right">
-  <p>Total Visitors</p>
-  <img src="https://profile-counter.glitch.me/krishnay447/count.svg" alt="Visitor Count">
+  <img src="https://img.shields.io/badge/Visitors-blue?style=for-the-badge&logo=github" alt="Visitor Count">
+  <img src="https://profile-counter.glitch.me/krishnay447/count.svg" alt="Count Number">
 </div>
 
 [🔙 Back to Home Page](https://krishnay447.github.io)
