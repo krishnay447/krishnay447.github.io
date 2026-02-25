@@ -31,9 +31,6 @@
 * **Supervisors:** Dr. Menaka Jha and Prof. Ashok K. Ganguli.
 
 ---
-[🔙 Back to Home Page](https://krishnay447.github.io)
-
----
 
 ### 🧪 Areas of Expertise
 * **Cleanroom Operations:** Extensive experience in high-precision research environments.
