@@ -3,7 +3,6 @@
 ---
 # 🔬 Research Experience & Expertise
 
-[🏠 Home](index.md) | [📬 Contact](contact.md)
 
 ### 🏫 Professional Journey
 * **Current:** Post-Doctoral Fellow, University of Salamanca, Spain (2024–Present).
