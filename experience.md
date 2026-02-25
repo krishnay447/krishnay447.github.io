@@ -29,7 +29,6 @@
 **Institute of Nano Science and Technology (INST), Mohali, India**
 * **Thesis Title:** Nanostructured Metal Borides: Synthesis and their Applications.
 * **Supervisors:** Dr. Menaka Jha and Prof. Ashok K. Ganguli.
-* **Focus:** Developing novel chemical-assisted solid-state routes for metal hexaborides and exploring their electronic and thermal properties.
 
 ---
 [🔙 Back to Home Page](https://krishnay447.github.io)
