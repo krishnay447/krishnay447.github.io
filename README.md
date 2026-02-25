@@ -12,15 +12,17 @@ Welcome to my professional academic website. I am a physicist specializing in Na
 
 ### 📸 Research & Lab Gallery
 <div align="center">
-  <img src="photo1.jpg" width="130" height="130" style="border-radius: 10px; margin: 5px;">
-  <img src="photo3.jpg" width="130" height="130" style="border-radius: 10px; margin: 5px;">
-  <img src="photo4.jpg" width="130" height="130" style="border-radius: 10px; margin: 5px;">
+  <img src="photo1.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 1">
+  <img src="photo3.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 3">
+</div>
+<div align="center">
+  <img src="photo4.jpg" width="45%" style="border-radius: 10px; margin: 10px;" alt="Research Image 4">
 </div>
 
 ---
 
 ### 📍 Current Focus
-Currently advancing the characterization of two‑dimensional (2D) transition metal dichalcogenides (TMDs) and establishing a scalable platform for Schottky barrier quantification using KPFM mode, as well as the fabrication of Schottky‑junction solar cells at the **University of Salamanca**, Spain.
+Currently advancing the characterization of two‑dimensional (2D) transition metal dichalcogenides (TMDs), establishing a scalable platform for Schottky barrier quantification using KPFM, and fabricating Schottky‑junction solar cells at the **University of Salamanca**, Spain.
 
 ---
 📧 **Contact:** krish91phy@usal.es | [🎓 Google Scholar](https://scholar.google.com/citations?user=DsDWPX4AAAAJ&hl=en)
