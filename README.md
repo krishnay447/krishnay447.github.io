@@ -13,7 +13,7 @@ Welcome to my professional academic website. I am a physicist specializing in Na
 ### 📸 Research & Lab Gallery
 <div align="center">
   <img src="photo1.jpg" width="130" height="130" style="border-radius: 10px; margin: 5px;">
-  <img src="photo2.jpg" width="130" height="130" style="border-radius: 10px; margin: 5px;">
+  <img src="photo3.jpg" width="130" height="130" style="border-radius: 10px; margin: 5px;">
   <img src="photo4.jpg" width="130" height="130" style="border-radius: 10px; margin: 5px;">
 </div>
 
