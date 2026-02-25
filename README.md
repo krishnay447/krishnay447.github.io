@@ -20,7 +20,7 @@ Welcome to my professional academic website. I am a physicist specializing in Na
 ---
 
 ### 📍 Current Focus
-I am currently a Post-Doctoral Fellow at the **University of Salamanca**, Spain, focusing on advanced device fabrication and nanotechnology.
+Currently advancing the characterization of two‑dimensional (2D) transition metal dichalcogenides (TMDs) and establishing a scalable platform for Schottky barrier quantification using KPFM mode, as well as the fabrication of Schottky‑junction solar cells at the **University of Salamanca**, Spain.
 
 ---
 📧 **Contact:** krish91phy@usal.es | [🎓 Google Scholar](https://scholar.google.com/citations?user=DsDWPX4AAAAJ&hl=en)
