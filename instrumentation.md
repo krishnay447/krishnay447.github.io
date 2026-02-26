@@ -1,54 +1,10 @@
-<style>
-  /* Container for the menu */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🔬 Instrumentation](instrumentation.md) | [📈 Impact](impact.md) | **📜 Patents** | [📬 Contact](contact.md)
+> **Patents Dropdown:** [1. Patents](patents.md) • [2. Journal Publication](Publications.md) • [3. Book Chapter](Book_chapters.md)
 
-  /* Hidden menu that appears on hover */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border: 1px solid #ddd;
-    z-index: 99;
-    text-align: left;
-  }
+---
 
-  /* Links inside the menu */
-  .dropdown-content a {
-    color: #0056b3 !important;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-  }
-
-  /* Show the menu when you hover over 'Patents' */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-</style>
-<div class="nav-bar">
-  <a href="https://krishnay447.github.io">🏠 Home</a> | 
-  <a href="experience.md">👨‍🔬 Experience</a> | 
-  <a href="instrumentation.md">🔬 Instrumentation</a> | 
-  <a href="impact.md">📈 Impact</a> | 
-  <span class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">📜 Patents</a>
-    <div class="dropdown-content">
-      <a href="patents.md">1. Patents</a>
-      <a href="Publications.md">2. Journal Publication</a>
-      <a href="Book_chapters.md">3. Book Chapter</a>
-    </div>
-  </span> | 
-  <a href="contact.md">📬 Contact</a>
-</div>
+# Dr. Krishna Kumar Yadav 
+### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
 ---
 
 # 🛠️ Instrumentation & Development
