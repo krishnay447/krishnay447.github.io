@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Book Chapters
-permalink: /book_chapters/
+permalink: /Book_Chapters/
 ---
 
 # 📖 Book Chapters
