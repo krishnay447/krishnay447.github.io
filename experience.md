@@ -5,50 +5,45 @@ permalink: /experience/
 ---
 
 <style>
-/* Navigation Bar */
+/* === NAVIGATION FIX (Works on all pages) === */
 .nav-bar {
   text-align: center;
   border-bottom: 2px solid #eee;
-  padding: 10px 0 12px;
-  font-family: sans-serif;
+  padding: 12px 0;
   background: #fff;
   position: relative;
-  z-index: 5000; /* keeps nav above content */
+  z-index: 3000;
+  font-family: sans-serif;
 }
 
-/* Dropdown container */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown menu */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: calc(100% + 6px);
+  top: 26px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff;
+  background: #fff;
   min-width: 220px;
   border: 1px solid #ddd;
   border-radius: 6px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   z-index: 9999;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Dropdown items */
 .dropdown-content a {
-  display: block;
   padding: 10px 14px;
-  text-decoration: none;
-  font-size: 14px;
+  display: block;
   color: #0366d6;
+  text-decoration: none;
   border-bottom: 1px solid #eee;
 }
 
@@ -60,11 +55,9 @@ permalink: /experience/
   background: #f6f8fa;
 }
 
-/* GH Pages theme fix: allow dropdown to appear */
+/* FIX for GitHub Pages content wrapper */
 .markdown-body {
   overflow: visible !important;
-  position: relative;
-  z-index: 1;
 }
 </style>
 
@@ -74,14 +67,14 @@ permalink: /experience/
   <a href="/instrumentation/">⚙️ Instrumentation</a> |
   <a href="/impact/">🧭 Impact</a> |
 
-  <span class="dropdown">
+  <div class="dropdown">
     <a href="javascript:void(0)">📚 Publications ▾</a>
-    <span class="dropdown-content">
+    <div class="dropdown-content">
       <a href="/patents/">1. Patents</a>
       <a href="/book_chapters/">2. Book Chapters</a>
       <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
-    </span>
-  </span> |
+    </div>
+  </div> |
 
   <a href="/contact/">📬 Contact</a>
 </div>
@@ -119,10 +112,10 @@ permalink: /experience/
 ---
 
 ### 🧪 Areas of Expertise
-* **Cleanroom Operations**: Extensive experience in high-precision research environments.  
-* **Device Fabrication**: Dip Pen Nanolithography (DPN), Optical Lithography, and Electron Beam Evaporation.  
-* **Advanced AFM**: Specialized in deploying **KPFM** and **FFM** techniques for high‑resolution mapping of properties in 2D materials.
+* **Cleanroom Operations**  
+* **Device Fabrication**: DPN, Optical Lithography, Electron Beam Evaporation  
+* **Advanced AFM**: KPFM & FFM for nanoscale property mapping  
 
 ---
 
-https://krishnay447.github.io
+[🔙 Back to Home](/)
