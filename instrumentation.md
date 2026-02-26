@@ -68,4 +68,3 @@ My expertise extends beyond standard characterization; I actively develop and mo
 ---
 
 [🔙 Back to Home Page](https://krishnay447.github.io)
-``
