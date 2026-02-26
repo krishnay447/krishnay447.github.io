@@ -16,21 +16,21 @@ permalink: /impact/
 </style>
 
 <div class="nav-bar">
-  /🏠 Home</a> | 
-  /experience/👨‍🔬 Experience</a> | 
-  /instrumentation/🔬 Instrumentation</a> | 
-  /impact/📈 Impact</a> | 
+  <a href="/">🏠 Home</a> | 
+  <a href="/experience/">👨‍🔬 Experience</a> | 
+  <a href="/instrumentation/">🔬 Instrumentation</a> | 
+  <a href="/impact/">📈 Impact</a> | 
 
   <div class="dropdown">
-    javascript:void(0)📚 Publications ▾</a>
+    <a href="javascript:void(0)" style="color:#0366d6;cursor:pointer;text-decoration:none;font-weight:bold;">📚 Publications ▾</a>
     <div class="dropdown-content">
-      /patents/1. Patents</a>
-      /book_chapters/2. Book Chapters</a>
-      /publications/3. Peer-Reviewed Journal Articles</a>
+      <a href="/patents/">1. Patents</a>
+      <a href="/book_chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
 
-  /contact/📬 Contact</a>
+  <a href="/contact/">📬 Contact</a>
 </div>
 
 ---
@@ -38,32 +38,31 @@ permalink: /impact/
 # 📊 Scientific Impact & Publications
 
 ### 📈 Statistics
-* **Publications:** 51 Peer-reviewed articles.  
-* **Book Chapters:** 11 Chapters.  
-* **Citations:** Add your citation count here (e.g., from Google Scholar).
+* **Publications:** 51 Peer-reviewed articles.
+* **Book Chapters:** 11 Chapters.
+* **Citations:** Add your citation count here.
 
 ---
 
 ### 🏆 Key Awards
-* **CSIR-NET:** Qualified in Physical Science (2015).  
-* **Best Poster Award:** 9th Bangalore India Nano (2017).
+* **CSIR-NET:** Qualified in Physical Science (2015).
+* **Best Poster:** 9th Bangalore India Nano (2017).
 
 ---
 
 ## 💻 Digital Innovation & Software
 
 ### ⚡ Photocurrent Detector Tool
-Developed custom software leveraging artificial intelligence to automate the extraction of photocurrent response from raw experimental data.  
-This includes automated determination of:  
-* **Response Time**  
-* **Detectivity**  
-* **External Quantum Efficiency (EQE)**
+Developed AI-based software to automatically extract photocurrent parameters:
+* Response Time  
+* Detectivity  
+* External Quantum Efficiency (EQE)
 
 ---
 
 ### 📄 PDF Management Platform
-Created a web-based tool designed for efficient management and categorization of scientific PDF documents, streamlining the literature review process for research teams.
+Created a research-focused tool for organizing and managing scientific PDF documents.
 
 ---
 
-https://krishnay447.github.io
+<a href="/">🔙 Back to Home</a>
