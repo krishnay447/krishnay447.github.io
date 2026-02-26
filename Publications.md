@@ -2,7 +2,7 @@
 
 # 📚 Publications
 
-## 🔬 Peer-Reviewed Journal Articles
+## 🔬 Peer-Reviewed Journal Articles 
 
 * **Shape-induced manganese iron-based nanostructures loaded onto iron sheet as efficient electrocatalyst for O<sub>2</sub> evolution.** *Inorganic Chemistry Communications*, 2026, 183, 115745. [DOI: 10.1016/j.inoche.2025.115745](https://doi.org/10.1016/j.inoche.2025.115745)
 * **Enhanced photogenerated carrier assisted ethanol oxidation via surface modification with perovskite to develop pn type NiTiO<sub>3</sub>-NiO heterostructure.** *Materials Research Bulletin*, 2026, 196, 113865. [DOI: 10.1016/j.materresbull.2025.113865](https://doi.org/10.1016/j.materresbull.2025.113865)
