@@ -1,5 +1,11 @@
+---
+layout: default
+title: Instrumentation
+permalink: /instrumentation/
+---
+
 <style>
-/* CSS for the Hover Dropdown - Works on your live site */
+/* CSS for the Hover Dropdown - Works on GitHub Pages */
 .nav-bar { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; font-family: sans-serif; }
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 230px; box-shadow: 0px 8px 16px rgba(0,0,0,0.1); border: 1px solid #ddd; z-index: 100; text-align: left; border-radius: 5px; }
@@ -10,21 +16,24 @@
 </style>
 
 <div class="nav-bar">
-  <a href="https://krishnay447.github.io">🏠 Home</a> | 
-  <a href="experience.md">👨‍🔬 Experience</a> | 
-  <a href="instrumentation.md">🔬 Instrumentation</a> | 
-  <a href="impact.md">📈 Impact</a> | 
+  <a href="/">🏠 Home</a> | 
+  <a href="/experience/">👨‍🔬 Experience</a> | 
+  <a href="/instrumentation/">🔬 Instrumentation</a> | 
+  <a href="/impact/">📈 Impact</a> | 
+
   <div class="dropdown">
     <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
     <div class="dropdown-content">
-      <a href="patents.md">1. Patents</a>
-      <a href="Book_chapters.md">2. Book Chapters</a>
-      <a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
+      <a href="/patents/">1. Patents</a>
+      <a href="/book_chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
-  <a href="contact.md">📬 Contact</a>
+
+  <a href="/contact/">📬 Contact</a>
 </div>
 
+---
 
 # 🛠️ Instrumentation & Development
 
@@ -57,4 +66,6 @@ My expertise extends beyond standard characterization; I actively develop and mo
     * **Raman:** Expert in Confocal and micro Raman Spectroscopy for vibrational mode analysis.
 
 ---
+
 [🔙 Back to Home Page](https://krishnay447.github.io)
+``
