@@ -88,25 +88,25 @@ body{ background:var(--bg) !important; }
 
 <!-- ===================== HERO HEADER (uses header3.jpg) ===================== -->
 <div class="hero-header">
-  /assets/header3.jpg
+  <img src="/assets/header3.jpg" alt="Header banner">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
 <!-- ===================== NAVIGATION (same style site‑wide) ===================== -->
 <nav class="nav-bar" role="navigation" aria-label="Primary">
-  /🏠 Home</a> |
-  /experience/👨‍🔬 Experience</a> |
-  /instrumentation/🔬 Instrumentation</a> |
-  /impact/📈 Impact</a> |
+  <a href="/">🏠 Home</a> |
+  <a href="/experience/">👨‍🔬 Experience</a> |
+  <a href="/instrumentation/">🔬 Instrumentation</a> |
+  <a href="/impact/">📈 Impact</a> |
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
     <span class="dropdown-content" role="menu" aria-label="Publications submenu">
-      /patents/1. Patents</a>
-      /Book_Chapters/2. Book Chapters</a>
-      /publications/3. Peer‑Reviewed Journal Articles</a>
+      <a href="/patents/">1. Patents</a>
+      <a href="/Book_Chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
     </span>
   </span> |
-  /contact/📬 Contact</a>
+  <a href="/contact/">📬 Contact</a>
 </nav>
 
 ---
@@ -124,13 +124,13 @@ My expertise extends beyond standard characterization; I actively develop and mo
 
 * **Thermal Analysis:**
     * **DSC:** **Differential Scanning Calorimetry** to study heat flow and phase transitions. 
-    * **Publication Link:** Detailed DSC analysis of thermal phase transitions can be found in my work here: [Water Environment Research (WER), 2020](https://doi.org/10.1002/wer.1307).
+    * **Publication Link:** Detailed DSC analysis of thermal phase transitions can be found in my work here: https://doi.org/10.1002/wer.1307.
     * **TGA:** **Thermogravimetric Analysis** (TGA) for measuring weight changes relative to temperature.
     * **Furnaces:** Expert use of High-Temperature Furnaces (up to 1200°C) for material synthesis and annealing.
 
 * **Electrical & Field Emission:**
     * **Field Emission:** Characterization of field emission properties including **I-V measurements in diode configuration** for cold cathode applications.
-    * **Publication Link:** [Applied Surface Science, 2020](https://doi.org/10.1016/j.apsusc.2020.146652).
+    * **Publication Link:** https://doi.org/10.1016/j.apsusc.2020.146652.
     * **Workstations:** Professional use of **Metrohm** and **PalmSens** workstations for electrochemical sensing and cyclic voltammetry.
 
 * **Structural & Morphological:**
@@ -143,4 +143,4 @@ My expertise extends beyond standard characterization; I actively develop and mo
 
 ---
 
-/🔙 Back to Home Page</a>
+<a href="/">🔙 Back to Home Page</a>
