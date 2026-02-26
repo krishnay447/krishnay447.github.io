@@ -1,15 +1,9 @@
----
-layout: default
-title: Experience
----
-
 <p align="center">
   <a href="/">🏠 Home</a> |
-  <a href="/experience">🧪 Experience</a> |
-  <a href="/instrumentation">⚙️ Instrumentation</a> |
-  <a href="/impact">🧭 Impact</a> |
-  <a href="/publications">📚 Publications</a> |
-  <a href="/contact">📬 Contact</a>
+  <a href="/experience">/instrumentation⚙️ Instrumentation</a> |
+  /impact🧭 Impact</a> |
+  /publications📚 Publications</a> |
+  /contact📬 Contact</a>
 </p>
 
 ---
