@@ -1,7 +1,3 @@
-[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [📚 Publications](Publications.md) | [🛠️ Instrumentation](instrumentation.md) | [📚 Impact](impact.md) | [📜 Patents](patents.md) | [📬 Contact](contact.md)
-
----
-
 # 📜 Patents & Intellectual Property
 
 ### 🥇 Granted Patents
