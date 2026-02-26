@@ -18,8 +18,8 @@
     <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
     <div class="dropdown-content">
       <a href="https://krishnay447.github.io/patents">1. Patents</a>
-      <a href="https://krishnay447.github.io/Book_chapters">2. Book Chapters</a>
-      <a href="https://krishnay447.github.io/Publications">3. Peer-Reviewed Journal Articles</a>
+      <a href="https://krishnay447.github.io/Book_Chapters">2. Book Chapters</a>
+      <a href="https://krishnay447.github.io/publications">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
   <a href="https://krishnay447.github.io/contact">📬 Contact</a>
