@@ -22,7 +22,7 @@
       <a href="https://krishnay447.github.io/Publications">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
-  <a href="contact.md">📬 Contact</a>
+  <a href="https://krishnay447.github.io/contact">📬 Contact</a>
 </div>
 
 # Dr. Krishna Kumar Yadav 
