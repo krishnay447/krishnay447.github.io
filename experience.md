@@ -1,7 +1,7 @@
 <p align="center">
   <a href="/">🏠 Home</a> |
   <a href="/experience">🧪 Experience</a⚙️ Instrumentation</a> |
-  /🧭 Impact</a> |
+  🧭 Impact</a> |
   <a href="/publications">📚 Publications</a> |
   <a href="/contact">📬 Contact</a>
 </p>
