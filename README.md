@@ -1,57 +1,67 @@
 <style>
-  /* This CSS makes the "3 points" hide and show on hover */
-  .nav-bar {
-    background-color: #ffffff;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
+  /* The Container */
+  .nav-wrapper {
     text-align: center;
-    font-family: Arial, sans-serif;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   }
+
+  /* Dropdown Positioning */
   .dropdown {
     position: relative;
     display: inline-block;
   }
+
+  /* The Hover Menu */
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #ffffff;
-    min-width: 200px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
     border: 1px solid #ddd;
     z-index: 100;
     text-align: left;
+    border-radius: 4px;
   }
-  .dropdown-content a {
-    color: #0056b3 !important;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+
+  /* Show Menu on Hover */
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  /* Links inside Menu */
+  .dropdown-content a {
+    color: #0366d6 !important;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f6f8fa;
   }
 </style>
 
-<div class="nav-bar">
+<div class="nav-wrapper">
   <a href="https://krishnay447.github.io">🏠 Home</a> | 
   <a href="experience.md">👨‍🔬 Experience</a> | 
   <a href="instrumentation.md">🔬 Instrumentation</a> | 
   <a href="impact.md">📈 Impact</a> | 
-  <span class="dropdown">
-    <a href="javascript:void(0)" style="cursor:pointer; color: #0056b3;">📜 Patents ▾</a>
+  <div class="dropdown">
+    <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer;">📜 Patents ▾</a>
     <div class="dropdown-content">
-      <a href="patents.md">1. Patents</a>
+      <a href="Patents.md">1. Patents</a>
       <a href="Publications.md">2. Journal Publication</a>
       <a href="Book_chapters.md">3. Book Chapter</a>
     </div>
-  </span> | 
+  </div> | 
   <a href="contact.md">📬 Contact</a>
 </div>
 
----
+<br>
 
 # Dr. Krishna Kumar Yadav 
 ### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸 
