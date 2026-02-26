@@ -25,7 +25,7 @@ permalink: /instrumentation/
     <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
     <div class="dropdown-content">
       <a href="/patents/">1. Patents</a>
-      <a href="/book_chapters/">2. Book Chapters</a>
+      <a href="/Book_Chapters/">2. Book Chapters</a>
       <a href="/publications/">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
