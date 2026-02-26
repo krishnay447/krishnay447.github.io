@@ -5,79 +5,64 @@ permalink: /experience/
 ---
 
 <style>
-/* === NAVIGATION FIX (Works on all pages) === */
-.nav-bar {
-  text-align: center;
-  border-bottom: 2px solid #eee;
-  padding: 12px 0;
-  background: #fff;
-  position: relative;
-  z-index: 3000;
-  font-family: sans-serif;
-}
-
+/* Dropdown container */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 26px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  min-width: 220px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  z-index: 9999;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    z-index: 9999;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .dropdown-content a {
-  padding: 10px 14px;
-  display: block;
-  color: #0366d6;
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
+    color: #0366d6;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
 }
 
 .dropdown-content a:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
-.dropdown-content a:hover {
-  background: #f6f8fa;
-}
-
-/* FIX for GitHub Pages content wrapper */
+/* Fix: GitHub theme was clipping dropdown */
 .markdown-body {
-  overflow: visible !important;
+    overflow: visible !important;
 }
 </style>
 
-<div class="nav-bar">
-  <a href="/">🏠 Home</a> |
-  <a href="/experience/">🧪 Experience</a> |
+
+<p align="center">
+
+  /🏠 Home</a> |
+  /experience/🧪 Experience</a> |
   <a href="/instrumentation/">⚙️ Instrumentation</a> |
   <a href="/impact/">🧭 Impact</a> |
 
-  <div class="dropdown">
-    <a href="javascript:void(0)">📚 Publications ▾</a>
-    <div class="dropdown-content">
+  <span class="dropdown">
+    <a class="dropdown-toggle">📚 Publications ▾</a>
+    <span class="dropdown-content">
       <a href="/patents/">1. Patents</a>
       <a href="/book_chapters/">2. Book Chapters</a>
-      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
-    </div>
-  </div> |
+      <a href="/publications/">3. Peer-Reviewed Journal Articles</a>
+    </span>
+  </span> |
 
   <a href="/contact/">📬 Contact</a>
-</div>
+
+</p>
 
 ---
 
@@ -113,9 +98,9 @@ permalink: /experience/
 
 ### 🧪 Areas of Expertise
 * **Cleanroom Operations**  
-* **Device Fabrication**: DPN, Optical Lithography, Electron Beam Evaporation  
-* **Advanced AFM**: KPFM & FFM for nanoscale property mapping  
+* **Device Fabrication**  
+* **Advanced AFM (KPFM, FFM)**
 
 ---
 
-[🔙 Back to Home](/)
+https://krishnay447.github.io
