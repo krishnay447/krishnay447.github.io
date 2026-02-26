@@ -23,9 +23,6 @@
 <a href="contact.md">📬 Contact</a>
 </div>
 
-# Dr. Krishna Kumar Yadav 
-### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
-
 ---
 
 ## Welcome
