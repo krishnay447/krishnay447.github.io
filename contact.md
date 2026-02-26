@@ -27,7 +27,7 @@ permalink: /contact/
     </a>
     <div class="dropdown-content">
       <a href="https://krishnay447.github.io/patents">1. Patents</a>
-      <a href="https://krishnay447.github.io/book_chapters">2. Book Chapters</a>
+      <a href="https://krishnay447.github.io/Book_Chapters">2. Book Chapters</a>
       <a href="https://krishnay447.github.io/publications">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
