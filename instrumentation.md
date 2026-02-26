@@ -3,10 +3,6 @@
 
 ---
 
-# Dr. Krishna Kumar Yadav 
-### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
----
-
 # 🛠️ Instrumentation & Development
 
 My expertise extends beyond standard characterization; I actively develop and modify scientific setups to meet specific research needs.
