@@ -1,8 +1,3 @@
----
-layout: default
-title: Book Chapters
----
-
 # 📖 Book Chapters
 
 1. **Chemical Waste-Derived Carbon Nanomaterials.** Deepak Kumar Chauhan, Kritika Sood, Venugopala Rao Battula, **Krishna K Yadav**.  
