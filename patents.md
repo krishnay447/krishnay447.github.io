@@ -1,4 +1,4 @@
-# 📜 Patents & Intellectual Property
+# 📜 Patents & Intellectual Property 
 
 ### 🥇 Granted Patents
 
