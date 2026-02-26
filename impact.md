@@ -67,8 +67,8 @@ permalink: /impact/
     <a class="dropdown-toggle">📚 Publications ▾</a>
     <span class="dropdown-content" role="menu" aria-label="Publications submenu">
       <a href="/patents/">1. Patents</a>
-      <a href="/book_chapters/">2. Book Chapters</a>
-      <a href="/Publications/">3. Peer‑Reviewed Journal Articles</a>
+      <a href="/Book_Chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
       <!-- If you rename the file to publications.md, change to /publications/ -->
     </span>
   </span> |
@@ -106,5 +106,7 @@ Developed custom software leveraging artificial intelligence to automate the ext
 Created a web-based tool designed for the efficient management and categorization of scientific PDF documents, streamlining the literature review process for research teams.
 
 ---
+
+[🔙 Back to Home Page](https://krishnay447.github.io)
 
 https://krishnay447.github.io
