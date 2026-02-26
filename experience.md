@@ -49,11 +49,3 @@ permalink: /experience/
 * **Cleanroom Operations**: Extensive experience in high-precision research environments.  
 * **Device Fabrication**: Dip Pen Nanolithography (DPN), Optical Lithography, and Electron Beam Evaporation.  
 * **Advanced AFM**: Specialized in deploying **KPFM** and **FFM** techniques for high‑resolution mapping of properties in 2D materials.
-
-
----
-
-### 🧪 Areas of Expertise
-* **Cleanroom Operations**: Extensive experience in high-precision research environments.  
-* **Device Fabrication**: Dip Pen Nanolithography (DPN), Optical Lithography, and Electron Beam Evaporation.  
-* **Advanced AFM**: Specialized in deploying **KPFM** and **FFM** techniques for high‑resolution mapping of properties in 2D materials.
