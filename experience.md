@@ -4,14 +4,87 @@ title: Experience
 permalink: /experience/
 ---
 
-<p align="center">
+<style>
+/* Navigation Bar */
+.nav-bar {
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  padding: 10px 0 12px;
+  font-family: sans-serif;
+  background: #fff;
+  position: relative;
+  z-index: 5000; /* keeps nav above content */
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  min-width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown items */
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #0366d6;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: #f6f8fa;
+}
+
+/* GH Pages theme fix: allow dropdown to appear */
+.markdown-body {
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
+}
+</style>
+
+<div class="nav-bar">
   <a href="/">🏠 Home</a> |
   <a href="/experience/">🧪 Experience</a> |
   <a href="/instrumentation/">⚙️ Instrumentation</a> |
   <a href="/impact/">🧭 Impact</a> |
-  <a href="/publications/">📚 Publications</a> |
+
+  <span class="dropdown">
+    <a href="javascript:void(0)">📚 Publications ▾</a>
+    <span class="dropdown-content">
+      <a href="/patents/">1. Patents</a>
+      <a href="/book_chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
+    </span>
+  </span> |
+
   <a href="/contact/">📬 Contact</a>
-</p>
+</div>
 
 ---
 
@@ -49,6 +122,7 @@ permalink: /experience/
 * **Cleanroom Operations**: Extensive experience in high-precision research environments.  
 * **Device Fabrication**: Dip Pen Nanolithography (DPN), Optical Lithography, and Electron Beam Evaporation.  
 * **Advanced AFM**: Specialized in deploying **KPFM** and **FFM** techniques for high‑resolution mapping of properties in 2D materials.
+
 ---
 
 https://krishnay447.github.io
