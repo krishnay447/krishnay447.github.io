@@ -1,4 +1,4 @@
-[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🔬 Instrumentation](instrumentation.md) | [📈 Impact](impact.md) | **📜 Patents** | [📬 Contact](contact.md)
+[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🔬 Instrumentation](instrumentation.md) | [📈 Impact](impact.md) | **📜 Publications** | [📬 Contact](contact.md)
 
 ---
 
