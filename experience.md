@@ -6,7 +6,7 @@ permalink: /experience/
 
 <!-- ===================== PAGE THEME (matches Home) ===================== -->
 <style>
-/* Hide any injected first H1 from theme */
+/* Hide any injected first H1 from the theme */
 .markdown-body > h1:first-child { display: none !important; }
 
 /* --- GLOBAL COLORS --- */
@@ -86,27 +86,27 @@ body{ background:var(--bg) !important; }
 .markdown-body{ overflow:visible !important; }
 </style>
 
-<!-- ===================== HERO HEADER (use header2.jpg) ===================== -->
+<!-- ===================== HERO HEADER (uses header2.jpg) ===================== -->
 <div class="hero-header">
-  /assets/header2.jpg
+  <img src="/assets/header2.jpg" alt="Header banner">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
 <!-- ===================== NAVIGATION (same style as Home) ===================== -->
 <nav class="nav-bar" role="navigation" aria-label="Primary">
-  /🏠 Home</a> |
-  /experience/🧪 Experience</a> |
-  /instrumentation/⚙️ Instrumentation</a> |
-  /impact/📈 Impact</a> |
+  <a href="/">🏠 Home</a> |
+  <a href="/experience/">👨‍🔬 Experience</a> |
+  <a href="/instrumentation/">🔬 Instrumentation</a> |
+  <a href="/impact/">📈 Impact</a> |
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
     <span class="dropdown-content" role="menu" aria-label="Publications submenu">
-      /patents/1. Patents</a>
-      /Book_Chapters/2. Book Chapters</a>
-      /publications/3. Peer‑Reviewed Journal Articles</a>
+      <a href="/patents/">1. Patents</a>
+      <a href="/Book_Chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
     </span>
   </span> |
-  /contact/📬 Contact</a>
+  <a href="/contact/">📬 Contact</a>
 </nav>
 
 ---
@@ -148,4 +148,4 @@ body{ background:var(--bg) !important; }
 
 ---
 
-/🔙 Back to Home Page</a>
+[🔙 Back to Home Page](/)
