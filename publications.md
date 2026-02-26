@@ -5,9 +5,7 @@ permalink: /publications/
 ---
 
 ## 🔬 Peer‑Reviewed Journal Articles  
-<a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
-  <img src="https://img.icons8.com/?size=35&id=98957&format=png" alt="Google Scholar">
-</a>
+[🎓 Google Scholar](https://scholar.google.com/citations?user=DsDWPX4AAAAJ&hl=en)
 
 ---
 
