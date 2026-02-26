@@ -3,9 +3,6 @@
 
 ---
 
-# Dr. Krishna Kumar Yadav 
-### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
----
 # 📊 Scientific Impact & Publications
 
 ### 📈 Statistics
