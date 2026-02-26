@@ -1,5 +1,4 @@
 <style>
-/* CSS for the Hover Dropdown - Works on your live site */
 .nav-bar { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; font-family: sans-serif; }
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 230px; box-shadow: 0px 8px 16px rgba(0,0,0,0.1); border: 1px solid #ddd; z-index: 100; text-align: left; border-radius: 5px; }
@@ -10,21 +9,20 @@
 </style>
 
 <div class="nav-bar">
-  <a href="https://krishnay447.github.io">🏠 Home</a> | 
-  <a href="experience.md">👨‍🔬 Experience</a> | 
-  <a href="instrumentation.md">🔬 Instrumentation</a> | 
-  <a href="impact.md">📈 Impact</a> | 
-  <div class="dropdown">
-    <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
-    <div class="dropdown-content">
-      <a href="patents.md">1. Patents</a>
-      <a href="Book_chapters.md">2. Book Chapters</a>
-      <a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
-    </div>
-  </div> | 
-  <a href="contact.md">📬 Contact</a>
+<a href="https://krishnay447.github.io">🏠 Home</a> | 
+<a href="experience.md">👨‍🔬 Experience</a> | 
+<a href="instrumentation.md">🔬 Instrumentation</a> | 
+<a href="impact.md">📈 Impact</a> | 
+<div class="dropdown">
+<a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
+<div class="dropdown-content">
+<a href="patents.md">1. Patents</a>
+<a href="Book_chapters.md">2. Book Chapters</a>
+<a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
 </div>
-
+</div> | 
+<a href="contact.md">📬 Contact</a>
+</div>
 
 # 👨‍🔬 Professional Experience
 
@@ -59,7 +57,7 @@
 ### 🧪 Areas of Expertise
 * **Cleanroom Operations:** Extensive experience in high-precision research environments.
 * **Device Fabrication:** Dip Pen Nanolithography (DPN), Optical Lithography, and Electron Beam Evaporation.
-* **Advanced AFM:** Specialized in deploying **KPFM** and **FFM** techniques for high‑resolution mapping of electronic, topographical, and tribological properties in 2D materials, delivering quantitative nanoscale insights essential for next‑generation material and device engineering.
+* **Advanced AFM:** Specialized in deploying **KPFM** and **FFM** techniques for high‑resolution mapping of electronic, topographical, and tribological properties in 2D materials.
 
 ---
 
