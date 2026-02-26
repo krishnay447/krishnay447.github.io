@@ -11,7 +11,7 @@
 
 <div class="nav-bar">
   <a href="https://krishnay447.github.io">🏠 Home</a> | 
-  <a href="https://krishnay447.github.io/experience">👨‍🔬 Experience</a> | 
+  <a href="https://krishnay447.github.io/experience/">👨‍🔬 Experience</a> | 
   <a href="https://krishnay447.github.io/instrumentation">🔬 Instrumentation</a> | 
   <a href="https://krishnay447.github.io/impact">📈 Impact</a> | 
   <div class="dropdown">
