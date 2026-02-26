@@ -1,5 +1,5 @@
 [🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🔬 Instrumentation](instrumentation.md) | [📈 Impact](impact.md) | **📜 Patents** | [📬 Contact](contact.md)
-> **Patents Dropdown:** [1. Patents](patents.md) • [2. Journal Publication](Publications.md) • [3. Book Chapter](Book_chapters.md)
+
 
 ---
 
