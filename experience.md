@@ -1,7 +1,7 @@
 <style>
 .nav-bar { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; font-family: sans-serif; }
 .dropdown { position: relative; display: inline-block; }
-.dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 230px; box-shadow: 0px 8px 16px rgba(0,0,0,0.1); border: 1px solid #ddd; z-index: 100; text-align: left; border-radius: 5px; }
+.dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 200px; box-shadow: 0px 8px 16px rgba(0,0,0,0.1); border: 1px solid #ddd; z-index: 100; text-align: left; border-radius: 5px; }
 .dropdown:hover .dropdown-content { display: block; }
 .dropdown-content a { color: #0366d6 !important; padding: 12px 16px; text-decoration: none; display: block; font-size: 14px; border-bottom: 1px solid #f1f1f1; }
 .dropdown-content a:last-child { border-bottom: none; }
@@ -35,21 +35,21 @@
 
 ### 🇮🇱 Post-Doctoral Fellow
 **Shamoon College of Engineering (SCE), Beer Sheva, Israel** | *Nov 2022 – Aug 2024*
-* **Project**: Dip-pen nanolithography printing over screen-printed electrodes for real-time electrochemical sensing of heavy metals.
+* **Project Title**: Dip-pen nanolithography printing over screen-printed electrodes for real-time electrochemical sensing of heavy metals.
 * **Key Expertise**: Nanofabrication, sensor development, and real-time environmental monitoring.
 
 ---
 
 ### 🇮🇳 Research Associate (Institute Postdoc Fellow)
 **Institute of Nano Science and Technology (INST), Mohali, India** | *Jun 2021 – Oct 2022*
-* **Project**: Understanding the role of 2D materials for field emission.
+* **Project Title**: Understanding the role of 2D materials for field emission.
 * **Key Expertise**: 2D materials synthesis and high-vacuum field emission characterization.
 
 ---
 
 ### 🎓 Ph.D. in Nanotechnology
 **Institute of Nano Science and Technology (INST), Mohali, India**
-* **Thesis**: Nanostructured Metal Borides: Synthesis and their Applications.
+* **Thesis Title**: Nanostructured Metal Borides: Synthesis and their Applications.
 * **Supervisors**: Dr. Menaka Jha and Prof. Ashok K. Ganguli.
 
 ---
