@@ -1,4 +1,4 @@
-[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [📚 Publications](digital.md) | [🛠️ Instrumentation](instrumentation.md) | [📚 Impact](impact.md) | [📜 Patents](patents.md) | [📬 Contact](contact.md)
+[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [📚 Publications](Publications.md) | [🛠️ Instrumentation](instrumentation.md) | [📚 Impact](impact.md) | [📜 Patents](patents.md) | [📬 Contact](contact.md)
 
 # Dr. Krishna Kumar Yadav 
 ### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
