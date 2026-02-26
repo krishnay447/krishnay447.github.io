@@ -1,4 +1,5 @@
 [🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🤖 AI & Digital](digital.md) | [🛠️ Instrumentation](instrumentation.md) | [📚 Impact](impact.md) | [📜 Patents](patents.md) | [📬 Contact](contact.md)
+
 ## Journal Publications
 
 * **Shape-induced manganese iron-based nanostructures loaded onto iron sheet as efficient electrocatalyst for O<sub>2</sub> evolution.** *Inorganic Chemistry Communications*, 2026, 183, 115745. [DOI: 10.1016/j.inoche.2025.115745](https://doi.org/10.1016/j.inoche.2025.115745)
