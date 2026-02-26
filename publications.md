@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Contact
-permalink: /contact/
+title: Publications
+permalink: /publications/
 ---
 
 <style>
@@ -23,8 +23,8 @@ permalink: /contact/
     <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
     <div class="dropdown-content">
       <a href="patents.md">1. Patents</a>
-      <a href="Book_chapters.md">2. Book Chapters</a>
-      <a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
+      <a href="Book_Chapters.md">2. Book Chapters</a>
+      <a href="publications.md">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
   <a href="contact.md">📬 Contact</a>
