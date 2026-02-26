@@ -11,15 +11,15 @@
 
 <div class="nav-bar">
   <a href="https://krishnay447.github.io">🏠 Home</a> | 
-  <a href="experience.md">👨‍🔬 Experience</a> | 
-  <a href="instrumentation.md">🔬 Instrumentation</a> | 
-  <a href="impact.md">📈 Impact</a> | 
+  <a href="https://krishnay447.github.io/experience">👨‍🔬 Experience</a> | 
+  <a href="https://krishnay447.github.io/instrumentation">🔬 Instrumentation</a> | 
+  <a href="https://krishnay447.github.io/impact">📈 Impact</a> | 
   <div class="dropdown">
     <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
     <div class="dropdown-content">
-      <a href="patents.md">1. Patents</a>
-      <a href="Book_chapters.md">2. Book Chapters</a>
-      <a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
+      <a href="https://krishnay447.github.io/patents">1. Patents</a>
+      <a href="https://krishnay447.github.io/Book_chapters">2. Book Chapters</a>
+      <a href="https://krishnay447.github.io/Publications">3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
   <a href="contact.md">📬 Contact</a>
