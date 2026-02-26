@@ -1,4 +1,18 @@
-[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🔬 Instrumentation](instrumentation.md) | [📈 Impact](impact.md) | **📜 Patents** ([1. Patents](Patents.md), [2. Journal Publication](Publications.md), [3. Book Chapter](Book_chapters.md)) | [📬 Contact](contact.md)
+<div class="nav-bar">
+  <a href="https://krishnay447.github.io">🏠 Home</a> | 
+  <a href="experience.md">👨‍🔬 Experience</a> | 
+  <a href="instrumentation.md">🔬 Instrumentation</a> | 
+  <a href="impact.md">📈 Impact</a> | 
+  <span class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">📜 Patents</a>
+    <div class="dropdown-content">
+      <a href="patents.md">1. Patents</a>
+      <a href="Publications.md">2. Journal Publication</a>
+      <a href="Book_chapters.md">3. Book Chapter</a>
+    </div>
+  </span> | 
+  <a href="contact.md">📬 Contact</a>
+</div>
 ---
 
 # 🛠️ Instrumentation & Development
