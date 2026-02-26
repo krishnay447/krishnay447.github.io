@@ -12,6 +12,17 @@
 * **CSIR-NET:** Qualified in Physical Science (2015).
 * **Best Poster:** 9th Bangalore India Nano (2017).
 
+## 💻 Digital Innovation & Software
+
+### ⚡ Photocurrent Detector Tool
+Developed custom software leveraging artificial intelligence to automate the extraction of photocurrent response from raw experimental data. This includes the automated determination of:
+* **Response Time**
+* **Detectivity**
+* **External Quantum Efficiency (EQE)**
+
+### 📄 PDF Management Platform
+Created a web-based tool designed for the efficient management and categorization of scientific PDF documents, streamlining the literature review process for research teams.
+
  --- 
 ## Journal Publications
 
