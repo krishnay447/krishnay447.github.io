@@ -4,21 +4,18 @@ title: Patents
 permalink: /patents/
 ---
 
-<!-- ===================== PAGE THEME (matches all other pages) ===================== -->
 <style>
-/* Hide any injected first H1 from the theme */
 .markdown-body > h1:first-child { display: none !important; }
 
-/* --- GLOBAL COLORS --- */
 :root{
-  --primary:#1e88e5;        /* blue */
-  --primary-dark:#1565c0;   /* darker blue */
-  --bg:#f7f9fc;             /* soft background */
-  --border:#dce3ef;         /* light divider */
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
 }
 body{ background:var(--bg) !important; }
 
-/* ===================== HERO BANNER ===================== */
+/* HERO */
 .hero-header{
   position:relative;
   width:100%;
@@ -30,25 +27,24 @@ body{ background:var(--bg) !important; }
 }
 .hero-header img{
   width:100%;
-  height:260px;             /* adjust height if you prefer */
+  height:260px;
   object-fit:cover;
-  display:block;
 }
 .hero-title{
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", Roboto, Arial, sans-serif;
+  font-family:"Segoe UI", Roboto, sans-serif;
   font-size:clamp(28px,4vw,40px);
-  font-weight:700; color:#fff;
+  font-weight:700; color:white;
+  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.2));
   text-shadow:0 3px 10px rgba(0,0,0,0.55);
-  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* ===================== NAVIGATION BAR ===================== */
+/* NAV */
 .nav-bar{
   text-align:center;
   padding:12px 0;
-  background:#fff;
+  background:white;
   border-bottom:2px solid var(--border);
   box-shadow:0 2px 6px rgba(0,0,0,0.05);
   font-family:"Segoe UI", sans-serif;
@@ -56,57 +52,66 @@ body{ background:var(--bg) !important; }
 }
 .nav-bar a{
   color:var(--primary);
-  text-decoration:none;
   font-weight:600;
+  text-decoration:none;
   padding:0 8px;
 }
 .nav-bar a:hover{ color:var(--primary-dark); text-decoration:underline; }
 
-/* ===================== DROPDOWN ===================== */
+/* DROPDOWN */
 .dropdown{ position:relative; display:inline-block; }
-.dropdown > a.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
-
-/* show menu directly under trigger (no hover gap) */
+.dropdown > a.dropdown-toggle{
+  cursor:pointer; font-weight:700; color:var(--primary);
+}
 .dropdown-content{
   display:none; position:absolute; top:100%; left:0;
-  background:#fff; min-width:230px;
-  border:1px solid var(--border); border-radius:8px;
+  background:white; min-width:230px;
+  border:1px solid var(--border);
+  border-radius:8px;
   box-shadow:0 8px 18px rgba(0,0,0,0.12);
-  z-index:9999; text-align:left;
+  z-index:9999;
 }
 .dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{
-  display:block; padding:10px 16px; font-size:14px;
-  color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; white-space:nowrap;
-}
-.dropdown-content a:last-child{ border-bottom:none; }
-.dropdown-content a:hover{ background:#eef6ff; color:var(--primary-dark); }
 
-/* Prevent GitHub Pages wrapper from clipping dropdown */
+.dropdown-content a{
+  display:block; padding:10px 16px;
+  font-size:14px; color:var(--primary);
+  text-decoration:none;
+  border-bottom:1px solid #eee;
+}
+.dropdown-content a:hover{
+  background:#eef6ff;
+  color:var(--primary-dark);
+}
+
 .markdown-body{ overflow:visible !important; }
 </style>
 
-<!-- ===================== HERO HEADER (uses header6.jpg) ===================== -->
+<!-- HERO HEADER -->
 <div class="hero-header">
-  /assets/header6.jpg
+  <img src="/assets/header6.jpg" alt="Header Image">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
-<!-- ===================== NAVIGATION (same style site‑wide) ===================== -->
-<nav class="nav-bar" role="navigation" aria-label="Primary">
-  /🏠 Home</a> |
-  /experience/🧪 Experience</a> |
-  /instrumentation/⚙️ Instrumentation</a> |
-  /impact/🧭 Impact</a> |
+<!-- NAVIGATION -->
+<nav class="nav-bar">
+
+  <a href="/">🏠 Home</a> |
+  <a href="/experience/">🧪 Experience</a> |
+  <a href="/instrumentation/">🔬 Instrumentation</a> |
+  <a href="/impact/">📈 Impact</a> |
+
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
-    <span class="dropdown-content" role="menu" aria-label="Publications submenu">
-      /patents/1. Patents</a>
-      /Book_Chapters/2. Book Chapters</a>
-      /publications/3. Peer‑Reviewed Journal Articles</a>
+    <span class="dropdown-content">
+      <a href="/patents/">1. Patents</a>
+      <a href="/Book_Chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
     </span>
   </span> |
-  /contact/📬 Contact</a>
+
+  <a href="/contact/">📬 Contact</a>
+
 </nav>
 
 ---
@@ -131,8 +136,8 @@ body{ background:var(--bg) !important; }
 
 * **Process of conversion of wastepaper to nanostructured CaCO<sub>3</sub> and their application in de-fluorination of contaminated water.**  
     * **Inventors:** Menaka Jha, Ritika Wadhwa, Sunaina, Ankush, **Krishna Yadav**, Sujit Kumar Guchhait  
-    * **Application No:** 202311017356
+    * **Application No:** 202311017356  
 
 ---
 
-[🔙 Back to Home Page](/)
+https://krishnay447.github.io
