@@ -1,27 +1,10 @@
-<style>
-.nav-bar { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; font-family: sans-serif; }
-.dropdown { position: relative; display: inline-block; }
-.dropdown-content { display: none; position: absolute; background-color: #fff; min-width: 180px; box-shadow: 0px 8px 16px rgba(0,0,0,0.1); border: 1px solid #ddd; z-index: 100; text-align: left; }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { color: #0366d6 !important; padding: 10px 15px; text-decoration: none; display: block; font-size: 14px; }
-.dropdown-content a:hover { background-color: #f6f8fa; }
-</style>
+[🏠 Home](https://krishnay447.github.io) | [👨‍🔬 Experience](experience.md) | [🔬 Instrumentation](instrumentation.md) | [📈 Impact](impact.md) | **📜 Patents** | [📬 Contact](contact.md)
+> **Patents Dropdown:** [1. Patents](patents.md) • [2. Journal Publication](Publications.md) • [3. Book Chapter](Book_chapters.md)
 
-<div class="nav-bar">
-<a href="https://krishnay447.github.io">🏠 Home</a> | 
-<a href="experience.md">👨‍🔬 Experience</a> | 
-<a href="instrumentation.md">🔬 Instrumentation</a> | 
-<a href="impact.md">📈 Impact</a> | 
-<div class="dropdown">
-<a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none;">📜 Patents ▾</a>
-<div class="dropdown-content">
-<a href="patents.md">1. Patents</a>
-<a href="Publications.md">2. Journal Publication</a>
-<a href="Book_chapters.md">3. Book Chapter</a>
-</div>
-</div> | 
-<a href="contact.md">📬 Contact</a>
-</div>
+---
+
+# Dr. Krishna Kumar Yadav 
+### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
 
 ---
 
