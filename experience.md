@@ -1,3 +1,40 @@
+<style>
+  /* Container for the menu */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Hidden menu that appears on hover */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border: 1px solid #ddd;
+    z-index: 99;
+    text-align: left;
+  }
+
+  /* Links inside the menu */
+  .dropdown-content a {
+    color: #0056b3 !important;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Show the menu when you hover over 'Patents' */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+</style>
+
 <div class="nav-bar">
   <a href="https://krishnay447.github.io">🏠 Home</a> | 
   <a href="experience.md">👨‍🔬 Experience</a> | 
