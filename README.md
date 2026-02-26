@@ -6,14 +6,6 @@
 # Dr. Krishna Kumar Yadav 
 ### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
 
-# Dr. Krishna Kumar Yadav 
-### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
-
----
-
-# Dr. Krishna Kumar Yadav 
-### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸
-
 ---
 
 ## Welcome
