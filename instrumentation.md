@@ -48,7 +48,7 @@ My expertise extends beyond standard characterization; I actively develop and mo
 
 * **Thermal Analysis:**
     * **DSC:** **Differential Scanning Calorimetry** to study heat flow and phase transitions. 
-    * **Research Link:** Detailed DSC analysis of thermal phase transitions can be found in my work here: [Physical Chemistry Chemical Physics, 2018](https://doi.org/10.1039/C8CP03645A).
+    * **Publication Link:** Detailed DSC analysis of thermal phase transitions can be found in my work here: [Water Environment Research (WER), 2020](https://doi.org/10.1002/wer.1307).
     * **TGA:** **Thermogravimetric Analysis** (TGA) for measuring weight changes relative to temperature.
     * **Furnaces:** Expert use of High-Temperature Furnaces (up to 1200°C) for material synthesis and annealing.
 
