@@ -1,3 +1,9 @@
+---
+layout: default
+title: Impact
+permalink: /impact/
+---
+
 <style>
 /* CSS for the Hover Dropdown - Works on your live site */
 .nav-bar { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; font-family: sans-serif; }
@@ -10,42 +16,54 @@
 </style>
 
 <div class="nav-bar">
-  <a href="https://krishnay447.github.io">🏠 Home</a> | 
-  <a href="experience.md">👨‍🔬 Experience</a> | 
-  <a href="instrumentation.md">🔬 Instrumentation</a> | 
-  <a href="impact.md">📈 Impact</a> | 
+  /🏠 Home</a> | 
+  /experience/👨‍🔬 Experience</a> | 
+  /instrumentation/🔬 Instrumentation</a> | 
+  /impact/📈 Impact</a> | 
+
   <div class="dropdown">
-    <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
+    javascript:void(0)📚 Publications ▾</a>
     <div class="dropdown-content">
-      <a href="patents.md">1. Patents</a>
-      <a href="Book_chapters.md">2. Book Chapters</a>
-      <a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
+      /patents/1. Patents</a>
+      /book_chapters/2. Book Chapters</a>
+      /publications/3. Peer-Reviewed Journal Articles</a>
     </div>
   </div> | 
-  <a href="contact.md">📬 Contact</a>
+
+  /contact/📬 Contact</a>
 </div>
 
+---
 
 # 📊 Scientific Impact & Publications
 
 ### 📈 Statistics
-* **Publications:** 51 Peer-reviewed articles.
-* **Book Chapters:** 11 Chapters.
-* **Citations:** [Add your citation count here from Google Scholar].
+* **Publications:** 51 Peer-reviewed articles.  
+* **Book Chapters:** 11 Chapters.  
+* **Citations:** Add your citation count here (e.g., from Google Scholar).
+
+---
 
 ### 🏆 Key Awards
-* **CSIR-NET:** Qualified in Physical Science (2015).
-* **Best Poster:** 9th Bangalore India Nano (2017).
+* **CSIR-NET:** Qualified in Physical Science (2015).  
+* **Best Poster Award:** 9th Bangalore India Nano (2017).
+
+---
 
 ## 💻 Digital Innovation & Software
 
 ### ⚡ Photocurrent Detector Tool
-Developed custom software leveraging artificial intelligence to automate the extraction of photocurrent response from raw experimental data. This includes the automated determination of:
-* **Response Time**
-* **Detectivity**
+Developed custom software leveraging artificial intelligence to automate the extraction of photocurrent response from raw experimental data.  
+This includes automated determination of:  
+* **Response Time**  
+* **Detectivity**  
 * **External Quantum Efficiency (EQE)**
 
-### 📄 PDF Management Platform
-Created a web-based tool designed for the efficient management and categorization of scientific PDF documents, streamlining the literature review process for research teams.
+---
 
- --- 
+### 📄 PDF Management Platform
+Created a web-based tool designed for efficient management and categorization of scientific PDF documents, streamlining the literature review process for research teams.
+
+---
+
+https://krishnay447.github.io
