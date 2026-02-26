@@ -9,21 +9,20 @@
 </style>
 
 <div class="nav-bar">
-  <a href="https://krishnay447.github.io">🏠 Home</a> | 
-  <a href="experience.md">👨‍🔬 Experience</a> | 
-  <a href="instrumentation.md">🔬 Instrumentation</a> | 
-  <a href="impact.md">📈 Impact</a> | 
-  <div class="dropdown">
-    <a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
-    <div class="dropdown-content">
-      <a href="patents.md">1. Patents</a>
-      <a href="Book_chapters.md">2. Book Chapters</a>
-      <a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
-    </div>
-  </div> | 
-  <a href="contact.md">📬 Contact</a>
+<a href="https://krishnay447.github.io">🏠 Home</a> | 
+<a href="experience.md">👨‍🔬 Experience</a> | 
+<a href="instrumentation.md">🔬 Instrumentation</a> | 
+<a href="impact.md">📈 Impact</a> | 
+<div class="dropdown">
+<a href="javascript:void(0)" style="color: #0366d6; cursor: pointer; text-decoration: none; font-weight: bold;">📚 Publications ▾</a>
+<div class="dropdown-content">
+<a href="patents.md">1. Patents</a>
+<a href="Book_chapters.md">2. Book Chapters</a>
+<a href="Publications.md">3. Peer-Reviewed Journal Articles</a>
 </div>
-<br>
+</div> | 
+<a href="contact.md">📬 Contact</a>
+</div>
 
 # 📬 Get in Touch
 
@@ -37,8 +36,6 @@ Click the buttons below to reach me or view my professional profiles.
 | 🎓 **Google Scholar** | <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-View_Profile-red?style=for-the-badge&logo=google-scholar&logoColor=white"></a> |
 | 🆔 **ORCID iD** | <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-0000--0002--9063--7851-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"></a> |
 
---
-
 ### 📍 Location
 **Department of Physics** Edificio Multiusos I+D+i  
 Universidad de Salamanca, C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸
@@ -46,11 +43,9 @@ Universidad de Salamanca, C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸
 ---
 
 <div align="right">
-  <a href="https://github.com/krishnay447">
-    <img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitor Count" />
-  </a>
+<a href="https://github.com/krishnay447">
+<img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitor Count" />
+</a>
 </div>
-
-<br>
 
 [🔙 Back to Home Page](https://krishnay447.github.io)
