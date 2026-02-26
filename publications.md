@@ -1,3 +1,9 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
 <style>
 .nav-bar { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; font-family: sans-serif; }
 .dropdown { position: relative; display: inline-block; }
