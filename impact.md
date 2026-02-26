@@ -4,61 +4,96 @@ title: Impact
 permalink: /impact/
 ---
 
+<!-- ===================== PAGE THEME (matches Home/Experience/Instrumentation) ===================== -->
 <style>
-/* === NAVIGATION BAR (same style site-wide) === */
-.nav-bar {
-  text-align: center;
-  border-bottom: 2px solid #eee;
-  padding: 12px 0;
-  background: #fff;
-  font-family: sans-serif;
-  position: relative;
-  z-index: 3000;
-}
-.nav-bar a {
-  text-decoration: none;
-  color: #0366d6;
-  font-size: 16px;
-}
-.nav-bar a:hover { text-decoration: underline; }
+/* Hide any injected first H1 from the theme */
+.markdown-body > h1:first-child { display: none !important; }
 
-/* === DROPDOWN === */
-.dropdown { position: relative; display: inline-block; }
-.dropdown-toggle { cursor: pointer; font-weight: 600; }
-
-/* No-hover gap: panel touches the trigger */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;           /* sits directly under trigger → no gap */
-  left: 0;             /* align left edges */
-  background: #ffffff;
-  min-width: 240px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  z-index: 9999;
-  text-align: left;
+/* --- GLOBAL COLORS --- */
+:root{
+  --primary:#1e88e5;        /* blue */
+  --primary-dark:#1565c0;   /* darker blue */
+  --bg:#f7f9fc;             /* soft background */
+  --border:#dce3ef;         /* light divider */
 }
-.dropdown:hover .dropdown-content { display: block; }
+body{ background:var(--bg) !important; }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 14px;
-  color: #0366d6;
-  text-decoration: none;
-  border-bottom: 1px solid #f1f1f1;
-  white-space: nowrap;
+/* ===================== HERO BANNER ===================== */
+.hero-header{
+  position:relative;
+  width:100%;
+  max-width:1150px;
+  margin:0 auto 20px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
-.dropdown-content a:last-child { border-bottom: none; }
-.dropdown-content a:hover { background: #f6f8fa; }
+.hero-header img{
+  width:100%;
+  height:260px;             /* adjust height if you prefer */
+  object-fit:cover;
+  display:block;
+}
+.hero-title{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-family:"Segoe UI", Roboto, Arial, sans-serif;
+  font-size:clamp(28px,4vw,40px);
+  font-weight:700; color:#fff;
+  text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
+}
 
-/* Prevent GitHub Pages theme from clipping the dropdown */
-.markdown-body { overflow: visible !important; }
+/* ===================== NAVIGATION BAR ===================== */
+.nav-bar{
+  text-align:center;
+  padding:12px 0;
+  background:#fff;
+  border-bottom:2px solid var(--border);
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  font-family:"Segoe UI", sans-serif;
+  font-size:16px;
+}
+.nav-bar a{
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+  padding:0 8px;
+}
+.nav-bar a:hover{ color:var(--primary-dark); text-decoration:underline; }
+
+/* ===================== DROPDOWN ===================== */
+.dropdown{ position:relative; display:inline-block; }
+.dropdown > a.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
+
+/* show menu directly under trigger (no hover gap) */
+.dropdown-content{
+  display:none; position:absolute; top:100%; left:0;
+  background:#fff; min-width:230px;
+  border:1px solid var(--border); border-radius:8px;
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
+  z-index:9999; text-align:left;
+}
+.dropdown:hover .dropdown-content{ display:block; }
+.dropdown-content a{
+  display:block; padding:10px 16px; font-size:14px;
+  color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; white-space:nowrap;
+}
+.dropdown-content a:last-child{ border-bottom:none; }
+.dropdown-content a:hover{ background:#eef6ff; color:var(--primary-dark); }
+
+/* Prevent GitHub Pages wrapper from clipping dropdown */
+.markdown-body{ overflow:visible !important; }
 </style>
 
-<nav class="nav-bar" aria-label="Primary">
+<!-- ===================== HERO HEADER (uses header4.jpg) ===================== -->
+<div class="hero-header">
+  <img src="/assets/header4.jpg" alt="Header banner">
+  <div class="hero-title">Krishna Kumar Yadav</div>
+</div>
+
+<!-- ===================== NAVIGATION (same style site‑wide) ===================== -->
+<nav class="nav-bar" role="navigation" aria-label="Primary">
   <a href="/">🏠 Home</a> |
   <a href="/experience/">🧪 Experience</a> |
   <a href="/instrumentation/">⚙️ Instrumentation</a> |
@@ -69,7 +104,6 @@ permalink: /impact/
       <a href="/patents/">1. Patents</a>
       <a href="/Book_Chapters/">2. Book Chapters</a>
       <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
-      <!-- If you rename the file to publications.md, change to /publications/ -->
     </span>
   </span> |
   <a href="/contact/">📬 Contact</a>
@@ -108,4 +142,3 @@ Created a web-based tool designed for the efficient management and categorizatio
 ---
 
 [🔙 Back to Home Page](https://krishnay447.github.io)
-
