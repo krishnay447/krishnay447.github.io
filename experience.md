@@ -1,5 +1,4 @@
 <style>
-  /* CSS for the Hover Dropdown - Works on your live site */
 .nav-bar { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; font-family: sans-serif; }
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 230px; box-shadow: 0px 8px 16px rgba(0,0,0,0.1); border: 1px solid #ddd; z-index: 100; text-align: left; border-radius: 5px; }
