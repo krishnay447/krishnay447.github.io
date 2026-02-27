@@ -48,7 +48,41 @@ body{ background:var(--bg) !important; }
 /* LAYOUT SPLIT */
 .main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; }
 .bio-section { flex: 2; min-width: 300px; }
-.news-sidebar { flex: 1; min-width: 250px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
+
+/* SCROLLING NEWS SIDEBAR */
+.news-sidebar { 
+  flex: 1; min-width: 250px; background: #fff; 
+  padding: 20px; border-radius: 12px; border: 1px solid var(--border);
+  height: 250px; /* Fixed height for scrolling area */
+  overflow: hidden; 
+  position: relative;
+}
+.news-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.news-list {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: scroll-up 15s linear infinite;
+}
+.news-list:hover { animation-play-state: paused; } /* Stops when mouse is over it */
+
+.news-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+  color: #444;
+}
+
+@keyframes scroll-up {
+  0%   { top: 100%; }
+  100% { top: -100%; }
+}
 
 /* SKILL PILLS */
 .skill-pill {
@@ -112,12 +146,16 @@ body{ background:var(--bg) !important; }
   </div>
 
   <div class="news-sidebar">
-    <h4 style="margin-top: 0; color: var(--primary); border-bottom: 2px solid var(--bg); padding-bottom: 8px;">📢 Latest News</h4>
-    <ul style="list-style: none; padding: 0; font-size: 13px; color: #444;">
-      <li style="margin-bottom: 12px;"><b>Feb 2026:</b> Presenting recent TMD research at the Physics Symposium in Madrid.</li>
-      <li style="margin-bottom: 12px;"><b>Jan 2026:</b> Established new KPFM protocols at USAL for Schottky barrier quantification.</li>
-      <li style="margin-bottom: 12px;"><b>Dec 2025:</b> Collaborative project on Energy Storage initiated with partners in Israel.</li>
-    </ul>
+    <h4 style="margin-top: 0; color: var(--primary); border-bottom: 2px solid var(--bg); background: white; position: relative; z-index: 10; padding-bottom: 8px;">📢 Latest News</h4>
+    <div class="news-container">
+      <ul class="news-list">
+        <li><b>Feb 2026:</b> Presenting recent TMD research at the Physics Symposium in Madrid.</li>
+        <li><b>Jan 2026:</b> Established new KPFM protocols at USAL for Schottky barrier quantification.</li>
+        <li><b>Dec 2025:</b> Collaborative project on Energy Storage initiated with partners in Israel.</li>
+        <li><b>Nov 2025:</b> Published new article on Metal hexaborides in [Journal Name].</li>
+        <li><b>Oct 2025:</b> Received recognition for high citation impact in Materials Science.</li>
+        </ul>
+    </div>
   </div>
 </div>
 
