@@ -46,15 +46,15 @@ body{ background:var(--bg) !important; }
 
 /* MAP PINS */
 .map-container { position: relative; background: #222; border-radius: 10px; overflow: hidden; border: 1px solid #444; }
-.map-pin { width: 26px; height: 26px; position: absolute; cursor: pointer; z-index: 10; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); transition: transform 0.2s; }
+.map-pin { width: 24px; height: 24px; position: absolute; cursor: pointer; z-index: 10; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); transition: transform 0.2s; }
 .map-pin:hover { transform: scale(1.3) translateY(-2px); }
 
-/* Current Location Pulse */
-.pin-active { animation: pulse 2s infinite; }
+/* Pulse for Salamanca */
+.pin-active { animation: pulse 2.5s infinite; fill: #ffd700 !important; }
 @keyframes pulse {
-  0% { filter: drop-shadow(0 0 0px #ff4757); }
-  70% { filter: drop-shadow(0 0 10px #ff4757); }
-  100% { filter: drop-shadow(0 0 0px #ff4757); }
+  0% { filter: drop-shadow(0 0 0px #ffd700); }
+  50% { filter: drop-shadow(0 0 12px #ffd700); }
+  100% { filter: drop-shadow(0 0 0px #ffd700); }
 }
 
 .profile-card { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
@@ -114,25 +114,25 @@ body{ background:var(--bg) !important; }
            style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="World Map">
       
       <a href="/assets/gorakhpur.jpg" target="_blank" title="Gorakhpur, India">
-        <svg class="map-pin" style="top: 48.5%; left: 74.5%;" viewBox="0 0 24 24" fill="#ff4757">
+        <svg class="map-pin" style="top: 48%; left: 77%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
       <a href="/assets/mohali.jpg" target="_blank" title="Mohali, India">
-        <svg class="map-pin" style="top: 43.5%; left: 73.5%;" viewBox="0 0 24 24" fill="#ff4757">
+        <svg class="map-pin" style="top: 41%; left: 75.5%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
       <a href="/assets/israel.jpg" target="_blank" title="Israel">
-        <svg class="map-pin" style="top: 45.5%; left: 60.8%;" viewBox="0 0 24 24" fill="#ff4757">
+        <svg class="map-pin" style="top: 45%; left: 63.5%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
       <a href="/assets/salamanca.jpg" target="_blank" title="Salamanca, Spain (Current)">
-        <svg class="map-pin pin-active" style="top: 43.0%; left: 47.8%;" viewBox="0 0 24 24" fill="#ff4757">
+        <svg class="map-pin pin-active" style="top: 40%; left: 49%;" viewBox="0 0 24 24">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
