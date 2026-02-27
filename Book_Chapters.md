@@ -5,7 +5,7 @@ permalink: /Book_Chapters/
 ---
 
 <style>
-/* Hide GitHub repo title */
+/* 1. HIDE GITHUB REPO TITLE */
 .markdown-body > h1:first-child { display: none !important; }
 
 :root{
@@ -14,9 +14,9 @@ permalink: /Book_Chapters/
   --bg:#f7f9fc;
   --border:#dce3ef;
 }
-body{ background:var(--bg) !important; }
+body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
-/* HERO BANNER */
+/* 2. HERO BANNER */
 .hero-header{
   position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
   border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
@@ -24,70 +24,93 @@ body{ background:var(--bg) !important; }
 .hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
 .hero-title{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", sans-serif; font-size:clamp(28px,4vw,40px);
-  font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff;
+  text-shadow:0 3px 10px rgba(0,0,0,0.55);
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* NAVIGATION BAR */
+/* 3. NAVIGATION BAR & STICKY DROPDOWN FIX */
 .nav-bar {
   text-align: center; padding: 12px 0; background: #ffffff;
   border-bottom: 3px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  font-family: "Segoe UI", sans-serif; position: sticky; top: 0; z-index: 10000;
+  position: sticky; top: 0; z-index: 10000;
 }
 .nav-bar a, .dropdown-toggle {
-  color: #444; text-decoration: none; font-weight: 600; padding: 8px 16px;
-  margin: 0 4px; border-radius: 8px; transition: all 0.3s ease;
-  display: inline-block; font-size: 15px; cursor: pointer;
+  color: #444; text-decoration: none; font-weight: 600; padding: 10px 18px;
+  margin: 0 2px; border-radius: 8px; transition: all 0.2s ease;
+  display: inline-block; font-size: 15px; cursor: pointer; border: none; background: none;
 }
 .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background-color: #e3f2fd; color: var(--primary-dark); }
 
-/* DROPDOWN */
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content {
   display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   background: #ffffff; min-width: 250px; border-radius: 12px; border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; margin-top: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden;
+  padding-top: 10px; /* Bridge gap */
+}
+/* Invisible hover bridge */
+.dropdown-content::before {
+  content: ""; position: absolute; top: -15px; left: 0; width: 100%; height: 15px; background: transparent;
 }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 14px; color:#444; text-decoration:none; }
+.dropdown-content a {
+  display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0;
+  text-align: left; font-size: 14px; color: #444; text-decoration: none; border-radius: 0; margin: 0;
+}
+.dropdown-content a:hover { background: #f8fbff; color: var(--primary); }
 
-/* COMPACT FILTER SYSTEM */
+/* 4. SCHOLAR & ORCID CARDS */
+.profile-container {
+  max-width: 950px; margin: 20px auto; display: flex; gap: 15px; padding: 0 20px;
+}
+.profile-link {
+  flex: 1; display: flex; align-items: center; padding: 12px 20px;
+  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  text-decoration: none; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+.profile-link:hover { transform: translateY(-3px); border-color: var(--primary); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+.profile-link img { width: 30px; height: 30px; margin-right: 15px; }
+.profile-label { display: block; font-size: 11px; color: #888; text-transform: uppercase; }
+.profile-name { display: block; font-size: 15px; font-weight: 700; color: var(--primary-dark); }
+
+/* 5. SEARCH & FILTER */
 .search-container {
-  max-width: 950px; margin: 15px auto; padding: 10px 20px; 
-  display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: flex-start;
+  max-width: 950px; margin: 15px auto; padding: 0 20px;
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
 }
 #yearInput {
-  padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border);
-  width: 140px; font-size: 13px; outline: none;
+  padding: 8px 15px; border-radius: 8px; border: 1px solid var(--border);
+  width: 200px; font-size: 14px; outline: none; transition: 0.3s;
 }
-#yearInput:focus { border-color: var(--primary); }
+#yearInput:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1); }
 .filter-btn {
-  padding: 5px 12px; border: 1px solid var(--border); background: #fff; color: #666;
-  border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; transition: 0.2s;
+  padding: 7px 16px; border: 1px solid var(--border); background: #fff; color: #666;
+  border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; transition: 0.2s;
 }
 .filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-/* CHAPTER CARD STYLING */
+/* 6. CHAPTER CARDS */
 .chapter-container { max-width: 950px; margin: 0 auto; padding: 0 20px; }
 .chapter-card {
-  background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border);
-  margin-bottom: 15px; position: relative; transition: transform 0.2s;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.02); display: block;
+  background: #fff; padding: 22px; border-radius: 12px; border: 1px solid var(--border);
+  margin-bottom: 15px; position: relative; transition: 0.3s; display: block;
 }
-.chapter-year-label { 
-  float: right; background: var(--primary); color: white; 
-  padding: 3px 10px; border-radius: 15px; font-size: 11px; font-weight: 700; 
+.chapter-card:hover { border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.chapter-year-label {
+  float: right; background: #e3f2fd; color: var(--primary);
+  padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; border: 1px solid #bbdefb;
 }
-.chapter-title { color: var(--primary-dark); font-size: 16px; font-weight: 700; margin-bottom: 6px; display: block; }
-.chapter-authors { font-size: 13.5px; color: #555; margin-bottom: 4px; }
-.chapter-meta { font-size: 12.5px; color: #888; font-style: italic; }
+.chapter-title { color: var(--primary-dark); font-size: 17px; font-weight: 700; margin-bottom: 8px; display: block; line-height: 1.4; }
+.chapter-authors { font-size: 14px; color: #555; margin-bottom: 6px; }
+.chapter-meta { font-size: 13px; color: #888; font-style: italic; border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px; }
 
-.markdown-body{ overflow:visible !important; }
+.markdown-body { overflow: visible !important; }
+@media (max-width: 600px) { .profile-container { flex-direction: column; } }
 </style>
 
 <div class="hero-header">
-  <img src="/assets/header5.jpg" alt="Book Chapters Banner">
+  <img src="/assets/header5.jpg" alt="Banner">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
@@ -96,7 +119,7 @@ body{ background:var(--bg) !important; }
   <a href="/experience/">👨‍🔬 Experience</a>
   <a href="/impact/">📈 Impact</a>
   <div class="dropdown">
-    <a class="dropdown-toggle">📚 Publications ▾</a>
+    <span class="dropdown-toggle">📚 Publications ▾</span>
     <div class="dropdown-content">
       <a href="/patents/">📜 1. Patents</a>
       <a href="/Book_Chapters/">📖 2. Book Chapters</a>
@@ -106,8 +129,11 @@ body{ background:var(--bg) !important; }
   <a href="/contact/">📬 Contact</a>
 </div>
 
+  </a>
+</div>
+
 <div class="search-container">
-  <input type="text" id="yearInput" onkeyup="filterBySearch()" placeholder="🔍 Search year...">
+  <input type="text" id="yearInput" onkeyup="filterBySearch()" placeholder="🔍 Search Title or Year...">
   <button class="filter-btn active" onclick="filterByYear('all', this)">All</button>
   <button class="filter-btn" onclick="filterByYear('2025', this)">2025</button>
   <button class="filter-btn" onclick="filterByYear('2024', this)">2024</button>
@@ -116,7 +142,7 @@ body{ background:var(--bg) !important; }
 </div>
 
 <div class="chapter-container" id="chapterList">
-  <h2 style="color: var(--primary-dark); border-bottom: 2px solid var(--primary); padding-bottom: 8px; margin-bottom: 20px; font-size: 1.5em;">📖 Authored Book Chapters</h2>
+  <h2 style="color: var(--primary-dark); border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px;">📖 Authored Book Chapters</h2>
 
   <div class="chapter-card" data-year="2025">
     <span class="chapter-year-label">2025</span>
@@ -214,14 +240,14 @@ function filterByYear(year, btn) {
 }
 
 function filterBySearch() {
-  const input = document.getElementById('yearInput').value;
+  const input = document.getElementById('yearInput').value.toUpperCase();
   const cards = document.querySelectorAll('.chapter-card');
   const buttons = document.querySelectorAll('.filter-btn');
   buttons.forEach(b => b.classList.remove('active'));
 
   cards.forEach(card => {
-    const year = card.getAttribute('data-year');
-    card.style.display = year.includes(input) ? 'block' : 'none';
+    const text = card.textContent || card.innerText;
+    card.style.display = text.toUpperCase().includes(input) ? 'block' : 'none';
   });
 }
 </script>
