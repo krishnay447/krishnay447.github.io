@@ -5,92 +5,184 @@ permalink: /contact/
 ---
 
 <style>
-/* Reset and Global */
+/* Hide any injected first H1 from the theme */
 .markdown-body > h1:first-child { display: none !important; }
-:root { --primary: #1e88e5; --bg: #f7f9fc; --border: #dce3ef; }
-body { background: var(--bg) !important; }
 
-/* Hero and Nav */
-.hero-header { position: relative; max-width: 1150px; margin: 0 auto 10px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.hero-header img { width: 100%; height: 200px; object-fit: cover; display: block; }
-.hero-title { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.5); background: rgba(0,0,0,0.3); font-size: 32px; }
-.nav-bar { text-align: center; padding: 10px 0; background: #fff; border-bottom: 2px solid var(--border); margin-bottom: 15px; }
-.nav-bar a { color: var(--primary); text-decoration: none; font-weight: 600; padding: 0 10px; }
+/* --- GLOBAL COLORS --- */
+:root{
+  --primary:#1e88e5;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
+}
+body{ background:var(--bg) !important; }
 
-/* COMPACT LAYOUT */
-.compact-container {
+/* ===================== HERO BANNER ===================== */
+.hero-header{
+  position:relative;
+  width:100%;
+  max-width:1150px;
+  margin:0 auto 15px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+.hero-header img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+}
+.hero-title{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-family:"Segoe UI", sans-serif;
+  font-size:36px;
+  font-weight:700; color:#fff;
+  text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  background:linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+}
+
+/* ===================== NAVIGATION ===================== */
+.nav-bar{
+  text-align:center;
+  padding:12px 0;
+  background:#fff;
+  border-bottom:2px solid var(--border);
+  margin-bottom:20px;
+}
+.nav-bar a{ color:var(--primary); text-decoration:none; font-weight:600; padding:0 10px; }
+
+/* ===================== SPLIT LAYOUT (30% Left / 70% Right) ===================== */
+.contact-split-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  background: white;
-  padding: 12px 20px;
-  border-radius: 10px;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* LEFT SIDE: CONTACT DETAILS (30%) */
+.contact-left {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.profile-section { display: flex; align-items: center; gap: 12px; }
-.profile-img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--primary); }
-.address-brief { font-size: 13px; line-height: 1.2; }
+/* RIGHT SIDE: MAP (70%) */
+.map-right {
+  flex: 2.3; /* Roughly 70% */
+  min-width: 350px;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  position: relative;
+}
 
-.contact-badges { display: flex; gap: 8px; }
-.contact-badges img { height: 22px; }
-
-.journey-map-box { 
-  flex: 1; 
-  min-width: 300px; 
-  background: #222; 
-  border-radius: 8px; 
-  padding: 8px; 
-  position: relative; 
+.map-container {
+  position: relative;
+  background: #222;
+  border-radius: 10px;
   overflow: hidden;
-  height: 120px;
+  border: 1px solid #444;
 }
-.map-point { width: 8px; height: 8px; background: #ff4757; border-radius: 50%; position: absolute; box-shadow: 0 0 8px #ff4757; cursor: pointer; }
+
+/* Map Points */
+.map-point {
+  width: 10px;
+  height: 10px;
+  background: #ff4757;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff4757;
+  z-index: 5;
+  transition: transform 0.3s;
+}
+.map-point:hover { transform: scale(2); background: #fff; }
+
+.journey-label {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+/* Profile Image Style */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+.profile-img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid var(--primary); }
 </style>
 
 <div class="hero-header">
-  <img src="/assets/header1.jpg" alt="Banner">
+  <img src="/assets/header1.jpg" alt="Header">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
 <nav class="nav-bar">
-  <a href="/">🏠 Home</a> | <a href="/experience/">👨‍🔬 Experience</a> | <a href="/impact/">📈 Impact</a> | <a href="/contact/">📬 Contact</a>
+  <a href="/">🏠 Home</a> | 
+  <a href="/experience/">👨‍🔬 Experience</a> | 
+  <a href="/impact/">📈 Impact</a> | 
+  <a href="/contact/">📬 Contact</a>
 </nav>
 
-<div class="compact-container">
-  <div class="profile-section">
-    <img src="/assets/profile.jpg" class="profile-img" alt="Krishna">
-    <div class="address-brief">
-      <strong>Dept. of Physics</strong><br>
-      Univ. de Salamanca, Spain 🇪🇸
+<div class="contact-split-wrapper">
+  
+  <div class="contact-left">
+    <div class="profile-card">
+      <img src="/assets/profile.jpg" alt="Krishna" class="profile-img">
+      <div style="font-size: 14px; line-height: 1.3;">
+        <strong>Krishna Kumar Yadav</strong><br>
+        <span style="color: #666;">Post-Doctoral Researcher</span>
+      </div>
     </div>
+
+    <h4 style="margin-top: 0; color: var(--primary);">📬 Get in Touch</h4>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+      <a href="mailto:krish91phy@usal.es"><img src="https://img.shields.io/badge/Email-krish91phy@usal.es-007ACC?style=flat-square&logo=gmail&logoColor=white" style="width:100%;"></a>
+      <a href="mailto:Krishnay447@gmail.com"><img src="https://img.shields.io/badge/Email-Personal-007ACC?style=flat-square&logo=gmail&logoColor=white" style="width:100%;"></a>
+      <a href="https://wa.me/34603917596"><img src="https://img.shields.io/badge/WhatsApp-%2B34_603_917_596-25D366?style=flat-square&logo=whatsapp&logoColor=white" style="width:100%;"></a>
+    </div>
+
+    <p style="font-size: 13px; color: #444;">
+      <strong>📍 Current Location:</strong><br>
+      Department of Physics,<br>
+      Edificio Multiusos I+D+i,<br>
+      Universidad de Salamanca, Spain 🇪🇸
+    </p>
   </div>
 
-  <div class="journey-map-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" 
-         style="width: 100%; height: 100%; filter: invert(1) opacity(0.4); object-fit: contain;" alt="World Map">
-    <a href="/assets/gorakhpur.jpg" class="map-point" style="top: 48%; left: 74%;" title="Gorakhpur"></a>
-    <a href="#" class="map-point" style="top: 42%; left: 72%;" title="INST Mohali"></a>
-    <a href="#" class="map-point" style="top: 46%; left: 62%;" title="Israel"></a>
-    <a href="#" class="map-point" style="top: 40%; left: 47%;" title="Salamanca"></a>
+  <div class="map-right">
+    <h3 style="margin-top: 0; color: white; font-size: 1.2em;">🌍 Research Journey & Global Footprint</h3>
+    <div class="map-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" 
+           style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="Accurate World Map">
+      
+      <a href="/assets/gorakhpur.jpg" class="map-point" style="top: 48%; left: 74.5%;" title="Home: Gorakhpur"></a>
+      <a href="https://www.inst.ac.in/" target="_blank" class="map-point" style="top: 41%; left: 72.5%;" title="PhD: INST Mohali"></a>
+      <a href="https://en.sce.ac.il/" target="_blank" class="map-point" style="top: 47%; left: 62.5%;" title="PostDoc: Israel"></a>
+      <a href="https://www.usal.es/en" target="_blank" class="map-point" style="top: 41%; left: 47.5%;" title="Current: Salamanca"></a>
+    </div>
+
+    <div class="journey-label">
+      <span>🏠 Gorakhpur</span> ➔ <span>🎓 INST Mohali</span> ➔ <span>🇮🇱 SCE Israel</span> ➔ <span>🇪🇸 Salamanca</span>
+    </div>
+    <p style="font-size: 11px; color: #888; text-align: center; margin-top: 10px;">* Points indicate locations of academic and research tenure.</p>
   </div>
 
-  <div class="contact-badges">
-    <a href="mailto:krish91phy@usal.es"><img src="https://img.shields.io/badge/Email-Primary-007ACC?style=flat-square&logo=gmail" alt="Email"></a>
-    <a href="https://wa.me/34603917596"><img src="https://img.shields.io/badge/WhatsApp-Chat-25D366?style=flat-square&logo=whatsapp" alt="WhatsApp"></a>
-    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ"><img src="https://img.shields.io/badge/Scholar-Stats-red?style=flat-square&logo=google-scholar" alt="Scholar"></a>
-  </div>
 </div>
 
-<div style="text-align: center; margin-top: 15px; font-size: 13px;">
-  <strong>Journey:</strong> 🏠 Gorakhpur ➔ 🎓 INST Mohali ➔ 🇮🇱 SCE Israel ➔ 🇪🇸 USAL Salamanca
-</div>
-
-<div align="right" style="margin-top: 20px;">
-  <a href="https://github.com/krishnay447">
-    <img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitor Count">
-  </a>
+<div align="center">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
+  <a href="https://github.com/krishnay447" style="margin-left: 10px;"><img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitors"></a>
 </div>
