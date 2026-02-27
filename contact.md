@@ -156,8 +156,7 @@ Click the buttons below to reach me or view my professional profiles.
     Universidad de Salamanca<br>
     C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸</p>
     
-    <p><em>Passionate about materials science, photocurrent detection, and AI-driven data analysis.</em></p>
-  </div>
+   
 </div>
 
 ---
