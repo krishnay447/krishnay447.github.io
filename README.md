@@ -160,7 +160,7 @@ body{ background:var(--bg) !important; }
         </ul>
     </div>
   </div>
-
+</div>
 <hr>
 
 <h3 style="text-align: center;">📸 Research & Lab Gallery</h3>
