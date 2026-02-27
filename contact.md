@@ -10,10 +10,10 @@ permalink: /contact/
 
 /* --- GLOBAL COLORS --- */
 :root{
-  --primary:#1e88e5;        /* blue */
-  --primary-dark:#1565c0;   /* darker blue */
-  --bg:#f7f9fc;             /* soft background */
-  --border:#dce3ef;         /* light divider */
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
 }
 body{ background:var(--bg) !important; }
 
@@ -83,80 +83,55 @@ body{ background:var(--bg) !important; }
 /* Prevent GitHub Pages wrapper from clipping dropdown */
 .markdown-body{ overflow:visible !important; }
 
-/* ===================== CONTACT & MAP LAYOUT ===================== */
-.contact-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 25px; 
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-.contact-photo {
-  width: 160px; 
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border: 3px solid #fff;
-}
-
+/* ===================== MAP & CONTACT STYLES ===================== */
 .map-section-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
   background: #1a1a1a; 
-  padding: 25px;
-  border-radius: 15px;
+  padding: 15px;
+  border-radius: 12px;
   color: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.map-box {
-  flex: 2;
-  min-width: 300px;
-  position: relative;
-}
-
-.locations-list {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .map-point {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: #ff4757;
   border-radius: 50%;
   position: absolute;
   cursor: pointer;
-  box-shadow: 0 0 12px #ff4757;
+  box-shadow: 0 0 10px #ff4757;
   transition: transform 0.3s;
   z-index: 10;
 }
 
 .map-point:hover {
-  transform: scale(1.8);
+  transform: scale(2);
   background: #fff;
 }
 
 .loc-card {
   background: #2d2d2d;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
   text-decoration: none;
   color: white !important;
-  font-size: 14px;
-  border-left: 4px solid var(--primary);
-  transition: 0.3s;
+  font-size: 13px;
+  border-left: 3px solid var(--primary);
+  display: block;
+  transition: 0.2s;
 }
 
 .loc-card:hover {
   background: #3d3d3d;
-  transform: translateX(5px);
+  transform: translateX(3px);
+}
+
+.contact-photo {
+  width: 90px; 
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border: 2px solid #fff;
 }
 </style>
 
@@ -172,7 +147,7 @@ body{ background:var(--bg) !important; }
   <a href="/impact/">📈 Impact</a> |
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
-    <span class="dropdown-content" role="menu" aria-label="Publications submenu">
+    <span class="dropdown-content">
       <a href="/patents/">1. Patents</a>
       <a href="/Book_Chapters/">2. Book Chapters</a>
       <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
@@ -181,74 +156,70 @@ body{ background:var(--bg) !important; }
   <a href="/contact/">📬 Contact</a>
 </nav>
 
----
+<hr>
 
-# 📬 Get in Touch
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 10px;">
 
-| Channel | Interactive Link (Click to Action) |
-| :--- | :--- |
-| 📧 **Primary Email** | <a href="mailto:krish91phy@usal.es"><img src="https://img.shields.io/badge/Email-krish91phy@usal.es-007ACC?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a> |
-| 📧 **Personal Email** | <a href="mailto:Krishnay447@gmail.com"><img src="https://img.shields.io/badge/Email-Krishnay447@gmail.com-007ACC?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a> |
-| 📱 **WhatsApp** | <a href="https://wa.me/34603917596"><img src="https://img.shields.io/badge/WhatsApp-%2B34%20603%20917%20596-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a> |
-
----
-
-### 📍 Current Location & Research Journey
-
-<div class="contact-container">
-  <img src="/assets/profile.jpg" alt="Krishna Kumar Yadav" class="contact-photo">
-  <div class="address-details">
-    <p><strong>Department of Physics</strong><br>
-    Edificio Multiusos I+D+i<br>
-    Universidad de Salamanca<br>
-    C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸</p>
-  </div>
-</div>
-
-<div class="map-section-container">
-  
-  <div class="map-box">
-    <h3 style="color:white; margin-top:0;">🌍 Global Research Footprint</h3>
-    <div style="position: relative; background: #222; border-radius: 10px; overflow: hidden;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
-           style="width:100%; filter: invert(1) opacity(0.3); display: block;" alt="World Map">
+  <div style="flex: 2; min-width: 350px;">
+    <div class="map-section-container">
+      <h3 style="color:white; margin-top:0; font-size: 1.1em; border-bottom: 1px solid #444; padding-bottom: 5px;">🌍 Research Journey</h3>
       
-      <a href="/assets/gorakhpur.jpg" target="_blank" class="map-point" style="top: 48%; left: 75%;" title="Home: Gorakhpur"></a>
-      
-      <a href="https://www.inst.ac.in/" target="_blank" class="map-point" style="top: 42%; left: 73%;" title="PhD: INST Mohali"></a>
-      
-      <a href="https://en.sce.ac.il/" target="_blank" class="map-point" style="top: 48%; left: 63%;" title="PostDoc 1: SCE Beer Sheva"></a>
-      
-      <a href="https://www.usal.es/en" target="_blank" class="map-point" style="top: 42%; left: 47%;" title="Current: Univ. of Salamanca"></a>
+      <div style="position: relative; background: #222; border-radius: 8px; overflow: hidden; margin-top: 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
+             style="width:100%; filter: invert(1) opacity(0.35); display: block;" alt="World Map">
+        
+        <a href="/assets/gorakhpur.jpg" target="_blank" class="map-point" style="top: 48%; left: 75%;" title="Home: Gorakhpur"></a>
+        <a href="https://www.inst.ac.in/" target="_blank" class="map-point" style="top: 42%; left: 73%;" title="PhD: INST Mohali"></a>
+        <a href="https://en.sce.ac.il/" target="_blank" class="map-point" style="top: 48%; left: 63%;" title="PostDoc 1: SCE Beer Sheva"></a>
+        <a href="https://www.usal.es/en" target="_blank" class="map-point" style="top: 42%; left: 47%;" title="Current: Univ. of Salamanca"></a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 15px;">
+        <a href="/assets/gorakhpur.jpg" target="_blank" class="loc-card"><strong>🏠 Gorakhpur</strong></a>
+        <a href="https://www.inst.ac.in/" target="_blank" class="loc-card"><strong>🎓 INST Mohali</strong></a>
+        <a href="https://en.sce.ac.il/" target="_blank" class="loc-card"><strong>🇮🇱 SCE Israel</strong></a>
+        <a href="https://www.usal.es/en" target="_blank" class="loc-card"><strong>🇪🇸 Salamanca</strong></a>
+      </div>
     </div>
-    <p style="font-size: 12px; color: #888; margin-top: 10px;">* Click dots to view photos or institutional links.</p>
   </div>
 
-  <div class="locations-list">
-    <h4 style="margin-top:0; color: var(--primary);">📍 Timeline</h4>
+  <div style="flex: 1; min-width: 300px; padding: 10px; background: white; border-radius: 12px; border: 1px solid var(--border);">
+    <h3 style="margin-top: 0; color: var(--primary);">📬 Get in Touch</h3>
     
-    <a href="/assets/gorakhpur.jpg" target="_blank" class="loc-card">
-      <strong>🏠 Gorakhpur</strong><br>Home City & Roots
-    </a>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="mailto:krish91phy@usal.es" style="text-decoration:none;">
+        <img src="https://img.shields.io/badge/Email-krish91phy@usal.es-007ACC?style=flat-square&logo=gmail&logoColor=white" style="width:100%; height: 28px;">
+      </a>
+      <a href="mailto:Krishnay447@gmail.com" style="text-decoration:none;">
+        <img src="https://img.shields.io/badge/Email-Krishnay447@gmail.com-007ACC?style=flat-square&logo=gmail&logoColor=white" style="width:100%; height: 28px;">
+      </a>
+      <a href="https://wa.me/34603917596" style="text-decoration:none;">
+        <img src="https://img.shields.io/badge/WhatsApp-%2B34_603_917_596-25D366?style=flat-square&logo=whatsapp&logoColor=white" style="width:100%; height: 28px;">
+      </a>
+    </div>
 
-    <a href="https://www.inst.ac.in/" target="_blank" class="loc-card">
-      <strong>🎓 INST Mohali</strong><br>PhD Institute (India)
-    </a>
+    <hr style="margin: 15px 0; border: 0; border-top: 1px solid var(--border);">
 
-    <a href="https://en.sce.ac.il/" target="_blank" class="loc-card">
-      <strong>🇮🇱 SCE Beer Sheva</strong><br>1st PostDoc (Israel)
-    </a>
-
-    <a href="https://www.usal.es/en" target="_blank" class="loc-card">
-      <strong>🇪🇸 Univ. of Salamanca</strong><br>Current PostDoc (Spain)
-    </a>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <img src="/assets/profile.jpg" alt="Krishna Kumar Yadav" class="contact-photo">
+      <div style="font-size: 13px; color: #444; line-height: 1.4;">
+        <strong>Dept. of Physics</strong><br>
+        Edificio Multiusos I+D+i<br>
+        Univ. de Salamanca<br>
+        Salamanca, Spain 🇪🇸
+      </div>
+    </div>
   </div>
+
 </div>
 
 ---
 
-<div align="right">
+<div align="center" style="margin-top: 20px;">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
+</div>
+<div align="right" style="margin-top: 30px;">
   <a href="https://github.com/krishnay447">
     <img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitor Count">
   </a>
-</div>
