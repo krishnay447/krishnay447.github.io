@@ -102,14 +102,13 @@ body{ background:var(--bg) !important; }
   gap: 12px;
   margin-top: 15px;
 }
-
-/* Standardization of Badge Height */
 .badge-stack img {
   height: 32px; 
   width: 100%;
   object-fit: contain;
 }
 
+/* Map Elements */
 .map-container {
   position: relative;
   background: #222;
@@ -118,13 +117,16 @@ body{ background:var(--bg) !important; }
   border: 1px solid #444;
 }
 
-.map-point {
-  width: 10px; height: 10px;
-  background: #ff4757;
-  border-radius: 50%;
+.map-pin {
+  width: 28px;
+  height: 28px;
   position: absolute;
-  box-shadow: 0 0 10px #ff4757;
+  cursor: pointer;
+  z-index: 10;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  transition: transform 0.2s ease-in-out;
 }
+.map-pin:hover { transform: scale(1.3) translateY(-2px); }
 
 .profile-card {
   display: flex;
@@ -145,6 +147,7 @@ body{ background:var(--bg) !important; }
 <nav class="nav-bar">
   <a href="/">🏠 Home</a> | 
   <a href="/experience/">👨‍🔬 Experience</a> | 
+  <a href="/instrumentation/">🔬 Instrumentation</a> | 
   <a href="/impact/">📈 Impact</a> | 
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
@@ -188,17 +191,35 @@ body{ background:var(--bg) !important; }
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" 
            style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="World Map">
       
-      <a href="/assets/gorakhpur.jpg" class="map-point" style="top: 48%; left: 74.5%;" title="Gorakhpur"></a>
-      <a href="https://www.inst.ac.in/" target="_blank" class="map-point" style="top: 41%; left: 72.5%;" title="INST Mohali"></a>
-      <a href="https://en.sce.ac.il/" target="_blank" class="map-point" style="top: 47%; left: 62.5%;" title="Israel"></a>
-      <a href="https://www.usal.es/en" target="_blank" class="map-point" style="top: 41%; left: 47.5%;" title="Salamanca"></a>
+      <a href="/assets/gorakhpur.jpg">
+        <svg class="map-pin" style="top: 45%; left: 74%;" viewBox="0 0 24 24" fill="#ff4757">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.inst.ac.in/" target="_blank">
+        <svg class="map-pin" style="top: 38%; left: 72%;" viewBox="0 0 24 24" fill="#ff4757">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </a>
+
+      <a href="https://en.sce.ac.il/" target="_blank">
+        <svg class="map-pin" style="top: 44%; left: 62%;" viewBox="0 0 24 24" fill="#ff4757">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.usal.es/en" target="_blank">
+        <svg class="map-pin" style="top: 38%; left: 47%;" viewBox="0 0 24 24" fill="#ff4757">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </a>
     </div>
 
     <div style="display: flex; justify-content: space-around; margin-top: 15px; font-size: 12px;">
       <span>🏠 Gorakhpur</span> ➔ <span>🎓 Mohali</span> ➔ <span>🇮🇱 Israel</span> ➔ <span>🇪🇸 Salamanca</span>
     </div>
   </div>
-
 </div>
 
 <div align="center">
