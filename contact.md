@@ -114,25 +114,25 @@ body{ background:var(--bg) !important; }
            style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="World Map">
       
       <a href="/assets/gorakhpur.jpg" target="_blank" title="Gorakhpur, India">
-        <svg class="map-pin" style="top: 48%; left: 77%;" viewBox="0 0 24 24" fill="#ff4757">
+        <svg class="map-pin" style="top: 38%; left: 60%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
       <a href="/assets/mohali.jpg" target="_blank" title="Mohali, India">
-        <svg class="map-pin" style="top: 41%; left: 75.5%;" viewBox="0 0 24 24" fill="#ff4757">
+        <svg class="map-pin" style="top: 35%; left: 56%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
       <a href="/assets/israel.jpg" target="_blank" title="Israel">
-        <svg class="map-pin" style="top: 45%; left: 63.5%;" viewBox="0 0 24 24" fill="#ff4757">
+        <svg class="map-pin" style="top: 45%; left: 50%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
       <a href="/assets/salamanca.jpg" target="_blank" title="Salamanca, Spain (Current)">
-        <svg class="map-pin pin-active" style="top: 22.5%; left: 41%;" viewBox="0 0 24 24">
+        <svg class="map-pin pin-active" style="top: 20%; left: 43%;" viewBox="0 0 24 24">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
