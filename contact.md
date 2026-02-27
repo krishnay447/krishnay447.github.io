@@ -40,21 +40,38 @@ body{ background:var(--bg) !important; }
 .contact-left { flex: 1; min-width: 280px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 .map-right { flex: 2.3; min-width: 350px; background: #1a1a1a; padding: 20px; border-radius: 12px; color: white; }
 
-/* CONTACT BADGES - FIXED SIZING */
-.badge-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; align-items: flex-start; }
-.badge-stack a img { 
-  height: 28px; 
-  width: 240px; /* Forces all badges to be the same width */
-  object-fit: fill; 
-  border-radius: 4px;
+/* MINI IMAGE THUMBNAILS */
+.timeline-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  gap: 10px;
 }
+.timeline-box {
+  text-align: center;
+  flex: 1;
+}
+.timeline-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #444;
+  margin-bottom: 5px;
+  transition: transform 0.2s;
+}
+.timeline-box img:hover { transform: scale(1.2); border-color: var(--primary); }
+.timeline-box span { font-size: 11px; display: block; color: #ccc; }
+
+/* BADGES */
+.badge-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; align-items: flex-start; }
+.badge-stack a img { height: 28px; width: 240px; object-fit: fill; border-radius: 4px; }
 
 /* MAP PINS */
 .map-container { position: relative; background: #222; border-radius: 10px; overflow: hidden; border: 1px solid #444; }
 .map-pin { width: 24px; height: 24px; position: absolute; cursor: pointer; z-index: 10; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); transition: transform 0.2s; }
 .map-pin:hover { transform: scale(1.3) translateY(-2px); }
 
-/* Pulse for Salamanca */
 .pin-active { animation: pulse 2.5s infinite; fill: #ffd700 !important; }
 @keyframes pulse {
   0% { filter: drop-shadow(0 0 0px #ffd700); }
@@ -143,8 +160,26 @@ body{ background:var(--bg) !important; }
       </a>
     </div>
 
-    <div style="display: flex; justify-content: space-around; margin-top: 15px; font-size: 12px;">
-      <span>🏠 Gorakhpur</span> ➔ <span>🎓 Mohali</span> ➔ <span>🇮🇱 Israel</span> ➔ <span>🇪🇸 Salamanca</span>
+    <div class="timeline-images">
+      <div class="timeline-box">
+        <img src="/assets/gorakhpur.jpg" alt="Gorakhpur">
+        <span>🏠 Gorakhpur</span>
+      </div>
+      <div style="padding-top: 30px; color: #666;">➔</div>
+      <div class="timeline-box">
+        <img src="/assets/mohali.jpg" alt="Mohali">
+        <span>🎓 Mohali</span>
+      </div>
+      <div style="padding-top: 30px; color: #666;">➔</div>
+      <div class="timeline-box">
+        <img src="/assets/israel.jpg" alt="Israel">
+        <span>🇮🇱 Israel</span>
+      </div>
+      <div style="padding-top: 30px; color: #666;">➔</div>
+      <div class="timeline-box">
+        <img src="/assets/salamanca.jpg" alt="Salamanca">
+        <span>🇪🇸 Salamanca</span>
+      </div>
     </div>
   </div>
 </div>
