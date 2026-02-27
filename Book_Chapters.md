@@ -222,6 +222,12 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
   </div>
 </div>
 
+<hr style="margin: 30px 0; opacity: 0.5;">
+<div align="center">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
+</div>
+
 <script>
 function filterByYear(year, btn) {
   const cards = document.querySelectorAll('.chapter-card');
