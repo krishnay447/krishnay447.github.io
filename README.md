@@ -172,7 +172,6 @@ body{ background:var(--bg) !important; }
 <div class="nav-bar">
   <a href="/">🏠 Home</a>
   <a href="/experience/">👨‍🔬 Experience</a>
-  <a href="/instrumentation/">🔬 Instrumentation</a>
   <a href="/impact/">📈 Impact</a>
   <div class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
@@ -259,18 +258,16 @@ counters.forEach(counter => {
   const updateCount = () => {
     const target = +counter.getAttribute('data-target');
     const suffix = counter.getAttribute('data-suffix');
-    // Read the current text but strip the suffix to get the number
     const currentText = counter.innerText.replace(suffix, '');
     const count = +currentText;
     
-    // speed 600 = very smooth and slow
     const speed = 600; 
     const inc = Math.max(1, target / speed);
 
     if (count < target) {
       const nextValue = Math.min(target, Math.ceil(count + inc));
       counter.innerText = nextValue + suffix;
-      setTimeout(updateCount, 20); // 20ms interval is very stable
+      setTimeout(updateCount, 20);
     } else {
       counter.innerText = target + suffix;
     }
