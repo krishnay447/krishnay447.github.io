@@ -81,17 +81,18 @@ body{ background:var(--bg) !important; }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-/* REFINED THINNER STATS BAR */
+/* ULTRA-THIN CLICKABLE STATS BAR */
 .stats-bar {
   display: flex; 
   justify-content: space-around; 
   background: #fff; 
-  padding: 10px 20px; /* Thinner Y-direction padding */
+  padding: 8px 20px; 
   border-radius: 12px; 
   border: 1px solid var(--border); 
   margin: 15px 0; 
   text-align: center; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  align-items: center;
 }
 
 .stat-item { 
@@ -101,12 +102,14 @@ body{ background:var(--bg) !important; }
   cursor: pointer; 
   transition: transform 0.2s; 
   display: flex;
-  flex-direction: column;
+  flex-direction: row; 
   justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
-.stat-item:hover { transform: translateY(-2px); }
-.stat-item h2 { color: var(--primary); margin: 0; font-size: 22px; line-height: 1.2; }
-.stat-item small { color: #666; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 11px; }
+.stat-item:hover { transform: scale(1.02); }
+.stat-item h2 { color: var(--primary); margin: 0; font-size: 20px; font-weight: 800; font-family: sans-serif; }
+.stat-item small { color: #666; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 10px; }
 
 /* LAYOUT SPLIT */
 .main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; align-items: stretch; }
@@ -156,8 +159,8 @@ body{ background:var(--bg) !important; }
 @media (max-width: 768px) {
   .gallery-grid { flex-wrap: wrap; }
   .gallery-grid img { width: calc(50% - 12px); }
-  .stats-bar { flex-wrap: wrap; }
-  .stat-item { min-width: 45%; margin: 5px 0; }
+  .stats-bar { flex-direction: column; padding: 10px; }
+  .stat-item { margin: 4px 0; }
 }
 </style>
 
@@ -184,16 +187,16 @@ body{ background:var(--bg) !important; }
 
 <div class="stats-bar">
   <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" class="stat-item">
-    <h2>50+</h2><small>Articles</small>
+    <h2 class="counter" data-target="50" data-suffix="+">0+</h2><small>Articles</small>
   </a>
   <a href="/patents/" class="stat-item">
-    <h2>3</h2><small>Patents</small>
+    <h2 class="counter" data-target="3" data-suffix="">0</h2><small>Patents</small>
   </a>
   <div class="stat-item" style="cursor: default;">
-    <h2>3</h2><small>Countries</small>
+    <h2 class="counter" data-target="3" data-suffix="">0</h2><small>Countries</small>
   </div>
   <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" class="stat-item">
-    <h2>750+</h2><small>Citations</small>
+    <h2 class="counter" data-target="750" data-suffix="+">0+</h2><small>Citations</small>
   </a>
 </div>
 
@@ -207,8 +210,8 @@ body{ background:var(--bg) !important; }
       I am passionate about integrating <b>Artificial Intelligence</b> into materials science to accelerate discovery and automate complex data analysis.
     </p>
     
-    <h4 style="text-align: left;">🛠️ Technical Toolkit</h4>
-    <div style="text-align: left;">
+    <h4>🛠️ Technical Toolkit</h4>
+    <div>
       <div class="skill-pill">KPFM/FFM</div>
       <div class="skill-pill">Exfoliation</div>
       <div class="skill-pill">Cold Field Emission</div>
@@ -216,19 +219,17 @@ body{ background:var(--bg) !important; }
       <div class="skill-pill">AI for Science</div>
       <div class="skill-pill">Waste To Energy</div>
     </div>
-    <div style="height: 40px;"></div>
   </div>
 
   <div class="news-sidebar">
     <h4 style="margin-top: 0; color: var(--primary-dark); border-bottom: 2px solid #c2d9ff; padding-bottom: 10px; font-weight: 800; text-align: left;">📢 Latest News</h4>
     <div class="news-container">
       <ul class="news-list">
-        <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> with optical microscope for 2D material thickness determination.</li>
-        <li><b>Dec 2025:</b> Published new article on synthesis and water splitting from <b>MnFe<sub>2</sub>O<sub>4</sub></b> in Inorganic Chemistry Communications.</li>
-        <li><b>Nov 2025:</b> Talk on <b>2D TMDC for Schottky junction solar cell</b> at AMatS Spain.</li>
-        <li><b>Nov 2025:</b> Talk at INL on <b>2D Materials for Advanced Solar Cells</b>.</li>
+        <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> for 2D material thickness determination.</li>
+        <li><b>Dec 2025:</b> Published article on <b>MnFe<sub>2</sub>O<sub>4</sub></b> in Inorganic Chemistry Communications.</li>
+        <li><b>Nov 2025:</b> Talk at AMatS Spain on <b>2D TMDC Schottky junction solar cells</b>.</li>
         <li><b>July 2025:</b> Integrating <b>KPFM</b> for Schottky barrier quantification at USAL.</li>
-        <li><b>Dec 2025:</b> Poster at GEFES2025 on <b>Solid Lubricants</b>.</li>
+        <li><b>Dec 2025:</b> Poster on <b>Solid Lubricants</b> at GEFES2025.</li>
         <li><b>Jun 2021:</b> Defended PhD thesis on Rare Earth Hexaboride.</li>
       </ul>
     </div>
@@ -251,3 +252,29 @@ body{ background:var(--bg) !important; }
   <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
   <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
 </div>
+
+<script>
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.getAttribute('data-suffix');
+    // Read the current text but strip the suffix to get the number
+    const currentText = counter.innerText.replace(suffix, '');
+    const count = +currentText;
+    
+    // speed 600 = very smooth and slow
+    const speed = 600; 
+    const inc = Math.max(1, target / speed);
+
+    if (count < target) {
+      const nextValue = Math.min(target, Math.ceil(count + inc));
+      counter.innerText = nextValue + suffix;
+      setTimeout(updateCount, 20); // 20ms interval is very stable
+    } else {
+      counter.innerText = target + suffix;
+    }
+  };
+  updateCount();
+});
+</script>
