@@ -4,148 +4,206 @@ title: Experience
 permalink: /experience/
 ---
 
-<!-- ===================== PAGE THEME (matches Home) ===================== -->
 <style>
-/* Hide any injected first H1 from the theme */
+/* Hide injected H1 */
 .markdown-body > h1:first-child { display: none !important; }
 
-/* --- GLOBAL COLORS --- */
 :root{
-  --primary:#1e88e5;        /* blue */
-  --primary-dark:#1565c0;   /* darker blue */
-  --bg:#f7f9fc;             /* soft background */
-  --border:#dce3ef;         /* light divider */
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
 }
 body{ background:var(--bg) !important; }
 
-/* ===================== HERO BANNER ===================== */
+/* HERO BANNER */
 .hero-header{
-  position:relative;
-  width:100%;
-  max-width:1150px;
-  margin:0 auto 20px;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
+  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
-.hero-header img{
-  width:100%;
-  height:260px;             /* adjust if you want */
-  object-fit:cover;
-  display:block;
-}
+.hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
 .hero-title{
-  position:absolute; inset:0;
-  display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", Roboto, Arial, sans-serif;
-  font-size:clamp(28px,4vw,40px);
-  font-weight:700; color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:"Segoe UI", sans-serif; font-size:clamp(28px,4vw,40px);
+  font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* ===================== NAVIGATION BAR ===================== */
-.nav-bar{
-  text-align:center;
-  padding:12px 0;
-  background:#fff;
-  border-bottom:2px solid var(--border);
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-  font-family:"Segoe UI", sans-serif;
-  font-size:16px;
+/* FULL NAVIGATION BAR (Instrumentation tab removed as requested) */
+.nav-bar {
+  text-align: center; padding: 12px 0; background: #ffffff;
+  border-bottom: 3px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: "Segoe UI", sans-serif; position: sticky; top: 0; z-index: 10000;
 }
-.nav-bar a{
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600;
-  padding:0 8px;
+.nav-bar a, .dropdown-toggle {
+  color: #444; text-decoration: none; font-weight: 600; padding: 8px 16px;
+  margin: 0 4px; border-radius: 8px; transition: all 0.3s ease;
+  display: inline-block; font-size: 15px; cursor: pointer;
 }
-.nav-bar a:hover{ color:var(--primary-dark); text-decoration:underline; }
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background-color: #e3f2fd; color: var(--primary-dark); }
 
-/* ===================== DROPDOWN ===================== */
-.dropdown{ position:relative; display:inline-block; }
-.dropdown > a.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
-
-/* show menu directly under trigger (no hover gap) */
-.dropdown-content{
-  display:none; position:absolute; top:100%; left:0;
-  background:#fff; min-width:230px;
-  border:1px solid var(--border); border-radius:8px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.12);
-  z-index:9999; text-align:left;
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #ffffff; min-width: 250px; border-radius: 12px; border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; margin-top: 5px;
 }
-.dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{
-  display:block; padding:10px 16px; font-size:14px;
-  color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; white-space:nowrap;
-}
-.dropdown-content a:last-child{ border-bottom:none; }
-.dropdown-content a:hover{ background:#eef6ff; color:var(--primary-dark); }
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content a { display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; text-align: left; }
 
-/* Prevent GitHub Pages wrapper from clipping dropdown */
-.markdown-body{ overflow:visible !important; }
+/* TOP HIGHLIGHT PANEL */
+.dev-highlight-full {
+  max-width: 1150px; margin: 20px auto; padding: 15px 25px;
+  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+  border-radius: 16px; border: 1px solid var(--primary);
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.08);
+}
+
+/* SPLIT LAYOUT */
+.split-layout { display: flex; gap: 30px; max-width: 1150px; margin: 0 auto 30px; padding: 0 15px; }
+
+/* LEFT SIDE: EXPERIENCE */
+.experience-side { flex: 1.5; }
+.timeline-v { position: relative; padding-left: 30px; border-left: 3px solid var(--border); }
+.timeline-v-item { position: relative; margin-bottom: 25px; }
+.timeline-v-item::before {
+  content: ''; position: absolute; left: -39px; top: 5px;
+  width: 15px; height: 15px; background: white; border: 3px solid var(--primary);
+  border-radius: 50%; z-index: 2;
+}
+.v-content { background: white; padding: 18px; border-radius: 12px; border: 1px solid var(--border); }
+.v-content h3 { margin: 0; font-size: 17px; color: var(--primary-dark); }
+.v-content b { font-size: 13.5px; color: #333; display: block; margin-top: 4px; line-height: 1.4; }
+
+.inst-link { text-decoration: none !important; color: inherit !important; cursor: pointer; }
+
+/* RIGHT SIDE: TOOLKIT */
+.instrumentation-side { flex: 1; }
+.sticky-right { position: sticky; top: 100px; }
+.inst-category { margin-bottom: 8px; } 
+.inst-category h4 { 
+  font-size: 10px; text-transform: uppercase; color: #888; 
+  letter-spacing: 1px; margin-bottom: 4px; border-bottom: 1px solid #eee; padding-bottom: 2px;
+}
+.skill-grid-compact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; }
+.skill-badge-v {
+  background: white; border: 1px solid var(--border); 
+  padding: 6px 5px; border-radius: 8px; text-align: center;
+  display: flex; flex-direction: column; justify-content: center; min-height: 52px; 
+}
+.skill-badge-v b { font-size: 11.5px; display: block; color: var(--primary-dark); line-height: 1.1; }
+.skill-badge-v small { font-size: 10.5px; color: #555; margin-top: 3px; font-weight: 500; }
+
+.diode-icon { vertical-align: middle; margin-right: 8px; width: 24px; height: 24px; }
+
+.profile-links {
+  max-width: 1150px; margin: 40px auto; text-align: center;
+  padding: 20px; border-top: 1px solid var(--border);
+}
 </style>
 
-<!-- ===================== HERO HEADER (uses header2.jpg) ===================== -->
 <div class="hero-header">
-  <img src="/assets/header2.jpg" alt="Header banner">
-  <div class="hero-title">Krishna Kumar Yadav</div>
+  <img src="/assets/header2.jpg" alt="Experience header">
+  <div class="hero-title">Experience & Expertise</div>
 </div>
 
-<!-- ===================== NAVIGATION (same style as Home) ===================== -->
-<nav class="nav-bar" role="navigation" aria-label="Primary">
-  <a href="/">🏠 Home</a> |
-  <a href="/experience/">👨‍🔬 Experience</a> |
-  <a href="/instrumentation/">🔬 Instrumentation</a> |
-  <a href="/impact/">📈 Impact</a> |
-  <span class="dropdown">
+<div class="nav-bar">
+  <a href="/">🏠 Home</a>
+  <a href="/experience/">👨‍🔬 Experience</a>
+  <a href="/impact/">📈 Impact</a>
+  <div class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
-    <span class="dropdown-content" role="menu" aria-label="Publications submenu">
-      <a href="/patents/">1. Patents</a>
-      <a href="/Book_Chapters/">2. Book Chapters</a>
-      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
-    </span>
-  </span> |
+    <div class="dropdown-content">
+      <a href="/patents/">📜 1. Patents</a>
+      <a href="/Book_Chapters/">📖 2. Book Chapters</a>
+      <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+    </div>
+  </div>
   <a href="/contact/">📬 Contact</a>
-</nav>
+</div>
 
----
+<div class="dev-highlight-full">
+  <h2 style="margin-top:0; margin-bottom: 8px; color:var(--primary-dark); font-size: 22px;">🔬 Instrumental Development</h2>
+  <p style="font-size: 14.5px; line-height: 1.5; color: #333; margin-bottom: 0;">
+    <b>Modified Optical Microscopy:</b> I actively develop and modify scientific setups to meet specific research needs. 
+    I successfully integrated a <b>high-resolution spectrometer</b> into an optical microscope system, allowing for 
+    precise, non-destructive <b>2D material thickness determination</b> through localized spectral analysis.
+  </p>
+</div>
 
-# 👨‍🔬 Professional Experience
+<div class="split-layout">
+  <div class="experience-side">
+    <h2 style="color: var(--primary-dark); margin-bottom: 20px;">👨‍🔬 Experience Tree</h2>
+    <div class="timeline-v">
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Post-Doctoral Fellow</h3>
+        <b><a href="https://www.usal.es/en" target="_blank" class="inst-link">🇪🇸 Department of Physics, University of Salamanca, Spain (2024–Present)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Post-Doctoral Fellow</h3>
+        <b><a href="https://www.sce.ac.il/en" target="_blank" class="inst-link">🇮🇱 Shamoon College of Engineering, Beer Sheva, Israel (2022–2024)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Research Associate</h3>
+        <b><a href="https://inst.ac.in/" target="_blank" class="inst-link">🇮🇳 Institute of Nano Science and Technology, Mohali, India (2021–2022)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>PhD Scholar (Nanotechnology)</h3>
+        <b><a href="https://inst.ac.in/" target="_blank" class="inst-link">🇮🇳 Institute of Nano Science and Technology, Mohali, India (2016–2021)</a></b>
+      </div></div>
+    </div>
 
-### 🇪🇸 Post-Doctoral Fellow  
-**University of Salamanca, Spain** | *Sep 2024 – Present*  
-* **Department**: Department of Physics  
-* **Focus**: Advanced physics research and material characterization within the Edificio Multiusos I+D+i framework.
+    <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-top: 20px;">
+      <h3 style="margin-top:0; color:var(--primary-dark); display: flex; align-items: center;">
+        <svg class="diode-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 19H20M5 5V18" stroke="#1e88e5" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 17C9 17 14 15 18 6" stroke="#f44336" stroke-width="2" stroke-linecap="round"/>
+          <path d="M14 12L20 12M17 9V15M20 9V15" stroke="#1e88e5" stroke-width="1.5"/>
+        </svg>
+        Electrical & Field Emission
+      </h3>
+      <p style="font-size: 14px; color: #444; margin-bottom: 15px;">Characterization of field emission properties including I-V measurements in diode configuration for cold cathode applications.</p>
+      
+    </div>
+  </div>
 
----
+  <div class="instrumentation-side">
+    <div class="sticky-right">
+      <h2 style="color: var(--primary-dark); margin-bottom: 20px;">🛠️ Technical Toolkit</h2>
+      <div class="inst-category">
+        <h4>🔥 Thermal Analysis</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>DSC</b><small>Phase Transitions</small></div>
+          <div class="skill-badge-v"><b>TGA</b><small>Weight Change</small></div>
+          <div class="skill-badge-v" style="grid-column: span 2;"><b>Furnaces</b><small>Up to 1200°C</small></div>
+        </div>
+      </div>
+      <div class="inst-category">
+        <h4>⚛️ Structural & Morphological</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>XRD</b><small>High-Temp XRD</small></div>
+          <div class="skill-badge-v"><b>SEM</b><small>JSM-IT 300</small></div>
+          <div class="skill-badge-v"><b>AFM</b><small>Surface Topology</small></div>
+          <div class="skill-badge-v"><b>BET</b><small>Surface Area</small></div>
+        </div>
+      </div>
+      <div class="inst-category">
+        <h4>🌈 Spectroscopy & Electro-chem</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>Raman</b><small>Confocal/Micro</small></div>
+          <div class="skill-badge-v"><b>Metrohm / PalmSens</b><small>Workstations</small></div>
+          <div class="skill-badge-v" style="grid-column: span 2;"><b>UV-Vis-NIR</b><small>IR / DRS Mode</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-### 🇮🇱 Post-Doctoral Fellow  
-**Shamoon College of Engineering (SCE), Beer Sheva, Israel** | *Nov 2022 – Aug 2024*  
-* **Project Title**: Dip-pen nanolithography printing over screen-printed electrodes for real-time electrochemical sensing of heavy metals.  
-* **Key Expertise**: Nanofabrication, sensor development, and real-time environmental monitoring.
-
----
-
-### 🇮🇳 Research Associate (Institute Postdoc Fellow)  
-**Institute of Nano Science and Technology (INST), Mohali, India** | *Jun 2021 – Oct 2022*  
-* **Project Title**: Understanding the role of 2D materials for field emission.  
-* **Key Expertise**: 2D materials synthesis and high-vacuum field emission characterization.
-
----
-
-### 🎓 Ph.D. in Nanotechnology  
-**Institute of Nano Science and Technology (INST), Mohali, India**  
-* **Thesis Title**: Nanostructured Metal Borides: Synthesis and their Applications.  
-* **Supervisors**: Dr. Menaka Jha and Prof. Ashok K. Ganguli.
-
----
-
-### 🧪 Areas of Expertise
-* **Cleanroom Operations**: Extensive experience in high-precision research environments.  
-* **Device Fabrication**: Dip Pen Nanolithography (DPN), Optical Lithography, and Electron Beam Evaporation.  
-* **Advanced AFM**: Specialized in deploying **KPFM** and **FFM** techniques for high‑resolution mapping of properties in 2D materials.
-
----
-
-[🔙 Back to Home Page](/)
+<div class="profile-links">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
+    <img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar">
+  </a>
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank">
+    <img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID">
+  </a>
+</div>
