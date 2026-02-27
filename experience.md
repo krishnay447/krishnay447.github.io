@@ -175,7 +175,7 @@ body{ background:var(--bg) !important; }
         <div class="skill-grid-compact">
           <div class="skill-badge-v"><b>DSC</b><small>Phase Transitions</small></div>
           <div class="skill-badge-v"><b>TGA</b><small>Weight Change</small></div>
-          <div class="skill-badge-v" style="grid-column: span 2;"><b>Furnaces</b><small>Up to 1200°C</small></div>
+          <div class="skill-badge-v" style="grid-column: span 2;"><b>Furnaces</b><small>Up to 1600°C</small></div>
         </div>
       </div>
       <div class="inst-category">
