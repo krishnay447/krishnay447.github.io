@@ -1,139 +1,138 @@
-<!-- ===================== GLOBAL UI THEME ===================== -->
 <style>
-/* Hide GitHub repo title ("krishnay447") that Pages may inject */
+/* Hide GitHub repo title */
 .markdown-body > h1:first-child { display: none !important; }
 
-/* --- GLOBAL COLORS --- */
 :root{
-  --primary:#1e88e5;         /* blue */
-  --primary-dark:#1565c0;    /* darker blue */
-  --bg:#f7f9fc;              /* soft background */
-  --border:#dce3ef;          /* light divider */
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
 }
 body{ background:var(--bg) !important; }
 
-/* ===================== HERO BANNER ===================== */
+/* HERO BANNER */
 .hero-header{
-  position:relative;
-  width:100%;
-  max-width:1150px;
-  margin:0 auto 20px;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
+  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
-.hero-header img{
-  width:100%;
-  height:260px;              /* adjust if you want taller/shorter */
-  object-fit:cover;
-  display:block;
-}
+.hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
 .hero-title{
-  position:absolute; inset:0;
-  display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", Roboto, Arial, sans-serif;
-  font-size:clamp(28px,4vw,40px);
-  font-weight:700; color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:"Segoe UI", sans-serif; font-size:clamp(28px,4vw,40px);
+  font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* ===================== NAVIGATION BAR ===================== */
-.nav-bar{
-  text-align:center;
-  padding:12px 0;
-  background:#fff;
-  border-bottom:2px solid var(--border);
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-  font-family:"Segoe UI", sans-serif;
-  font-size:16px;
-}
-.nav-bar a{
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600;
-  padding:0 8px;
-}
-.nav-bar a:hover{ color:var(--primary-dark); text-decoration:underline; }
+/* NAVIGATION */
+.nav-bar{ text-align:center; padding:12px 0; background:#fff; border-bottom:2px solid var(--border); box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+.nav-bar a{ color:var(--primary); text-decoration:none; font-weight:600; padding:0 8px; }
 
-/* ===================== DROPDOWN ===================== */
+/* DROPDOWN */
 .dropdown{ position:relative; display:inline-block; }
-.dropdown > a.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
-
-/* show menu directly under trigger (no hover gap) */
 .dropdown-content{
-  display:none; position:absolute; top:100%; left:0;
-  background:#fff; min-width:230px;
-  border:1px solid var(--border); border-radius:8px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.12);
-  z-index:9999; text-align:left;
+  display:none; position:absolute; top:100%; left:0; background:#fff; min-width:230px;
+  border:1px solid var(--border); border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.12); z-index:9999;
 }
 .dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{
-  display:block; padding:10px 16px; font-size:14px;
-  color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; white-space:nowrap;
-}
-.dropdown-content a:last-child{ border-bottom:none; }
-.dropdown-content a:hover{ background:#eef6ff; color:var(--primary-dark); }
+.dropdown-content a{ display:block; padding:10px 16px; font-size:14px; color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; }
 
-/* Prevent GitHub Pages wrapper from clipping dropdown */
-.markdown-body{ overflow:visible !important; }
+/* STATS BAR */
+.stats-bar {
+  display: flex; justify-content: space-around; background: #fff; 
+  padding: 20px; border-radius: 12px; border: 1px solid var(--border); 
+  margin: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+.stat-item h2 { color: var(--primary); margin: 0; font-size: 24px; }
+.stat-item small { color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+/* LAYOUT SPLIT */
+.main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; }
+.bio-section { flex: 2; min-width: 300px; }
+.news-sidebar { flex: 1; min-width: 250px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
+
+/* SKILL PILLS */
+.skill-pill {
+  display: inline-block; padding: 5px 12px; background: #eef6ff; 
+  color: var(--primary); border-radius: 20px; font-size: 12px; 
+  font-weight: 600; margin: 4px; border: 1px solid #d0e3ff;
+}
+
+/* RESPONSIVE GALLERY */
+.gallery-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+.gallery-grid img { 
+  width: 260px; height: 200px; object-fit: cover; 
+  border-radius: 12px; border: 3px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover { transform: translateY(-5px); }
 </style>
 
-<!-- ===================== HERO HEADER ===================== -->
 <div class="hero-header">
   <img src="/assets/header.jpg" alt="Header banner" />
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
-<!-- ===================== NAVIGATION (ALL LINKS CLICKABLE) ===================== -->
-<div class="nav-bar" role="navigation" aria-label="Primary">
-  <a href="/">🏠 Home</a> |
-  <a href="/experience/">👨‍🔬 Experience</a> |
-  <a href="/instrumentation/">🔬 Instrumentation</a> |
-  <a href="/impact/">📈 Impact</a> |
+<div class="nav-bar">
+  <a href="/">🏠 Home</a> | <a href="/experience/">👨‍🔬 Experience</a> | 
+  <a href="/instrumentation/">🔬 Instrumentation</a> | <a href="/impact/">📈 Impact</a> |
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
-    <span class="dropdown-content" role="menu" aria-label="Publications submenu">
+    <div class="dropdown-content">
       <a href="/patents/">1. Patents</a>
       <a href="/Book_Chapters/">2. Book Chapters</a>
-      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
-    </span>
-  </span> |
-  <a href="/contact/">📬 Contact</a>
+      <a href="/publications/">3. Peer-Reviewed Articles</a>
+    </div>
+  </span> | <a href="/contact/">📬 Contact</a>
 </div>
 
----
-
-# Dr. Krishna Kumar Yadav 
-### Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸 
-
----
-
-## Welcome
-Welcome to my professional academic website. I am a physicist specializing in Nanotechnology, Energy, Device Fabrication, and Advanced Material Synthesis, with a particular focus on Metal hexaboride. I am a proactive learner, constantly integrating modern tools like **Artificial Intelligence** to accelerate scientific discovery and automate data analysis.
-
----
-
-### 📸 Research & Lab Gallery
-
-<div align="center">
-<table style="border: none; border-collapse: collapse;">
-<tr>
-<td style="padding: 10px; border: none;"><img src="photo1.jpg" height="320" style="border-radius: 10px;" alt="Research Image 1"></td>
-<td style="padding: 10px; border: none;"><img src="photo2.jpg" height="320" style="border-radius: 10px;" alt="Research Image 2"></td>
-</tr>
-<tr>
-<td style="padding: 10px; border: none;"><img src="photo3.jpg" height="320" style="border-radius: 10px;" alt="Research Image 3"></td>
-<td style="padding: 10px; border: none;"><img src="photo4.jpg" height="320" style="border-radius: 10px;" alt="Research Image 4"></td>
-</tr>
-</table>
+<div class="stats-bar">
+  <div class="stat-item"><h2>15+</h2><small>Articles</small></div>
+  <div class="stat-item"><h2>2</h2><small>Patents</small></div>
+  <div class="stat-item"><h2>4</h2><small>Countries</small></div>
+  <div class="stat-item"><h2>500+</h2><small>Citations</small></div>
 </div>
 
----
+<div class="main-grid">
+  <div class="bio-section">
+    <h1 style="color: var(--primary-dark); margin-top:0;">Dr. Krishna Kumar Yadav</h1>
+    <h3 style="color: #555;">Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸</h3>
+    <p>
+      I am a physicist specializing in <b>Nanotechnology, Energy Device Fabrication</b>, and <b>Advanced Material Synthesis</b>. 
+      My research primarily explores Metal hexaborides and 2D transition metal dichalcogenides (TMDs). 
+      I am passionate about integrating <b>Artificial Intelligence</b> into materials science to accelerate discovery and automate complex data analysis.
+    </p>
+    
+    <h4>🛠️ Technical Toolkit</h4>
+    <div class="skill-pill">KPFM</div>
+    <div class="skill-pill">Schottky Junctions</div>
+    <div class="skill-pill">TMDs</div>
+    <div class="skill-pill">Device Fabrication</div>
+    <div class="skill-pill">AI for Science</div>
+    <div class="skill-pill">Solar Cells</div>
+  </div>
 
-### 📍 Current Focus
-Currently advancing the characterization of two‑dimensional (2D) transition metal dichalcogenides (TMDs), establishing a scalable platform for Schottky barrier quantification using KPFM, and fabricating Schottky‑junction solar cells at the **University of Salamanca**, Spain.
+  <div class="news-sidebar">
+    <h4 style="margin-top: 0; color: var(--primary); border-bottom: 2px solid var(--bg); padding-bottom: 8px;">📢 Latest News</h4>
+    <ul style="list-style: none; padding: 0; font-size: 13px; color: #444;">
+      <li style="margin-bottom: 12px;"><b>Feb 2026:</b> Presenting recent TMD research at the Physics Symposium in Madrid.</li>
+      <li style="margin-bottom: 12px;"><b>Jan 2026:</b> Established new KPFM protocols at USAL for Schottky barrier quantification.</li>
+      <li style="margin-bottom: 12px;"><b>Dec 2025:</b> Collaborative project on Energy Storage initiated with partners in Israel.</li>
+    </ul>
+  </div>
+</div>
 
----
-📧 **Contact:** krish91phy@usal.es | <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ&hl=en" target="_blank" rel="noopener">🎓 Google Scholar</a>
+<hr>
+
+<h3 style="text-align: center;">📸 Research & Lab Gallery</h3>
+
+<div class="gallery-grid">
+  <img src="photo1.jpg" alt="Lab Work">
+  <img src="photo2.jpg" alt="Sample Analysis">
+  <img src="photo3.jpg" alt="Scientific Equipment">
+  <img src="photo4.jpg" alt="Research Presentation">
+</div>
+
+<hr>
+<div align="center" style="padding: 20px;">
+  <p>📧 <b>Contact:</b> krish91phy@usal.es | <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ&hl=en" target="_blank">🎓 Google Scholar</a></p>
+</div>
