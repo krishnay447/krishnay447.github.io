@@ -5,143 +5,56 @@ permalink: /contact/
 ---
 
 <style>
-/* Hide any injected first H1 from the theme */
 .markdown-body > h1:first-child { display: none !important; }
-
-/* --- GLOBAL COLORS --- */
-:root{
-  --primary:#1e88e5;
-  --bg:#f7f9fc;
-  --border:#dce3ef;
-}
+:root{ --primary:#1e88e5; --bg:#f7f9fc; --border:#dce3ef; }
 body{ background:var(--bg) !important; }
 
-/* ===================== HERO BANNER ===================== */
+/* HERO BANNER */
 .hero-header{
-  position:relative;
-  width:100%;
-  max-width:1150px;
-  margin:0 auto 15px;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  position:relative; width:100%; max-width:1150px; margin:0 auto 15px;
+  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
-.hero-header img{
-  width:100%;
-  height:240px;
-  object-fit:cover;
-  display:block;
-}
+.hero-header img{ width:100%; height:240px; object-fit:cover; display:block; }
 .hero-title{
-  position:absolute; inset:0;
-  display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", sans-serif;
-  font-size:36px;
-  font-weight:700; color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,0.55);
-  background:linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:"Segoe UI", sans-serif; font-size:36px; font-weight:700; color:#fff;
+  text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
 }
 
-/* ===================== NAVIGATION ===================== */
-.nav-bar{
-  text-align:center;
-  padding:12px 0;
-  background:#fff;
-  border-bottom:2px solid var(--border);
-  margin-bottom:20px;
-}
+/* NAVIGATION */
+.nav-bar{ text-align:center; padding:12px 0; background:#fff; border-bottom:2px solid var(--border); margin-bottom:20px; }
 .nav-bar a{ color:var(--primary); text-decoration:none; font-weight:600; padding:0 10px; }
 
-/* DROPDOWN MENU */
+/* DROPDOWN */
 .dropdown{ position:relative; display:inline-block; }
 .dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
 .dropdown-content{
-  display:none; position:absolute; top:100%; left:0;
-  background:#fff; min-width:200px;
-  border:1px solid var(--border); border-radius:8px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.12);
-  z-index:9999; text-align:left;
+  display:none; position:absolute; top:100%; left:0; background:#fff; min-width:200px;
+  border:1px solid var(--border); border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.12); z-index:9999;
 }
 .dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{
-  display:block; padding:10px 16px; font-size:14px;
-  color:var(--primary); text-decoration:none; border-bottom:1px solid #eee;
-}
-.dropdown-content a:last-child{ border-bottom:none; }
+.dropdown-content a{ display:block; padding:10px 16px; font-size:14px; color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; text-align:left; }
 
-/* ===================== SPLIT LAYOUT ===================== */
-.contact-split-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 30px;
-}
+/* SPLIT LAYOUT */
+.contact-split-wrapper { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
+.contact-left { flex: 1; min-width: 280px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.map-right { flex: 2.3; min-width: 350px; background: #1a1a1a; padding: 20px; border-radius: 12px; color: white; }
 
-.contact-left {
-  flex: 1;
-  min-width: 280px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
+/* CONTACT BADGES */
+.badge-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+.badge-stack img { height: 32px; width: 100%; object-fit: contain; }
 
-.map-right {
-  flex: 2.3;
-  min-width: 350px;
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 12px;
-  color: white;
-}
-
-/* Uniform Contact Badges */
-.badge-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 15px;
-}
-.badge-stack img {
-  height: 32px; 
-  width: 100%;
-  object-fit: contain;
-}
-
-/* Map Elements */
-.map-container {
-  position: relative;
-  background: #222;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #444;
-}
-
-.map-pin {
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  cursor: pointer;
-  z-index: 10;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-  transition: transform 0.2s ease-in-out;
-}
+/* MAP PINS */
+.map-container { position: relative; background: #222; border-radius: 10px; overflow: hidden; border: 1px solid #444; }
+.map-pin { width: 28px; height: 28px; position: absolute; cursor: pointer; z-index: 10; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); transition: transform 0.2s; }
 .map-pin:hover { transform: scale(1.3) translateY(-2px); }
 
-.profile-card {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 15px;
-}
+.profile-card { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
 .profile-img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid var(--primary); }
 </style>
 
 <div class="hero-header">
-  <img src="/assets/header1.jpg" alt="Header">
+  <img src="/assets/header1.jpg" alt="Header Banner">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
@@ -165,7 +78,7 @@ body{ background:var(--bg) !important; }
   
   <div class="contact-left">
     <div class="profile-card">
-      <img src="/assets/profile.jpg" alt="Krishna" class="profile-img">
+      <img src="/assets/profile.jpg" alt="Krishna Profile" class="profile-img">
       <div style="font-size: 14px;">
         <strong>Krishna Kumar Yadav</strong><br>
         <span style="color: #666;">Researcher</span>
@@ -192,25 +105,25 @@ body{ background:var(--bg) !important; }
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" 
            style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="World Map">
       
-      <a href="/assets/gorakhpur.jpg">
+      <a href="/assets/gorakhpur.jpg" target="_blank">
         <svg class="map-pin" style="top: 47.5%; left: 74.8%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
-      <a href="https://www.inst.ac.in/" target="_blank">
+      <a href="/assets/mohali.jpg" target="_blank">
         <svg class="map-pin" style="top: 42.8%; left: 73.0%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
-      <a href="https://en.sce.ac.il/" target="_blank">
+      <a href="/assets/israel.jpg" target="_blank">
         <svg class="map-pin" style="top: 42.2%; left: 61.3%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
-      <a href="https://www.usal.es/en" target="_blank">
+      <a href="/assets/salamanca.jpg" target="_blank">
         <svg class="map-pin" style="top: 32.5%; left: 48.5%;" viewBox="0 0 24 24" fill="#ff4757">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
