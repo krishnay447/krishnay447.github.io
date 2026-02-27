@@ -136,7 +136,7 @@ body{ background:var(--bg) !important; }
            style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="World Map">
       
       <a href="https://gorakhpur.nic.in/" target="_blank" title="Gorakhpur, India">
-        <svg class="map-pin" style="top: 31.2%; left: 68.5%;" viewBox="0 0 24 24" fill="#FF9933">
+        <svg class="map-pin" style="top: 31%; left: 68.2%;" viewBox="0 0 24 24" fill="#FF9933">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
@@ -148,13 +148,13 @@ body{ background:var(--bg) !important; }
       </a>
 
       <a href="https://en.sce.ac.il/" target="_blank" title="SCE, Israel">
-        <svg class="map-pin" style="top: 24.2%; left: 55.25%;" viewBox="0 0 24 24" fill="#2E8B57">
+        <svg class="map-pin" style="top: 24%; left: 55.25%;" viewBox="0 0 24 24" fill="#2E8B57">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
       <a href="https://lbt.usal.es/" target="_blank" title="LBT, Univ. de Salamanca">
-        <svg class="map-pin pin-active" style="top: 21.1%; left: 43.7%;" viewBox="0 0 24 24">
+        <svg class="map-pin pin-active" style="top: 20.5%; left: 43.7%;" viewBox="0 0 24 24">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
