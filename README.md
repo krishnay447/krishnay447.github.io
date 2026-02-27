@@ -160,7 +160,6 @@ body{ background:var(--bg) !important; }
         </ul>
     </div>
   </div>
-</div>
 
 <hr>
 
