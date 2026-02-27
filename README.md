@@ -149,11 +149,14 @@ body{ background:var(--bg) !important; }
     <h4 style="margin-top: 0; color: var(--primary); border-bottom: 2px solid var(--bg); background: white; position: relative; z-index: 10; padding-bottom: 8px;">📢 Latest News</h4>
     <div class="news-container">
       <ul class="news-list">
-        <li><b>Feb 2026:</b> Presenting recent TMD research at the Physics Symposium in Madrid.</li>
-        <li><b>Jan 2026:</b> Established new KPFM protocols at USAL for Schottky barrier quantification.</li>
-        <li><b>Dec 2025:</b> Collaborative project on Energy Storage initiated with partners in Israel.</li>
-        <li><b>Nov 2025:</b> Published new article on Metal hexaborides in [Journal Name].</li>
-        <li><b>Oct 2025:</b> Received recognition for high citation impact in Materials Science.</li>
+        <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> with optical microscope system for precise 2D material thickness determination.</li>
+        <li><b>Dec 2025:</b> Published new article on synthesis and water splitting from MnFe<sub>2</sub>O<sub>4</sub> in Inorganic Chemistry Communications.</li>
+        <li><b>Nov 2025:</b> Deliver a Scientific talk at the Universitat Autònoma de Barcelona on <b>2D TMDC for Schottky junction solar cell</b> in 4<sup>th</sup> Conference on Advanced Materials in Spain <b>(AMatS)</b>.</li>
+        <li><b>Nov 2025:</b> Deliver a talk on <b>2D Materials for Advanced Solar Cells Using Engineered Metal Contacts</b> in <b>International Conference on Layered Materials and Devices: From Atoms to Chips</b> at the International Iberian Nanotechnology Laboratory (INL).</li>
+        <li><b>July 2025:</b> Integrating <b>KPFM</b> with Using Engineered Metal Contact for Schottky barrier quantification at USAL.</li>
+        <li><b>Dec 2025:</b> Presented a Poster on <b>Study of Solid Lubricants using Friction Force Microscopy</b> at <b>GEFES2025</b> held at <b>Oviedo</b>, Spain.</li>
+        <li><b>Jun 2021:</b> Successfully defended the PhD thesis on Rare Earth Hexaboride for Field Emission.</li>
+        
         </ul>
     </div>
   </div>
