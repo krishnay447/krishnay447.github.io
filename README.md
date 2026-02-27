@@ -86,10 +86,10 @@ body{ background:var(--bg) !important; }
 </div>
 
 <div class="stats-bar">
-  <div class="stat-item"><h2>15+</h2><small>Articles</small></div>
-  <div class="stat-item"><h2>2</h2><small>Patents</small></div>
-  <div class="stat-item"><h2>4</h2><small>Countries</small></div>
-  <div class="stat-item"><h2>500+</h2><small>Citations</small></div>
+  <div class="stat-item"><h2>50+</h2><small>Articles</small></div>
+  <div class="stat-item"><h2>3</h2><small>Patents</small></div>
+  <div class="stat-item"><h2>3</h2><small>Countries</small></div>
+  <div class="stat-item"><h2>750+</h2><small>Citations</small></div>
 </div>
 
 <div class="main-grid">
@@ -103,12 +103,12 @@ body{ background:var(--bg) !important; }
     </p>
     
     <h4>🛠️ Technical Toolkit</h4>
-    <div class="skill-pill">KPFM</div>
-    <div class="skill-pill">Schottky Junctions</div>
-    <div class="skill-pill">TMDs</div>
+    <div class="skill-pill">KPFM/FFM</div>
+    <div class="skill-pill">Exfoliation</div>
+    <div class="skill-pill">Cold Field Emission</div>
     <div class="skill-pill">Device Fabrication</div>
     <div class="skill-pill">AI for Science</div>
-    <div class="skill-pill">Solar Cells</div>
+    <div class="skill-pill">Waste To Energy</div>
   </div>
 
   <div class="news-sidebar">
