@@ -66,7 +66,7 @@ body{ background:var(--bg) !important; }
 
 <div class="hero-header">
   <img src="/assets/header8.jpg" alt="Impact banner">
-  <div class="hero-title">Krishna Kumar Yadav</div>
+  <div class="hero-title">Impact</div>
 </div>
 
 <div class="nav-bar">
