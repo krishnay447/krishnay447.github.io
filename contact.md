@@ -52,7 +52,24 @@ body{ background:var(--bg) !important; }
 }
 .nav-bar a{ color:var(--primary); text-decoration:none; font-weight:600; padding:0 10px; }
 
-/* ===================== SPLIT LAYOUT (30% Left / 70% Right) ===================== */
+/* DROPDOWN MENU */
+.dropdown{ position:relative; display:inline-block; }
+.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
+.dropdown-content{
+  display:none; position:absolute; top:100%; left:0;
+  background:#fff; min-width:200px;
+  border:1px solid var(--border); border-radius:8px;
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
+  z-index:9999; text-align:left;
+}
+.dropdown:hover .dropdown-content{ display:block; }
+.dropdown-content a{
+  display:block; padding:10px 16px; font-size:14px;
+  color:var(--primary); text-decoration:none; border-bottom:1px solid #eee;
+}
+.dropdown-content a:last-child{ border-bottom:none; }
+
+/* ===================== SPLIT LAYOUT ===================== */
 .contact-split-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +77,6 @@ body{ background:var(--bg) !important; }
   margin-bottom: 30px;
 }
 
-/* LEFT SIDE: CONTACT DETAILS (30%) */
 .contact-left {
   flex: 1;
   min-width: 280px;
@@ -68,18 +84,30 @@ body{ background:var(--bg) !important; }
   padding: 20px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* RIGHT SIDE: MAP (70%) */
 .map-right {
-  flex: 2.3; /* Roughly 70% */
+  flex: 2.3;
   min-width: 350px;
   background: #1a1a1a;
   padding: 20px;
   border-radius: 12px;
   color: white;
-  position: relative;
+}
+
+/* Uniform Contact Badges */
+.badge-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Standardization of Badge Height */
+.badge-stack img {
+  height: 32px; 
+  width: 100%;
+  object-fit: contain;
 }
 
 .map-container {
@@ -90,35 +118,21 @@ body{ background:var(--bg) !important; }
   border: 1px solid #444;
 }
 
-/* Map Points */
 .map-point {
-  width: 10px;
-  height: 10px;
+  width: 10px; height: 10px;
   background: #ff4757;
   border-radius: 50%;
   position: absolute;
-  cursor: pointer;
   box-shadow: 0 0 10px #ff4757;
-  z-index: 5;
-  transition: transform 0.3s;
-}
-.map-point:hover { transform: scale(2); background: #fff; }
-
-.journey-label {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 15px;
-  font-size: 12px;
 }
 
-/* Profile Image Style */
 .profile-card {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--border);
+  padding-bottom: 15px;
 }
 .profile-img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid var(--primary); }
 </style>
@@ -132,6 +146,14 @@ body{ background:var(--bg) !important; }
   <a href="/">🏠 Home</a> | 
   <a href="/experience/">👨‍🔬 Experience</a> | 
   <a href="/impact/">📈 Impact</a> | 
+  <span class="dropdown">
+    <a class="dropdown-toggle">📚 Publications ▾</a>
+    <div class="dropdown-content">
+      <a href="/patents/">1. Patents</a>
+      <a href="/Book_Chapters/">2. Book Chapters</a>
+      <a href="/publications/">3. Articles</a>
+    </div>
+  </span> | 
   <a href="/contact/">📬 Contact</a>
 </nav>
 
@@ -140,43 +162,41 @@ body{ background:var(--bg) !important; }
   <div class="contact-left">
     <div class="profile-card">
       <img src="/assets/profile.jpg" alt="Krishna" class="profile-img">
-      <div style="font-size: 14px; line-height: 1.3;">
+      <div style="font-size: 14px;">
         <strong>Krishna Kumar Yadav</strong><br>
-        <span style="color: #666;">Post-Doctoral Researcher</span>
+        <span style="color: #666;">Researcher</span>
       </div>
     </div>
 
     <h4 style="margin-top: 0; color: var(--primary);">📬 Get in Touch</h4>
-    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-      <a href="mailto:krish91phy@usal.es"><img src="https://img.shields.io/badge/Email-krish91phy@usal.es-007ACC?style=flat-square&logo=gmail&logoColor=white" style="width:100%;"></a>
-      <a href="mailto:Krishnay447@gmail.com"><img src="https://img.shields.io/badge/Email-Personal-007ACC?style=flat-square&logo=gmail&logoColor=white" style="width:100%;"></a>
-      <a href="https://wa.me/34603917596"><img src="https://img.shields.io/badge/WhatsApp-%2B34_603_917_596-25D366?style=flat-square&logo=whatsapp&logoColor=white" style="width:100%;"></a>
+    <div class="badge-stack">
+      <a href="mailto:krish91phy@usal.es"><img src="https://img.shields.io/badge/Email-krish91phy@usal.es-007ACC?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+      <a href="mailto:Krishnay447@gmail.com"><img src="https://img.shields.io/badge/Email-Krishnay447@gmail.com-007ACC?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+      <a href="https://wa.me/34603917596"><img src="https://img.shields.io/badge/WhatsApp-%2B34_603_917_596-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
     </div>
 
-    <p style="font-size: 13px; color: #444;">
-      <strong>📍 Current Location:</strong><br>
-      Department of Physics,<br>
-      Edificio Multiusos I+D+i,<br>
-      Universidad de Salamanca, Spain 🇪🇸
+    <p style="font-size: 13px; color: #444; margin-top: 20px;">
+      <strong>📍 Office:</strong><br>
+      Dept. of Physics, Edificio Multiusos I+D+i,<br>
+      Univ. de Salamanca, Spain 🇪🇸
     </p>
   </div>
 
   <div class="map-right">
-    <h3 style="margin-top: 0; color: white; font-size: 1.2em;">🌍 Research Journey & Global Footprint</h3>
+    <h3 style="margin-top: 0; color: white; font-size: 1.2em;">🌍 Research Journey</h3>
     <div class="map-container">
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" 
-           style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="Accurate World Map">
+           style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="World Map">
       
-      <a href="/assets/gorakhpur.jpg" class="map-point" style="top: 48%; left: 74.5%;" title="Home: Gorakhpur"></a>
-      <a href="https://www.inst.ac.in/" target="_blank" class="map-point" style="top: 41%; left: 72.5%;" title="PhD: INST Mohali"></a>
-      <a href="https://en.sce.ac.il/" target="_blank" class="map-point" style="top: 47%; left: 62.5%;" title="PostDoc: Israel"></a>
-      <a href="https://www.usal.es/en" target="_blank" class="map-point" style="top: 41%; left: 47.5%;" title="Current: Salamanca"></a>
+      <a href="/assets/gorakhpur.jpg" class="map-point" style="top: 48%; left: 74.5%;" title="Gorakhpur"></a>
+      <a href="https://www.inst.ac.in/" target="_blank" class="map-point" style="top: 41%; left: 72.5%;" title="INST Mohali"></a>
+      <a href="https://en.sce.ac.il/" target="_blank" class="map-point" style="top: 47%; left: 62.5%;" title="Israel"></a>
+      <a href="https://www.usal.es/en" target="_blank" class="map-point" style="top: 41%; left: 47.5%;" title="Salamanca"></a>
     </div>
 
-    <div class="journey-label">
-      <span>🏠 Gorakhpur</span> ➔ <span>🎓 INST Mohali</span> ➔ <span>🇮🇱 SCE Israel</span> ➔ <span>🇪🇸 Salamanca</span>
+    <div style="display: flex; justify-content: space-around; margin-top: 15px; font-size: 12px;">
+      <span>🏠 Gorakhpur</span> ➔ <span>🎓 Mohali</span> ➔ <span>🇮🇱 Israel</span> ➔ <span>🇪🇸 Salamanca</span>
     </div>
-    <p style="font-size: 11px; color: #888; text-align: center; margin-top: 10px;">* Points indicate locations of academic and research tenure.</p>
   </div>
 
 </div>
@@ -184,5 +204,5 @@ body{ background:var(--bg) !important; }
 <div align="center">
   <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
   <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
-  <a href="https://github.com/krishnay447" style="margin-left: 10px;"><img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitors"></a>
+  <a href="https://github.com/krishnay447"><img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitors"></a>
 </div>
