@@ -46,42 +46,54 @@ body{ background:var(--bg) !important; }
 .stat-item small { color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
 /* LAYOUT SPLIT */
-.main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; }
+.main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; align-items: stretch; }
 .bio-section { flex: 2; min-width: 300px; }
 
-/* SCROLLING NEWS SIDEBAR */
+/* UPDATED SCROLLING NEWS SIDEBAR */
 .news-sidebar { 
-  flex: 1; min-width: 250px; background: #fff; 
-  padding: 20px; border-radius: 12px; border: 1px solid var(--border);
-  height: 250px; /* Fixed height for scrolling area */
+  flex: 1; 
+  min-width: 300px; 
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); 
+  padding: 20px; 
+  border-radius: 16px; 
+  border: 1px solid #c2d9ff;
+  height: 480px; /* Increased height to reach down towards the gallery */
   overflow: hidden; 
   position: relative;
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
 }
+
 .news-container {
   height: 100%;
   overflow: hidden;
   position: relative;
+  margin-top: 10px;
 }
+
 .news-list {
   position: absolute;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-  animation: scroll-up 15s linear infinite;
+  animation: scroll-up 25s linear infinite; /* Slower scroll for readability */
 }
-.news-list:hover { animation-play-state: paused; } /* Stops when mouse is over it */
+
+.news-list:hover { animation-play-state: paused; }
 
 .news-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 13px;
-  color: #444;
+  padding: 15px 0;
+  border-bottom: 1px dashed #d0e3ff;
+  font-size: 13.5px;
+  color: #334e68;
+  line-height: 1.5;
 }
+
+.news-list li b { color: var(--primary-dark); }
 
 @keyframes scroll-up {
   0%   { top: 100%; }
-  100% { top: -100%; }
+  100% { top: -120%; }
 }
 
 /* SKILL PILLS */
@@ -143,27 +155,29 @@ body{ background:var(--bg) !important; }
     <div class="skill-pill">Device Fabrication</div>
     <div class="skill-pill">AI for Science</div>
     <div class="skill-pill">Waste To Energy</div>
+
+    <div style="height: 40px;"></div>
   </div>
 
   <div class="news-sidebar">
-    <h4 style="margin-top: 0; color: var(--primary); border-bottom: 2px solid var(--bg); background: white; position: relative; z-index: 10; padding-bottom: 8px;">📢 Latest News</h4>
+    <h4 style="margin-top: 0; color: var(--primary-dark); border-bottom: 2px solid #c2d9ff; padding-bottom: 10px; font-weight: 800;">📢 Latest News</h4>
     <div class="news-container">
       <ul class="news-list">
         <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> with optical microscope system for precise 2D material thickness determination.</li>
-        <li><b>Dec 2025:</b> Published new article on synthesis and water splitting from MnFe<sub>2</sub>O<sub>4</sub> in Inorganic Chemistry Communications.</li>
+        <li><b>Dec 2025:</b> Published new article on synthesis and water splitting from <b>MnFe<sub>2</sub>O<sub>4</sub></b> in Inorganic Chemistry Communications.</li>
         <li><b>Nov 2025:</b> Deliver a Scientific talk at the Universitat Autònoma de Barcelona on <b>2D TMDC for Schottky junction solar cell</b> in 4<sup>th</sup> Conference on Advanced Materials in Spain <b>(AMatS)</b>.</li>
         <li><b>Nov 2025:</b> Deliver a talk on <b>2D Materials for Advanced Solar Cells Using Engineered Metal Contacts</b> in <b>International Conference on Layered Materials and Devices: From Atoms to Chips</b> at the International Iberian Nanotechnology Laboratory (INL).</li>
         <li><b>July 2025:</b> Integrating <b>KPFM</b> with Using Engineered Metal Contact for Schottky barrier quantification at USAL.</li>
         <li><b>Dec 2025:</b> Presented a Poster on <b>Study of Solid Lubricants using Friction Force Microscopy</b> at <b>GEFES2025</b> held at <b>Oviedo</b>, Spain.</li>
         <li><b>Jun 2021:</b> Successfully defended the PhD thesis on Rare Earth Hexaboride for Field Emission.</li>
-        
-        </ul>
+      </ul>
     </div>
   </div>
 </div>
-<hr>
 
-<h3 style="text-align: center;">📸 Research & Lab Gallery</h3>
+<hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0)); margin: 40px 0;">
+
+<h3 style="text-align: center; color: var(--primary-dark);">📸 Research & Lab Gallery</h3>
 
 <div class="gallery-grid">
   <img src="photo1.jpg" alt="Lab Work">
@@ -172,7 +186,7 @@ body{ background:var(--bg) !important; }
   <img src="photo4.jpg" alt="Research Presentation">
 </div>
 
-<hr>
+<hr style="margin: 40px 0; opacity: 0.5;">
 <div align="center">
   <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
   <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
