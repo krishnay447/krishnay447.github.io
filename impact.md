@@ -4,141 +4,127 @@ title: Impact
 permalink: /impact/
 ---
 
-<!-- ===================== PAGE THEME (matches Home/Experience/Instrumentation) ===================== -->
 <style>
 /* Hide any injected first H1 from the theme */
 .markdown-body > h1:first-child { display: none !important; }
 
 /* --- GLOBAL COLORS --- */
 :root{
-  --primary:#1e88e5;        /* blue */
-  --primary-dark:#1565c0;   /* darker blue */
-  --bg:#f7f9fc;             /* soft background */
-  --border:#dce3ef;         /* light divider */
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
 }
 body{ background:var(--bg) !important; }
 
-/* ===================== HERO BANNER ===================== */
+/* HERO BANNER */
 .hero-header{
-  position:relative;
-  width:100%;
-  max-width:1150px;
-  margin:0 auto 20px;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
+  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
-.hero-header img{
-  width:100%;
-  height:260px;             /* adjust height if you prefer */
-  object-fit:cover;
-  display:block;
-}
+.hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
 .hero-title{
-  position:absolute; inset:0;
-  display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", Roboto, Arial, sans-serif;
-  font-size:clamp(28px,4vw,40px);
-  font-weight:700; color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:"Segoe UI", sans-serif; font-size:clamp(28px,4vw,40px);
+  font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* ===================== NAVIGATION BAR ===================== */
-.nav-bar{
-  text-align:center;
-  padding:12px 0;
-  background:#fff;
-  border-bottom:2px solid var(--border);
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-  font-family:"Segoe UI", sans-serif;
-  font-size:16px;
+/* NAVIGATION BAR (Cleaned up to match Home/Experience) */
+.nav-bar {
+  text-align: center; padding: 12px 0; background: #ffffff;
+  border-bottom: 3px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: "Segoe UI", sans-serif; position: sticky; top: 0; z-index: 10000;
 }
-.nav-bar a{
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600;
-  padding:0 8px;
+.nav-bar a, .dropdown-toggle {
+  color: #444; text-decoration: none; font-weight: 600; padding: 8px 16px;
+  margin: 0 4px; border-radius: 8px; transition: all 0.3s ease;
+  display: inline-block; font-size: 15px; cursor: pointer;
 }
-.nav-bar a:hover{ color:var(--primary-dark); text-decoration:underline; }
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background-color: #e3f2fd; color: var(--primary-dark); }
 
-/* ===================== DROPDOWN ===================== */
-.dropdown{ position:relative; display:inline-block; }
-.dropdown > a.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
-
-/* show menu directly under trigger (no hover gap) */
-.dropdown-content{
-  display:none; position:absolute; top:100%; left:0;
-  background:#fff; min-width:230px;
-  border:1px solid var(--border); border-radius:8px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.12);
-  z-index:9999; text-align:left;
+/* DROPDOWN */
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #ffffff; min-width: 250px; border-radius: 12px; border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; margin-top: 5px;
 }
-.dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{
-  display:block; padding:10px 16px; font-size:14px;
-  color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; white-space:nowrap;
-}
-.dropdown-content a:last-child{ border-bottom:none; }
-.dropdown-content a:hover{ background:#eef6ff; color:var(--primary-dark); }
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content a { display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; text-align: left; }
 
-/* Prevent GitHub Pages wrapper from clipping dropdown */
-.markdown-body{ overflow:visible !important; }
+/* IMPACT CONTENT STYLING */
+.impact-container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+.stat-card { background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; }
+.award-item { border-left: 4px solid var(--primary); padding-left: 15px; margin: 15px 0; }
+
+.profile-links {
+  max-width: 1150px; margin: 40px auto; text-align: center;
+  padding: 20px; border-top: 1px solid var(--border);
+}
 </style>
 
-<!-- ===================== HERO HEADER (uses header4.jpg) ===================== -->
 <div class="hero-header">
-  <img src="/assets/header8.jpg" alt="Header banner">
+  <img src="/assets/header8.jpg" alt="Impact banner">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
-<!-- ===================== NAVIGATION (same style site‑wide) ===================== -->
-<nav class="nav-bar" role="navigation" aria-label="Primary">
-  <a href="/">🏠 Home</a> |
-  <a href="/experience/">🧪 Experience</a> |
-  <a href="/instrumentation/">⚙️ Instrumentation</a> |
-  <a href="/impact/">🧭 Impact</a> |
-  <span class="dropdown">
+<div class="nav-bar">
+  <a href="/">🏠 Home</a>
+  <a href="/experience/">👨‍🔬 Experience</a>
+  <a href="/impact/">📈 Impact</a>
+  <div class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
-    <span class="dropdown-content" role="menu" aria-label="Publications submenu">
-      <a href="/patents/">1. Patents</a>
-      <a href="/Book_Chapters/">2. Book Chapters</a>
-      <a href="/publications/">3. Peer‑Reviewed Journal Articles</a>
-    </span>
-  </span> |
+    <div class="dropdown-content">
+      <a href="/patents/">📜 1. Patents</a>
+      <a href="/Book_Chapters/">📖 2. Book Chapters</a>
+      <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+    </div>
+  </div>
   <a href="/contact/">📬 Contact</a>
-</nav>
+</div>
 
----
+<div class="impact-container">
+  <h1 style="color: var(--primary-dark); border-bottom: 2px solid var(--primary); padding-bottom: 10px;">📊 Scientific Impact & Publications</h1>
 
-# 📊 Scientific Impact & Publications
+  <div class="stat-card">
+    <h3 style="margin-top: 0;">📈 Statistics</h3>
+    <ul style="list-style: none; padding: 0; font-size: 1.1em;">
+      <li>✅ <b>Publications:</b> 51 Peer-reviewed articles</li>
+      <li>✅ <b>Book Chapters:</b> 13 Chapters</li>
+      <li>✅ <b>Citations:</b> 761</li>
+    </ul>
+  </div>
 
-### 📈 Statistics
-* **Publications:** 51 Peer-reviewed articles.
-* **Book Chapters:** 13 Chapters.
-* **Citations:** 761.
+  <h3 style="color: var(--primary-dark);">🏆 Key Awards</h3>
+  <div class="award-item">
+    <b>CSIR-NET:</b> Qualified in Physical Science (2015)
+  </div>
+  <div class="award-item">
+    <b>Best Poster:</b> 9th Bangalore India Nano (2017)
+  </div>
 
----
+  <hr style="margin: 30px 0; opacity: 0.2;">
 
-### 🏆 Key Awards
-* **CSIR-NET:** Qualified in Physical Science (2015).
-* **Best Poster:** 9th Bangalore India Nano (2017).
+  <h2 style="color: var(--primary-dark);">💻 Digital Innovation & Software</h2>
+  
+  <h3 style="display: flex; align-items: center;">⚡ Photocurrent Detector Tool</h3>
+  <p>Developed custom software leveraging artificial intelligence to automate the extraction of photocurrent response from raw experimental data. This includes the automated determination of:</p>
+    <ul>
+    <li><b>Response Time</b></li>
+    <li><b>Detectivity</b></li>
+    <li><b>External Quantum Efficiency (EQE)</b></li>
+  </ul>
 
----
+  <h3 style="display: flex; align-items: center;">📄 PDF Management Platform</h3>
+  <p>Created a web-based tool designed for the efficient management and categorization of scientific PDF documents, streamlining the literature review process for research teams.</p>
+</div>
 
-## 💻 Digital Innovation & Software
-
-### ⚡ Photocurrent Detector Tool
-Developed custom software leveraging artificial intelligence to automate the extraction of photocurrent response from raw experimental data. This includes the automated determination of:
-* **Response Time**
-* **Detectivity**
-* **External Quantum Efficiency (EQE)**
-
----
-
-### 📄 PDF Management Platform
-Created a web-based tool designed for the efficient management and categorization of scientific PDF documents, streamlining the literature review process for research teams.
-
----
-
-[🔙 Back to Home Page](https://krishnay447.github.io)
+<div class="profile-links">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
+    <img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar">
+  </a>
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank">
+    <img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID">
+  </a>
+</div>
