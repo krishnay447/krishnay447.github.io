@@ -23,7 +23,7 @@ body{ background:var(--bg) !important; }
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* UPDATED BEAUTIFUL NAVIGATION BAR */
+/* NAVIGATION BAR */
 .nav-bar {
   text-align: center;
   padding: 12px 0;
@@ -35,7 +35,6 @@ body{ background:var(--bg) !important; }
   top: 0;
   z-index: 10000;
 }
-
 .nav-bar a, .dropdown-toggle {
   color: #444;
   text-decoration: none;
@@ -48,15 +47,13 @@ body{ background:var(--bg) !important; }
   font-size: 15px;
   cursor: pointer;
 }
-
 .nav-bar a:hover, .dropdown:hover .dropdown-toggle {
   background-color: #e3f2fd;
   color: var(--primary-dark);
 }
 
-/* DROPDOWN REFINEMENT */
+/* DROPDOWN */
 .dropdown { position: relative; display: inline-block; }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -72,19 +69,11 @@ body{ background:var(--bg) !important; }
   overflow: hidden;
   margin-top: 5px;
 }
-
 .dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.3s; }
-
 .dropdown-content a {
-  display: block;
-  padding: 12px 20px;
-  margin: 0;
-  border-radius: 0;
-  border-bottom: 1px solid #f0f0f0;
-  text-align: left;
-  font-size: 14px;
+  display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0;
+  text-align: left; font-size: 14px;
 }
-
 .dropdown-content a:hover { background-color: #f8fbff; padding-left: 25px; }
 
 @keyframes fadeIn {
@@ -92,72 +81,56 @@ body{ background:var(--bg) !important; }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-/* STATS BAR */
+/* REFINED THINNER STATS BAR */
 .stats-bar {
-  display: flex; justify-content: space-around; background: #fff; 
-  padding: 20px; border-radius: 12px; border: 1px solid var(--border); 
-  margin: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  display: flex; 
+  justify-content: space-around; 
+  background: #fff; 
+  padding: 10px 20px; /* Thinner Y-direction padding */
+  border-radius: 12px; 
+  border: 1px solid var(--border); 
+  margin: 15px 0; 
+  text-align: center; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
-.stat-item h2 { color: var(--primary); margin: 0; font-size: 24px; }
-.stat-item small { color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+.stat-item { 
+  text-decoration: none; 
+  color: inherit; 
+  flex: 1; 
+  cursor: pointer; 
+  transition: transform 0.2s; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stat-item:hover { transform: translateY(-2px); }
+.stat-item h2 { color: var(--primary); margin: 0; font-size: 22px; line-height: 1.2; }
+.stat-item small { color: #666; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 11px; }
 
 /* LAYOUT SPLIT */
 .main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; align-items: stretch; }
+.bio-section { flex: 2; min-width: 300px; text-align: justify; text-justify: inter-word; }
 
-/* BIO SECTION - JUSTIFIED */
-.bio-section { 
-  flex: 2; 
-  min-width: 300px; 
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* UPDATED SCROLLING NEWS SIDEBAR */
+/* NEWS SIDEBAR */
 .news-sidebar { 
-  flex: 1; 
-  min-width: 300px; 
-  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); 
-  padding: 20px; 
-  border-radius: 16px; 
-  border: 1px solid #c2d9ff;
-  height: 480px; 
-  overflow: hidden; 
-  position: relative;
+  flex: 1; min-width: 300px; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); 
+  padding: 20px; border-radius: 16px; border: 1px solid #c2d9ff;
+  height: 480px; overflow: hidden; position: relative;
   box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
 }
-
-.news-container {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  margin-top: 10px;
-}
-
+.news-container { height: 100%; overflow: hidden; position: relative; margin-top: 10px; }
 .news-list {
-  position: absolute;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  position: absolute; width: 100%; margin: 0; padding: 0; list-style: none;
   animation: scroll-up 25s linear infinite;
 }
-
 .news-list:hover { animation-play-state: paused; }
-
 .news-list li {
-  padding: 15px 0;
-  border-bottom: 1px dashed #d0e3ff;
-  font-size: 13.5px;
-  color: #334e68;
-  line-height: 1.6;
-  text-align: justify;
-  text-justify: inter-word;
+  padding: 15px 0; border-bottom: 1px dashed #d0e3ff; font-size: 13.5px;
+  color: #334e68; line-height: 1.6; text-align: justify; text-justify: inter-word;
 }
-
-.news-list li b { color: var(--primary-dark); }
-
 @keyframes scroll-up {
-  0%   { top: 100%; }
+  0% { top: 100%; }
   100% { top: -140%; }
 }
 
@@ -170,29 +143,21 @@ body{ background:var(--bg) !important; }
 
 /* SINGLE ROW GALLERY */
 .gallery-grid { 
-  display: flex; 
-  flex-direction: row; 
-  justify-content: space-between; 
-  gap: 12px; 
-  margin-top: 20px; 
-  width: 100%;
+  display: flex; flex-direction: row; justify-content: space-between; 
+  gap: 12px; margin-top: 20px; width: 100%;
 }
 .gallery-grid img { 
-  width: calc(25% - 12px); 
-  height: 200px; 
-  object-fit: contain; 
-  background: #fff;
-  border-radius: 12px; 
-  border: 1px solid var(--border); 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
+  width: calc(25% - 12px); height: 200px; object-fit: contain; 
+  background: #fff; border-radius: 12px; border: 1px solid var(--border); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s;
 }
 .gallery-grid img:hover { transform: scale(1.05); z-index: 5; }
 
-/* Stack images on mobile */
 @media (max-width: 768px) {
   .gallery-grid { flex-wrap: wrap; }
   .gallery-grid img { width: calc(50% - 12px); }
+  .stats-bar { flex-wrap: wrap; }
+  .stat-item { min-width: 45%; margin: 5px 0; }
 }
 </style>
 
@@ -218,10 +183,18 @@ body{ background:var(--bg) !important; }
 </div>
 
 <div class="stats-bar">
-  <div class="stat-item"><h2>50+</h2><small>Articles</small></div>
-  <div class="stat-item"><h2>3</h2><small>Patents</small></div>
-  <div class="stat-item"><h2>3</h2><small>Countries</small></div>
-  <div class="stat-item"><h2>750+</h2><small>Citations</small></div>
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" class="stat-item">
+    <h2>50+</h2><small>Articles</small>
+  </a>
+  <a href="/patents/" class="stat-item">
+    <h2>3</h2><small>Patents</small>
+  </a>
+  <div class="stat-item" style="cursor: default;">
+    <h2>3</h2><small>Countries</small>
+  </div>
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" class="stat-item">
+    <h2>750+</h2><small>Citations</small>
+  </a>
 </div>
 
 <div class="main-grid">
@@ -250,13 +223,13 @@ body{ background:var(--bg) !important; }
     <h4 style="margin-top: 0; color: var(--primary-dark); border-bottom: 2px solid #c2d9ff; padding-bottom: 10px; font-weight: 800; text-align: left;">📢 Latest News</h4>
     <div class="news-container">
       <ul class="news-list">
-        <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> with optical microscope system for precise 2D material thickness determination.</li>
+        <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> with optical microscope for 2D material thickness determination.</li>
         <li><b>Dec 2025:</b> Published new article on synthesis and water splitting from <b>MnFe<sub>2</sub>O<sub>4</sub></b> in Inorganic Chemistry Communications.</li>
-        <li><b>Nov 2025:</b> Deliver a Scientific talk at the Universitat Autònoma de Barcelona on <b>2D TMDC for Schottky junction solar cell</b> in 4<sup>th</sup> Conference on Advanced Materials in Spain <b>(AMatS)</b>.</li>
-        <li><b>Nov 2025:</b> Deliver a talk on <b>2D Materials for Advanced Solar Cells Using Engineered Metal Contacts</b> in <b>International Conference on Layered Materials and Devices: From Atoms to Chips</b> at the International Iberian Nanotechnology Laboratory (INL).</li>
-        <li><b>July 2025:</b> Integrating <b>KPFM</b> with Using Engineered Metal Contact for Schottky barrier quantification at USAL.</li>
-        <li><b>Dec 2025:</b> Presented a Poster on <b>Study of Solid Lubricants using Friction Force Microscopy</b> at <b>GEFES2025</b> held at <b>Oviedo</b>, Spain.</li>
-        <li><b>Jun 2021:</b> Successfully defended the PhD thesis on Rare Earth Hexaboride for Field Emission.</li>
+        <li><b>Nov 2025:</b> Talk on <b>2D TMDC for Schottky junction solar cell</b> at AMatS Spain.</li>
+        <li><b>Nov 2025:</b> Talk at INL on <b>2D Materials for Advanced Solar Cells</b>.</li>
+        <li><b>July 2025:</b> Integrating <b>KPFM</b> for Schottky barrier quantification at USAL.</li>
+        <li><b>Dec 2025:</b> Poster at GEFES2025 on <b>Solid Lubricants</b>.</li>
+        <li><b>Jun 2021:</b> Defended PhD thesis on Rare Earth Hexaboride.</li>
       </ul>
     </div>
   </div>
