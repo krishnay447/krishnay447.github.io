@@ -88,7 +88,7 @@ body{ background:var(--bg) !important; }
 
 <!-- ===================== HERO HEADER (uses header4.jpg) ===================== -->
 <div class="hero-header">
-  <img src="/assets/header4.jpg" alt="Header banner">
+  <img src="/assets/header8.jpg" alt="Header banner">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
