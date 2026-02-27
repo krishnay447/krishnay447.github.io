@@ -47,7 +47,14 @@ body{ background:var(--bg) !important; }
 
 /* LAYOUT SPLIT */
 .main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; align-items: stretch; }
-.bio-section { flex: 2; min-width: 300px; }
+
+/* BIO SECTION WITH JUSTIFIED TEXT */
+.bio-section { 
+  flex: 2; 
+  min-width: 300px; 
+  text-align: justify; /* This aligns both left and right edges */
+  text-justify: inter-word;
+}
 
 /* UPDATED SCROLLING NEWS SIDEBAR */
 .news-sidebar { 
@@ -57,7 +64,7 @@ body{ background:var(--bg) !important; }
   padding: 20px; 
   border-radius: 16px; 
   border: 1px solid #c2d9ff;
-  height: 480px; /* Increased height to reach down towards the gallery */
+  height: 480px; 
   overflow: hidden; 
   position: relative;
   box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
@@ -76,7 +83,7 @@ body{ background:var(--bg) !important; }
   margin: 0;
   padding: 0;
   list-style: none;
-  animation: scroll-up 25s linear infinite; /* Slower scroll for readability */
+  animation: scroll-up 25s linear infinite;
 }
 
 .news-list:hover { animation-play-state: paused; }
@@ -86,14 +93,16 @@ body{ background:var(--bg) !important; }
   border-bottom: 1px dashed #d0e3ff;
   font-size: 13.5px;
   color: #334e68;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: justify; /* Justify text inside news items */
+  text-justify: inter-word;
 }
 
 .news-list li b { color: var(--primary-dark); }
 
 @keyframes scroll-up {
   0%   { top: 100%; }
-  100% { top: -120%; }
+  100% { top: -140%; } /* Adjusted for longer content */
 }
 
 /* SKILL PILLS */
@@ -140,27 +149,28 @@ body{ background:var(--bg) !important; }
 
 <div class="main-grid">
   <div class="bio-section">
-    <h1 style="color: var(--primary-dark); margin-top:0;">Dr. Krishna Kumar Yadav</h1>
-    <h3 style="color: #555;">Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸</h3>
+    <h1 style="color: var(--primary-dark); margin-top:0; text-align: left;">Dr. Krishna Kumar Yadav</h1>
+    <h3 style="color: #555; text-align: left;">Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸</h3>
+    
     <p>
       I am a physicist specializing in <b>Nanotechnology, Energy Device Fabrication</b>, and <b>Advanced Material Synthesis</b>. 
       My research primarily explores Metal hexaborides and 2D transition metal dichalcogenides (TMDs). 
       I am passionate about integrating <b>Artificial Intelligence</b> into materials science to accelerate discovery and automate complex data analysis.
     </p>
     
-    <h4>🛠️ Technical Toolkit</h4>
-    <div class="skill-pill">KPFM/FFM</div>
-    <div class="skill-pill">Exfoliation</div>
-    <div class="skill-pill">Cold Field Emission</div>
-    <div class="skill-pill">Device Fabrication</div>
-    <div class="skill-pill">AI for Science</div>
-    <div class="skill-pill">Waste To Energy</div>
-
-    <div style="height: 40px;"></div>
+    <h4 style="text-align: left;">🛠️ Technical Toolkit</h4>
+    <div style="text-align: left;">
+        <div class="skill-pill">KPFM/FFM</div>
+        <div class="skill-pill">Exfoliation</div>
+        <div class="skill-pill">Cold Field Emission</div>
+        <div class="skill-pill">Device Fabrication</div>
+        <div class="skill-pill">AI for Science</div>
+        <div class="skill-pill">Waste To Energy</div>
+    </div>
   </div>
 
   <div class="news-sidebar">
-    <h4 style="margin-top: 0; color: var(--primary-dark); border-bottom: 2px solid #c2d9ff; padding-bottom: 10px; font-weight: 800;">📢 Latest News</h4>
+    <h4 style="margin-top: 0; color: var(--primary-dark); border-bottom: 2px solid #c2d9ff; padding-bottom: 10px; font-weight: 800; text-align: left;">📢 Latest News</h4>
     <div class="news-container">
       <ul class="news-list">
         <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> with optical microscope system for precise 2D material thickness determination.</li>
