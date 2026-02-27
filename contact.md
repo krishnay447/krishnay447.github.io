@@ -4,7 +4,6 @@ title: Contact
 permalink: /contact/
 ---
 
-<!-- ===================== PAGE THEME (matches Home/Experience/Instrumentation/Impact) ===================== -->
 <style>
 /* Hide any injected first H1 from the theme */
 .markdown-body > h1:first-child { display: none !important; }
@@ -30,7 +29,7 @@ body{ background:var(--bg) !important; }
 }
 .hero-header img{
   width:100%;
-  height:260px;             /* adjust height if you prefer */
+  height:260px;
   object-fit:cover;
   display:block;
 }
@@ -66,7 +65,6 @@ body{ background:var(--bg) !important; }
 .dropdown{ position:relative; display:inline-block; }
 .dropdown > a.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
 
-/* show menu directly under trigger (no hover gap) */
 .dropdown-content{
   display:none; position:absolute; top:100%; left:0;
   background:#fff; min-width:230px;
@@ -85,17 +83,36 @@ body{ background:var(--bg) !important; }
 /* Prevent GitHub Pages wrapper from clipping dropdown */
 .markdown-body{ overflow:visible !important; }
 
-/* Optional: tighten table visuals on this page only */
+/* ===================== CONTACT PAGE SPECIFIC LAYOUT ===================== */
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px; 
+  margin: 20px 0;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+}
+
+.contact-photo {
+  width: 160px; 
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 3px solid #fff;
+}
+
+.address-details {
+  flex: 1;
+  min-width: 250px;
+}
+
 .contact-table td, .contact-table th { padding: 8px 10px; }
 </style>
 
-<!-- ===================== HERO HEADER (uses header1.jpg) ===================== -->
 <div class="hero-header">
   <img src="/assets/header1.jpg" alt="Header banner">
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
-<!-- ===================== NAVIGATION (same style site‑wide) ===================== -->
 <nav class="nav-bar" role="navigation" aria-label="Primary">
   <a href="/">🏠 Home</a> |
   <a href="/experience/">👨‍🔬 Experience</a> |
@@ -126,10 +143,22 @@ Click the buttons below to reach me or view my professional profiles.
 | 🎓 **Google Scholar** | <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-View_Profile-red?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar Profile"></a> |
 | 🆔 **ORCID iD** | <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-0000--0002--9063--7851-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID: 0000-0002-9063-7851"></a> |
 
+---
+
 ### 📍 Location
-**Department of Physics**, Edificio Multiusos I+D+i  
-Universidad de Salamanca  
-C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸
+
+<div class="contact-container">
+  <img src="/assets/profile.jpg" alt="Krishna Kumar Yadav" class="contact-photo">
+
+  <div class="address-details">
+    <p><strong>Department of Physics</strong><br>
+    Edificio Multiusos I+D+i<br>
+    Universidad de Salamanca<br>
+    C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸</p>
+    
+    <p><em>Passionate about materials science, photocurrent detection, and AI-driven data analysis.</em></p>
+  </div>
+</div>
 
 ---
 
@@ -140,5 +169,3 @@ C. Espejo, 2, 37007 Salamanca, Spain 🇪🇸
 </div>
 
 ---
-
-https://krishnay447.github.io
