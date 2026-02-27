@@ -66,27 +66,27 @@ body{ background:var(--bg) !important; }
 .main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; align-items: flex-start; }
 .bio-section { flex: 2; min-width: 300px; text-align: justify; }
 
-/* SHORTENED NEWS SIDEBAR */
+/* ALIGNED NEWS SIDEBAR */
 .news-sidebar { 
   flex: 1; min-width: 300px; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); 
   padding: 15px 20px; border-radius: 16px; border: 1px solid #c2d9ff;
-  height: 320px; /* Reduced height to align with toolkit */
+  height: 325px; 
   overflow: hidden; position: relative;
   box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
 }
 .news-container { height: 100%; overflow: hidden; position: relative; margin-top: 5px; }
 .news-list {
   position: absolute; width: 100%; margin: 0; padding: 0; list-style: none;
-  animation: scroll-up 20s linear infinite;
+  animation: scroll-up 22s linear infinite;
 }
 .news-list:hover { animation-play-state: paused; }
 .news-list li {
-  padding: 10px 0; border-bottom: 1px dashed #d0e3ff; font-size: 13px;
+  padding: 10px 0; border-bottom: 1px dashed #d0e3ff; font-size: 13.2px;
   color: #334e68; line-height: 1.5;
 }
 @keyframes scroll-up {
   0% { top: 100%; }
-  100% { top: -180%; }
+  100% { top: -190%; }
 }
 
 /* SKILL PILLS */
@@ -159,17 +159,17 @@ body{ background:var(--bg) !important; }
       <div class="skill-pill">Cold Field Emission</div>
       <div class="skill-pill">Device Fabrication</div>
       <div class="skill-pill">AI for Science</div>
-    </div>
+      </div>
   </div>
 
   <div class="news-sidebar">
     <h4 style="margin-top: 0; color: var(--primary-dark); border-bottom: 2px solid #c2d9ff; padding-bottom: 8px; font-weight: 800; text-align: left; font-size: 15px;">📢 Latest News</h4>
     <div class="news-container">
       <ul class="news-list">
-        <li><b>Jan 2026:</b> Integrated a <b>Spectrometer</b> for 2D material thickness.</li>
-        <li><b>Dec 2025:</b> Published <b>MnFe<sub>2</sub>O<sub>4</sub></b> in Inorg. Chem. Comm.</li>
-        <li><b>Nov 2025:</b> Talk at AMatS Spain on <b>TMD Schottky cells</b>.</li>
-        <li><b>July 2025:</b> KPFM barrier quantification at USAL.</li>
+        <li><b>Jan 2026:</b> Successfully integrated a <b>Spectrometer</b> for 2D material thickness determination.</li>
+        <li><b>Dec 2025:</b> Published article on <b>MnFe<sub>2</sub>O<sub>4</sub></b> in Inorganic Chemistry Communications.</li>
+        <li><b>Nov 2025:</b> Talk at AMatS Spain on <b>2D TMDC Schottky junction solar cells</b>.</li>
+        <li><b>July 2025:</b> Integrating <b>KPFM</b> for Schottky barrier quantification at USAL.</li>
         <li><b>Dec 2025:</b> Poster on <b>Solid Lubricants</b> at GEFES2025.</li>
         <li><b>Jun 2021:</b> Defended PhD thesis on Rare Earth Hexaboride.</li>
       </ul>
