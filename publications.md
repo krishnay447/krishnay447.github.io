@@ -81,7 +81,7 @@ sup { top: -0.4em; }
 
 <div class="hero-header">
   <img src="/assets/header7.jpg" alt="Banner">
-  <div class="hero-title">Krishna Kumar Yadav</div>
+  <div class="hero-title">Knowledge Sharing</div>
 </div>
 
 <nav class="nav-bar">
