@@ -115,8 +115,8 @@ body{ background:var(--bg) !important; }
 
 ### 📈 Statistics
 * **Publications:** 51 Peer-reviewed articles.
-* **Book Chapters:** 11 Chapters.
-* **Citations:** Add your citation count here.
+* **Book Chapters:** 13 Chapters.
+* **Citations:** 761.
 
 ---
 
