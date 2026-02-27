@@ -29,7 +29,8 @@ body{ background:var(--bg) !important; }
 .dropdown{ position:relative; display:inline-block; }
 .dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
 .dropdown-content{
-  display:none; position:absolute; top:100%; left:0; background:#fff; min-width:200px;
+  display:none; position:absolute; top:100%; left:50%; transform: translateX(-50%);
+  background:#fff; min-width:200px;
   border:1px solid var(--border); border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.12); z-index:9999;
 }
 .dropdown:hover .dropdown-content{ display:block; }
@@ -91,7 +92,6 @@ body{ background:var(--bg) !important; }
 <nav class="nav-bar">
   <a href="/">🏠 Home</a> | 
   <a href="/experience/">👨‍🔬 Experience</a> | 
-  <a href="/instrumentation/">🔬 Instrumentation</a> | 
   <a href="/impact/">📈 Impact</a> | 
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
