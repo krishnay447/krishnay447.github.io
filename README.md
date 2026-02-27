@@ -23,18 +23,74 @@ body{ background:var(--bg) !important; }
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* NAVIGATION */
-.nav-bar{ text-align:center; padding:12px 0; background:#fff; border-bottom:2px solid var(--border); box-shadow:0 2px 6px rgba(0,0,0,0.05); }
-.nav-bar a{ color:var(--primary); text-decoration:none; font-weight:600; padding:0 8px; }
-
-/* DROPDOWN */
-.dropdown{ position:relative; display:inline-block; }
-.dropdown-content{
-  display:none; position:absolute; top:100%; left:0; background:#fff; min-width:230px;
-  border:1px solid var(--border); border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.12); z-index:9999;
+/* UPDATED BEAUTIFUL NAVIGATION BAR */
+.nav-bar {
+  text-align: center;
+  padding: 12px 0;
+  background: #ffffff;
+  border-bottom: 3px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: "Segoe UI", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
 }
-.dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{ display:block; padding:10px 16px; font-size:14px; color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; }
+
+.nav-bar a, .dropdown-toggle {
+  color: #444;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: 0 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
+  background-color: #e3f2fd;
+  color: var(--primary-dark);
+}
+
+/* DROPDOWN REFINEMENT */
+.dropdown { position: relative; display: inline-block; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  min-width: 250px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 9999;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.3s; }
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  margin: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover { background-color: #f8fbff; padding-left: 25px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
 
 /* STATS BAR */
 .stats-bar {
@@ -124,7 +180,7 @@ body{ background:var(--bg) !important; }
 .gallery-grid img { 
   width: calc(25% - 12px); 
   height: 200px; 
-  object-fit: contain; /* Ensures full charts/plots are visible */
+  object-fit: contain; 
   background: #fff;
   border-radius: 12px; 
   border: 1px solid var(--border); 
@@ -146,16 +202,19 @@ body{ background:var(--bg) !important; }
 </div>
 
 <div class="nav-bar">
-  <a href="/">🏠 Home</a> | <a href="/experience/">👨‍🔬 Experience</a> | 
-  <a href="/instrumentation/">🔬 Instrumentation</a> | <a href="/impact/">📈 Impact</a> |
-  <span class="dropdown">
+  <a href="/">🏠 Home</a>
+  <a href="/experience/">👨‍🔬 Experience</a>
+  <a href="/instrumentation/">🔬 Instrumentation</a>
+  <a href="/impact/">📈 Impact</a>
+  <div class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
     <div class="dropdown-content">
-      <a href="/patents/">1. Patents</a>
-      <a href="/Book_Chapters/">2. Book Chapters</a>
-      <a href="/publications/">3. Peer-Reviewed Articles</a>
+      <a href="/patents/">📜 1. Patents</a>
+      <a href="/Book_Chapters/">📖 2. Book Chapters</a>
+      <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
     </div>
-  </span> | <a href="/contact/">📬 Contact</a>
+  </div>
+  <a href="/contact/">📬 Contact</a>
 </div>
 
 <div class="stats-bar">
@@ -184,7 +243,6 @@ body{ background:var(--bg) !important; }
       <div class="skill-pill">AI for Science</div>
       <div class="skill-pill">Waste To Energy</div>
     </div>
-
     <div style="height: 40px;"></div>
   </div>
 
