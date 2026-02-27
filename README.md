@@ -48,11 +48,11 @@ body{ background:var(--bg) !important; }
 /* LAYOUT SPLIT */
 .main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; align-items: stretch; }
 
-/* BIO SECTION WITH JUSTIFIED TEXT */
+/* BIO SECTION - JUSTIFIED */
 .bio-section { 
   flex: 2; 
   min-width: 300px; 
-  text-align: justify; /* This aligns both left and right edges */
+  text-align: justify;
   text-justify: inter-word;
 }
 
@@ -94,7 +94,7 @@ body{ background:var(--bg) !important; }
   font-size: 13.5px;
   color: #334e68;
   line-height: 1.6;
-  text-align: justify; /* Justify text inside news items */
+  text-align: justify;
   text-justify: inter-word;
 }
 
@@ -102,7 +102,7 @@ body{ background:var(--bg) !important; }
 
 @keyframes scroll-up {
   0%   { top: 100%; }
-  100% { top: -140%; } /* Adjusted for longer content */
+  100% { top: -140%; }
 }
 
 /* SKILL PILLS */
@@ -112,14 +112,32 @@ body{ background:var(--bg) !important; }
   font-weight: 600; margin: 4px; border: 1px solid #d0e3ff;
 }
 
-/* RESPONSIVE GALLERY */
-.gallery-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+/* SINGLE ROW GALLERY */
+.gallery-grid { 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  gap: 12px; 
+  margin-top: 20px; 
+  width: 100%;
+}
 .gallery-grid img { 
-  width: 260px; height: 200px; object-fit: cover; 
-  border-radius: 12px; border: 3px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: calc(25% - 12px); 
+  height: 200px; 
+  object-fit: contain; /* Ensures full charts/plots are visible */
+  background: #fff;
+  border-radius: 12px; 
+  border: 1px solid var(--border); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s;
 }
-.gallery-grid img:hover { transform: translateY(-5px); }
+.gallery-grid img:hover { transform: scale(1.05); z-index: 5; }
+
+/* Stack images on mobile */
+@media (max-width: 768px) {
+  .gallery-grid { flex-wrap: wrap; }
+  .gallery-grid img { width: calc(50% - 12px); }
+}
 </style>
 
 <div class="hero-header">
@@ -151,7 +169,6 @@ body{ background:var(--bg) !important; }
   <div class="bio-section">
     <h1 style="color: var(--primary-dark); margin-top:0; text-align: left;">Dr. Krishna Kumar Yadav</h1>
     <h3 style="color: #555; text-align: left;">Post-Doctoral Fellow | University of Salamanca, Spain 🇪🇸</h3>
-    
     <p>
       I am a physicist specializing in <b>Nanotechnology, Energy Device Fabrication</b>, and <b>Advanced Material Synthesis</b>. 
       My research primarily explores Metal hexaborides and 2D transition metal dichalcogenides (TMDs). 
@@ -160,13 +177,15 @@ body{ background:var(--bg) !important; }
     
     <h4 style="text-align: left;">🛠️ Technical Toolkit</h4>
     <div style="text-align: left;">
-        <div class="skill-pill">KPFM/FFM</div>
-        <div class="skill-pill">Exfoliation</div>
-        <div class="skill-pill">Cold Field Emission</div>
-        <div class="skill-pill">Device Fabrication</div>
-        <div class="skill-pill">AI for Science</div>
-        <div class="skill-pill">Waste To Energy</div>
+      <div class="skill-pill">KPFM/FFM</div>
+      <div class="skill-pill">Exfoliation</div>
+      <div class="skill-pill">Cold Field Emission</div>
+      <div class="skill-pill">Device Fabrication</div>
+      <div class="skill-pill">AI for Science</div>
+      <div class="skill-pill">Waste To Energy</div>
     </div>
+
+    <div style="height: 40px;"></div>
   </div>
 
   <div class="news-sidebar">
@@ -187,13 +206,13 @@ body{ background:var(--bg) !important; }
 
 <hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0)); margin: 40px 0;">
 
-<h3 style="text-align: center; color: var(--primary-dark);">📸 Research & Lab Gallery</h3>
+<h3 style="text-align: center; color: var(--primary-dark); margin-bottom: 25px;">📸 Research & Lab Gallery</h3>
 
 <div class="gallery-grid">
-  <img src="photo1.jpg" alt="Lab Work">
-  <img src="photo2.jpg" alt="Sample Analysis">
-  <img src="photo3.jpg" alt="Scientific Equipment">
-  <img src="photo4.jpg" alt="Research Presentation">
+  <img src="photo1.jpg" alt="3D Surface Mapping">
+  <img src="photo2.jpg" alt="Crystal Structure MnFe2O4">
+  <img src="photo3.jpg" alt="KPFM Mapping">
+  <img src="photo4.jpg" alt="Scientific Graph">
 </div>
 
 <hr style="margin: 40px 0; opacity: 0.5;">
