@@ -40,9 +40,14 @@ body{ background:var(--bg) !important; }
 .contact-left { flex: 1; min-width: 280px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 .map-right { flex: 2.3; min-width: 350px; background: #1a1a1a; padding: 20px; border-radius: 12px; color: white; }
 
-/* CONTACT BADGES */
-.badge-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
-.badge-stack img { height: 32px; width: 100%; object-fit: contain; }
+/* CONTACT BADGES - FIXED SIZING */
+.badge-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; align-items: flex-start; }
+.badge-stack a img { 
+  height: 28px; 
+  width: 240px; /* Forces all badges to be the same width */
+  object-fit: fill; 
+  border-radius: 4px;
+}
 
 /* MAP PINS */
 .map-container { position: relative; background: #222; border-radius: 10px; overflow: hidden; border: 1px solid #444; }
@@ -113,25 +118,25 @@ body{ background:var(--bg) !important; }
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" 
            style="width: 100%; filter: invert(1) opacity(0.4); display: block;" alt="World Map">
       
-      <a href="/assets/gorakhpur.jpg" target="_blank" title="Gorakhpur, India">
-        <svg class="map-pin" style="top: 31.5%; left: 68.5%;" viewBox="0 0 24 24" fill="#ff4757">
+      <a href="https://gorakhpur.nic.in/" target="_blank" title="Gorakhpur, India">
+        <svg class="map-pin" style="top: 31.5%; left: 68.5%;" viewBox="0 0 24 24" fill="#FF9933">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
-      <a href="/assets/mohali.jpg" target="_blank" title="Mohali, India">
-        <svg class="map-pin" style="top: 30.4%; left: 66.5%;" viewBox="0 0 24 24" fill="#ff4757">
+      <a href="https://www.inst.ac.in/" target="_blank" title="INST Mohali, India">
+        <svg class="map-pin" style="top: 30.4%; left: 66.5%;" viewBox="0 0 24 24" fill="#FFFFFF">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
-      <a href="/assets/israel.jpg" target="_blank" title="Israel">
-        <svg class="map-pin" style="top: 24.5%; left: 55.45%;" viewBox="0 0 24 24" fill="#ff4757">
+      <a href="https://en.sce.ac.il/" target="_blank" title="SCE, Israel">
+        <svg class="map-pin" style="top: 24.5%; left: 55.45%;" viewBox="0 0 24 24" fill="#2E8B57">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </a>
 
-      <a href="/assets/salamanca.jpg" target="_blank" title="Salamanca, Spain (Current)">
+      <a href="https://lbt.usal.es/" target="_blank" title="LBT, Univ. de Salamanca">
         <svg class="map-pin pin-active" style="top: 21.3%; left: 44%;" viewBox="0 0 24 24">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
