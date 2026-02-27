@@ -86,7 +86,7 @@ body{ background:var(--bg) !important; }
 
 <div class="hero-header">
   <img src="/assets/header1.jpg" alt="Header Banner">
-  <div class="hero-title">Krishna Kumar Yadav</div>
+  <div class="hero-title">Say Hello</div>
 </div>
 
 <nav class="nav-bar">
