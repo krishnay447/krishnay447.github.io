@@ -7,72 +7,89 @@ permalink: /patents/
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-/* 1. CLEANUP */
+/* 1. GLOBAL STYLES */
 .markdown-body > h1:first-child { display: none !important; }
 
 :root{
   --primary:#1e88e5;
   --primary-dark:#1565c0;
-  --bg:#f7f9fc;
+  --bg:#f0f4f8;
   --border:#dce3ef;
+  --card-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-serif; }
 
-/* 2. NAVIGATION BAR */
+/* 2. NAVIGATION BAR (Fixed & Stylish) */
 .nav-bar {
-  text-align: center; background: #ffffff; border-bottom: 3px solid var(--border);
-  position: sticky; top: 0; z-index: 10000; display: flex; justify-content: center; gap: 5px; padding: 12px 0;
+  text-align: center; background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--border);
+  position: sticky; top: 0; z-index: 10000;
+  display: flex; justify-content: center; align-items: center; gap: 10px; padding: 12px 0;
 }
 .nav-item { position: relative; display: inline-block; }
 .nav-bar a, .drop-btn {
-  color: #444; text-decoration: none; font-weight: 600; padding: 10px 18px;
-  border-radius: 8px; transition: 0.2s; font-size: 15px; cursor: pointer; border: none; background: none;
+  color: #444; text-decoration: none; font-weight: 600; padding: 10px 20px;
+  border-radius: 8px; transition: 0.3s; font-size: 15px; cursor: pointer; border: none; background: none;
 }
-.nav-bar a:hover, .nav-item:hover .drop-btn { background-color: #e3f2fd; color: var(--primary-dark); }
+.nav-bar a:hover, .nav-item:hover .drop-btn { background-color: var(--primary); color: white !important; }
 
 .dropdown-content {
   display: none; position: absolute; background-color: #ffffff; min-width: 220px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1); z-index: 1; border-radius: 8px; top: 100%; left: 0; border: 1px solid var(--border);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1); border-radius: 10px; top: 100%; left: 0; border: 1px solid var(--border); overflow: hidden;
 }
-.nav-item:hover .dropdown-content { display: block; }
-.dropdown-content a { color: #444; padding: 12px 16px; text-decoration: none; display: block; text-align: left; border-bottom: 1px solid #f1f1f1; }
+.nav-item:hover .dropdown-content { display: block; animation: fadeIn 0.3s ease; }
+.dropdown-content a { color: #444; padding: 12px 16px; display: block; text-align: left; border-bottom: 1px solid #f1f1f1; }
+.dropdown-content a:hover { background: #f8fbff; color: var(--primary); }
 
-/* 3. PATENT CARDS & IMAGE HOLDERS */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* 3. PATENT GRID SYSTEM */
+.patent-section { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 .patent-card {
-  background: #fff; padding: 25px; border-radius: 12px; 
-  border: 1px solid var(--border); margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  background: #ffffff; border-radius: 20px; margin-bottom: 40px;
+  display: flex; flex-wrap: wrap; overflow: hidden;
+  box-shadow: var(--card-shadow); border: 1px solid rgba(255,255,255,0.8);
 }
+.patent-info { flex: 1; padding: 30px; min-width: 300px; }
+.patent-visual { 
+  flex: 1; background: #f8fafc; padding: 20px; 
+  display: flex; align-items: center; justify-content: center;
+  min-width: 300px; border-left: 1px solid #f1f5f9;
+}
+
 .patent-tag {
-  display: inline-block; padding: 4px 10px; border-radius: 6px;
-  font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px;
+  display: inline-block; padding: 5px 15px; border-radius: 50px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
-.granted { background: #e8f5e9; color: #2e7d32; }
+.tag-granted { background: #e8f5e9; color: #2e7d32; }
+.tag-pending { background: #fff3e0; color: #ef6c00; }
 
-/* THE IMAGE BOX - This will always show a grey frame until image is found */
-.image-submission-box {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 550px;
-  border: 2px solid #edf2f7;
-  border-radius: 12px;
-  background-color: #f1f5f9;
-  overflow: hidden;
-  display: block;
-}
-.image-submission-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-  min-height: 200px; /* Ensures the box exists even if image is loading */
-}
+.patent-title { font-size: 22px; color: var(--primary-dark); font-weight: 700; margin-bottom: 15px; line-height: 1.3; }
+.meta-item { font-size: 14px; margin-bottom: 8px; color: #555; display: flex; gap: 10px; }
+.meta-item i { color: var(--primary); width: 20px; }
 
-.markdown-body{ overflow:visible !important; }
+/* 4. IMAGE STYLING */
+.cert-frame {
+  width: 100%; border-radius: 12px; border: 8px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.4s ease;
+  cursor: zoom-in;
+}
+.cert-frame:hover { transform: scale(1.03) rotate(1deg); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
+
+@media (max-width: 768px) {
+  .patent-card { flex-direction: column; }
+  .patent-visual { border-left: none; border-top: 1px solid #f1f5f9; }
+}
 </style>
 
-<div style="position:relative; width:100%; max-width:1150px; margin:0 auto 20px; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);">
-  <img src="/assets/header7.jpg" style="width:100%; height:260px; object-fit:cover; display:block;">
-  <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:40px; font-weight:700; color:white; background:rgba(0,0,0,0.3); text-shadow:0 3px 10px rgba(0,0,0,0.5);">Knowledge Sharing</div>
+<div style="position:relative; width:100%; max-width:1150px; margin:0 auto 20px; border-radius:20px; overflow:hidden; box-shadow:var(--card-shadow);">
+  <img src="/assets/header7.jpg" style="width:100%; height:280px; object-fit:cover;">
+  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; color:white; background:rgba(0,0,0,0.4);">
+    <h1 style="font-size:45px; margin:0; text-shadow:2px 2px 10px rgba(0,0,0,0.5);">Patents & IP</h1>
+    <p style="font-size:18px; opacity:0.9;">Innovation • Research • Protection</p>
+  </div>
 </div>
 
 <div class="nav-bar">
@@ -90,55 +107,58 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
   <a href="/contact/">📬 Contact</a>
 </div>
 
-<div style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
-  <h1 style="color: var(--primary-dark); border-bottom: 2px solid var(--primary); padding-bottom: 10px;">📜 Patents & Intellectual Property</h1>
-
-  <h3 style="margin-top: 30px;">🥇 Granted Patents</h3>
+<div class="patent-section">
   
+  <h2 style="color: #2c3e50; margin-bottom: 30px; font-weight: 800; border-left: 6px solid var(--primary); padding-left: 15px;">🥇 Granted Portfolio</h2>
+
   <div class="patent-card">
-    <span class="patent-tag granted">Granted • Indian Patent</span>
-    <h4 style="margin: 5px 0;">A Process for Producing La<sub>2</sub>FeMnO<sub>6</sub> (LFMO) From Iron Ore Slime and Applications Thereof</h4>
-    <p style="font-size: 14px; color: #555;">
-      <strong>Inventors:</strong> Santanu Sarkar, Tamal Kanti Ghosh, Supriya Sarkar, Menaka Jha, Sujit Guchhait, Kritika Sood, <b>Krishna Yadav</b>, Ankush<br>
-      <strong>Patent No:</strong> 482517 | <strong>Grant Date:</strong> 14/12/2023
-    </p>
-    
-    <div class="image-submission-box">
-      <img src="/assets/Patent1.jpg" alt="Patent Certificate 482517">
+    <div class="patent-info">
+      <span class="patent-tag tag-granted"><i class="fas fa-check-circle"></i> Granted</span>
+      <div class="patent-title">A Process for Producing La<sub>2</sub>FeMnO<sub>6</sub> (LFMO) From Iron Ore Slime</div>
+      <div class="meta-item"><i class="fas fa-fingerprint"></i> <strong>Patent No:</strong> 482517</div>
+      <div class="meta-item"><i class="fas fa-calendar-alt"></i> <strong>Grant Date:</strong> 14/12/2023</div>
+      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> S. Sarkar, T.K. Ghosh, S. Sarkar, M. Jha, S. Guchhait, K. Sood, <b>K. Yadav</b>, Ankush</div>
+      <p style="font-size: 14px; color: #777; margin-top: 15px; font-style: italic;">Application: 202131014754</p>
+    </div>
+    <div class="patent-visual">
+      <a href="/assets/Patent1.jpg" target="_blank">
+        <img src="/assets/Patent1.jpg" class="cert-frame" alt="Certificate 1" onerror="this.src='https://via.placeholder.com/400x550?text=Upload+Patent1.jpg+to+Assets'">
+      </a>
     </div>
   </div>
 
   <div class="patent-card">
-    <span class="patent-tag granted">Granted • Indian Patent</span>
-    <h4 style="margin: 5px 0;">Process of Preparing Silica-Iron Oxide From Iron Ore Slime</h4>
-    <p style="font-size: 14px; color: #555;">
-      <strong>Inventors:</strong> Santanu Sarkar, Niloy Kundu, Tamal Kanti Ghosh, Menaka Jha, Sujit Kumar Guchhait, <b>Krishna Yadav</b>, Sunaina, Arushi Arora<br>
-      <strong>Patent No:</strong> 577043 | <strong>Grant Date:</strong> 31/12/2025
-    </p>
-
-    <div class="image-submission-box">
-      <img src="/assets/Patent2.jpg" alt="Patent Certificate 577043">
+    <div class="patent-info">
+      <span class="patent-tag tag-granted"><i class="fas fa-check-circle"></i> Granted</span>
+      <div class="patent-title">Process of Preparing Silica-Iron Oxide From Iron Ore Slime</div>
+      <div class="meta-item"><i class="fas fa-fingerprint"></i> <strong>Patent No:</strong> 577043</div>
+      <div class="meta-item"><i class="fas fa-calendar-alt"></i> <strong>Grant Date:</strong> 31/12/2025</div>
+      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> S. Sarkar, N. Kundu, T.K. Ghosh, M. Jha, S.K. Guchhait, <b>K. Yadav</b>, Sunaina, A. Arora</div>
+      <p style="font-size: 14px; color: #777; margin-top: 15px; font-style: italic;">Application: 202231018701</p>
+    </div>
+    <div class="patent-visual">
+      <a href="/assets/Patent2.jpg" target="_blank">
+        <img src="/assets/Patent2.jpg" class="cert-frame" alt="Certificate 2" onerror="this.src='https://via.placeholder.com/400x550?text=Upload+Patent2.jpg+to+Assets'">
+      </a>
     </div>
   </div>
 
-  <hr style="margin: 40px 0; opacity: 0.2;">
+  <h2 style="color: #2c3e50; margin-top: 60px; margin-bottom: 30px; font-weight: 800; border-left: 6px solid #ef6c00; padding-left: 15px;">🚀 Ongoing Applications</h2>
 
-  <h3>🚀 Patent Applications (In Progress)</h3>
   <div class="patent-card">
-    <span style="background: #fff3e0; color: #ef6c00;" class="patent-tag">Application Filed</span>
-    <h4 style="margin: 5px 0;">Process of conversion of wastepaper to nanostructured CaCO<sub>3</sub> and their application in de-fluorination of contaminated water.</h4>
-    <p style="font-size: 14px; color: #555;">
-      <strong>Inventors:</strong> Menaka Jha, Ritika Wadhwa, Sunaina, Ankush, <b>Krishna Yadav</b>, Sujit Kumar Guchhait<br>
-      <strong>Application No:</strong> 202311017356
-    </p>
+    <div class="patent-info" style="border-right: none; flex: 2;">
+      <span class="patent-tag tag-pending"><i class="fas fa-clock"></i> Pending</span>
+      <div class="patent-title">Conversion of wastepaper to nanostructured CaCO<sub>3</sub> for de-fluorination of water</div>
+      <div class="meta-item"><i class="fas fa-file-invoice"></i> <strong>App No:</strong> 202311017356</div>
+      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> M. Jha, R. Wadhwa, Sunaina, Ankush, <b>K. Yadav</b>, S.K. Guchhait</div>
+    </div>
   </div>
 
-  <div align="center" style="margin-top: 40px;">
-    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
-    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
+  <div align="center" style="margin-top: 50px; padding-bottom: 30px;">
+    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar"></a>
+    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid"></a>
+    <br><br>
+    <a href="/" style="color: var(--primary); text-decoration: none; font-weight: 700; font-size: 14px;">[🔙 BACK TO HOME]</a>
   </div>
 
-  <p style="text-align: center; margin-top: 40px;">
-    <a href="/" style="color: var(--primary); text-decoration: none; font-weight: 600;">[🔙 Back to Home Page]</a>
-  </p>
 </div>
