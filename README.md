@@ -8,7 +8,7 @@
   --bg:#f7f9fc;
   --border:#dce3ef;
 }
-body{ background:var(--bg) !important; }
+body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 
 /* HERO BANNER */
 .hero-header{
@@ -18,7 +18,7 @@ body{ background:var(--bg) !important; }
 .hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
 .hero-title{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", sans-serif; font-size:clamp(28px,4vw,40px);
+  font-size:clamp(28px,4vw,40px);
   font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
@@ -27,24 +27,40 @@ body{ background:var(--bg) !important; }
 .nav-bar {
   text-align: center; padding: 12px 0; background: #ffffff;
   border-bottom: 3px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  font-family: "Segoe UI", sans-serif; position: sticky; top: 0; z-index: 10000;
+  position: sticky; top: 0; z-index: 10000;
 }
 .nav-bar a, .dropdown-toggle {
-  color: #444; text-decoration: none; font-weight: 600; padding: 8px 16px;
-  margin: 0 4px; border-radius: 8px; transition: all 0.3s ease;
-  display: inline-block; font-size: 15px; cursor: pointer;
+  color: #444; text-decoration: none; font-weight: 600; padding: 10px 18px;
+  margin: 0 4px; border-radius: 8px; transition: all 0.2s ease;
+  display: inline-block; font-size: 15px; cursor: pointer; border: none; background: none;
 }
 .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background-color: #e3f2fd; color: var(--primary-dark); }
 
-/* DROPDOWN */
+/* --- FIXED DROPDOWN SYSTEM --- */
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content {
   display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: #ffffff; min-width: 250px; border-radius: 12px; border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; margin-top: 5px;
+  background: transparent; /* Makes the bridge invisible */
+  min-width: 250px; z-index: 9999; 
+  padding-top: 10px; /* This is the bridge gap */
 }
-.dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.3s; }
-.dropdown-content a { display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; text-align: left; font-size: 14px; }
+/* Invisible hover bridge pseudo-element */
+.dropdown-content::before {
+  content: ""; position: absolute; top: -15px; left: 0; width: 100%; height: 15px; background: transparent;
+}
+.dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.2s ease-out; }
+
+/* The visible menu container */
+.dropdown-menu-box {
+  background: #ffffff; border-radius: 12px; border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); overflow: hidden;
+}
+.dropdown-menu-box a { 
+  display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; 
+  text-align: left; font-size: 14px; color: #444; text-decoration: none; transition: 0.2s;
+}
+.dropdown-menu-box a:last-child { border-bottom: none; }
+.dropdown-menu-box a:hover { background: #f8fbff; color: var(--primary); }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateX(-50%) translateY(10px); }
@@ -53,14 +69,14 @@ body{ background:var(--bg) !important; }
 
 /* STATS BAR */
 .stats-bar {
-  display: flex; justify-content: space-around; background: #fff; padding: 8px 20px; 
+  display: flex; justify-content: space-around; background: #fff; padding: 12px 20px; 
   border-radius: 12px; border: 1px solid var(--border); margin: 15px 0; 
   text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03); align-items: center;
 }
-.stat-item { text-decoration: none; color: inherit; flex: 1; cursor: pointer; transition: transform 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px; }
-.stat-item:hover { transform: scale(1.02); }
-.stat-item h2 { color: var(--primary); margin: 0; font-size: 20px; font-weight: 800; }
-.stat-item small { color: #666; font-weight: 700; text-transform: uppercase; font-size: 10px; }
+.stat-item { text-decoration: none; color: inherit; flex: 1; cursor: pointer; transition: transform 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.stat-item:hover { transform: scale(1.03); }
+.stat-item h2 { color: var(--primary); margin: 0; font-size: 22px; font-weight: 800; }
+.stat-item small { color: #666; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 0.5px; }
 
 /* LAYOUT SPLIT */
 .main-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 20px; align-items: flex-start; }
@@ -70,8 +86,7 @@ body{ background:var(--bg) !important; }
 .news-sidebar { 
   flex: 1; min-width: 300px; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); 
   padding: 15px 20px; border-radius: 16px; border: 1px solid #c2d9ff;
-  height: 325px; 
-  overflow: hidden; position: relative;
+  height: 325px; overflow: hidden; position: relative;
   box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
 }
 .news-container { height: 100%; overflow: hidden; position: relative; margin-top: 5px; }
@@ -103,8 +118,9 @@ body{ background:var(--bg) !important; }
 
 @media (max-width: 768px) {
   .gallery-grid img { width: calc(50% - 12px); }
-  .stats-bar { flex-direction: column; }
+  .stats-bar { flex-direction: column; gap: 15px; }
 }
+.markdown-body { overflow: visible !important; }
 </style>
 
 <div class="hero-header">
@@ -117,11 +133,13 @@ body{ background:var(--bg) !important; }
   <a href="/experience/">👨‍🔬 Experience</a>
   <a href="/impact/">📈 Impact</a>
   <div class="dropdown">
-    <a class="dropdown-toggle">📚 Publications ▾</a>
+    <span class="dropdown-toggle">📚 Publications ▾</span>
     <div class="dropdown-content">
-      <a href="/patents/">📜 1. Patents</a>
-      <a href="/Book_Chapters/">📖 2. Book Chapters</a>
-      <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+      <div class="dropdown-menu-box">
+        <a href="/patents/">📜 1. Patents</a>
+        <a href="/Book_Chapters/">📖 2. Book Chapters</a>
+        <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+      </div>
     </div>
   </div>
   <a href="/contact/">📬 Contact</a>
@@ -201,7 +219,7 @@ counters.forEach(counter => {
     const target = +counter.getAttribute('data-target');
     const suffix = counter.getAttribute('data-suffix');
     const count = +counter.innerText.replace(suffix, '');
-    const inc = Math.max(1, target / 600);
+    const inc = Math.max(1, target / 100);
     if (count < target) {
       counter.innerText = Math.min(target, Math.ceil(count + inc)) + suffix;
       setTimeout(updateCount, 20);
