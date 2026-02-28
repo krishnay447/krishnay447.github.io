@@ -128,9 +128,9 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
   <div class="nav-item">
     <button class="drop-btn">📝 Publications <i class="fas fa-caret-down"></i></button>
     <div class="dropdown-content">
-      <a href="/publications/#articles">Articles</a>
-      <a href="/publications/#chapters">Book Chapters</a>
-      <a href="/publications/#patents">Patents</a>
+      <a href="/publications/#articles">Patents</a>
+      <a href="/publications/#chapters">Chapters</a>
+      <a href="/publications/#patents">Articles</a>
     </div>
   </div>
 
