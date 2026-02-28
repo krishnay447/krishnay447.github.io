@@ -4,6 +4,8 @@ title: Book Chapters
 permalink: /Book_Chapters/
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
 /* 1. HIDE GITHUB REPO TITLE */
 .markdown-body > h1:first-child { display: none !important; }
@@ -29,59 +31,36 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* 3. NAVIGATION BAR & STICKY DROPDOWN FIX */
+/* 3. NAVIGATION BAR */
 .nav-bar {
-  text-align: center; padding: 12px 0; background: #ffffff;
-  border-bottom: 3px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  position: sticky; top: 0; z-index: 10000;
+  text-align: center; background: #ffffff; border-bottom: 3px solid var(--border);
+  position: sticky; top: 0; z-index: 10000; display: flex; justify-content: center; gap: 5px; padding: 12px 0;
 }
-.nav-bar a, .dropdown-toggle {
+.nav-item { position: relative; display: inline-block; }
+.nav-bar a, .drop-btn {
   color: #444; text-decoration: none; font-weight: 600; padding: 10px 18px;
-  margin: 0 2px; border-radius: 8px; transition: all 0.2s ease;
-  display: inline-block; font-size: 15px; cursor: pointer; border: none; background: none;
+  border-radius: 8px; transition: 0.2s; font-size: 15px; cursor: pointer; border: none; background: none;
 }
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background-color: #e3f2fd; color: var(--primary-dark); }
+.nav-bar a:hover, .nav-item:hover .drop-btn { background-color: #e3f2fd; color: var(--primary-dark); }
 
-.dropdown { position: relative; display: inline-block; }
 .dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: #ffffff; min-width: 250px; border-radius: 12px; border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden;
-  padding-top: 10px; /* Bridge gap */
+  display: none; position: absolute; background-color: #ffffff; min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1); z-index: 1; border-radius: 8px; top: 100%; left: 0; border: 1px solid var(--border);
 }
-/* Invisible hover bridge */
-.dropdown-content::before {
-  content: ""; position: absolute; top: -15px; left: 0; width: 100%; height: 15px; background: transparent;
-}
-.dropdown:hover .dropdown-content { display: block; }
 .dropdown-content a {
-  display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0;
-  text-align: left; font-size: 14px; color: #444; text-decoration: none; border-radius: 0; margin: 0;
+  color: #444; padding: 12px 16px; text-decoration: none; display: block; text-align: left; border-bottom: 1px solid #f1f1f1;
 }
-.dropdown-content a:hover { background: #f8fbff; color: var(--primary); }
+.dropdown-content a:last-child { border-bottom: none; }
+.nav-item:hover .dropdown-content { display: block; }
 
-/* 4. SCHOLAR & ORCID CARDS */
-.profile-container {
-  max-width: 950px; margin: 20px auto; display: flex; gap: 15px; padding: 0 20px;
-}
-.profile-link {
-  flex: 1; display: flex; align-items: center; padding: 12px 20px;
-  background: #fff; border: 1px solid var(--border); border-radius: 12px;
-  text-decoration: none; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-}
-.profile-link:hover { transform: translateY(-3px); border-color: var(--primary); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
-.profile-link img { width: 30px; height: 30px; margin-right: 15px; }
-.profile-label { display: block; font-size: 11px; color: #888; text-transform: uppercase; }
-.profile-name { display: block; font-size: 15px; font-weight: 700; color: var(--primary-dark); }
-
-/* 5. SEARCH & FILTER */
+/* 4. SEARCH & FILTER */
 .search-container {
   max-width: 950px; margin: 15px auto; padding: 0 20px;
   display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
 }
 #yearInput {
   padding: 8px 15px; border-radius: 8px; border: 1px solid var(--border);
-  width: 200px; font-size: 14px; outline: none; transition: 0.3s;
+  width: 250px; font-size: 14px; outline: none; transition: 0.3s;
 }
 #yearInput:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1); }
 .filter-btn {
@@ -90,7 +69,7 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
 }
 .filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-/* 6. CHAPTER CARDS */
+/* 5. CHAPTER CARDS */
 .chapter-container { max-width: 950px; margin: 0 auto; padding: 0 20px; }
 .chapter-card {
   background: #fff; padding: 22px; border-radius: 12px; border: 1px solid var(--border);
@@ -106,7 +85,6 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
 .chapter-meta { font-size: 13px; color: #888; font-style: italic; border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px; }
 
 .markdown-body { overflow: visible !important; }
-@media (max-width: 600px) { .profile-container { flex-direction: column; } }
 </style>
 
 <div class="hero-header">
@@ -118,18 +96,17 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
   <a href="/">🏠 Home</a>
   <a href="/experience/">👨‍🔬 Experience</a>
   <a href="/impact/">📈 Impact</a>
-  <div class="dropdown">
-    <span class="dropdown-toggle">📚 Publications ▾</span>
+  
+  <div class="nav-item">
+    <button class="drop-btn">📚 Publications <i class="fas fa-caret-down"></i></button>
     <div class="dropdown-content">
       <a href="/patents/">📜 1. Patents</a>
       <a href="/Book_Chapters/">📖 2. Book Chapters</a>
       <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
     </div>
   </div>
-  <a href="/contact/">📬 Contact</a>
-</div>
 
-  </a>
+  <a href="/contact/">📬 Contact</a>
 </div>
 
 <div class="search-container">
