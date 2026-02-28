@@ -88,8 +88,8 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
 </style>
 
 <div class="hero-header">
-  <img src="/assets/header5.jpg" alt="Banner">
-  <div class="hero-title">Krishna Kumar Yadav</div>
+  <img src="/assets/header7.jpg" alt="Banner">
+  <div class="hero-title">Knowledge Sharing</div>
 </div>
 
 <div class="nav-bar">
