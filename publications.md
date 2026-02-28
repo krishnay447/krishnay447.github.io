@@ -48,7 +48,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 .dropdown-content a:hover{ background:#eef6ff; }
 
 /* Search Bar */
-.search-container { max-width: 900px; margin: 25px auto; padding: 0 20px; }
+.search-container { max-width: 900px; margin: 25px auto 5px; padding: 0 20px; }
 #pubSearch {
   width: 100%; padding: 14px 25px; font-size: 16px; border-radius: 30px;
   border: 2px solid var(--border); outline: none; transition: 0.3s;
@@ -103,10 +103,17 @@ sup { top: -0.4em; }
   <input type="text" id="pubSearch" onkeyup="searchFunction()" placeholder="🔍 Search Title, Year, Journal, or Authors...">
 </div>
 
+<div style="max-width: 900px; margin: 0 auto 25px; padding: 0 20px; display: flex; justify-content: flex-end;">
+  <a href="https://notebooklm.google.com/notebook/8b8b0acb-21e5-4f16-9025-dfcc93980356" target="_blank" 
+     style="background-color: #4285F4; color: white !important; width: 25%; min-width: 160px; height: 40px; border-radius: 25px; text-decoration: none; font-weight: bold; font-family: sans-serif; display: flex; align-items: center; justify-content: center; font-size: 13px; box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);">
+    🤖 AI Assistant
+  </a>
+</div>
+
 <div class="pub-list-container" id="pubList">
   <h2 style="border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px; color: var(--primary-dark);">🔬 Peer‑Reviewed Journal Articles</h2>
 
-  <div class="pub-card">
+<div class="pub-card">
     <span class="article-year-label">2026</span>
     <span class="article-title">Shape-induced manganese iron-based nanostructures loaded onto iron sheet as efficient electrocatalyst for O<sub>2</sub> evolution.</span>
     <div class="article-authors">Supriya Rana, <b>Krishna K. Yadav</b>, Menaka Jha</div>
@@ -526,6 +533,26 @@ function searchFunction() {
   for (var i = 0; i < cards.length; i++) {
     var content = cards[i].textContent || cards[i].innerText;
     if (content.toUpperCase().indexOf(input) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</div>
+
+<script>
+function searchFunction() {
+  var input = document.getElementById('pubSearch');
+  var filter = input.value.toUpperCase();
+  var container = document.getElementById("pubList");
+  var cards = container.getElementsByClassName('pub-card');
+
+  for (var i = 0; i < cards.length; i++) {
+    var textContent = cards[i].textContent || cards[i].innerText;
+    if (textContent.toUpperCase().indexOf(filter) > -1) {
       cards[i].style.display = "";
     } else {
       cards[i].style.display = "none";
