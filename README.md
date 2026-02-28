@@ -208,10 +208,19 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 
 <hr style="margin: 30px 0; opacity: 0.5;">
 <div align="center">
-  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
-  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
-</div>
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" style="text-decoration: none; vertical-align: middle; margin: 0 5px;">
+    <img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar" style="height: 40px;">
+  </a>
 
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" style="text-decoration: none; vertical-align: middle; margin: 0 5px;">
+    <img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID" style="height: 40px;">
+  </a>
+
+  <a href="https://notebooklm.google.com/notebook/8b8b0acb-21e5-4f16-9025-dfcc93980356" target="_blank" 
+     style="background-color: #4285F4; color: white !important; padding: 0 15px; border-radius: 3px; text-decoration: none; font-weight: bold; font-family: 'Segoe UI', sans-serif; white-space: nowrap; display: inline-flex; align-items: center; height: 40px; font-size: 13px; vertical-align: middle; margin: 0 5px; text-transform: uppercase; letter-spacing: 0.5px;">
+    🤖 AI Assistant
+  </a>
+</div>
 <script>
 const counters = document.querySelectorAll('.counter');
 counters.forEach(counter => {
