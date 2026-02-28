@@ -86,8 +86,8 @@ body{ background:var(--bg) !important; }
 </style>
 
 <div class="hero-header">
-  <img src="/assets/header6.jpg" alt="Patents Image">
-  <div class="hero-title">Krishna Kumar Yadav</div>
+  <img src="/assets/header7.jpg" alt="Patents Image">
+  <div class="hero-title">Knowledge Sharing</div>
 </div>
 
 <div class="nav-bar">
