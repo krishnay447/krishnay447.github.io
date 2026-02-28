@@ -96,9 +96,9 @@ body{ background:var(--bg) !important; }
   <span class="dropdown">
     <a class="dropdown-toggle">📚 Publications ▾</a>
     <div class="dropdown-content">
-      <a href="/patents/">1. Patents</a>
-      <a href="/Book_Chapters/">2. Book Chapters</a>
-      <a href="/publications/">3. Articles</a>
+      <a href="/patents/">📜 1. Patents</a>
+      <a href="/Book_Chapters/">📖 2. Chapters</a>
+      <a href="/publications/">📝 3. Articles</a>
     </div>
   </span> | 
   <a href="/contact/">📬 Contact</a>
