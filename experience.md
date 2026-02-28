@@ -14,7 +14,7 @@ permalink: /experience/
   --bg:#f7f9fc;
   --border:#dce3ef;
 }
-body{ background:var(--bg) !important; }
+body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 
 /* HERO BANNER */
 .hero-header{
@@ -24,45 +24,58 @@ body{ background:var(--bg) !important; }
 .hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
 .hero-title{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", sans-serif; font-size:clamp(28px,4vw,40px);
+  font-size:clamp(28px,4vw,40px);
   font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* FULL NAVIGATION BAR (Instrumentation tab removed as requested) */
+/* NAVIGATION BAR */
 .nav-bar {
   text-align: center; padding: 12px 0; background: #ffffff;
   border-bottom: 3px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  font-family: "Segoe UI", sans-serif; position: sticky; top: 0; z-index: 10000;
+  position: sticky; top: 0; z-index: 10000;
 }
 .nav-bar a, .dropdown-toggle {
-  color: #444; text-decoration: none; font-weight: 600; padding: 8px 16px;
-  margin: 0 4px; border-radius: 8px; transition: all 0.3s ease;
-  display: inline-block; font-size: 15px; cursor: pointer;
+  color: #444; text-decoration: none; font-weight: 600; padding: 10px 18px;
+  margin: 0 4px; border-radius: 8px; transition: all 0.2s ease;
+  display: inline-block; font-size: 15px; cursor: pointer; border: none; background: none;
 }
 .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background-color: #e3f2fd; color: var(--primary-dark); }
 
+/* --- FIXED DROPDOWN SYSTEM --- */
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content {
   display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: #ffffff; min-width: 250px; border-radius: 12px; border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; margin-top: 5px;
+  background: transparent; 
+  min-width: 250px; z-index: 9999; 
+  padding-top: 10px; /* Bridge gap */
+}
+/* Invisible bridge pseudo-element */
+.dropdown-content::before {
+  content: ""; position: absolute; top: -15px; left: 0; width: 100%; height: 15px; background: transparent;
 }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; text-align: left; }
 
-/* TOP HIGHLIGHT PANEL */
+/* Visible menu container */
+.dropdown-menu-box {
+  background: #ffffff; border-radius: 12px; border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); overflow: hidden;
+}
+.dropdown-menu-box a { 
+  display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; 
+  text-align: left; font-size: 14px; color: #444; text-decoration: none; 
+}
+.dropdown-menu-box a:last-child { border-bottom: none; }
+.dropdown-menu-box a:hover { background: #f8fbff; color: var(--primary); }
+
+/* CONTENT STYLING */
 .dev-highlight-full {
   max-width: 1150px; margin: 20px auto; padding: 15px 25px;
   background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
   border-radius: 16px; border: 1px solid var(--primary);
   box-shadow: 0 10px 25px rgba(30, 136, 229, 0.08);
 }
-
-/* SPLIT LAYOUT */
 .split-layout { display: flex; gap: 30px; max-width: 1150px; margin: 0 auto 30px; padding: 0 15px; }
-
-/* LEFT SIDE: EXPERIENCE */
 .experience-side { flex: 1.5; }
 .timeline-v { position: relative; padding-left: 30px; border-left: 3px solid var(--border); }
 .timeline-v-item { position: relative; margin-bottom: 25px; }
@@ -74,10 +87,9 @@ body{ background:var(--bg) !important; }
 .v-content { background: white; padding: 18px; border-radius: 12px; border: 1px solid var(--border); }
 .v-content h3 { margin: 0; font-size: 17px; color: var(--primary-dark); }
 .v-content b { font-size: 13.5px; color: #333; display: block; margin-top: 4px; line-height: 1.4; }
-
 .inst-link { text-decoration: none !important; color: inherit !important; cursor: pointer; }
 
-/* RIGHT SIDE: TOOLKIT */
+/* TOOLKIT STYLING */
 .instrumentation-side { flex: 1; }
 .sticky-right { position: sticky; top: 100px; }
 .inst-category { margin-bottom: 8px; } 
@@ -95,11 +107,11 @@ body{ background:var(--bg) !important; }
 .skill-badge-v small { font-size: 10.5px; color: #555; margin-top: 3px; font-weight: 500; }
 
 .diode-icon { vertical-align: middle; margin-right: 8px; width: 24px; height: 24px; }
-
 .profile-links {
   max-width: 1150px; margin: 40px auto; text-align: center;
   padding: 20px; border-top: 1px solid var(--border);
 }
+.markdown-body { overflow: visible !important; }
 </style>
 
 <div class="hero-header">
@@ -112,11 +124,13 @@ body{ background:var(--bg) !important; }
   <a href="/experience/">👨‍🔬 Experience</a>
   <a href="/impact/">📈 Impact</a>
   <div class="dropdown">
-    <a class="dropdown-toggle">📚 Publications ▾</a>
+    <span class="dropdown-toggle">📚 Publications ▾</span>
     <div class="dropdown-content">
-      <a href="/patents/">📜 1. Patents</a>
-      <a href="/Book_Chapters/">📖 2. Book Chapters</a>
-      <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+      <div class="dropdown-menu-box">
+        <a href="/patents/">📜 1. Patents</a>
+        <a href="/Book_Chapters/">📖 2. Book Chapters</a>
+        <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+      </div>
     </div>
   </div>
   <a href="/contact/">📬 Contact</a>
@@ -163,7 +177,6 @@ body{ background:var(--bg) !important; }
         Electrical & Field Emission
       </h3>
       <p style="font-size: 14px; color: #444; margin-bottom: 15px;">Characterization of field emission properties including I-V measurements in diode configuration for cold cathode applications.</p>
-      
     </div>
   </div>
 
@@ -200,10 +213,10 @@ body{ background:var(--bg) !important; }
 </div>
 
 <div class="profile-links">
-  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" style="margin: 0 10px;">
     <img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar">
   </a>
-  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank">
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" style="margin: 0 10px;">
     <img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID">
   </a>
 </div>
