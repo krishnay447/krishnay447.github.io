@@ -101,8 +101,8 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
     <button class="drop-btn">📚 Publications <i class="fas fa-caret-down"></i></button>
     <div class="dropdown-content">
       <a href="/patents/">📜 1. Patents</a>
-      <a href="/Book_Chapters/">📖 2. Book Chapters</a>
-      <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+      <a href="/Book_Chapters/">📖 2. Chapters</a>
+      <a href="/publications/">📝 3. Articles</a>
     </div>
   </div>
 
