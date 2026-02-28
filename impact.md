@@ -156,6 +156,11 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
             <div style="font-size: 0.8em; color: #666; margin-top: 4px;">Asst. Prof, Rupnagar, Punjab</div>
           </div>
           <div class="mentor-card">
+            <span class="mentor-name">Pankaj Taneja</span>
+            <span class="mentor-role">Master's Project</span>
+            <div style="font-size: 0.8em; color: #666; margin-top: 4px;">Project Mentorship</div>
+          </div>
+          <div class="mentor-card">
             <span class="mentor-name">Rubén Bastida Vadillo</span>
             <span class="mentor-role">Master's Project</span>
             <div style="font-size: 0.8em; color: #666; margin-top: 4px;">University of Salamanca, Spain</div>
@@ -294,6 +299,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
     </div>
   </div>
 </div>
+
 <hr style="margin: 30px 0; opacity: 0.5;">
 <div align="center">
   <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
