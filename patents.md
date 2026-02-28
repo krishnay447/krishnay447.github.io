@@ -117,7 +117,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
       <div class="patent-title">A Process for Producing La<sub>2</sub>FeMnO<sub>6</sub> (LFMO) From Iron Ore Slime</div>
       <div class="meta-item"><i class="fas fa-fingerprint"></i> <strong>Patent No:</strong> 482517</div>
       <div class="meta-item"><i class="fas fa-calendar-alt"></i> <strong>Grant Date:</strong> 14/12/2023</div>
-      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> S. Sarkar, T.K. Ghosh, S. Sarkar, M. Jha, S. Guchhait, K. Sood, <b>K. Yadav</b>, Ankush</div>
+      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> S. Sarkar, T.K. Ghosh, S. Sarkar, M. Jha, S. Guchhait, K. Sood, <b>krishna K. Yadav</b>, Ankush</div>
       <p style="font-size: 14px; color: #777; margin-top: 15px; font-style: italic;">Application: 202131014754</p>
     </div>
     <div class="patent-visual">
@@ -133,7 +133,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
       <div class="patent-title">Process of Preparing Silica-Iron Oxide From Iron Ore Slime</div>
       <div class="meta-item"><i class="fas fa-fingerprint"></i> <strong>Patent No:</strong> 577043</div>
       <div class="meta-item"><i class="fas fa-calendar-alt"></i> <strong>Grant Date:</strong> 31/12/2025</div>
-      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> S. Sarkar, N. Kundu, T.K. Ghosh, M. Jha, S.K. Guchhait, <b>K. Yadav</b>, Sunaina, A. Arora</div>
+      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> S. Sarkar, N. Kundu, T.K. Ghosh, M. Jha, S.K. Guchhait, <b>krishna K. Yadav</b>, Sunaina, A. Arora</div>
       <p style="font-size: 14px; color: #777; margin-top: 15px; font-style: italic;">Application: 202231018701</p>
     </div>
     <div class="patent-visual">
@@ -150,7 +150,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
       <span class="patent-tag tag-pending"><i class="fas fa-clock"></i> Pending</span>
       <div class="patent-title">Conversion of wastepaper to nanostructured CaCO<sub>3</sub> for de-fluorination of water</div>
       <div class="meta-item"><i class="fas fa-file-invoice"></i> <strong>App No:</strong> 202311017356</div>
-      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> M. Jha, R. Wadhwa, Sunaina, Ankush, <b>K. Yadav</b>, S.K. Guchhait</div>
+      <div class="meta-item"><i class="fas fa-users"></i> <strong>Team:</strong> M. Jha, R. Wadhwa, Sunaina, Ankush, <b>krishna K. Yadav</b>, S.K. Guchhait</div>
     </div>
   </div>
 
