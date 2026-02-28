@@ -136,9 +136,9 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
     <span class="dropdown-toggle">📚 Publications ▾</span>
     <div class="dropdown-content">
       <div class="dropdown-menu-box">
-        <a href="/patents/">📜 1. Patents</a>
-        <a href="/Book_Chapters/">📖 2. Book Chapters</a>
-        <a href="/publications/">📝 3. Peer-Reviewed Articles</a>
+      <a href="/patents/">📜 1. Patents</a>
+      <a href="/Book_Chapters/">📖 2. Chapters</a>
+      <a href="/publications/">📝 3. Articles</a>
       </div>
     </div>
   </div>
