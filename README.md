@@ -278,7 +278,7 @@ ul.compact li{ margin:6px 0; }
 <div class="gallery-wrap">
   <h3 id="gallery" class="section-title" style="border-left-color:#c2d9ff; margin-top:0;">📸 Research &amp; Lab Gallery</h3>
   <div class="gallery-grid">
-    <img src="/assets/photo1.jpg" alt="3D Surface Mapping">
+    <img src="/assets/photo1.jpg">
     <img src="/assets/photo2.jpg" alt="Crystal Structure MnFe2O4">
     <img src="/assets/photo3.jpg" alt="KPFM Mapping">
     <img src="/assets/photo4.jpg" alt="Scientific Graph">
