@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 /* Hide GitHub repo title */
 .markdown-body > h1:first-child { display: none !important; }
@@ -10,15 +15,27 @@
   --border:#dce3ef;
   --ink:#2a3440;
 }
+
 html { scroll-behavior: smooth; }
-body{ background:var(--bg) !important; font-family:"Segoe UI",sans-serif; color:var(--ink); margin:0; padding:0; }
+body { 
+  background: var(--bg) !important; 
+  font-family: "Segoe UI", sans-serif; 
+  color: var(--ink); 
+  margin: 0; 
+  padding: 0; 
+}
 
 /* HERO BANNER */
-.hero-header{
-  position:relative; width:100%; max-width:1150px; margin:20px auto;
-  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
+.hero-header {
+  position: relative; 
+  width: 100%; 
+  max-width: 1150px; 
+  margin: 20px auto;
+  border-radius: 14px; 
+  overflow: hidden; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
-.hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
+.hero-header img { width: 100%; height: 260px; object-fit: cover; display: block; }
 .hero-title{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
   font-size:clamp(24px,4vw,36px); font-weight:700; color:#fff;
@@ -26,110 +43,165 @@ body{ background:var(--bg) !important; font-family:"Segoe UI",sans-serif; color:
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* THIN NAVIGATION BAR */
+/* NAVIGATION BAR */
 .nav-bar {
-  position: sticky; top: 10px; z-index: 10000;
-  margin: 0 auto 25px; max-width: 1150px; box-sizing: border-box;
+  position: sticky; 
+  top: 10px; 
+  z-index: 10000;
+  margin: 0 auto 25px;
+  max-width: 1150px;
 }
 .nav-inner {
-  display: flex; align-items: center; justify-content: center; 
-  gap: 15px; padding: 6px 12px; background: #ffffff; 
-  border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 6px 15px;
+  background: #ffffff; 
+  border-radius: 12px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid var(--border);
 }
 .nav-bar a, .dropdown-toggle {
-  text-decoration: none; color: var(--primary-dark) !important;
-  font-weight: 700; padding: 6px 14px; border-radius: 8px; 
-  transition: all 0.2s ease; display: inline-flex; 
-  align-items: center; gap: 6px; font-size: 16px; 
-  cursor: pointer; border: none; background: none;
+  text-decoration: none; 
+  color: var(--primary-dark) !important;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  font-size: 17px; 
+  cursor: pointer;
+  border: none;
+  background: none;
+  white-space: nowrap;
 }
 .nav-bar a:hover, .dropdown:hover .dropdown-toggle {
-  background: var(--nav-hover); color: var(--primary) !important;
+  background: var(--nav-hover);
+  color: var(--primary) !important;
 }
 
 /* DROPDOWN */
 .dropdown { position: relative; }
 .dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  min-width: 180px; z-index: 9999; padding-top: 8px; 
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  min-width: 180px; 
+  z-index: 9999; 
+  padding-top: 10px; 
 }
 .dropdown:hover .dropdown-content { display: block; }
 .dropdown-menu-box {
   background: #fff; border-radius: 10px; border: 1px solid var(--border);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; padding: 4px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
 }
 .dropdown-menu-box a {
-  display: block; padding: 10px 14px; font-size: 14px; 
-  color: var(--ink) !important; font-weight: 600;
+  display: block; padding: 10px 15px; font-size: 15px; 
+  color: var(--ink) !important; font-weight: 700; text-align: left;
 }
 
-/* MAIN GRID */
-.main-grid{
-  display: grid; grid-template-columns: 1fr 340px; 
-  gap: 25px; max-width: 1150px; margin: 0 auto; 
-  align-items: start; box-sizing: border-box;
+/* MAIN CONTENT */
+.main-grid {
+  display: grid; 
+  grid-template-columns: 1fr 340px; 
+  gap: 30px;
+  max-width: 1150px; 
+  margin: 0 auto; 
+  align-items: start;
 }
-.news-sidebar{
-  width: 340px; background: linear-gradient(135deg,#ffffff 0%,#f5f9ff 100%);
-  border: 1px solid #cfe0ff; border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(30,136,229,.05);
-  display: flex; flex-direction: column; overflow: hidden;
+.news-sidebar {
+  width: 340px; 
+  background: linear-gradient(135deg,#ffffff 0%,#f5f9ff 100%);
+  border: 1px solid #cfe0ff; 
+  border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(30,136,229,.08);
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden;
 }
-.news-header{
-  padding: 10px 14px; border-bottom: 1px dashed #cfe0ff; 
-  font-weight: 800; color: var(--primary-dark); font-size: 15px;
+.news-header {
+  padding: 12px 14px; 
+  border-bottom: 1px dashed #cfe0ff; 
+  font-weight: 800; 
+  color: var(--primary-dark);
+  display: flex; align-items: center; gap: 8px;
 }
-.news-scroll{ height: 260px; overflow: hidden; position: relative; }
-.news-list{
-  position: absolute; width: 100%; margin: 0; padding: 0 14px; list-style: none;
-  animation: scroll-up 22s linear infinite; box-sizing: border-box;
+.news-scroll { height: 280px; overflow: hidden; position: relative; }
+.news-list {
+  position: absolute; width: 100%; margin: 0; padding: 0 14px; 
+  list-style: none; color: #334e68;
+  animation: scroll-up 22s linear infinite;
+  box-sizing: border-box;
 }
-.news-list li{ padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 13px; }
+.news-list li { padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 13px; line-height: 1.4; }
 
-@keyframes scroll-up{ 0%{ top: 100%; } 100%{ top: -180%; } }
+@keyframes scroll-up { 0% { top: 100%; } 100% { top: -180%; } }
 
-/* SECTION LINE & CENTERED GALLERY TITLE */
-.section-divider {
-  border: 0; height: 1px; 
-  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0));
-  max-width: 1150px; margin: 40px auto 20px;
-}
-.centered-title {
-  text-align: center; color: var(--primary-dark); font-weight: 800;
-  font-size: 1.5rem; margin-bottom: 25px; position: relative;
-}
-.centered-title::after {
-  content: ""; display: block; width: 60px; height: 3px; 
-  background: var(--primary); margin: 8px auto 0; border-radius: 2px;
-}
-
-/* GALLERY */
-.gallery-wrap{ max-width: 1150px; margin: 0 auto 40px; }
-.gallery-grid{ display: flex; flex-wrap: wrap; gap: 15px; }
-.gallery-grid img{
-  width: calc(25% - 12px); height: 180px; object-fit: cover; 
-  border-radius: 10px; border: 1px solid var(--border); transition: transform 0.3s;
-}
-.gallery-grid img:hover { transform: translateY(-5px); }
-
-/* FOOTER */
-.symbol-row-compact { display: flex; justify-content: center; align-items: center; gap: 20px; margin: 30px 0; }
+/* TITLES & PILLS */
 .section-title {
-  color: var(--primary-dark); font-weight: 800; margin: 15px 0 8px;
+  color: var(--primary-dark); font-weight: 800; margin: 20px 0 10px;
   border-left: 4px solid var(--primary); padding-left: 10px;
 }
 .skill-pill {
-  display: inline-block; padding: 4px 10px; background: #eef6ff;
-  color: var(--primary); border-radius: 15px; font-size: 11px;
-  font-weight: 600; margin: 3px; border: 1px solid #d0e3ff;
+  display: inline-block; padding: 5px 12px; background: #eef6ff;
+  color: var(--primary); border-radius: 20px; font-size: 12px;
+  font-weight: 600; margin: 4px; border: 1px solid #d0e3ff;
 }
 
-@media (max-width:1024px){
-  .main-grid{ grid-template-columns: 1fr; padding: 0 15px; }
-  .news-sidebar{ width: 100%; }
+/* UPDATED GALLERY GRID SYSTEM */
+.gallery-wrap { 
+  max-width: 1150px; 
+  margin: 40px auto; 
+  padding: 0 15px;
+}
+.gallery-grid { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  margin-top: 20px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  height: 180px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.symbol-row-compact {
+  display: flex; justify-content: center; align-items: center; gap: 20px; margin: 40px 0;
+}
+
+@media (max-width: 1024px) {
+  .main-grid { grid-template-columns: 1fr; padding: 0 20px; }
+  .news-sidebar { width: 100%; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
+</head>
+<body>
 
 <div class="hero-header">
   <img src="/assets/header.jpg" alt="Header banner" />
@@ -159,18 +231,25 @@ body{ background:var(--bg) !important; font-family:"Segoe UI",sans-serif; color:
   <section class="bio-section">
     <div class="bio-inner">
       <h3 class="section-title">🔵 Who I Am</h3>
-      <p>I am a researcher in <b>nanotechnology and advanced materials</b>, focusing on <b>2D materials</b> for optoelectronic applications.</p>
+      <p>I am a researcher in <b>nanotechnology and advanced materials</b>, focusing on <b>2D materials</b> for <b>optoelectronic</b> and <b>field‑emission</b> applications. My work integrates <b>materials synthesis</b> and <b>2D exfoliation</b>.</p>
       
       <h3 class="section-title">🟢 Current Work</h3>
-      <ul style="padding-left: 20px; font-size: 14px;">
-        <li>Design of <b>engineered contact platforms</b> for 2D devices.</li>
-        <li><b>KPFM‑assisted device physics</b> on photodetectors.</li>
+      <ul style="padding-left: 20px;">
+        <li>Design of <b>engineered contact platforms</b> for 2D optoelectronic devices.</li>
+        <li><b>KPFM‑assisted device physics</b> on <b>high‑responsive photodetectors</b>.</li>
+      </ul>
+
+      <h3 class="section-title">🔮 Future Vision</h3>
+      <ul style="padding-left: 20px;">
+        <li>Utilization of <b>AI</b> to optimize photodetector performance.</li>
+        <li>Applying <b>contact physics</b> to next‑gen <b>optoelectronic devices</b>.</li>
       </ul>
 
       <h4 class="section-title" style="border-left-color:#c2d9ff;">🛠 Technical Toolkit</h4>
       <div>
         <span class="skill-pill">KPFM/FFM</span>
         <span class="skill-pill">Exfoliation</span>
+        <span class="skill-pill">Cold Field Emission</span>
         <span class="skill-pill">AI for Science</span>
       </div>
     </div>
@@ -182,22 +261,21 @@ body{ background:var(--bg) !important; font-family:"Segoe UI",sans-serif; color:
       <ul class="news-list">
         <li><b>Jan 2026:</b> Installed spectrometer for 2D analysis.</li>
         <li><b>Dec 2025:</b> MnFe<sub>2</sub>O<sub>4</sub> study published.</li>
-        <li><b>Nov 2025:</b> Talk at AMatS Spain.</li>
+        <li><b>Nov 2025:</b> Talk at AMatS Spain on Schottky junctions.</li>
         <li><b>Jul 2025:</b> KPFM integrated at USAL.</li>
-        <li><b>Jun 2021:</b> PhD defended.</li>
+        <li><b>Jun 2021:</b> PhD on Rare‑Earth Hexaborides defended.</li>
       </ul>
     </div>
   </aside>
 </div>
 
-<hr class="section-divider">
 <div class="gallery-wrap">
-  <h2 class="centered-title">📸 Research & Lab Gallery</h2>
+  <h3 class="section-title" style="border-left-color:#c2d9ff;">📸 Research & Lab Gallery</h3>
   <div class="gallery-grid">
-    <img src="/assets/photo1.jpg">
-    <img src="/assets/photo2.jpg">
-    <img src="/assets/photo3.jpg">
-    <img src="/assets/photo4.jpg">
+    <div class="gallery-item"><img src="/assets/photo1.jpg" alt="Lab 1"></div>
+    <div class="gallery-item"><img src="/assets/photo2.jpg" alt="Lab 2"></div>
+    <div class="gallery-item"><img src="/assets/photo3.jpg" alt="Lab 3"></div>
+    <div class="gallery-item"><img src="/assets/photo4.jpg" alt="Lab 4"></div>
   </div>
 </div>
 
@@ -210,3 +288,6 @@ body{ background:var(--bg) !important; font-family:"Segoe UI",sans-serif; color:
   </a>
   <span style="font-size: 22px;">🤖</span>
 </div>
+
+</body>
+</html>
