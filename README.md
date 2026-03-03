@@ -269,8 +269,12 @@ body {
   </aside>
 </div>
 
+<hr style="max-width: 1150px; margin: 40px auto 0; border: 0; border-top: 1px solid var(--border);">
+
 <div class="gallery-wrap">
-  <h3 class="section-title" style="border-left-color:#c2d9ff;">📸 Research & Lab Gallery</h3>
+  <h3 class="section-title" style="border-left: none; padding-left: 0; text-align: center; border-bottom: 3px solid var(--primary); display: table; margin: 20px auto 30px; padding-bottom: 5px;">
+    📸 Research & Lab Gallery
+  </h3>
   <div class="gallery-grid">
     <div class="gallery-item"><img src="/assets/photo1.jpg" alt="Lab 1"></div>
     <div class="gallery-item"><img src="/assets/photo2.jpg" alt="Lab 2"></div>
