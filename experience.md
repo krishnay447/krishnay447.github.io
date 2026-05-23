@@ -31,42 +31,65 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 
 /* NAVIGATION BAR */
 .nav-bar {
-  text-align: center; padding: 12px 0; background: #ffffff;
-  border-bottom: 3px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  position: sticky; top: 0; z-index: 10000;
+  position: sticky; 
+  top: 10px; 
+  z-index: 10000;
+  margin: 0 auto 25px;
+  max-width: 1150px;
+}
+.nav-inner {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 6px 15px;
+  background: #ffffff; 
+  border-radius: 12px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
 }
 .nav-bar a, .dropdown-toggle {
-  color: #444; text-decoration: none; font-weight: 600; padding: 10px 18px;
-  margin: 0 4px; border-radius: 8px; transition: all 0.2s ease;
-  display: inline-block; font-size: 15px; cursor: pointer; border: none; background: none;
+  text-decoration: none; 
+  color: var(--primary-dark) !important;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  font-size: 17px; 
+  cursor: pointer;
+  border: none;
+  background: none;
+  white-space: nowrap;
 }
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background-color: #e3f2fd; color: var(--primary-dark); }
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
+  background: var(--nav-hover);
+  color: var(--primary) !important;
+}
 
-/* --- FIXED DROPDOWN SYSTEM --- */
-.dropdown { position: relative; display: inline-block; }
+/* DROPDOWN */
+.dropdown { position: relative; }
 .dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: transparent; 
-  min-width: 250px; z-index: 9999; 
-  padding-top: 10px; /* Bridge gap */
-}
-/* Invisible bridge pseudo-element */
-.dropdown-content::before {
-  content: ""; position: absolute; top: -15px; left: 0; width: 100%; height: 15px; background: transparent;
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  min-width: 180px; 
+  z-index: 9999; 
+  padding-top: 10px; 
 }
 .dropdown:hover .dropdown-content { display: block; }
-
-/* Visible menu container */
 .dropdown-menu-box {
-  background: #ffffff; border-radius: 12px; border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); overflow: hidden;
+  background: #fff; border-radius: 10px; border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
 }
-.dropdown-menu-box a { 
-  display: block; padding: 12px 20px; border-bottom: 1px solid #f0f0f0; 
-  text-align: left; font-size: 14px; color: #444; text-decoration: none; 
+.dropdown-menu-box a {
+  display: block; padding: 10px 15px; font-size: 15px; 
+  color: var(--ink) !important; font-weight: 700; text-align: left;
 }
-.dropdown-menu-box a:last-child { border-bottom: none; }
-.dropdown-menu-box a:hover { background: #f8fbff; color: var(--primary); }
 
 /* CONTENT STYLING */
 .dev-highlight-full {
@@ -119,22 +142,24 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
   <div class="hero-title">Experience & Expertise</div>
 </div>
 
-<div class="nav-bar">
-  <a href="/">🏠 Home</a>
-  <a href="/experience/">👨‍🔬 Experience</a>
-  <a href="/impact/">📈 Impact</a>
-  <div class="dropdown">
-    <span class="dropdown-toggle">📚 Publications ▾</span>
-    <div class="dropdown-content">
-      <div class="dropdown-menu-box">
-        <a href="/patents/">📜 1. Patents</a>
-        <a href="/Book_Chapters/">📖 2. Chapters</a>
-        <a href="/publications/">📝 3. Articles</a>
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="/">🏠 Home</a>
+    <a href="/experience/">👨‍🔬 Experience</a>
+    <a href="/impact/">📈 Impact</a>
+    <div class="dropdown">
+      <span class="dropdown-toggle">📚 Publications ▾</span>
+      <div class="dropdown-content">
+        <div class="dropdown-menu-box">
+          <a href="/patents/">📜 Patents</a>
+          <a href="/Book_Chapters/">📖 Chapters</a>
+          <a href="/publications/">📝 Articles</a>
+        </div>
       </div>
     </div>
+    <a href="/contact/">📬 Contact</a>
   </div>
-  <a href="/contact/">📬 Contact</a>
-</div>
+</nav>
 
 <div class="dev-highlight-full">
   <h2 style="margin-top:0; margin-bottom: 8px; color:var(--primary-dark); font-size: 22px;">🔬 Instrumental Development</h2>
