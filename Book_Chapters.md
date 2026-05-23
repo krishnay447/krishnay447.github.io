@@ -7,14 +7,16 @@ permalink: /Book_Chapters/
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-/* 1. HIDE GITHUB REPO TITLE */
+/* 1. GLOBAL STYLES */
 .markdown-body > h1:first-child { display: none !important; }
 
 :root{
   --primary:#1e88e5;
   --primary-dark:#1565c0;
+  --nav-hover:#e3f2fd;
   --bg:#f7f9fc;
   --border:#dce3ef;
+  --ink:#2a3440;
 }
 body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
@@ -31,27 +33,43 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* 3. NAVIGATION BAR */
+/* 3. UPDATED NAVIGATION BAR */
 .nav-bar {
-  text-align: center; background: #ffffff; border-bottom: 3px solid var(--border);
-  position: sticky; top: 0; z-index: 10000; display: flex; justify-content: center; gap: 5px; padding: 12px 0;
+  position: sticky; top: 10px; z-index: 10000;
+  margin: 0 auto 25px; max-width: 1150px;
 }
-.nav-item { position: relative; display: inline-block; }
-.nav-bar a, .drop-btn {
-  color: #444; text-decoration: none; font-weight: 600; padding: 10px 18px;
-  border-radius: 8px; transition: 0.2s; font-size: 15px; cursor: pointer; border: none; background: none;
+.nav-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 20px; padding: 6px 15px; background: #ffffff;
+  border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
 }
-.nav-bar a:hover, .nav-item:hover .drop-btn { background-color: #e3f2fd; color: var(--primary-dark); }
+.nav-bar a, .dropdown-toggle {
+  text-decoration: none; color: var(--primary-dark) !important;
+  font-weight: 800; padding: 8px 16px; border-radius: 8px;
+  transition: all 0.2s ease-in-out; display: inline-flex;
+  align-items: center; gap: 8px; font-size: 17px; cursor: pointer;
+  border: none; background: none; white-space: nowrap;
+}
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
+  background: var(--nav-hover); color: var(--primary) !important;
+}
 
+/* Dropdown */
+.dropdown { position: relative; }
 .dropdown-content {
-  display: none; position: absolute; background-color: #ffffff; min-width: 220px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1); z-index: 1; border-radius: 8px; top: 100%; left: 0; border: 1px solid var(--border);
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px;
 }
-.dropdown-content a {
-  color: #444; padding: 12px 16px; text-decoration: none; display: block; text-align: left; border-bottom: 1px solid #f1f1f1;
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-menu-box {
+  background: #fff; border-radius: 10px; border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
 }
-.dropdown-content a:last-child { border-bottom: none; }
-.nav-item:hover .dropdown-content { display: block; }
+.dropdown-menu-box a {
+  display: block; padding: 10px 15px; font-size: 15px;
+  color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none;
+}
 
 /* 4. SEARCH & FILTER */
 .search-container {
@@ -92,22 +110,24 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
   <div class="hero-title">Knowledge Sharing</div>
 </div>
 
-<div class="nav-bar">
-  <a href="/">🏠 Home</a>
-  <a href="/experience/">👨‍🔬 Experience</a>
-  <a href="/impact/">📈 Impact</a>
-  
-  <div class="nav-item">
-    <button class="drop-btn">📚 Publications <i class="fas fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="/patents/">📜 1. Patents</a>
-      <a href="/Book_Chapters/">📖 2. Chapters</a>
-      <a href="/publications/">📝 3. Articles</a>
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="/">🏠 Home</a>
+    <a href="/experience/">👨‍🔬 Experience</a>
+    <a href="/impact/">📈 Impact</a>
+    <div class="dropdown">
+      <span class="dropdown-toggle">📚 Publications ▾</span>
+      <div class="dropdown-content">
+        <div class="dropdown-menu-box">
+          <a href="/patents/">📜 Patents</a>
+          <a href="/Book_Chapters/">📖 Chapters</a>
+          <a href="/publications/">📝 Articles</a>
+        </div>
+      </div>
     </div>
+    <a href="/contact/">📬 Contact</a>
   </div>
-
-  <a href="/contact/">📬 Contact</a>
-</div>
+</nav>
 
 <div class="search-container">
   <input type="text" id="yearInput" onkeyup="filterBySearch()" placeholder="🔍 Search Title or Year...">
