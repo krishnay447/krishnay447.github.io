@@ -13,11 +13,13 @@ permalink: /impact/
 :root{
   --primary:#1e88e5;
   --primary-dark:#1565c0;
+  --nav-hover:#e3f2fd;
   --accent: #ff9800;
   --bg:#f0f4f8;
   --card-bg: rgba(255, 255, 255, 0.9);
   --border:#dce3ef;
   --text-main: #2c3e50;
+  --ink:#2a3440;
 }
 body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-serif; }
 
@@ -34,62 +36,58 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
   background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);
 }
 
-/* DROPDOWN NAVIGATION */
+/* 3. UPDATED NAVIGATION BAR */
 .nav-bar {
-  text-align: center; background: #ffffff; border-bottom: 2px solid var(--border);
-  position: sticky; top: 0; z-index: 10000; display: flex; justify-content: center; gap: 5px; padding: 10px 0;
+  position: sticky; top: 10px; z-index: 10000;
+  margin: 0 auto 25px; max-width: 1150px;
 }
-.nav-item { position: relative; display: inline-block; }
-.nav-bar a, .drop-btn {
-  color: #444; text-decoration: none; font-weight: 600; padding: 8px 15px;
-  border-radius: 6px; transition: 0.2s; font-size: 14px; cursor: pointer; border: none; background: none;
+.nav-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 20px; padding: 6px 15px; background: #ffffff;
+  border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
 }
-.nav-bar a:hover, .nav-item:hover .drop-btn { background-color: #e3f2fd; color: var(--primary-dark); }
+.nav-bar a, .dropdown-toggle {
+  text-decoration: none; color: var(--primary-dark) !important;
+  font-weight: 800; padding: 8px 16px; border-radius: 8px;
+  transition: all 0.2s ease-in-out; display: inline-flex;
+  align-items: center; gap: 8px; font-size: 17px; cursor: pointer;
+  border: none; background: none; white-space: nowrap;
+}
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
+  background: var(--nav-hover); color: var(--primary) !important;
+}
 
+/* Dropdown */
+.dropdown { position: relative; }
 .dropdown-content {
-  display: none; position: absolute; background-color: #ffffff; min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1); z-index: 1; border-radius: 8px; top: 100%; left: 0;
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px;
 }
-.dropdown-content a {
-  color: #444; padding: 12px 16px; text-decoration: none; display: block; text-align: left; border-bottom: 1px solid #f1f1f1;
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-menu-box {
+  background: #fff; border-radius: 10px; border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
 }
-.dropdown-content a:last-child { border-bottom: none; }
-.nav-item:hover .dropdown-content { display: block; }
+.dropdown-menu-box a {
+  display: block; padding: 10px 15px; font-size: 15px;
+  color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none;
+}
 
 /* IMPACT LAYOUT */
 .impact-container { max-width: 1150px; margin: 20px auto; padding: 0 20px; }
 .impact-row { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 20px; }
-
-.stat-card { 
-  background: var(--card-bg); padding: 20px; border-radius: 15px; 
-  border: 1px solid #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  backdrop-filter: blur(4px); margin-bottom: 20px;
-}
-
-.section-header {
-  color: var(--primary-dark); font-size: 1.2em; margin-bottom: 15px;
-  display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #eef2f7; padding-bottom: 8px;
-}
+.stat-card { background: var(--card-bg); padding: 20px; border-radius: 15px; border: 1px solid #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); backdrop-filter: blur(4px); margin-bottom: 20px; }
+.section-header { color: var(--primary-dark); font-size: 1.2em; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #eef2f7; padding-bottom: 8px; }
 
 /* MENTORSHIP & ADVISORS */
-.mentor-card {
-  font-size: 0.88em; background: #ffffff; padding: 12px; border-radius: 10px; 
-  border-left: 4px solid var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: 0.2s;
-}
+.mentor-card { font-size: 0.88em; background: #ffffff; padding: 12px; border-radius: 10px; border-left: 4px solid var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: 0.2s; }
 .mentor-card:hover { transform: translateY(-2px); }
 .mentor-name { color: #1a237e; font-weight: 700; display: block; font-size: 1.05em; margin-bottom: 2px; }
 .mentor-role { color: var(--primary); font-weight: 600; font-size: 0.85em; }
-
-.advisor-item {
-  position: relative; background: #fff; padding: 10px 15px; border-radius: 10px; margin-bottom: 8px;
-  border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;
-}
+.advisor-item { position: relative; background: #fff; padding: 10px 15px; border-radius: 10px; margin-bottom: 8px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
 .advisor-name { font-weight: 700; color: var(--primary-dark); font-size: 1em; cursor: help; border-bottom: 1px dashed #ccc; }
-.tooltip-content {
-  visibility: hidden; width: 260px; background-color: #333; color: #fff;
-  text-align: left; border-radius: 6px; padding: 10px; position: absolute;
-  z-index: 100; bottom: 125%; left: 0; opacity: 0; transition: opacity 0.3s; font-weight: normal; font-size: 0.8em;
-}
+.tooltip-content { visibility: hidden; width: 260px; background-color: #333; color: #fff; text-align: left; border-radius: 6px; padding: 10px; position: absolute; z-index: 100; bottom: 125%; left: 0; opacity: 0; transition: opacity 0.3s; font-weight: normal; font-size: 0.8em; }
 .advisor-name:hover + .tooltip-content { visibility: visible; opacity: 1; }
 
 /* SOFTWARE ITEMS */
@@ -120,25 +118,26 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
   <div class="hero-title">Academic Impact</div>
 </div>
 
-<div class="nav-bar">
-  <a href="/">🏠 Home</a>
-  <a href="/experience/">👨‍🔬 Experience</a>
-  <a href="/impact/">📈 Impact</a>
-  
-  <div class="nav-item">
-    <button class="drop-btn">📝 Publications <i class="fas fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="/patents/">📜 1. Patents</a>
-      <a href="/Book_Chapters/">📖 2. Chapters</a>
-      <a href="/publications/">📝 3. Articles</a>
-     </div>
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="/">🏠 Home</a>
+    <a href="/experience/">👨‍🔬 Experience</a>
+    <a href="/impact/">📈 Impact</a>
+    <div class="dropdown">
+      <span class="dropdown-toggle">📚 Publications ▾</span>
+      <div class="dropdown-content">
+        <div class="dropdown-menu-box">
+          <a href="/patents/">📜 Patents</a>
+          <a href="/Book_Chapters/">📖 Chapters</a>
+          <a href="/publications/">📝 Articles</a>
+        </div>
+      </div>
+    </div>
+    <a href="/contact/">📬 Contact</a>
   </div>
-
-  <a href="/contact/">📬 Contact</a>
-</div>
+</nav>
 
 <div class="impact-container">
-  
   <div class="impact-row">
     <div class="impact-left">
       <div class="stat-card">
@@ -206,31 +205,26 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
         <p class="work-desc">Postdoc collaborator specializing in <b>Terahertz Physics</b> and Semiconductor dynamics.</p>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;"><span class="tag tag-postdoc">Postdoc Collab</span><a href="mailto:perez.rodriguez.ana@usal.es" class="email-btn">Email</a></div>
       </div>
-
       <div class="inst-card">
         <span class="prof-highlight">Dr. Carmen Munuera López</span><small style="color:#888;">ICMM-CSIC, Madrid</small>
         <p class="work-desc">Expertise in <b>Surface Science</b> and advanced material characterization.</p>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;"><span class="tag tag-postdoc">Postdoc Collab</span><a href="mailto:cmunuera@icmm.csic.es" class="email-btn">Email</a></div>
       </div>
-
       <div class="inst-card">
         <span class="prof-highlight">Prof. Santanu Ghosh</span><small style="color:#888;">IIT Delhi</small>
         <p class="work-desc">Research on <b>Field Emission</b> and Nanostructures throughout doctoral studies.</p>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;"><span class="tag tag-phd">Field Emission</span><a href="mailto:santanu1@physics.iitd.ac.in" class="email-btn">Email</a></div>
       </div>
-
       <div class="inst-card">
         <span class="prof-highlight">Dr. Sunaina Choudhary</span><small style="color:#888;">GNDU, Amritsar</small>
         <p class="work-desc">Core collaborator on <b>Physical Chemistry</b> and Nanomaterials since PhD.</p>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;"><span class="tag tag-ongoing">PhD to Present</span><a href="mailto:sunaina1010@yahoo.com" class="email-btn">Email</a></div>
       </div>
-
       <div class="inst-card">
         <span class="prof-highlight">Dr. Vishwajit Gaikwad</span><small style="color:#888;">SGB Amravati Univ.</small>
         <p class="work-desc">Experimental partner focused on <b>Instrumentation</b> and precision measurements.</p>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;"><span class="tag tag-ongoing">PhD to Present</span><a href="mailto:vish9823@gmail.com" class="email-btn">Email</a></div>
       </div>
-
       <div class="inst-card">
         <span class="prof-highlight">Prof. S.K. Mehta</span><small style="color:#888;">Panjab University</small>
         <p class="work-desc">Joint research on <b>Chemical Synthesis</b> pathways and techniques.</p>
