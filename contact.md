@@ -1,239 +1,247 @@
 ---
 layout: default
-title: Contact
-permalink: /contact/
+title: Experience
+permalink: /experience/
 ---
 
 <style>
+/* Hide injected H1 */
 .markdown-body > h1:first-child { display: none !important; }
-:root{ --primary:#1e88e5; --bg:#f7f9fc; --border:#dce3ef; }
-body{ background:var(--bg) !important; }
+
+:root{
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
+}
+body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 
 /* HERO BANNER */
 .hero-header{
-  position:relative; width:100%; max-width:1150px; margin:0 auto 15px;
+  position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
   border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
-.hero-header img{ width:100%; height:240px; object-fit:cover; display:block; }
+.hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
 .hero-title{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-family:"Segoe UI", sans-serif; font-size:36px; font-weight:700; color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+  font-size:clamp(28px,4vw,40px);
+  font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* NAVIGATION */
-.nav-bar{ text-align:center; padding:12px 0; background:#fff; border-bottom:2px solid var(--border); margin-bottom:20px; }
-.nav-bar a{ color:var(--primary); text-decoration:none; font-weight:600; padding:0 10px; }
+/* NAVIGATION BAR */
+.nav-bar {
+  position: sticky; 
+  top: 10px; 
+  z-index: 10000;
+  margin: 0 auto 25px;
+  max-width: 1150px;
+}
+.nav-inner {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 6px 15px;
+  background: #ffffff; 
+  border-radius: 12px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
+}
+.nav-bar a, .dropdown-toggle {
+  text-decoration: none; 
+  color: var(--primary-dark) !important;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  font-size: 17px; 
+  cursor: pointer;
+  border: none;
+  background: none;
+  white-space: nowrap;
+}
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
+  background: var(--nav-hover);
+  color: var(--primary) !important;
+}
 
 /* DROPDOWN */
-.dropdown{ position:relative; display:inline-block; }
-.dropdown-toggle{ cursor:pointer; font-weight:700; color:var(--primary); }
-.dropdown-content{
-  display:none; position:absolute; top:100%; left:50%; transform: translateX(-50%);
-  background:#fff; min-width:200px;
-  border:1px solid var(--border); border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.12); z-index:9999;
+.dropdown { position: relative; }
+.dropdown-content {
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  min-width: 180px; 
+  z-index: 9999; 
+  padding-top: 10px; 
 }
-.dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{ display:block; padding:10px 16px; font-size:14px; color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; text-align:left; }
-
-/* SPLIT LAYOUT */
-.contact-split-wrapper { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
-.contact-left { flex: 1; min-width: 280px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-.map-right { flex: 2.3; min-width: 350px; background: #1a1a1a; padding: 20px; border-radius: 12px; color: white; }
-
-/* MINI IMAGE THUMBNAILS */
-.timeline-images {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-  gap: 10px;
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-menu-box {
+  background: #fff; border-radius: 10px; border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
 }
-.timeline-box {
-  text-align: center;
-  flex: 1;
-}
-.timeline-box img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #444;
-  margin-bottom: 5px;
-  transition: transform 0.2s;
-}
-.timeline-box img:hover { transform: scale(1.2); border-color: var(--primary); }
-.timeline-box span { font-size: 11px; display: block; color: #ccc; }
-
-/* BADGES */
-.badge-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; align-items: flex-start; }
-.badge-stack a img { height: 28px; width: 240px; object-fit: fill; border-radius: 4px; }
-
-/* MAP AREA — FIXED ASPECT RATIO + RELIABLE PIN ANCHORING */
-.map-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 2 / 1;          /* equirectangular world map */
-  background: #222;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #444;
+.dropdown-menu-box a {
+  display: block; padding: 10px 15px; font-size: 15px; 
+  color: var(--ink) !important; font-weight: 700; text-align: left;
 }
 
-/* Fill the container exactly (no layout drift) */
-.map-container img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: invert(1) opacity(0.4);
-  pointer-events: none;         /* clicks pass through to pins */
+/* CONTENT STYLING */
+.dev-highlight-full {
+  max-width: 1150px; margin: 20px auto; padding: 15px 25px;
+  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+  border-radius: 16px; border: 1px solid var(--primary);
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.08);
 }
-
-/* Pins: the geographic point is at pin tip using translate(-50%, -100%) */
-.map-pin {
-  position: absolute;
-  width: 24px; height: 24px;
-  cursor: pointer; z-index: 10;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-  transition: transform 0.2s;
-  transform: translate(-50%, -100%);
+.split-layout { display: flex; gap: 30px; max-width: 1150px; margin: 0 auto 30px; padding: 0 15px; }
+.experience-side { flex: 1.5; }
+.timeline-v { position: relative; padding-left: 30px; border-left: 3px solid var(--border); }
+.timeline-v-item { position: relative; margin-bottom: 25px; }
+.timeline-v-item::before {
+  content: ''; position: absolute; left: -39px; top: 5px;
+  width: 15px; height: 15px; background: white; border: 3px solid var(--primary);
+  border-radius: 50%; z-index: 2;
 }
-.map-pin:hover { transform: translate(-50%, -100%) scale(1.3); }
+.v-content { background: white; padding: 18px; border-radius: 12px; border: 1px solid var(--border); }
+.v-content h3 { margin: 0; font-size: 17px; color: var(--primary-dark); }
+.v-content b { font-size: 13.5px; color: #333; display: block; margin-top: 4px; line-height: 1.4; }
+.inst-link { text-decoration: none !important; color: inherit !important; cursor: pointer; }
 
-.pin-active { animation: pulse 2.5s infinite; fill: #ffd700 !important; }
-@keyframes pulse {
-  0% { filter: drop-shadow(0 0 0px #ffd700); }
-  50% { filter: drop-shadow(0 0 12px #ffd700); }
-  100% { filter: drop-shadow(0 0 0px #ffd700); }
+/* TOOLKIT STYLING */
+.instrumentation-side { flex: 1; }
+.sticky-right { position: sticky; top: 100px; }
+.inst-category { margin-bottom: 8px; } 
+.inst-category h4 { 
+  font-size: 10px; text-transform: uppercase; color: #888; 
+  letter-spacing: 1px; margin-bottom: 4px; border-bottom: 1px solid #eee; padding-bottom: 2px;
 }
-
-/* Profile card */
-.profile-card { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
-.profile-img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid var(--primary); }
-
-/* Optional: smaller pins on small phones */
-@media (max-width: 480px) {
-  .map-pin { width: 18px; height: 18px; }
+.skill-grid-compact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; }
+.skill-badge-v {
+  background: white; border: 1px solid var(--border); 
+  padding: 6px 5px; border-radius: 8px; text-align: center;
+  display: flex; flex-direction: column; justify-content: center; min-height: 52px; 
 }
+.skill-badge-v b { font-size: 11.5px; display: block; color: var(--primary-dark); line-height: 1.1; }
+.skill-badge-v small { font-size: 10.5px; color: #555; margin-top: 3px; font-weight: 500; }
+
+.diode-icon { vertical-align: middle; margin-right: 8px; width: 24px; height: 24px; }
+.profile-links {
+  max-width: 1150px; margin: 40px auto; text-align: center;
+  padding: 20px; border-top: 1px solid var(--border);
+}
+.markdown-body { overflow: visible !important; }
 </style>
 
 <div class="hero-header">
-  <img src="/assets/header1.jpg" alt="Header Banner">
-  <div class="hero-title">Say Hello</div>
+  <img src="/assets/header2.jpg" alt="Experience header">
+  <div class="hero-title">Experience & Expertise</div>
 </div>
 
 <nav class="nav-bar">
-  <a href="/">🏠 Home</a> | 
-  <a href="/experience/">👨‍🔬 Experience</a> | 
-  <a href="/impact/">📈 Impact</a> | 
-  <span class="dropdown">
-    <a class="dropdown-toggle">📚 Publications ▾</a>
-    <div class="dropdown-content">
-      <a href="/patents/">📜 1. Patents</a>
-      <a href="/Book_Chapters/">📖 2. Chapters</a>
-      <a href="/publications/">📝 3. Articles</a>
+  <div class="nav-inner">
+    <a href="/">🏠 Home</a>
+    <a href="/experience/">👨‍🔬 Experience</a>
+    <a href="/impact/">📈 Impact</a>
+    <div class="dropdown">
+      <span class="dropdown-toggle">📚 Publications ▾</span>
+      <div class="dropdown-content">
+        <div class="dropdown-menu-box">
+          <a href="/patents/">📜 Patents</a>
+          <a href="/Book_Chapters/">📖 Chapters</a>
+          <a href="/publications/">📝 Articles</a>
+        </div>
+      </div>
     </div>
-  </span> | 
-  <a href="/contact/">📬 Contact</a>
+    <a href="/contact/">📬 Contact</a>
+  </div>
 </nav>
 
-<div class="contact-split-wrapper">
-  <div class="contact-left">
-    <div class="profile-card">
-      <img src="/assets/profile.jpg" alt="Krishna Profile" class="profile-img">
-      <div style="font-size: 14px;">
-        <strong>Krishna Kumar Yadav</strong><br>
-        <span style="color: #666;">Researcher</span>
-      </div>
+<div class="dev-highlight-full">
+  <h2 style="margin-top:0; margin-bottom: 8px; color:var(--primary-dark); font-size: 22px;">🔬 Instrumental Development</h2>
+  <p style="font-size: 14.5px; line-height: 1.5; color: #333; margin-bottom: 0;">
+    <b>Modified Optical Microscopy:</b> I actively develop and modify scientific setups to meet specific research needs. 
+    I successfully integrated a <b>high-resolution spectrometer</b> into an optical microscope system, allowing for 
+    precise, non-destructive <b>2D material thickness determination</b> through localized spectral analysis.
+  </p>
+</div>
+
+<div class="split-layout">
+  <div class="experience-side">
+    <h2 style="color: var(--primary-dark); margin-bottom: 20px;">👨‍🔬 Experience Tree</h2>
+    <div class="timeline-v">
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Post-Doctoral Fellow</h3>
+        <b><a href="https://www.usal.es/en" target="_blank" class="inst-link">🇪🇸 Department of Physics, University of Salamanca, Spain (2024–Present)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Post-Doctoral Fellow</h3>
+        <b><a href="https://www.sce.ac.il/en" target="_blank" class="inst-link">🇮🇱 Shamoon College of Engineering, Beer Sheva, Israel (2022–2024)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Research Associate</h3>
+        <b><a href="https://inst.ac.in/" target="_blank" class="inst-link">🇮🇳 Institute of Nano Science and Technology, Mohali, India (2021–2022)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>PhD Scholar (Nanotechnology)</h3>
+        <b><a href="https://inst.ac.in/" target="_blank" class="inst-link">🇮🇳 Institute of Nano Science and Technology, Mohali, India (2016–2021)</a></b>
+      </div></div>
     </div>
 
-    <h4 style="margin-top: 0; color: var(--primary);">📬 Get in Touch</h4>
-    <div class="badge-stack">
-      <a href="mailto:krish91phy@usal.es">
-        <img src="https://img.shields.io/badge/Email-krish91phy@usal.es-007ACC?style=for-the-badge&logo=gmail&logoColor=white" alt="Email 1">
-      </a>
-      <a href="mailto:Krishnay447@gmail.com">
-        <img src="https://img.shields.io/badge/Email-Krishnay447@gmail.com-007ACC?style=for-the-badge&logo=gmail&logoColor=white" alt="Email 2">
-      </a>
-      <a href="https://wa.me/34603917596">
-        <img src="https://img.shields.io/badge/WhatsApp-%2B34_603_917_596-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
-      </a>
+    <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-top: 20px;">
+      <h3 style="margin-top:0; color:var(--primary-dark); display: flex; align-items: center;">
+        <svg class="diode-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 19H20M5 5V18" stroke="#1e88e5" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 17C9 17 14 15 18 6" stroke="#f44336" stroke-width="2" stroke-linecap="round"/>
+          <path d="M14 12L20 12M17 9V15M20 9V15" stroke="#1e88e5" stroke-width="1.5"/>
+        </svg>
+        Electrical & Field Emission
+      </h3>
+      <p style="font-size: 14px; color: #444; margin-bottom: 15px;">Characterization of field emission properties including I-V measurements in diode configuration for cold cathode applications.</p>
     </div>
-
-    <p style="font-size: 13px; color: #444; margin-top: 20px;">
-      <strong>📍 Office:</strong><br>
-      Dept. of Physics, Edificio Multiusos I+D+i,<br>
-      Univ. de Salamanca, Spain 🇪🇸
-    </p>
   </div>
 
-  <div class="map-right">
-    <h3 style="margin-top: 0; color: white; font-size: 1.2em;">🌍 Research Journey</h3>
-
-    <div class="map-container">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg"
-        alt="World Map"
-      >
-
-      <!-- Kept your original percentages exactly as given -->
-      <a href="https://gorakhpur.nic.in/" target="_blank" title="Gorakhpur, India" aria-label="Gorakhpur, India">
-        <svg class="map-pin" style="top: 35%; left: 70%;" viewBox="0 0 24 24" fill="#FF9933" role="img" focusable="false">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-        </svg>
-      </a>
-
-      <a href="https://www.inst.ac.in/" target="_blank" title="INST Mohali, India" aria-label="INST Mohali, India">
-        <svg class="map-pin" style="top: 32.3%; left: 68.3%;" viewBox="0 0 24 24" fill="#FFFFFF" role="img" focusable="false">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-        </svg>
-      </a>
-
-      <a href="https://en.sce.ac.il/" target="_blank" title="SCE, Israel" aria-label="SCE, Israel">
-        <svg class="map-pin" style="top: 28%; left: 57%;" viewBox="0 0 24 24" fill="#2E8B57" role="img" focusable="false">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-        </svg>
-      </a>
-
-      <a href="https://lbt.usal.es/" target="_blank" title="LBT, Univ. de Salamanca" aria-label="LBT, Univ. de Salamanca">
-        <svg class="map-pin pin-active" style="top: 23.5%; left: 45.2%;" viewBox="0 0 24 24" role="img" focusable="false">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-        </svg>
-      </a>
-    </div>
-
-    <div class="timeline-images">
-      <div class="timeline-box">
-        <img src="/assets/gorakhpur.jpg" alt="Gorakhpur">
-        <span>🏠 Gorakhpur</span>
+  <div class="instrumentation-side">
+    <div class="sticky-right">
+      <h2 style="color: var(--primary-dark); margin-bottom: 20px;">🛠️ Technical Toolkit</h2>
+      <div class="inst-category">
+        <h4>🔥 Thermal Analysis</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>DSC</b><small>Phase Transitions</small></div>
+          <div class="skill-badge-v"><b>TGA</b><small>Weight Change</small></div>
+          <div class="skill-badge-v" style="grid-column: span 2;"><b>Furnaces</b><small>Up to 1600°C</small></div>
+        </div>
       </div>
-      <div style="padding-top: 30px; color: #666;">➔</div>
-      <div class="timeline-box">
-        <img src="/assets/mohali.jpg" alt="Mohali">
-        <span>🎓 Mohali</span>
+      <div class="inst-category">
+        <h4>⚛️ Structural & Morphological</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>XRD</b><small>High-Temp XRD</small></div>
+          <div class="skill-badge-v"><b>SEM</b><small>JSM-IT 300</small></div>
+          <div class="skill-badge-v"><b>AFM</b><small>Surface Topology</small></div>
+          <div class="skill-badge-v"><b>BET</b><small>Surface Area</small></div>
+        </div>
       </div>
-      <div style="padding-top: 30px; color: #666;">➔</div>
-      <div class="timeline-box">
-        <img src="/assets/israel.jpg" alt="Israel">
-        <span>🇮🇱 Israel</span>
-      </div>
-      <div style="padding-top: 30px; color: #666;">➔</div>
-      <div class="timeline-box">
-        <img src="/assets/salamanca.jpg" alt="Salamanca">
-        <span>🇪🇸 Salamanca</span>
+      <div class="inst-category">
+        <h4>🌈 Spectroscopy & Electro-chem</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>Raman</b><small>Confocal/Micro</small></div>
+          <div class="skill-badge-v"><b>Metrohm / PalmSens</b><small>Workstations</small></div>
+          <div class="skill-badge-v" style="grid-column: span 2;"><b>UV-Vis-NIR</b><small>IR / DRS Mode</small></div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div align="center">
-  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
+<div class="profile-links">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" style="margin: 0 10px;">
     <img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar">
   </a>
-  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank">
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" style="margin: 0 10px;">
     <img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID">
-  </a>
-  <a href="https://github.com/krishnay447" target="_blank">
-    <img src="https://komarev.com/ghpvc/?username=krishnay447&color=007ACC&style=for-the-badge&label=VISITORS" alt="Visitors">
   </a>
 </div>
