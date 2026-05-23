@@ -4,18 +4,23 @@ title: Publications
 permalink: /publications/
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
+/* 1. GLOBAL STYLES */
 .markdown-body > h1:first-child { display: none !important; }
 
 :root{
   --primary:#1e88e5;
   --primary-dark:#1565c0;
+  --nav-hover:#e3f2fd;
   --bg:#f7f9fc;
   --border:#dce3ef;
+  --ink:#2a3440;
 }
 body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 
-/* Hero Banner */
+/* 2. HERO BANNER */
 .hero-header{
   position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
   border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
@@ -28,26 +33,45 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
   background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
 }
 
-/* Navigation Bar */
-.nav-bar{
-  text-align:center; padding:12px 0; background:#fff;
-  border-bottom:2px solid var(--border); margin-bottom: 20px;
+/* 3. UPDATED NAVIGATION BAR */
+.nav-bar {
+  position: sticky; top: 10px; z-index: 10000;
+  margin: 0 auto 25px; max-width: 1150px;
 }
-.nav-bar a{ color:var(--primary); text-decoration:none; font-weight:600; padding:0 8px; }
-.nav-bar a:hover{ color:var(--primary-dark); text-decoration:underline; }
+.nav-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 20px; padding: 6px 15px; background: #ffffff;
+  border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
+}
+.nav-bar a, .dropdown-toggle {
+  text-decoration: none; color: var(--primary-dark) !important;
+  font-weight: 800; padding: 8px 16px; border-radius: 8px;
+  transition: all 0.2s ease-in-out; display: inline-flex;
+  align-items: center; gap: 8px; font-size: 17px; cursor: pointer;
+  border: none; background: none; white-space: nowrap;
+}
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
+  background: var(--nav-hover); color: var(--primary) !important;
+}
 
 /* Dropdown */
-.dropdown{ position:relative; display:inline-block; }
-.dropdown-content{
-  display:none; position:absolute; top:100%; left:0;
-  background:#fff; min-width:230px; border:1px solid var(--border);
-  border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.12); z-index:9999; text-align:left;
+.dropdown { position: relative; }
+.dropdown-content {
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px;
 }
-.dropdown:hover .dropdown-content{ display:block; }
-.dropdown-content a{ display:block; padding:10px 16px; font-size:14px; color:var(--primary); text-decoration:none; border-bottom:1px solid #eee; }
-.dropdown-content a:hover{ background:#eef6ff; }
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-menu-box {
+  background: #fff; border-radius: 10px; border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
+}
+.dropdown-menu-box a {
+  display: block; padding: 10px 15px; font-size: 15px;
+  color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none;
+}
 
-/* Search Bar */
+/* 4. SEARCH BAR */
 .search-container { max-width: 900px; margin: 25px auto 5px; padding: 0 20px; }
 #pubSearch {
   width: 100%; padding: 14px 25px; font-size: 16px; border-radius: 30px;
@@ -56,7 +80,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 }
 #pubSearch:focus { border-color: var(--primary); box-shadow: 0 4px 15px rgba(30, 136, 229, 0.15); }
 
-/* Unified Publication Card Style */
+/* 5. PUBLICATION CARDS */
 .pub-list-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 .pub-card {
   background: #fff; padding: 20px; border-radius: 12px;
@@ -64,19 +88,12 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
   transition: 0.3s; display: block;
 }
 .pub-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); }
-
 .article-title { color: var(--primary-dark); font-weight: 700; font-size: 17px; display: block; margin-bottom: 8px; line-height: 1.4; }
 .article-authors { font-size: 14px; color: #555; margin-bottom: 5px; }
 .article-journal { font-style: italic; color: #444; font-size: 14px; }
 .article-doi { font-size: 13px; margin-top: 8px; display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; }
-.article-doi:hover { text-decoration: underline; }
-
 .article-year-label { float: right; background: #e3f2fd; color: var(--primary); padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; border: 1px solid #bbdefb; }
 .if-badge { background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 800; margin-left: 10px; border: 1px solid #ffe0b2; }
-
-sub, sup { font-size: 0.75em; line-height: 0; position: relative; vertical-align: baseline; }
-sub { bottom: -0.2em; }
-sup { top: -0.4em; }
 </style>
 
 <div class="hero-header">
@@ -85,18 +102,22 @@ sup { top: -0.4em; }
 </div>
 
 <nav class="nav-bar">
-  <a href="/">🏠 Home</a> |
-  <a href="/experience/">🧪 Experience</a> |
-  <a href="/impact/">🧭 Impact</a> |
-  <span class="dropdown">
-    <a class="dropdown-toggle" style="font-weight:700;">📚 Publications ▾</a>
-    <span class="dropdown-content">
-      <a href="/patents/">📜 1. Patents</a>
-      <a href="/Book_Chapters/">📖 2. Chapters</a>
-      <a href="/publications/">📝 3. Articles</a>
-    </span>
-  </span> |
-  <a href="/contact/">📬 Contact</a>
+  <div class="nav-inner">
+    <a href="/">🏠 Home</a>
+    <a href="/experience/">👨‍🔬 Experience</a>
+    <a href="/impact/">📈 Impact</a>
+    <div class="dropdown">
+      <span class="dropdown-toggle">📚 Publications ▾</span>
+      <div class="dropdown-content">
+        <div class="dropdown-menu-box">
+          <a href="/patents/">📜 Patents</a>
+          <a href="/Book_Chapters/">📖 Chapters</a>
+          <a href="/publications/">📝 Articles</a>
+        </div>
+      </div>
+    </div>
+    <a href="/contact/">📬 Contact</a>
+  </div>
 </nav>
 
 <div class="search-container">
@@ -113,7 +134,7 @@ sup { top: -0.4em; }
 <div class="pub-list-container" id="pubList">
   <h2 style="border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px; color: var(--primary-dark);">🔬 Peer‑Reviewed Journal Articles</h2>
 
-<div class="pub-card">
+  <div class="pub-card">
     <span class="article-year-label">2026</span>
     <span class="article-title">Shape-induced manganese iron-based nanostructures loaded onto iron sheet as efficient electrocatalyst for O<sub>2</sub> evolution.</span>
     <div class="article-authors">Supriya Rana, <b>Krishna K. Yadav</b>, Menaka Jha</div>
