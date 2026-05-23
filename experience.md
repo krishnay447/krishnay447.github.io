@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Contact
-permalink: /contact/
+title: Experience
+permalink: /experience/
 ---
 
 <style>
@@ -16,51 +16,130 @@ permalink: /contact/
 }
 body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-<style>
-:root{
-  --primary:#1e88e5; --primary-dark:#1565c0; --nav-hover:#e3f2fd;
-  --bg:#f7f9fc; --border:#dce3ef; --ink:#2a3440;
-}
-body { background:var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); }
-
 /* HERO BANNER */
-.hero-header{ position:relative; width:100%; max-width:1150px; margin:0 auto 20px; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
+.hero-header{
+  position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
+  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
 .hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
-.hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
+.hero-title{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-size:clamp(28px,4vw,40px);
+  font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55);
+  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
+}
 
 /* NAVIGATION BAR */
-.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; }
-.nav-inner { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 6px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: all 0.2s ease-in-out; display: inline-flex; align-items: center; gap: 8px; font-size: 17px; cursor: pointer; border: none; background: none; white-space: nowrap; }
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
+.nav-bar {
+  position: sticky; 
+  top: 10px; 
+  z-index: 10000;
+  margin: 0 auto 25px;
+  max-width: 1150px;
+}
+.nav-inner {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 6px 15px;
+  background: #ffffff; 
+  border-radius: 12px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
+}
+.nav-bar a, .dropdown-toggle {
+  text-decoration: none; 
+  color: var(--primary-dark) !important;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  font-size: 17px; 
+  cursor: pointer;
+  border: none;
+  background: none;
+  white-space: nowrap;
+}
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
+  background: var(--nav-hover);
+  color: var(--primary) !important;
+}
 
-/* REFINED DROPDOWN */
+/* DROPDOWN */
 .dropdown { position: relative; }
 .dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  min-width: 180px; z-index: 9999; padding-top: 10px;
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  min-width: 180px; 
+  z-index: 9999; 
+  padding-top: 10px; 
 }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
-.dropdown-menu-box a { display: block; padding: 10px 15px; font-size: 15px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
-.dropdown-menu-box a:hover { background: var(--nav-hover); color: var(--primary) !important; }
+.dropdown-menu-box {
+  background: #fff; border-radius: 10px; border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
+}
+.dropdown-menu-box a {
+  display: block; padding: 10px 15px; font-size: 15px; 
+  color: var(--ink) !important; font-weight: 700; text-align: left;
+}
 
-/* LAYOUT */
-.grid-container { max-width: 1150px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 350px 1fr; gap: 30px; }
-.profile-card { background: #fff; padding: 40px; border-radius: 20px; border: 1px solid var(--border); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-.map-card { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-.loc-box { border-radius: 12px; overflow: hidden; border: 2px solid var(--border); transition: 0.3s; height: 100px; cursor: pointer; }
-.loc-box:hover { border-color: var(--primary); transform: translateY(-5px); }
-.loc-box img { width: 100%; height: 100%; object-fit: cover; }
-.location-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 25px; }
+/* CONTENT STYLING */
+.dev-highlight-full {
+  max-width: 1150px; margin: 20px auto; padding: 15px 25px;
+  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+  border-radius: 16px; border: 1px solid var(--primary);
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.08);
+}
+.split-layout { display: flex; gap: 30px; max-width: 1150px; margin: 0 auto 30px; padding: 0 15px; }
+.experience-side { flex: 1.5; }
+.timeline-v { position: relative; padding-left: 30px; border-left: 3px solid var(--border); }
+.timeline-v-item { position: relative; margin-bottom: 25px; }
+.timeline-v-item::before {
+  content: ''; position: absolute; left: -39px; top: 5px;
+  width: 15px; height: 15px; background: white; border: 3px solid var(--primary);
+  border-radius: 50%; z-index: 2;
+}
+.v-content { background: white; padding: 18px; border-radius: 12px; border: 1px solid var(--border); }
+.v-content h3 { margin: 0; font-size: 17px; color: var(--primary-dark); }
+.v-content b { font-size: 13.5px; color: #333; display: block; margin-top: 4px; line-height: 1.4; }
+.inst-link { text-decoration: none !important; color: inherit !important; cursor: pointer; }
+
+/* TOOLKIT STYLING */
+.instrumentation-side { flex: 1; }
+.sticky-right { position: sticky; top: 100px; }
+.inst-category { margin-bottom: 8px; } 
+.inst-category h4 { 
+  font-size: 10px; text-transform: uppercase; color: #888; 
+  letter-spacing: 1px; margin-bottom: 4px; border-bottom: 1px solid #eee; padding-bottom: 2px;
+}
+.skill-grid-compact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; }
+.skill-badge-v {
+  background: white; border: 1px solid var(--border); 
+  padding: 6px 5px; border-radius: 8px; text-align: center;
+  display: flex; flex-direction: column; justify-content: center; min-height: 52px; 
+}
+.skill-badge-v b { font-size: 11.5px; display: block; color: var(--primary-dark); line-height: 1.1; }
+.skill-badge-v small { font-size: 10.5px; color: #555; margin-top: 3px; font-weight: 500; }
+
+.diode-icon { vertical-align: middle; margin-right: 8px; width: 24px; height: 24px; }
+.profile-links {
+  max-width: 1150px; margin: 40px auto; text-align: center;
+  padding: 20px; border-top: 1px solid var(--border);
+}
+.markdown-body { overflow: visible !important; }
 </style>
 
 <div class="hero-header">
-  <img src="/assets/header7.jpg" alt="Banner" />
-  <div class="hero-title">Contact & Network</div>
+  <img src="/assets/header2.jpg" alt="Experience header">
+  <div class="hero-title">Experience & Expertise</div>
 </div>
 
 <nav class="nav-bar">
@@ -82,48 +161,87 @@ body { background:var(--bg) !important; font-family: "Segoe UI", sans-serif; col
   </div>
 </nav>
 
-<div class="grid-container">
-  <aside class="profile-card">
-    <img src="/assets/profile.jpg" style="width:180px; height:180px; border-radius:50%; margin-bottom:20px; border:5px solid var(--nav-hover);">
-    <h2 style="font-size:24px; font-weight:800; color:var(--ink);">Dr. Krishna Kumar Yadav</h2>
-    <p>Postdoctoral Fellow</p>
-    <div style="font-size:20px; font-style:italic; font-weight:700; color:var(--primary-dark); margin-bottom:20px;">
-        <i>Department of Fundamental Physics, University of Salamanca</i>
-    </div>
-    <a href="mailto:Krish91phy@usal.es" style="display:inline-block; padding:10px 20px; background:var(--primary); color:white; border-radius:30px; text-decoration:none; font-weight:700;">
-      <i class="fas fa-envelope"></i> Send Email
-    </a>
-  </aside>
-
-  <section class="map-card">
-    <h3 style="margin-top:0; color:var(--primary-dark); padding-bottom: 10px; border-bottom: 1px solid var(--border);">📍 Research Network</h3>
-    <div id="map" style="width:100%; height:320px; border-radius:12px; margin-top:15px; z-index:1;"></div>
-    
-    <div class="location-gallery">
-      <a href="https://en.wikipedia.org/wiki/Gorakhpur" class="loc-box"><img src="/assets/gorakhpur.jpg" alt="Gorakhpur"></a>
-      <a href="https://en.wikipedia.org/wiki/Mohali" class="loc-box"><img src="/assets/mohali.jpg" alt="Mohali"></a>
-      <a href="https://en.wikipedia.org/wiki/Beersheba" class="loc-box"><img src="/assets/beersheba.jpg" alt="Beer Sheva"></a>
-      <a href="https://en.wikipedia.org/wiki/Salamanca" class="loc-box"><img src="/assets/salamanca.jpg" alt="Salamanca"></a>
-    </div>
-  </section>
+<div class="dev-highlight-full">
+  <h2 style="margin-top:0; margin-bottom: 8px; color:var(--primary-dark); font-size: 22px;">🔬 Instrumental Development</h2>
+  <p style="font-size: 14.5px; line-height: 1.5; color: #333; margin-bottom: 0;">
+    <b>Modified Optical Microscopy:</b> I actively develop and modify scientific setups to meet specific research needs. 
+    I successfully integrated a <b>high-resolution spectrometer</b> into an optical microscope system, allowing for 
+    precise, non-destructive <b>2D material thickness determination</b> through localized spectral analysis.
+  </p>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-    var map = L.map('map').setView([30, 40], 2);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-    var locs = [
-        {coords: [40.96, -5.66], name: 'Salamanca', color: 'green'},
-        {coords: [31.25, 34.79], name: 'Beer Sheva', color: 'blue'},
-        {coords: [30.70, 76.73], name: 'Mohali', color: 'orange'},
-        {coords: [26.76, 83.37], name: 'Gorakhpur', color: 'orange'}
-    ];
-    locs.forEach(function(loc) {
-        var icon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-'+loc.color+'.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
-        });
-        L.marker(loc.coords, {icon: icon}).addTo(map).bindPopup(loc.name);
-    });
-</script>
+<div class="split-layout">
+  <div class="experience-side">
+    <h2 style="color: var(--primary-dark); margin-bottom: 20px;">👨‍🔬 Experience Tree</h2>
+    <div class="timeline-v">
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Post-Doctoral Fellow</h3>
+        <b><a href="https://www.usal.es/en" target="_blank" class="inst-link">🇪🇸 Department of Physics, University of Salamanca, Spain (2024–Present)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Post-Doctoral Fellow</h3>
+        <b><a href="https://www.sce.ac.il/en" target="_blank" class="inst-link">🇮🇱 Shamoon College of Engineering, Beer Sheva, Israel (2022–2024)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>Research Associate</h3>
+        <b><a href="https://inst.ac.in/" target="_blank" class="inst-link">🇮🇳 Institute of Nano Science and Technology, Mohali, India (2021–2022)</a></b>
+      </div></div>
+      <div class="timeline-v-item"><div class="v-content">
+        <h3>PhD Scholar (Nanotechnology)</h3>
+        <b><a href="https://inst.ac.in/" target="_blank" class="inst-link">🇮🇳 Institute of Nano Science and Technology, Mohali, India (2016–2021)</a></b>
+      </div></div>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-top: 20px;">
+      <h3 style="margin-top:0; color:var(--primary-dark); display: flex; align-items: center;">
+        <svg class="diode-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 19H20M5 5V18" stroke="#1e88e5" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 17C9 17 14 15 18 6" stroke="#f44336" stroke-width="2" stroke-linecap="round"/>
+          <path d="M14 12L20 12M17 9V15M20 9V15" stroke="#1e88e5" stroke-width="1.5"/>
+        </svg>
+        Electrical & Field Emission
+      </h3>
+      <p style="font-size: 14px; color: #444; margin-bottom: 15px;">Characterization of field emission properties including I-V measurements in diode configuration for cold cathode applications.</p>
+    </div>
+  </div>
+
+  <div class="instrumentation-side">
+    <div class="sticky-right">
+      <h2 style="color: var(--primary-dark); margin-bottom: 20px;">🛠️ Technical Toolkit</h2>
+      <div class="inst-category">
+        <h4>🔥 Thermal Analysis</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>DSC</b><small>Phase Transitions</small></div>
+          <div class="skill-badge-v"><b>TGA</b><small>Weight Change</small></div>
+          <div class="skill-badge-v" style="grid-column: span 2;"><b>Furnaces</b><small>Up to 1600°C</small></div>
+        </div>
+      </div>
+      <div class="inst-category">
+        <h4>⚛️ Structural & Morphological</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>XRD</b><small>High-Temp XRD</small></div>
+          <div class="skill-badge-v"><b>SEM</b><small>JSM-IT 300</small></div>
+          <div class="skill-badge-v"><b>AFM</b><small>Surface Topology</small></div>
+          <div class="skill-badge-v"><b>BET</b><small>Surface Area</small></div>
+        </div>
+      </div>
+      <div class="inst-category">
+        <h4>🌈 Spectroscopy & Electro-chem</h4>
+        <div class="skill-grid-compact">
+          <div class="skill-badge-v"><b>Raman</b><small>Confocal/Micro</small></div>
+          <div class="skill-badge-v"><b>Metrohm / PalmSens</b><small>Workstations</small></div>
+          <div class="skill-badge-v" style="grid-column: span 2;"><b>UV-Vis-NIR</b><small>IR / DRS Mode</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="profile-links">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" style="margin: 0 10px;">
+    <img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar">
+  </a>
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" style="margin: 0 10px;">
+    <img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID">
+  </a>
+</div>
