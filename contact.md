@@ -96,7 +96,6 @@ permalink: /contact/
   <noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13250871/0/d8d12d18/0/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 </div>
 
-HTML
 <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=mnqhensxdzjubccwihxdjvaehcwnlmcbfvcq"></script>
 
 <script>
