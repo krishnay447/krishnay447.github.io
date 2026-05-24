@@ -4,6 +4,19 @@ title: Contact
 permalink: /contact/
 ---
 
+<style>
+/* Hide injected H1 */
+.markdown-body > h1:first-child { display: none !important; }
+
+:root{
+  --primary:#1e88e5;
+  --primary-dark:#1565c0;
+  --bg:#f7f9fc;
+  --border:#dce3ef;
+}
+body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
