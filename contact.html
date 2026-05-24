@@ -7,27 +7,29 @@ permalink: /contact/
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-  .markdown-body > h1:first-child {
+
+.markdown-body > h1:first-child {
     display: none !important;
-  }
+}
 
-  :root {
-    --primary: #1e88e5;
-    --bg: #f0f4f8;
-    --card-bg: #ffffff;
-    --border: #dce3ef;
-    --ink: #2a3440;
-  }
+:root {
+    --primary:#1e88e5;
+    --bg:#f0f4f8;
+    --card-bg:#ffffff;
+    --border:#dce3ef;
+    --ink:#2a3440;
+}
 
-  body {
+body {
     background: var(--bg) !important;
     font-family: "Segoe UI", sans-serif;
     color: var(--ink);
     margin: 0;
-  }
+}
 
-  /* HERO */
-  .hero-header {
+/* HERO */
+
+.hero-header {
     position: relative;
     width: 100%;
     max-width: 1150px;
@@ -35,16 +37,16 @@ permalink: /contact/
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  }
+}
 
-  .hero-header img {
+.hero-header img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     display: block;
-  }
+}
 
-  .hero-title {
+.hero-title {
     position: absolute;
     inset: 0;
     display: flex;
@@ -55,18 +57,19 @@ permalink: /contact/
     color: #fff;
     text-shadow: 0 3px 10px rgba(0,0,0,0.6);
     background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
-  }
+}
 
-  /* NAVBAR */
-  .nav-bar {
+/* NAVBAR */
+
+.nav-bar {
     position: sticky;
     top: 10px;
     z-index: 10000;
     margin: 0 auto 25px;
     max-width: 1150px;
-  }
+}
 
-  .nav-inner {
+.nav-inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,10 +80,10 @@ permalink: /contact/
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     border: 1px solid var(--border);
     flex-wrap: wrap;
-  }
+}
 
-  .nav-bar a,
-  .dropdown-toggle {
+.nav-bar a,
+.dropdown-toggle {
     text-decoration: none;
     color: #1565c0 !important;
     font-weight: 800;
@@ -94,20 +97,21 @@ permalink: /contact/
     cursor: pointer;
     border: none;
     background: none;
-  }
+}
 
-  .nav-bar a:hover,
-  .dropdown:hover .dropdown-toggle {
+.nav-bar a:hover,
+.dropdown:hover .dropdown-toggle {
     background: #e3f2fd;
     color: #1e88e5 !important;
-  }
+}
 
-  /* DROPDOWN */
-  .dropdown {
+/* DROPDOWN */
+
+.dropdown {
     position: relative;
-  }
+}
 
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
@@ -116,295 +120,349 @@ permalink: /contact/
     min-width: 180px;
     z-index: 9999;
     padding-top: 10px;
-  }
+}
 
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
-  .dropdown-menu-box {
+.dropdown-menu-box {
     background: #fff;
     border-radius: 10px;
     border: 1px solid var(--border);
     box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     padding: 5px;
-  }
+}
 
-  .dropdown-menu-box a {
+.dropdown-menu-box a {
     display: block;
     padding: 10px;
     font-size: 15px;
     color: var(--ink) !important;
     font-weight: 700;
     text-decoration: none;
-  }
+}
 
-  /* GRID */
-  .grid-container {
+/* GRID */
+
+.grid-container {
     max-width: 1150px;
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 20px;
-  }
+}
 
-  .card {
+.card {
     background: var(--card-bg);
     padding: 25px;
     border-radius: 16px;
     border: 1px solid var(--border);
     margin-bottom: 20px;
-  }
+}
 
-  /* GALLERY */
-  .gallery-grid {
+/* MAP */
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-top: 15px;
+}
+
+/* GALLERY */
+
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin-top: 20px;
-  }
+}
 
-  .gallery-item {
+.gallery-item {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--border);
     height: 100px;
-  }
+}
 
-  .gallery-item img {
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  /* MAP */
-  #map {
-    width: 100%;
-    height: 450px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 15px;
-    border: 1px solid var(--border);
-  }
+/* MOBILE */
 
-  /* MOBILE */
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
+
     .grid-container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 
     .gallery-grid {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero-title {
-      font-size: 28px;
+        font-size: 28px;
     }
-  }
+}
+
 </style>
 
 <!-- HERO -->
+
 <div class="hero-header">
-  <img src="/assets/header7.jpg" alt="Contact banner">
-  <div class="hero-title">Contact & Research Network</div>
+
+    <img src="/assets/header7.jpg" alt="Contact banner">
+
+    <div class="hero-title">
+        Contact & Research Network
+    </div>
+
 </div>
 
 <!-- NAVBAR -->
+
 <nav class="nav-bar">
-  <div class="nav-inner">
-    <a href="/">🏠 Home</a>
-    <a href="/experience/">👨‍🔬 Experience</a>
-    <a href="/impact/">📈 Impact</a>
 
-    <div class="dropdown">
-      <span class="dropdown-toggle">📚 Publications ▾</span>
+    <div class="nav-inner">
 
-      <div class="dropdown-content">
-        <div class="dropdown-menu-box">
-          <a href="/patents/">📜 Patents</a>
-          <a href="/Book_Chapters/">📖 Chapters</a>
-          <a href="/publications/">📝 Articles</a>
+        <a href="/">🏠 Home</a>
+
+        <a href="/experience/">👨‍🔬 Experience</a>
+
+        <a href="/impact/">📈 Impact</a>
+
+        <div class="dropdown">
+
+            <span class="dropdown-toggle">
+                📚 Publications ▾
+            </span>
+
+            <div class="dropdown-content">
+
+                <div class="dropdown-menu-box">
+
+                    <a href="/patents/">📜 Patents</a>
+
+                    <a href="/Book_Chapters/">📖 Chapters</a>
+
+                    <a href="/publications/">📝 Articles</a>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
+        <a href="/contact/">📬 Contact</a>
+
     </div>
 
-    <a href="/contact/">📬 Contact</a>
-  </div>
 </nav>
 
 <!-- MAIN GRID -->
+
 <div class="grid-container">
 
-  <!-- SIDEBAR -->
-  <aside>
+    <!-- SIDEBAR -->
 
-    <div class="card" style="text-align:center;">
+    <aside>
 
-      <img
-        src="/assets/profile_pic.jpg"
-        alt="Krishna Kumar Yadav"
-        style="
-          width:180px;
-          height:180px;
-          object-fit:cover;
-          border-radius:50%;
-          margin-bottom:15px;
-          border:4px solid var(--border);
-          display:block;
-          margin-left:auto;
-          margin-right:auto;
-        "
-      >
+        <div class="card" style="text-align:center;">
 
-      <h2 style="font-size:20px; margin:0;">
-        Dr. Krishna Kumar Yadav
-      </h2>
+            <img
+                src="/assets/profile.jpg"
+                alt="Krishna Kumar Yadav"
+                style="
+                    width:180px;
+                    height:180px;
+                    object-fit:cover;
+                    border-radius:50%;
+                    margin-bottom:15px;
+                    border:4px solid var(--border);
+                "
+            >
 
-      <p style="font-size:0.9em; color:#666;">
-        Postdoctoral Fellow<br>
-        <b>Department of Fundamental Physics</b><br>
-        University of Salamanca, Spain
-      </p>
+            <h2 style="margin:0;">
+                Dr. Krishna Kumar Yadav
+            </h2>
 
-      <a
-        href="mailto:Krish91phy@usal.es"
-        style="color:var(--primary); font-weight:700;"
-      >
-        <i class="fas fa-envelope"></i>
-        Krish91phy@usal.es
-      </a>
+            <p style="font-size:0.9em; color:#666;">
 
-    </div>
+                Postdoctoral Fellow<br>
 
-  </aside>
+                <b>Department of Fundamental Physics</b><br>
 
-  <!-- MAIN -->
-  <main>
+                University of Salamanca, Spain
 
-    <div class="card">
+            </p>
 
-      <h3>📍 Global Research Network</h3>
+            <a
+                href="mailto:Krish91phy@usal.es"
+                style="color:var(--primary); font-weight:700;"
+            >
 
-      <!-- MAP -->
-      <div id="map"></div>
+                <i class="fas fa-envelope"></i>
 
-      <!-- GALLERY -->
-      <div class="gallery-grid">
+                Krish91phy@usal.es
 
-        <div class="gallery-item">
-          <img src="/assets/gorakhpur.jpg" alt="Gorakhpur">
+            </a>
+
         </div>
 
-        <div class="gallery-item">
-          <img src="/assets/mohali.jpg" alt="Mohali">
+    </aside>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <div class="card">
+
+            <h2>
+                📍 Global Research Network
+            </h2>
+
+            <!-- MAP -->
+
+            <div id="map"></div>
+
+            <!-- GALLERY -->
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="/assets/gorakhpur.jpg" alt="Gorakhpur">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="/assets/mohali.jpg" alt="Mohali">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="/assets/beersheba.jpg" alt="Beersheba">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="/assets/salamanca.jpg" alt="Salamanca">
+                </div>
+
+            </div>
+
+            <!-- VISITOR -->
+
+            <div
+                style="
+                    margin-top:20px;
+                    text-align:right;
+                    font-size:0.9em;
+                    color:#555;
+                "
+            >
+
+                Visitors:
+
+                <script
+                    type="text/javascript"
+                    src="https://www.statcounter.com/counter/counter.js"
+                    async>
+                </script>
+
+            </div>
+
         </div>
 
-        <div class="gallery-item">
-          <img src="/assets/beersheba.jpg" alt="Beersheba">
-        </div>
-
-        <div class="gallery-item">
-          <img src="/assets/salamanca.jpg" alt="Salamanca">
-        </div>
-
-      </div>
-
-      <!-- VISITOR -->
-      <div
-        style="
-          margin-top:20px;
-          text-align:right;
-          font-size:0.9em;
-          color:#555;
-        "
-      >
-        <span>Visitors:</span>
-
-        <script
-          type="text/javascript"
-          src="https://www.statcounter.com/counter/counter.js"
-          async>
-        </script>
-      </div>
-
-    </div>
-
-  </main>
+    </main>
 
 </div>
 
 <!-- MAPPLS SDK -->
-<!-- REPLACE YOUR_API_KEY_HERE WITH YOUR REAL API KEY -->
 
-<script
-  src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"
-  async
-  defer>
-</script>
+<!-- REPLACE ONLY YOUR_API_KEY -->
 
 <script>
 
 function initMap() {
 
-    console.log("Mappls map loading...");
+    console.log("Map initialization started");
 
-    // Check SDK
     if (typeof mappls === "undefined") {
 
-        console.error("Mappls SDK failed to load.");
+        console.error("Mappls SDK not loaded");
+
+        document.getElementById("map").innerHTML =
+            "<div style='padding:20px;color:red;font-weight:bold;'>Map failed to load. Check API key and domain whitelist.</div>";
+
         return;
     }
 
-    // Create map
+    // CREATE MAP
+
     var map = new mappls.Map("map", {
 
-        center: [10, 30],
+        center: [20, 20],
+
         zoom: 2
 
     });
 
-    // Marker locations
-    // FORMAT: [longitude, latitude]
+    console.log("Map created");
+
+    // LOCATIONS
+    // FORMAT = [LONGITUDE, LATITUDE]
 
     var locations = [
 
         {
             coords: [-5.6635, 40.9701],
-            title: "University of Salamanca, Spain"
+            title: "University of Salamanca"
         },
 
         {
             coords: [34.7913, 31.2520],
-            title: "Ben-Gurion University, Israel"
+            title: "Ben-Gurion University"
         },
 
         {
             coords: [76.7179, 30.7046],
-            title: "Mohali, India"
+            title: "Mohali"
         },
 
         {
             coords: [83.3732, 26.7606],
-            title: "Gorakhpur, India"
+            title: "Gorakhpur"
         }
 
     ];
 
-    // Add markers
+    // ADD MARKERS
+
     locations.forEach(function(loc) {
 
         new mappls.Marker({
 
             map: map,
+
             position: loc.coords,
+
             title: loc.title
 
         });
 
     });
 
-    console.log("Markers added successfully.");
+    console.log("Markers added");
 }
 
+</script>
+
+<!-- NEW WORKING SDK -->
+
+<script
+src="https://apis.mappls.com/advancedmaps/api/sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn/map_sdk?layer=vector&v=3.0&callback=initMap">
 </script>
