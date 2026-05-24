@@ -5,7 +5,6 @@ permalink: /contact/
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
   .markdown-body > h1:first-child { display: none !important; }
@@ -15,12 +14,10 @@ permalink: /contact/
   }
   body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; }
 
-  /* HERO BANNER */
+  /* HERO & NAV */
   .hero-header { position:relative; width:100%; max-width:1150px; margin:0 auto 20px; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
   .hero-header img { width:100%; height:260px; object-fit:cover; display:block; }
   .hero-title { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(24px,4vw,40px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
-
-  /* NAVIGATION */
   .nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; padding: 0 15px; max-width: 1150px; }
   .nav-inner { display: flex; align-items: center; justify-content: center; gap: 15px; padding: 8px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--border); flex-wrap: wrap; }
   .nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 6px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 5px; font-size: 15px; cursor: pointer; border: none; background: none; }
@@ -99,26 +96,27 @@ permalink: /contact/
   <noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13250871/0/d8d12d18/0/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+HTML
+<script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=mnqhensxdzjubccwihxdjvaehcwnlmcbfvcq"></script>
+
 <script>
-  var map = L.map('map').setView([30, 40], 2);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-  var locs = [
-    {coords: [40.96, -5.66], name: 'Salamanca', color: 'green'},
-    {coords: [31.25, 34.79], name: 'Beer Sheva', color: 'blue'},
-    {coords: [30.70, 76.73], name: 'Mohali', color: 'orange'},
-    {coords: [26.76, 83.37], name: 'Gorakhpur', color: 'orange'}
-  ];
-
-  locs.forEach(function(loc) {
-    var icon = new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-'+loc.color+'.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/leaflet-shadow.png',
-      iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+  function initMap() {
+    var map = new mappls.Map('map', {
+      center: [30, 40],
+      zoom: 3
     });
-    L.marker(loc.coords, {icon: icon}).addTo(map).bindPopup(loc.name);
-  });
-  
-  setTimeout(function(){ map.invalidateSize(); }, 500);
+
+    map.addListener('load', function() {
+      const locations = [
+        {pos: "40.9650,-5.6629", name: "Salamanca"},
+        {pos: "31.2529,34.7915", name: "Beer Sheva"},
+        {pos: "30.7046,76.7179", name: "Mohali"},
+        {pos: "26.7606,83.3732", name: "Gorakhpur"}
+      ];
+
+      locations.forEach(loc => {
+        mappls.pinMarker({map: map, pin: loc.pos, popupHtml: loc.name});
+      });
+    });
+  }
 </script>
