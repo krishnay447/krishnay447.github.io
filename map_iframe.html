@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.css" rel="stylesheet" />
-    <script src="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.js"></script>
     <style>body { margin: 0; padding: 0; } #map { width: 100vw; height: 400px; }</style>
+    <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
 </head>
 <body>
     <div id="map"></div>
     <script>
-        var map = new maplibregl.Map({
-            container: 'map',
-            // Using a neutral, standard OpenStreetMap-based vector style
-            style: 'https://demotiles.maplibre.org/style.json', 
-            center: [50, 25], 
-            zoom: 2
-        });
+        function initMap() {
+            // Initialize map centered on your points
+            var map = new mappls.Map('map', {
+                center: [30, 40],
+                zoom: 3
+            });
 
-        // Add markers
-        const locs = [
-            {lng: -5.6629, lat: 40.9650, name: "Salamanca"},
-            {lng: 34.7915, lat: 31.2529, name: "Beer Sheva"},
-            {lng: 76.7179, lat: 30.7046, name: "Mohali"},
-            {lng: 83.3732, lat: 26.7606, name: "Gorakhpur"}
-        ];
-
-        locs.forEach(loc => {
-            new maplibregl.Marker().setLngLat([loc.lng, loc.lat]).addTo(map);
-        });
+            map.addListener('load', function() {
+                var locs = [
+                    [40.9650, -5.6629], // Salamanca
+                    [31.2529, 34.7915], // Beer Sheva
+                    [30.7046, 76.7179], // Mohali
+                    [26.7606, 83.3732]  // Gorakhpur
+                ];
+                
+                locs.forEach(c => {
+                    new mappls.Marker({map: map, position: c}).addTo(map);
+                });
+            });
+        }
     </script>
 </body>
 </html>
