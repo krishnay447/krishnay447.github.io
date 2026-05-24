@@ -5,7 +5,6 @@ permalink: /contact/
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
   /* CRITICAL: Hide injected H1 titles */
@@ -32,10 +31,11 @@ permalink: /contact/
   /* GRID LAYOUT */
   .grid-container { max-width: 1150px; margin: 20px auto; padding: 0 20px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; }
   .profile-card { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid var(--border); text-align: center; }
-  .map-card { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid var(--border); min-height: 400px; }
+  .map-card { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid var(--border); }
   
-  /* MAP & GALLERY */
-  #map { width: 100%; height: 300px; border-radius: 12px; margin-top: 10px; border: 1px solid var(--border); }
+  /* GALLERY & IMAGE CONTAINER */
+  .world-map-box { width: 100%; height: 300px; border-radius: 12px; margin-top: 10px; border: 1px solid var(--border); overflow: hidden; background: #f0f4f8; display: flex; align-items: center; justify-content: center; }
+  .world-map-box img { width: 100%; height: 100%; object-fit: cover; }
   .location-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
   .loc-box { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); height: 80px; }
   .loc-box img { width: 100%; height: 100%; object-fit: cover; }
@@ -81,7 +81,9 @@ permalink: /contact/
 
   <section class="map-card">
     <h3 style="margin-top:0; color:var(--primary-dark); font-size:18px;">📍 Research Network</h3>
-    <div id="map"></div>
+    <div class="world-map-box">
+      <img src="/assets/world_map.jpg" alt="Research Locations Map">
+    </div>
     <div class="location-gallery">
       <a href="https://en.wikipedia.org/wiki/Gorakhpur" class="loc-box"><img src="/assets/gorakhpur.jpg" alt="Gorakhpur"></a>
       <a href="https://en.wikipedia.org/wiki/Mohali" class="loc-box"><img src="/assets/mohali.jpg" alt="Mohali"></a>
@@ -91,26 +93,6 @@ permalink: /contact/
   </section>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-  var map = L.map('map').setView([30, 40], 2);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-  var locs = [
-    {coords: [40.96, -5.66], name: 'Salamanca', color: 'green'},
-    {coords: [31.25, 34.79], name: 'Beer Sheva', color: 'blue'},
-    {coords: [30.70, 76.73], name: 'Mohali', color: 'orange'},
-    {coords: [26.76, 83.37], name: 'Gorakhpur', color: 'orange'}
-  ];
-
-  locs.forEach(function(loc) {
-    var icon = new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-'+loc.color+'.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-      iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
-    });
-    L.marker(loc.coords, {icon: icon}).addTo(map).bindPopup(loc.name);
-  });
-
-  setTimeout(function(){ map.invalidateSize(); }, 500);
-</script>
+<div style="text-align: center; margin-top: 20px;">
+  <a href="/" style="color:var(--primary); font-weight:700; text-decoration:none;">🔙 Back to Home Page</a>
+</div>
