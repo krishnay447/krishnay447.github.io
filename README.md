@@ -137,7 +137,8 @@ body {
   animation: scroll-up 22s linear infinite;
   box-sizing: border-box;
 }
-.news-list li { padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 13px; line-height: 1.4; }
+/* Increased font size for news box */
+.news-list li { padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 15px; line-height: 1.5; }
 
 @keyframes scroll-up { 0% { top: 100%; } 100% { top: -180%; } }
 
@@ -212,21 +213,23 @@ body {
 </nav>
 
 <div class="main-grid">
-  <section class="bio-section">
+  <section class="bio-section" style="text-align: justify;">
     <div class="bio-inner">
       <h3 class="section-title">🔵 Who I Am</h3>
-      <p>I am a researcher in <b>nanotechnology and advanced materials</b>, focusing on <b>2D materials</b> for <b>optoelectronic</b> and <b>field‑emission</b> applications. My work integrates <b>materials synthesis</b> and <b>2D exfoliation</b>.</p>
+      <p>I am a dedicated researcher in <b>nanotechnology and advanced materials</b>, specializing in the synthesis of nanostructured materials and their application in next-generation electronics. My expertise spans the <b>mechanical and chemical exfoliation of 2D materials</b>, the precise <b>fabrication of optoelectronic and field-effect transistor (FET) devices</b>, and the utilization of advanced characterization techniques like <b>KPFM and Raman spectroscopy</b>.</p>
       
       <h3 class="section-title">🟢 Current Work</h3>
       <ul style="padding-left: 20px;">
-        <li>Design of <b>engineered contact platforms</b> for 2D optoelectronic devices.</li>
-        <li><b>KPFM‑assisted device physics</b> on <b>high‑responsive photodetectors</b>.</li>
+        <li><b>Device Fabrication & FETs:</b> Developing high-performance field-effect transistors (FETs) utilizing 2D material architectures to study charge transport and contact resistance.</li>
+        <li><b>Photodetector Optimization:</b> Engineering 2D-material-based photodetectors to achieve high responsivity and external quantum efficiency through precise interface and contact engineering.</li>
+        <li><b>Nanoscale Characterization:</b> Employing <b>Dip-Pen Nanolithography (DPN)</b> and <b>Atomic Force Microscopy (AFM/KPFM)</b> to pattern surfaces and study the electronic behavior of 2D heterostructures.</li>
       </ul>
 
       <h3 class="section-title">🔮 Future Vision</h3>
       <ul style="padding-left: 20px;">
-        <li>Utilization of <b>AI</b> to optimize photodetector performance.</li>
-        <li>Applying <b>contact physics</b> to next‑gen <b>optoelectronic devices</b>.</li>
+        <li>Leveraging the unique properties of 2D heterostructures to develop ultra-sensitive, flexible, and high-speed optoelectronic devices.</li>
+        <li>Implementing machine learning and AI-driven data analysis to accelerate the optimization of device architectures, particularly in photodetectors and sensors.</li>
+        <li>Industries scale fabrication of a short channel device based on TMDS for very high on off ratio .</li>
       </ul>
 
       <h4 class="section-title" style="border-left-color:#c2d9ff;">🛠 Technical Toolkit</h4>
