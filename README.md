@@ -137,8 +137,15 @@ body {
   animation: scroll-up 22s linear infinite;
   box-sizing: border-box;
 }
-/* Increased font size for news box */
 .news-list li { padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 15px; line-height: 1.5; }
+
+/* TOOL LINKS */
+.tool-links { padding: 10px 14px; border-top: 2px solid #e2ecff; }
+.tool-links a { 
+  display: block; padding: 8px 0; color: var(--primary-dark); font-weight: 700; 
+  text-decoration: none; font-size: 14px; transition: color 0.2s;
+}
+.tool-links a:hover { color: var(--primary); }
 
 @keyframes scroll-up { 0% { top: 100%; } 100% { top: -180%; } }
 
@@ -229,7 +236,7 @@ body {
       <ul style="padding-left: 20px;">
         <li>Leveraging the unique properties of 2D heterostructures to develop ultra-sensitive, flexible, and high-speed optoelectronic devices.</li>
         <li>Implementing machine learning and AI-driven data analysis to accelerate the optimization of device architectures, particularly in photodetectors and sensors.</li>
-        <li>Industries scale fabrication of a short channel device based on TMDS for very high on off ratio .</li>
+        <li>Industries scale fabrication of a short channel device based on TMDS for very high on off ratio.</li>
       </ul>
 
       <h4 class="section-title" style="border-left-color:#c2d9ff;">🛠 Technical Toolkit</h4>
@@ -252,6 +259,13 @@ body {
         <li><b>Jul 2025:</b> KPFM integrated at USAL.</li>
         <li><b>Jun 2021:</b> PhD on Rare‑Earth Hexaborides defended.</li>
       </ul>
+    </div>
+    <div class="tool-links">
+        <div class="news-header" style="border-bottom:none; padding-left:0;">⚡ Try My Tools</div>
+        <a href="https://photosensor-459111164189.us-west1.run.app/" target="_blank">🚀 PhotoSensor Pro</a>
+        <a href="https://band-aligner-459111164189.us-west1.run.app/" target="_blank">⚛️ BandGap Aligner</a>
+        <a href="https://sbh-laboratory-pro-459111164189.us-west1.run.app/" target="_blank">🌡 SBH & Activation Lab</a>
+        <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank">🎨 AcadeFig Pro</a>
     </div>
   </aside>
 </div>
