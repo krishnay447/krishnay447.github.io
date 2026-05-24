@@ -5,12 +5,10 @@ permalink: /contact/
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
-  /* CRITICAL: Hide injected H1 titles */
   .markdown-body > h1:first-child { display: none !important; }
-
-  /* Base Setup */
   :root {
     --primary:#1e88e5; --primary-dark:#1565c0; --nav-hover:#e3f2fd;
     --bg:#f7f9fc; --border:#dce3ef; --ink:#2a3440;
@@ -28,24 +26,22 @@ permalink: /contact/
   .nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 6px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 5px; font-size: 15px; cursor: pointer; border: none; background: none; }
   .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
 
-  /* GRID LAYOUT */
-  .grid-container { max-width: 1150px; margin: 20px auto; padding: 0 20px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; }
-  .profile-card { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid var(--border); text-align: center; }
-  .map-card { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid var(--border); }
-  
-  /* GALLERY & IMAGE CONTAINER */
-  .world-map-box { width: 100%; height: 300px; border-radius: 12px; margin-top: 10px; border: 1px solid var(--border); overflow: hidden; background: #f0f4f8; display: flex; align-items: center; justify-content: center; }
-  .world-map-box img { width: 100%; height: 100%; object-fit: cover; }
-  .location-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
-  .loc-box { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); height: 80px; }
-  .loc-box img { width: 100%; height: 100%; object-fit: cover; }
-
   /* DROPDOWN */
   .dropdown { position: relative; }
   .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
   .dropdown:hover .dropdown-content { display: block; }
   .dropdown-menu-box { background: #fff; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 8px 16px rgba(0,0,0,0.1); padding: 5px; }
   .dropdown-menu-box a { display: block; padding: 8px 12px; font-size: 14px; color: var(--ink) !important; text-decoration: none; }
+
+  /* LAYOUT */
+  .grid-container { max-width: 1150px; margin: 20px auto; padding: 0 20px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; }
+  .profile-card { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid var(--border); text-align: center; }
+  .map-card { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid var(--border); }
+  #map { width: 100%; height: 300px; border-radius: 12px; margin-top: 10px; border: 1px solid var(--border); }
+  
+  .location-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
+  .loc-box { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); height: 80px; }
+  .loc-box img { width: 100%; height: 100%; object-fit: cover; }
 
   @media (max-width: 900px) { .grid-container { grid-template-columns: 1fr; } }
 </style>
@@ -81,9 +77,7 @@ permalink: /contact/
 
   <section class="map-card">
     <h3 style="margin-top:0; color:var(--primary-dark); font-size:18px;">📍 Research Network</h3>
-    <div class="world-map-box">
-      <img src="/assets/world_map.jpg" alt="Research Locations Map">
-    </div>
+    <div id="map"></div>
     <div class="location-gallery">
       <a href="https://en.wikipedia.org/wiki/Gorakhpur" class="loc-box"><img src="/assets/gorakhpur.jpg" alt="Gorakhpur"></a>
       <a href="https://en.wikipedia.org/wiki/Mohali" class="loc-box"><img src="/assets/mohali.jpg" alt="Mohali"></a>
@@ -93,6 +87,33 @@ permalink: /contact/
   </section>
 </div>
 
-<div style="text-align: center; margin-top: 20px;">
-  <a href="/" style="color:var(--primary); font-weight:700; text-decoration:none;">🔙 Back to Home Page</a>
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: white; padding: 10px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+   <p style="margin:0 0 5px 0; font-size: 11px; color: var(--ink); font-weight:bold;">Total Visitors</p>
+   <a href="https://statcounter.com/" target="_blank">
+     <img src="https://c.statcounter.com/13045678/0/example/1/" alt="web counter" style="border:none; height:20px; display:block;">
+   </a>
 </div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  var map = L.map('map').setView([30, 40], 2);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  var locs = [
+    {coords: [40.96, -5.66], name: 'Salamanca', color: 'green'},
+    {coords: [31.25, 34.79], name: 'Beer Sheva', color: 'blue'},
+    {coords: [30.70, 76.73], name: 'Mohali', color: 'orange'},
+    {coords: [26.76, 83.37], name: 'Gorakhpur', color: 'orange'}
+  ];
+
+  locs.forEach(function(loc) {
+    var icon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-'+loc.color+'.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/leaflet-shadow.png',
+      iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+    });
+    L.marker(loc.coords, {icon: icon}).addTo(map).bindPopup(loc.name);
+  });
+  
+  setTimeout(function(){ map.invalidateSize(); }, 500);
+</script>
