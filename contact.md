@@ -88,10 +88,15 @@ permalink: /contact/
 </div>
 
 <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: white; padding: 10px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-   <p style="margin:0 0 5px 0; font-size: 11px; color: var(--ink); font-weight:bold;">Total Visitors</p>
-   <a href="https://statcounter.com/" target="_blank">
-     <img src="https://c.statcounter.com/13045678/0/example/1/" alt="web counter" style="border:none; height:20px; display:block;">
-   </a>
+  <script type="text/javascript">
+    var sc_project=13250871; 
+    var sc_invisible=0; 
+    var sc_security="d8d12d18"; 
+    var scJsHost = "https://";
+    document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+    "statcounter.com/counter/counter.js'></"+"script>");
+  </script>
+  <noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13250871/0/d8d12d18/0/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
