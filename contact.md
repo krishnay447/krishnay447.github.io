@@ -4,58 +4,49 @@ title: Contact
 permalink: /contact/
 ---
 
-<style>
-/* Hide injected H1 */
-.markdown-body > h1:first-child { display: none !important; }
-
-:root{
-  --primary:#1e88e5;
-  --primary-dark:#1565c0;
-  --bg:#f7f9fc;
-  --border:#dce3ef;
-}
-body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
-:root{
+:root {
   --primary:#1e88e5; --primary-dark:#1565c0; --nav-hover:#e3f2fd;
   --bg:#f7f9fc; --border:#dce3ef; --ink:#2a3440;
 }
-body { background:var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); }
+body { background:var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; }
 
 /* HERO BANNER */
-.hero-header{ position:relative; width:100%; max-width:1150px; margin:0 auto 20px; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
-.hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
-.hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
+.hero-header { position:relative; width:100%; max-width:1150px; margin:0 auto 20px; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
+.hero-header img { width:100%; height:260px; object-fit:cover; display:block; }
+.hero-title { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(24px,4vw,40px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
 
-/* NAVIGATION BAR */
-.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; }
-.nav-inner { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 6px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: all 0.2s ease-in-out; display: inline-flex; align-items: center; gap: 8px; font-size: 17px; cursor: pointer; border: none; background: none; white-space: nowrap; }
+/* NAVIGATION */
+.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; padding: 0 15px; max-width: 1150px; }
+.nav-inner { display: flex; align-items: center; justify-content: center; gap: 15px; padding: 8px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--border); flex-wrap: wrap; }
+.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 6px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 5px; font-size: 15px; cursor: pointer; border: none; background: none; }
 .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
 
-/* REFINED DROPDOWN */
-.dropdown { position: relative; }
-.dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  min-width: 180px; z-index: 9999; padding-top: 10px;
-}
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
-.dropdown-menu-box a { display: block; padding: 10px 15px; font-size: 15px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
-.dropdown-menu-box a:hover { background: var(--nav-hover); color: var(--primary) !important; }
+/* LAYOUT GRID */
+.grid-container { max-width: 1150px; margin: 20px auto; padding: 0 20px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; }
+.profile-card { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid var(--border); text-align: center; height: fit-content; }
+.map-card { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid var(--border); }
 
-/* LAYOUT */
-.grid-container { max-width: 1150px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 350px 1fr; gap: 30px; }
-.profile-card { background: #fff; padding: 40px; border-radius: 20px; border: 1px solid var(--border); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-.map-card { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-.loc-box { border-radius: 12px; overflow: hidden; border: 2px solid var(--border); transition: 0.3s; height: 100px; cursor: pointer; }
-.loc-box:hover { border-color: var(--primary); transform: translateY(-5px); }
+/* GALLERY & MAP */
+.location-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin-top: 20px; }
+.loc-box { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); height: 80px; }
 .loc-box img { width: 100%; height: 100%; object-fit: cover; }
-.location-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 25px; }
+
+/* RESPONSIVE BREAKPOINT */
+@media (max-width: 900px) {
+  .grid-container { grid-template-columns: 1fr; }
+  .nav-inner { gap: 5px; }
+  .nav-bar a, .dropdown-toggle { font-size: 13px; padding: 5px; }
+}
+
+.dropdown { position: relative; }
+.dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-menu-box { background: #fff; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 8px 16px rgba(0,0,0,0.1); padding: 5px; }
+.dropdown-menu-box a { display: block; padding: 8px 12px; font-size: 14px; color: var(--ink) !important; text-decoration: none; }
 </style>
 
 <div class="hero-header">
@@ -84,21 +75,20 @@ body { background:var(--bg) !important; font-family: "Segoe UI", sans-serif; col
 
 <div class="grid-container">
   <aside class="profile-card">
-    <img src="/assets/profile.jpg" style="width:180px; height:180px; border-radius:50%; margin-bottom:20px; border:5px solid var(--nav-hover);">
-    <h2 style="font-size:24px; font-weight:800; color:var(--ink);">Dr. Krishna Kumar Yadav</h2>
-    <p>Postdoctoral Fellow</p>
-    <div style="font-size:20px; font-style:italic; font-weight:700; color:var(--primary-dark); margin-bottom:20px;">
-        <i>Department of Fundamental Physics, University of Salamanca</i>
+    <img src="/assets/profile.jpg" style="width:150px; height:150px; border-radius:50%; margin-bottom:15px; border:4px solid var(--nav-hover);">
+    <h2 style="font-size:22px; font-weight:800; color:var(--ink); margin:0;">Dr. Krishna Kumar Yadav</h2>
+    <p style="margin:5px 0;">Postdoctoral Fellow</p>
+    <div style="font-size:16px; font-style:italic; font-weight:700; color:var(--primary-dark); margin-bottom:15px;">
+        Department of Fundamental Physics, University of Salamanca
     </div>
-    <a href="mailto:Krish91phy@usal.es" style="display:inline-block; padding:10px 20px; background:var(--primary); color:white; border-radius:30px; text-decoration:none; font-weight:700;">
-      <i class="fas fa-envelope"></i> Send Email
+    <a href="mailto:Krish91phy@usal.es" style="display:inline-block; padding:8px 16px; background:var(--primary); color:white; border-radius:20px; text-decoration:none; font-weight:600;">
+      <i class="fas fa-envelope"></i> Krish91phy@usal.es
     </a>
   </aside>
 
   <section class="map-card">
-    <h3 style="margin-top:0; color:var(--primary-dark); padding-bottom: 10px; border-bottom: 1px solid var(--border);">📍 Research Network</h3>
-    <div id="map" style="width:100%; height:320px; border-radius:12px; margin-top:15px; z-index:1;"></div>
-    
+    <h3 style="margin-top:0; color:var(--primary-dark); font-size:18px;">📍 Research Network</h3>
+    <div id="map" style="width:100%; height:300px; border-radius:12px; margin-top:10px;"></div>
     <div class="location-gallery">
       <a href="https://en.wikipedia.org/wiki/Gorakhpur" class="loc-box"><img src="/assets/gorakhpur.jpg" alt="Gorakhpur"></a>
       <a href="https://en.wikipedia.org/wiki/Mohali" class="loc-box"><img src="/assets/mohali.jpg" alt="Mohali"></a>
