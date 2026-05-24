@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>body { margin: 0; padding: 0; }</style>
-    <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn" async defer></script>
+    <link href="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@3.0.0/dist/maplibre-gl.js"></script>
+    <style>body { margin: 0; padding: 0; } #map { width: 100vw; height: 400px; }</style>
 </head>
 <body>
-    <div id="map" style="width: 100vw; height: 400px;"></div>
+    <div id="map"></div>
     <script>
-        function initMap() {
-            var map = new mappls.Map('map', { center: [30, 40], zoom: 3 });
-            map.addListener('load', function() {
-                var locs = [[40.9650,-5.6629], [31.2529,34.7915], [30.7046,76.7179], [26.7606,83.3732]];
-                locs.forEach(c => { new mappls.Marker({map: map, position: c}); });
-            });
-        }
+        var map = new maplibregl.Map({
+            container: 'map',
+            style: 'https://demotiles.maplibre.org/style.json', // Crisp, clean professional style
+            center: [50, 25], // Centered between Spain and India
+            zoom: 2
+        });
+
+        // Add markers
+        const locs = [
+            {lng: -5.6629, lat: 40.9650, name: "Salamanca"},
+            {lng: 34.7915, lat: 31.2529, name: "Beer Sheva"},
+            {lng: 76.7179, lat: 30.7046, name: "Mohali"},
+            {lng: 83.3732, lat: 26.7606, name: "Gorakhpur"}
+        ];
+
+        locs.forEach(loc => {
+            new maplibregl.Marker().setLngLat([loc.lng, loc.lat]).addTo(map);
+        });
     </script>
 </body>
 </html>
