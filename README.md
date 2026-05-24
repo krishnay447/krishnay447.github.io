@@ -236,7 +236,7 @@ body {
       <ul style="padding-left: 20px;">
         <li>Leveraging the unique properties of 2D heterostructures to develop ultra-sensitive, flexible, and high-speed optoelectronic devices.</li>
         <li>Implementing machine learning and AI-driven data analysis to accelerate the optimization of device architectures, particularly in photodetectors and sensors.</li>
-        <li>Industries scale fabrication of a short channel device based on TMDS for very high on off ratio.</li>
+        <li>Scalable TMDC-based short-channel devices for industrial-scale fabrication with very high on/off ratios.</li>
       </ul>
 
       <h4 class="section-title" style="border-left-color:#c2d9ff;">🛠 Technical Toolkit</h4>
