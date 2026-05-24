@@ -152,46 +152,31 @@ body {
   font-weight: 600; margin: 4px; border: 1px solid #d0e3ff;
 }
 
-/* UPDATED GALLERY GRID SYSTEM */
-.gallery-wrap { 
-  max-width: 1150px; 
-  margin: 40px auto; 
-  padding: 0 15px;
-}
-.gallery-grid { 
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 20px; 
-  margin-top: 20px;
-}
+/* GALLERY */
+.gallery-wrap { max-width: 1150px; margin: 40px auto; padding: 0 15px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 20px; }
 .gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  height: 180px;
-  background: #fff;
+  position: relative; overflow: hidden; border-radius: 12px;
+  border: 1px solid var(--border); height: 180px; background: #fff;
   transition: all 0.3s ease;
 }
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-.gallery-item:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.gallery-item:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.gallery-item:hover img { transform: scale(1.1); }
 
+/* TWO-TONE BUTTONS */
 .symbol-row-compact {
   display: flex; justify-content: center; align-items: center; gap: 20px; margin: 40px 0;
 }
+.research-btn {
+  display: flex; align-items: stretch; border-radius: 4px; text-decoration: none;
+  font-family: sans-serif; font-weight: bold; overflow: hidden; height: 42px;
+}
+.btn-left {
+  background: #555; color: #fff; padding: 0 15px; display: flex; align-items: center; gap: 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
+}
+.btn-right-scholar { background: #e53935; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+.btn-right-orcid { background: #a6ce39; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
 
 @media (max-width: 1024px) {
   .main-grid { grid-template-columns: 1fr; padding: 0 20px; }
@@ -283,13 +268,21 @@ body {
 </div>
 
 <div class="symbol-row-compact">
-  <a class="icon-link" href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
-    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#4285F4" d="M12 2L1 9l11 7 9-5.73V17h2V9L12 2zM5.3 11.5c0 0 1.43 3.5 6.7 3.5s6.7-3.5 6.7-3.5L12 15.75 5.3 11.5z"/></svg>
+  <a class="research-btn" href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
+    <div class="btn-left">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="#fff" d="M12 2L1 9l11 7 9-5.73V17h2V9L12 2zM5.3 11.5c0 0 1.43 3.5 6.7 3.5s6.7-3.5 6.7-3.5L12 15.75 5.3 11.5z"/></svg>
+        GOOGLE SCHOLAR
+    </div>
+    <div class="btn-right-scholar">PROFILE</div>
   </a>
-  <a class="icon-link" href="https://orcid.org/0000-0002-9063-7851" target="_blank">
-    <svg viewBox="0 0 256 256" width="24" height="24"><path fill="#A6CE39" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="#FFF" d="M86.3 186.2H70.9V74.3h15.4v111.9zM108.9 74.3h33.8c24.9 0 38.6 17.5 38.6 37.5 0 14.5-8.1 29.5-22.3 35.1 16.3 5.4 23.3 20.2 23.3 36.3 0 25.1-18.7 39-44.5 39h-28.9V74.3zm15.4 46.1h15.9c12.5 0 19.3-8.8 19.3-19.4s-6.8-19.4-19.3-19.4h-15.9v38.8zm0 50.8h17.1c14.6 0 21.9-10.7 21.9-22.2s-7.3-22.2-21.9-22.2h-17.1v44.4z"/></svg>
+
+  <a class="research-btn" href="https://orcid.org/0000-0002-9063-7851" target="_blank">
+    <div class="btn-left">
+        <svg viewBox="0 0 256 256" width="16" height="16"><path fill="#fff" d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zM86.3 186.2H70.9V74.3h15.4v111.9zM108.9 74.3h33.8c24.9 0 38.6 17.5 38.6 37.5 0 14.5-8.1 29.5-22.3 35.1 16.3 5.4 23.3 20.2 23.3 36.3 0 25.1-18.7 39-44.5 39h-28.9V74.3zm15.4 46.1h15.9c12.5 0 19.3-8.8 19.3-19.4s-6.8-19.4-19.3-19.4h-15.9v38.8zm0 50.8h17.1c14.6 0 21.9-10.7 21.9-22.2s-7.3-22.2-21.9-22.2h-17.1v44.4z"/></svg>
+        ORCID
+    </div>
+    <div class="btn-right-orcid">ID</div>
   </a>
-  <span style="font-size: 22px;">🤖</span>
 </div>
 
 </body>
