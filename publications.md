@@ -9,91 +9,44 @@ permalink: /publications/
 <style>
 /* 1. GLOBAL STYLES */
 .markdown-body > h1:first-child { display: none !important; }
-
 :root{
-  --primary:#1e88e5;
-  --primary-dark:#1565c0;
-  --nav-hover:#e3f2fd;
-  --bg:#f7f9fc;
-  --border:#dce3ef;
-  --ink:#2a3440;
+  --primary:#1e88e5; --primary-dark:#1565c0; --nav-hover:#e3f2fd;
+  --bg:#f7f9fc; --border:#dce3ef; --ink:#2a3440;
 }
-body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
+body { background:var(--bg) !important; font-family: "Segoe UI", sans-serif; margin: 0; padding: 0; }
 
 /* 2. HERO BANNER */
-.hero-header{
-  position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
-  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
-}
+.hero-header{ position:relative; width:100%; max-width:1150px; margin:20px auto; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
 .hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
-.hero-title{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,0.55);
-  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
-}
+.hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
 
-/* 3. UPDATED NAVIGATION BAR */
-.nav-bar {
-  position: sticky; top: 10px; z-index: 10000;
-  margin: 0 auto 25px; max-width: 1150px;
-}
-.nav-inner {
-  display: flex; align-items: center; justify-content: center;
-  gap: 20px; padding: 6px 15px; background: #ffffff;
-  border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--border);
-}
-.nav-bar a, .dropdown-toggle {
-  text-decoration: none; color: var(--primary-dark) !important;
-  font-weight: 800; padding: 8px 16px; border-radius: 8px;
-  transition: all 0.2s ease-in-out; display: inline-flex;
-  align-items: center; gap: 8px; font-size: 17px; cursor: pointer;
-  border: none; background: none; white-space: nowrap;
-}
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
-  background: var(--nav-hover); color: var(--primary) !important;
-}
+/* 3. NAVIGATION BAR */
+.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
+.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 8px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
+.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: #e3f2fd; color: var(--primary) !important; }
 
-/* Dropdown */
+/* DROPDOWN */
 .dropdown { position: relative; }
-.dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%;
-  transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px;
-}
+.dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-menu-box {
-  background: #fff; border-radius: 10px; border: 1px solid var(--border);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
-}
-.dropdown-menu-box a {
-  display: block; padding: 10px 15px; font-size: 15px;
-  color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none;
-}
+.dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
+.dropdown-menu-box a { display: block; padding: 10px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
 
-/* 4. SEARCH BAR */
-.search-container { max-width: 900px; margin: 25px auto 5px; padding: 0 20px; }
-#pubSearch {
-  width: 100%; padding: 14px 25px; font-size: 16px; border-radius: 30px;
-  border: 2px solid var(--border); outline: none; transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
+/* 4. SEARCH BAR & LIST */
+.search-container { max-width: 900px; margin: 25px auto; padding: 0 20px; }
+#pubSearch { width: 100%; padding: 14px 25px; font-size: 16px; border-radius: 30px; border: 2px solid var(--border); outline: none; transition: 0.3s; box-sizing: border-box; }
 #pubSearch:focus { border-color: var(--primary); box-shadow: 0 4px 15px rgba(30, 136, 229, 0.15); }
 
-/* 5. PUBLICATION CARDS */
 .pub-list-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-.pub-card {
-  background: #fff; padding: 20px; border-radius: 12px;
-  border: 1px solid var(--border); margin-bottom: 15px; position: relative;
-  transition: 0.3s; display: block;
-}
-.pub-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); }
+.pub-card { background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 15px; position: relative; transition: 0.2s; }
+.pub-card:hover { border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 .article-title { color: var(--primary-dark); font-weight: 700; font-size: 17px; display: block; margin-bottom: 8px; line-height: 1.4; }
 .article-authors { font-size: 14px; color: #555; margin-bottom: 5px; }
-.article-journal { font-style: italic; color: #444; font-size: 14px; }
-.article-doi { font-size: 13px; margin-top: 8px; display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; }
-.article-year-label { float: right; background: #e3f2fd; color: var(--primary); padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; border: 1px solid #bbdefb; }
-.if-badge { background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 800; margin-left: 10px; border: 1px solid #ffe0b2; }
+.article-journal { font-style: italic; color: #444; font-size: 14px; margin-top: 5px; }
+.article-doi { font-size: 13px; margin-top: 10px; display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; }
+.article-year-label { float: right; background: #e3f2fd; color: var(--primary); padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; border: 1px solid #bbdefb; margin-left: 10px; }
+.if-badge { background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 800; border: 1px solid #ffe0b2; }
 </style>
 
 <div class="hero-header">
@@ -124,16 +77,15 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
   <input type="text" id="pubSearch" onkeyup="searchFunction()" placeholder="🔍 Search Title, Year, Journal, or Authors...">
 </div>
 
-<div style="max-width: 900px; margin: 0 auto 25px; padding: 0 20px; display: flex; justify-content: flex-end;">
-  <a href="https://notebooklm.google.com/notebook/8b8b0acb-21e5-4f16-9025-dfcc93980356" target="_blank" 
-     style="background-color: #4285F4; color: white !important; width: 25%; min-width: 160px; height: 40px; border-radius: 25px; text-decoration: none; font-weight: bold; font-family: sans-serif; display: flex; align-items: center; justify-content: center; font-size: 13px; box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);">
+<div style="max-width: 900px; margin: 0 auto 20px; padding: 0 20px; text-align: right;">
+  <a href="https://notebooklm.google.com/notebook/8b8b0acb-21e5-4f16-9025-dfcc93980356" target="_blank" style="background-color: #4285F4; color: white !important; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 13px; display: inline-flex; align-items: center; box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);">
     🤖 AI Assistant
   </a>
 </div>
 
 <div class="pub-list-container" id="pubList">
   <h2 style="border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px; color: var(--primary-dark);">🔬 Peer‑Reviewed Journal Articles</h2>
-
+  
   <div class="pub-card">
     <span class="article-year-label">2026</span>
     <span class="article-title">Shape-induced manganese iron-based nanostructures loaded onto iron sheet as efficient electrocatalyst for O<sub>2</sub> evolution.</span>
@@ -538,25 +490,17 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; }
     <div class="article-journal">New Journal of Chemistry, 43 (23), 8993-9001 <span class="if-badge">IF 2.5</span></div>
     <a class="article-doi" href="https://doi.org/10.1039/C9NJ01049A">DOI: 10.1039/C9NJ01049A</a>
   </div>
-
-</div>
-<hr style="margin: 30px 0; opacity: 0.5;">
-
-<div align="center" style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
   
-  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/Google_Scholar-Profile-4285F4?style=for-the-badge&logo=google-scholar" alt="Scholar" style="height: 35px; border-radius: 4px;">
-  </a>
+  </div>
 
+<hr style="margin: 40px 0; opacity: 0.5;">
+<div align="center" style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar" style="height: 35px; border-radius: 4px;">
+  </a>
   <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID" style="height: 35px; border-radius: 4px;">
   </a>
-
-  <a href="https://notebooklm.google.com/notebook/8b8b0acb-21e5-4f16-9025-dfcc93980356" target="_blank" 
-     style="background-color: #5b5b5b; color: white !important; padding: 0 12px; border-radius: 4px; text-decoration: none; font-weight: bold; font-family: sans-serif; white-space: nowrap; display: inline-flex; align-items: center; height: 35px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #444;">
-    <span style="margin-right: 8px;">🤖</span> AI Assistant
-  </a>
-  
 </div>
 
 <script>
@@ -565,14 +509,9 @@ function searchFunction() {
   var filter = input.value.toUpperCase();
   var container = document.getElementById("pubList");
   var cards = container.getElementsByClassName('pub-card');
-
   for (var i = 0; i < cards.length; i++) {
     var textContent = cards[i].textContent || cards[i].innerText;
-    if (textContent.toUpperCase().indexOf(filter) > -1) {
-      cards[i].style.display = "";
-    } else {
-      cards[i].style.display = "none";
-    }
+    cards[i].style.display = textContent.toUpperCase().indexOf(filter) > -1 ? "" : "none";
   }
 }
 </script>
