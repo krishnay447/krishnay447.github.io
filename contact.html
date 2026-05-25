@@ -93,34 +93,35 @@ permalink: /contact/
 </div>
 
 <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
-
 <script>
   function initMap() {
-    console.log("Mappls: Library loaded.");
-    if (typeof mappls === 'undefined') {
-        console.error("Mappls: Library not found.");
+    console.log("Mappls: Callback function running.");
+    
+    // Check if the div actually exists
+    var mapDiv = document.getElementById('map');
+    if (!mapDiv) {
+        console.error("Mappls: DIV with id 'map' not found!");
         return;
     }
-    
-    // Initialize map
-    var map = new mappls.Map('map', { 
-        center: [25, 50], 
-        zoom: 3 
-    });
 
-    // Add markers once the map is fully loaded
-    map.addListener('load', function() {
-        console.log("Map: Load event fired.");
-        var locs = [
-            [40.9650, -5.6629], // Salamanca
-            [31.2529, 34.7915], // Beer Sheva
-            [30.7046, 76.7179], // Mohali
-            [26.7606, 83.3732]  // Gorakhpur
-        ];
-        
-        locs.forEach(function(c) {
-            new mappls.Marker({map: map, position: c}).addTo(map);
+    try {
+        var map = new mappls.Map('map', { 
+            center: [25, 50], 
+            zoom: 3 
         });
-    });
+        
+        map.addListener('load', function() {
+            console.log("Mappls: Map successfully loaded.");
+            var locs = [
+                [40.9650, -5.6629], [31.2529, 34.7915], 
+                [30.7046, 76.7179], [26.7606, 83.3732]
+            ];
+            locs.forEach(function(c) {
+                new mappls.Marker({map: map, position: c}).addTo(map);
+            });
+        });
+    } catch (e) {
+        console.error("Mappls: Critical error during map initialization:", e);
+    }
   }
 </script>
