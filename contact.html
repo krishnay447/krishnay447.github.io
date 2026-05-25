@@ -7,7 +7,6 @@ permalink: /contact/
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-  /* Hide injected H1 */
   .markdown-body > h1:first-child { display: none !important; }
   :root { --primary:#1e88e5; --bg:#f7f9fc; --card-bg: #fff; --border:#dce3ef; --ink:#2a3440; }
   body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; padding: 0; }
@@ -22,25 +21,23 @@ permalink: /contact/
   .nav-bar a, .dropdown-toggle { text-decoration: none; color: #1565c0 !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
   .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: #e3f2fd; color: #1e88e5 !important; }
 
+  /* DROPDOWN */
   .dropdown { position: relative; }
   .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
   .dropdown:hover .dropdown-content { display: block; }
   .dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); padding: 5px; }
   .dropdown-menu-box a { display: block; padding: 10px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-decoration: none; text-align: left; }
 
-  /* GRID - RESPONSIVE */
+  /* GRID */
   .grid-container { max-width: 1150px; margin: 0 auto; padding: 0 15px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; align-items: start; }
   .card { background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 20px; }
   
-  /* GALLERY - FULLY RESPONSIVE */
+  /* GALLERY - RESPONSIVE */
   .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 20px; }
   .gallery-item { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); height: 120px; }
   .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
   
-  @media (max-width: 900px) { 
-    .grid-container { grid-template-columns: 1fr; }
-    .hero-header { margin: 10px auto; }
-  }
+  @media (max-width: 900px) { .grid-container { grid-template-columns: 1fr; } }
 </style>
 
 <div class="hero-header">
@@ -96,17 +93,18 @@ permalink: /contact/
   </main>
 </div>
 
-<script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhNPHC0-XcDYeK1zKi5gkvDXy606pdJMc&callback=initMap"></script>
 <script>
-  window.initMap = function() {
-    var mapInstance = window.mappls || window.MapmyIndia;
-    if (!mapInstance) return;
-    var map = new mapInstance.Map('map', { center: [25, 50], zoom: 3, layer: 'map' });
-    map.addListener('load', function() {
-        var locs = [[40.9650, -5.6629], [31.2529, 34.7915], [30.7046, 76.7179], [26.7606, 83.3732]];
-        locs.forEach(function(c) {
-            new mapInstance.Marker({map: map, position: c}).addTo(map);
-        });
+  function initMap() {
+    var locations = [
+      { lat: 40.9650, lng: -5.6629, label: "Salamanca" },
+      { lat: 31.2529, lng: 34.7915, label: "Beer Sheva" },
+      { lat: 30.7046, lng: 76.7179, label: "Mohali" },
+      { lat: 26.7606, lng: 83.3732, label: "Gorakhpur" }
+    ];
+    var map = new google.maps.Map(document.getElementById('map'), { zoom: 3, center: { lat: 25, lng: 50 } });
+    locations.forEach(function(loc) {
+      new google.maps.Marker({ position: { lat: loc.lat, lng: loc.lng }, map: map, title: loc.label });
     });
-  };
+  }
 </script>
