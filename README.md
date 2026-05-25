@@ -29,18 +29,15 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
 .dropdown:hover .dropdown-content { display: block; }
 .dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
-.dropdown-menu-box a { display: block; padding: 8px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-align: left; }
+.dropdown-menu-box a { display: block; padding: 8px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
 
 /* MAIN CONTENT */
 .main-grid { display: grid; grid-template-columns: 1fr 340px; gap: 20px; max-width: 1150px; margin: 0 auto; padding: 0 15px; align-items: start; }
-
-/* COMPACT FONT & SPACING */
 .bio-section { font-size: 20px !important; line-height: 1.5; }
-.bio-section p { margin-top: 5px; margin-bottom: 10px; }
-.bio-section ul { margin-top: 0px; margin-bottom: 10px; }
-.bio-section li { font-size: 20px !important; margin-bottom: 5px; }
 .section-title { color: var(--primary-dark); font-weight: 800; margin: 15px 0 5px; border-left: 4px solid var(--primary); padding-left: 10px; font-size: 24px !important; }
+.skill-pill { display: inline-block; padding: 4px 10px; background: #eef6ff; color: var(--primary); border-radius: 20px; font-size: 15px; font-weight: 600; margin: 2px; border: 1px solid #d0e3ff; }
 
+/* SIDEBAR */
 .news-sidebar { background: linear-gradient(135deg,#ffffff 0%,#f5f9ff 100%); border: 1px solid #cfe0ff; border-radius: 16px; box-shadow: 0 8px 26px rgba(30,136,229,.08); overflow: hidden; }
 .news-header { padding: 10px 14px; border-bottom: 1px dashed #cfe0ff; font-weight: 800; color: var(--primary-dark); }
 .news-scroll { height: 280px; overflow: hidden; position: relative; }
@@ -48,27 +45,22 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .news-list li { padding: 8px 0; border-bottom: 1px dashed #e2ecff; font-size: 14px; line-height: 1.3; }
 .tool-links { padding: 10px 14px; border-top: 2px solid #e2ecff; }
 .tool-links a { display: block; padding: 4px 0; color: var(--primary-dark); font-weight: 700; text-decoration: none; font-size: 14px; }
-
 @keyframes scroll-up { 0% { top: 100%; } 100% { top: -180%; } }
 
-.skill-pill { display: inline-block; padding: 4px 10px; background: #eef6ff; color: var(--primary); border-radius: 20px; font-size: 15px; font-weight: 600; margin: 2px; border: 1px solid #d0e3ff; }
-
-/* GALLERY & BUTTONS */
+/* GALLERY */
 .gallery-wrap { max-width: 1150px; margin: 30px auto 0; padding: 0 15px; }
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 15px; }
 .gallery-item { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); height: 160px; background: #fff; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-.symbol-row-compact { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 30px 0; padding: 0 10px; }
-.research-btn { display: flex; align-items: stretch; border-radius: 4px; text-decoration: none; height: 40px; overflow: hidden; }
-.btn-left { background: #555; color: #fff; padding: 0 15px; display: flex; align-items: center; gap: 8px; font-size: 14px; text-transform: uppercase; }
-.btn-right-scholar { background: #e53935; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; text-transform: uppercase; }
-.btn-right-orcid { background: #a6ce39; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; text-transform: uppercase; }
 
-@media (max-width: 1024px) {
-  .main-grid { grid-template-columns: 1fr; }
-  .news-sidebar { width: 100%; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
+/* BUTTONS */
+.symbol-row-compact { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 30px 0; }
+.research-btn { display: flex; align-items: stretch; border-radius: 4px; text-decoration: none; height: 40px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.btn-left { background: #555; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
+.btn-right-scholar { background: #4285F4; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
+.btn-right-orcid { background: #A6CE39; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
+
+@media (max-width: 1024px) { .main-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
@@ -143,8 +135,6 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
     </div>
   </aside>
 </div>
-
-<hr style="max-width: 1150px; margin: 30px auto 0; border: 0; border-top: 1px solid var(--border);">
 
 <div class="gallery-wrap">
   <h3 class="section-title" style="border-left: none; padding-left: 0; text-align: center; border-bottom: 3px solid var(--primary); display: table; margin: 15px auto 20px; padding-bottom: 5px;">📸 Research & Lab Gallery</h3>
