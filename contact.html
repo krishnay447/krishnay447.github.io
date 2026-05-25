@@ -88,26 +88,15 @@ permalink: /contact/
         <div class="gallery-item"><img src="/assets/beersheba.jpg"></div>
         <div class="gallery-item"><img src="/assets/salamanca.jpg"></div>
       </div>
-
-      <div style="margin-top: 20px; text-align: right; font-size: 0.9em; color: #555;">
-        <span>Visitors: </span>
-        <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-      </div>
     </div>
   </main>
 </div>
 
-<script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn" async defer></script>
+<script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
 <script>
   function initMap() {
-    console.log("Mappls: Callback initiated.");
-    // Mappls requires [lat, lng]
-    var map = new mappls.Map('map', { 
-        center: [25, 50], 
-        zoom: 3 
-    });
+    var map = new mappls.Map('map', { center: [25, 50], zoom: 3 });
     map.addListener('load', function() {
-        console.log("Map: Successfully loaded.");
         var locs = [
             [40.9650, -5.6629], [31.2529, 34.7915], 
             [30.7046, 76.7179], [26.7606, 83.3732]
