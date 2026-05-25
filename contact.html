@@ -7,36 +7,40 @@ permalink: /contact/
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
+  /* Hide injected H1 */
   .markdown-body > h1:first-child { display: none !important; }
-  :root { --primary:#1e88e5; --bg:#f0f4f8; --card-bg: #fff; --border:#dce3ef; --ink:#2a3440; }
-  body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; }
+  :root { --primary:#1e88e5; --bg:#f7f9fc; --card-bg: #fff; --border:#dce3ef; --ink:#2a3440; }
+  body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; padding: 0; }
 
   /* HERO & NAV */
-  .hero-header { position:relative; width:100%; max-width:1150px; margin:0 auto 15px; border-radius:14px; overflow:hidden; box-shadow:0 8px 25px rgba(0,0,0,0.1); }
+  .hero-header { position:relative; width:100%; max-width:1150px; margin:20px auto; border-radius:14px; overflow:hidden; box-shadow:0 8px 25px rgba(0,0,0,0.1); }
   .hero-header img { width:100%; height:220px; object-fit:cover; display:block; }
-  .hero-title { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:36px; font-weight:800; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.6); background:linear-gradient(to top, rgba(0,0,0,0.4), transparent); }
+  .hero-title { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:800; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.6); background:linear-gradient(to top, rgba(0,0,0,0.4), transparent); }
   
-  .nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; }
-  .nav-inner { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 6px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-  .nav-bar a, .dropdown-toggle { text-decoration: none; color: #1565c0 !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 17px; cursor: pointer; border: none; background: none; }
+  .nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
+  .nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 8px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
+  .nav-bar a, .dropdown-toggle { text-decoration: none; color: #1565c0 !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
   .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: #e3f2fd; color: #1e88e5 !important; }
 
   .dropdown { position: relative; }
-  .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px; }
+  .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
   .dropdown:hover .dropdown-content { display: block; }
   .dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); padding: 5px; }
-  .dropdown-menu-box a { display: block; padding: 10px; font-size: 15px; color: var(--ink) !important; font-weight: 700; text-decoration: none; }
+  .dropdown-menu-box a { display: block; padding: 10px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-decoration: none; text-align: left; }
 
-  /* GRID */
-  .grid-container { max-width: 1150px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; }
+  /* GRID - RESPONSIVE */
+  .grid-container { max-width: 1150px; margin: 0 auto; padding: 0 15px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; align-items: start; }
   .card { background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 20px; }
   
-  /* GALLERY */
-  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px; }
-  .gallery-item { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); height: 100px; }
+  /* GALLERY - FULLY RESPONSIVE */
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 20px; }
+  .gallery-item { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); height: 120px; }
   .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
   
-  @media (max-width: 900px) { .grid-container { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { 
+    .grid-container { grid-template-columns: 1fr; }
+    .hero-header { margin: 10px auto; }
+  }
 </style>
 
 <div class="hero-header">
@@ -66,29 +70,27 @@ permalink: /contact/
 <div class="grid-container">
   <aside>
     <div class="card" style="text-align: center;">
-        <img src="/assets/profile.jpg" alt="Krishna Kumar Yadav" style="width:180px; height:180px; object-fit:cover; border-radius:50%; margin-bottom:15px; border:4px solid var(--border); display: block; margin-left: auto; margin-right: auto;">
-        <h2 style="font-size:20px; margin:0;">Dr. Krishna Kumar Yadav</h2>
-        <p style="font-size:0.9em; color:#666;">
+        <img src="/assets/profile.jpg" alt="Krishna Kumar Yadav" style="width:160px; height:160px; object-fit:cover; border-radius:50%; margin-bottom:15px; border:4px solid var(--border); display: block; margin-left: auto; margin-right: auto;">
+        <h2 style="font-size:1.4em; margin:0;">Dr. Krishna Kumar Yadav</h2>
+        <p style="font-size:1em; color:#666; line-height: 1.4;">
             Postdoctoral Fellow<br>
             <b>Department of Fundamental Physics</b><br>
             University of Salamanca, Spain
         </p>
-        <a href="mailto:Krish91phy@usal.es" style="color:var(--primary); font-weight:700;"><i class="fas fa-envelope"></i> Krish91phy@usal.es</a>
+        <a href="mailto:Krish91phy@usal.es" style="color:var(--primary); font-weight:700; text-decoration: none;"><i class="fas fa-envelope"></i> Krish91phy@usal.es</a>
     </div>
   </aside>
 
   <main>
     <div class="card">
-  <h3>📍 Research Network</h3>
-  <div id="map" style="width: 100%; height: 400px !important; background-color: #e0e0e0; border-radius: 12px; margin-top: 15px; display: block;"></div>
-  
-  </div>
+      <h3 style="margin-top:0;">📍 Research Network</h3>
+      <div id="map" style="width: 100%; height: 400px; background-color: #e0e0e0; border-radius: 12px; margin-top: 15px;"></div>
       
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="/assets/gorakhpur.jpg"></div>
-        <div class="gallery-item"><img src="/assets/mohali.jpg"></div>
-        <div class="gallery-item"><img src="/assets/beersheba.jpg"></div>
-        <div class="gallery-item"><img src="/assets/salamanca.jpg"></div>
+        <div class="gallery-item"><img src="/assets/gorakhpur.jpg" alt="Gorakhpur"></div>
+        <div class="gallery-item"><img src="/assets/mohali.jpg" alt="Mohali"></div>
+        <div class="gallery-item"><img src="/assets/beersheba.jpg" alt="Beersheba"></div>
+        <div class="gallery-item"><img src="/assets/salamanca.jpg" alt="Salamanca"></div>
       </div>
     </div>
   </main>
@@ -96,26 +98,11 @@ permalink: /contact/
 
 <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
 <script>
-  // Global initializer
   window.initMap = function() {
-    console.log("Mappls: Callback triggered.");
-    
-    // Check multiple possible namespaces where the library might be hiding
     var mapInstance = window.mappls || window.MapmyIndia;
-    
-    if (!mapInstance) {
-        console.error("Mappls: Library failed to attach to window.");
-        return;
-    }
-
-    var map = new mapInstance.Map('map', { 
-        center: [25, 50], 
-        zoom: 3,
-        layer: 'map' 
-    });
-
+    if (!mapInstance) return;
+    var map = new mapInstance.Map('map', { center: [25, 50], zoom: 3, layer: 'map' });
     map.addListener('load', function() {
-        console.log("Mappls: Map loaded.");
         var locs = [[40.9650, -5.6629], [31.2529, 34.7915], [30.7046, 76.7179], [26.7606, 83.3732]];
         locs.forEach(function(c) {
             new mapInstance.Marker({map: map, position: c}).addTo(map);
