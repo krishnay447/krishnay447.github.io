@@ -11,98 +11,43 @@ permalink: /Book_Chapters/
 .markdown-body > h1:first-child { display: none !important; }
 
 :root{
-  --primary:#1e88e5;
-  --primary-dark:#1565c0;
-  --nav-hover:#e3f2fd;
-  --bg:#f7f9fc;
-  --border:#dce3ef;
-  --ink:#2a3440;
+  --primary:#1e88e5; --primary-dark:#1565c0; --nav-hover:#e3f2fd;
+  --bg:#f7f9fc; --border:#dce3ef; --ink:#2a3440;
 }
-body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
 
 /* 2. HERO BANNER */
-.hero-header{
-  position:relative; width:100%; max-width:1150px; margin:0 auto 20px;
-  border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15);
-}
+.hero-header{ position:relative; width:100%; max-width:1150px; margin:20px auto; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
 .hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
-.hero-title{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,0.55);
-  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20));
-}
+.hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
 
-/* 3. UPDATED NAVIGATION BAR */
-.nav-bar {
-  position: sticky; top: 10px; z-index: 10000;
-  margin: 0 auto 25px; max-width: 1150px;
-}
-.nav-inner {
-  display: flex; align-items: center; justify-content: center;
-  gap: 20px; padding: 6px 15px; background: #ffffff;
-  border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--border);
-}
-.nav-bar a, .dropdown-toggle {
-  text-decoration: none; color: var(--primary-dark) !important;
-  font-weight: 800; padding: 8px 16px; border-radius: 8px;
-  transition: all 0.2s ease-in-out; display: inline-flex;
-  align-items: center; gap: 8px; font-size: 17px; cursor: pointer;
-  border: none; background: none; white-space: nowrap;
-}
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle {
-  background: var(--nav-hover); color: var(--primary) !important;
-}
+/* 3. NAVIGATION BAR */
+.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
+.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 8px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
+.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
 
-/* Dropdown */
+/* DROPDOWN */
 .dropdown { position: relative; }
-.dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%;
-  transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px;
-}
+.dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-menu-box {
-  background: #fff; border-radius: 10px; border: 1px solid var(--border);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px;
-}
-.dropdown-menu-box a {
-  display: block; padding: 10px 15px; font-size: 15px;
-  color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none;
-}
+.dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
+.dropdown-menu-box a { display: block; padding: 10px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
 
-/* 4. SEARCH & FILTER */
-.search-container {
-  max-width: 950px; margin: 15px auto; padding: 0 20px;
-  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-}
-#yearInput {
-  padding: 8px 15px; border-radius: 8px; border: 1px solid var(--border);
-  width: 250px; font-size: 14px; outline: none; transition: 0.3s;
-}
-#yearInput:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1); }
-.filter-btn {
-  padding: 7px 16px; border: 1px solid var(--border); background: #fff; color: #666;
-  border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; transition: 0.2s;
-}
+/* 4. SEARCH & FILTER - RESPONSIVE */
+.search-container { max-width: 950px; margin: 15px auto; padding: 0 15px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+#yearInput { padding: 8px 15px; border-radius: 8px; border: 1px solid var(--border); flex: 1 1 200px; max-width: 300px; font-size: 14px; outline: none; }
+.filter-btn { padding: 8px 16px; border: 1px solid var(--border); background: #fff; color: #666; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; }
 .filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
 /* 5. CHAPTER CARDS */
-.chapter-container { max-width: 950px; margin: 0 auto; padding: 0 20px; }
-.chapter-card {
-  background: #fff; padding: 22px; border-radius: 12px; border: 1px solid var(--border);
-  margin-bottom: 15px; position: relative; transition: 0.3s; display: block;
-}
+.chapter-container { max-width: 950px; margin: 0 auto; padding: 0 15px; }
+.chapter-card { background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 15px; display: block; transition: 0.2s; }
 .chapter-card:hover { border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.chapter-year-label {
-  float: right; background: #e3f2fd; color: var(--primary);
-  padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; border: 1px solid #bbdefb;
-}
-.chapter-title { color: var(--primary-dark); font-size: 17px; font-weight: 700; margin-bottom: 8px; display: block; line-height: 1.4; }
+.chapter-year-label { display: block; float: right; background: #e3f2fd; color: var(--primary); padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 800; margin-left: 10px; }
+.chapter-title { color: var(--primary-dark); font-size: 17px; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
 .chapter-authors { font-size: 14px; color: #555; margin-bottom: 6px; }
 .chapter-meta { font-size: 13px; color: #888; font-style: italic; border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px; }
-
-.markdown-body { overflow: visible !important; }
 </style>
 
 <div class="hero-header">
@@ -139,7 +84,7 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
 </div>
 
 <div class="chapter-container" id="chapterList">
-  <h2 style="color: var(--primary-dark); border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px;">📖 Authored Book Chapters</h2>
+  <h2 style="color: var(--primary-dark); border-left: 5px solid var(--primary); padding-left: 15px; margin: 30px 0;">📖 Authored Book Chapters</h2>
 
   <div class="chapter-card" data-year="2025">
     <span class="chapter-year-label">2025</span>
@@ -219,8 +164,7 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
   </div>
 </div>
 
-<hr style="margin: 30px 0; opacity: 0.5;">
-<div align="center">
+<div align="center" style="margin: 40px 0;">
   <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
   <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
 </div>
@@ -234,11 +178,7 @@ function filterByYear(year, btn) {
   document.getElementById('yearInput').value = '';
 
   cards.forEach(card => {
-    if (year === 'all' || card.getAttribute('data-year') === year) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display = (year === 'all' || card.getAttribute('data-year') === year) ? 'block' : 'none';
   });
 }
 
@@ -249,12 +189,7 @@ function filterBySearch() {
   buttons.forEach(b => b.classList.remove('active'));
 
   cards.forEach(card => {
-    const text = card.textContent || card.innerText;
-    card.style.display = text.toUpperCase().includes(input) ? 'block' : 'none';
+    card.style.display = (card.textContent || card.innerText).toUpperCase().includes(input) ? 'block' : 'none';
   });
 }
 </script>
-
-<p style="text-align: center; margin: 30px 0;">
-  <a href="/" style="color: var(--primary); text-decoration: none; font-weight: 600;">[🔙 Back to Home Page]</a>
-</p>
