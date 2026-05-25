@@ -93,14 +93,31 @@ permalink: /contact/
 </div>
 
 <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
+
 <script>
   function initMap() {
-    var map = new mappls.Map('map', { center: [25, 50], zoom: 3 });
+    console.log("Mappls: Library loaded.");
+    if (typeof mappls === 'undefined') {
+        console.error("Mappls: Library not found.");
+        return;
+    }
+    
+    // Initialize map
+    var map = new mappls.Map('map', { 
+        center: [25, 50], 
+        zoom: 3 
+    });
+
+    // Add markers once the map is fully loaded
     map.addListener('load', function() {
+        console.log("Map: Load event fired.");
         var locs = [
-            [40.9650, -5.6629], [31.2529, 34.7915], 
-            [30.7046, 76.7179], [26.7606, 83.3732]
+            [40.9650, -5.6629], // Salamanca
+            [31.2529, 34.7915], // Beer Sheva
+            [30.7046, 76.7179], // Mohali
+            [26.7606, 83.3732]  // Gorakhpur
         ];
+        
         locs.forEach(function(c) {
             new mappls.Marker({map: map, position: c}).addTo(map);
         });
