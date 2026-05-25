@@ -18,18 +18,18 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .hero-header img { width: 100%; height: 260px; object-fit: cover; display: block; }
 .hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(24px,4vw,36px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
 
-/* NAVIGATION BAR */
-.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 20px; max-width: 1150px; padding: 0 10px; }
-.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 6px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; cursor: pointer; border: none; background: none; }
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
+/* NAVIGATION BAR - Consistent Size */
+.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
+.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 8px 20px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
+.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: #e3f2fd; color: var(--primary) !important; }
 
 /* DROPDOWN */
 .dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
+.dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px; }
 .dropdown:hover .dropdown-content { display: block; }
 .dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
-.dropdown-menu-box a { display: block; padding: 8px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
+.dropdown-menu-box a { display: block; padding: 10px 15px; font-size: 15px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
 
 /* MAIN CONTENT */
 .main-grid { display: grid; grid-template-columns: 1fr 340px; gap: 20px; max-width: 1150px; margin: 0 auto; padding: 0 15px; align-items: start; }
@@ -96,7 +96,7 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
     
     <h3 class="section-title">🟢 Current Work</h3>
     <ul>
-      <li><b>Device Fabrication & FETs:</b> Developing high-performance field-effect transistors (FETs) utilizing 2D material architectures to study charge transport and contact resistance.</li>
+      <li><b>Device Fabrication & FETs:</b> Developing high-performance field-effect transistors (FET) utilizing 2D material architectures to study charge transport and contact resistance.</li>
       <li><b>Photodetector Optimization:</b> Engineering 2D-material-based photodetectors to achieve high responsivity and external quantum efficiency through precise interface and contact engineering.</li>
       <li><b>Nanoscale Characterization:</b> Employing <b>Dip-Pen Nanolithography (DPN)</b> and <b>Atomic Force Microscopy (AFM/KPFM)</b> to pattern surfaces and study the electronic behavior of 2D heterostructures.</li>
     </ul>
