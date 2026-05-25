@@ -97,33 +97,30 @@ permalink: /contact/
 <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
 <script>
   function initMap() {
-    console.log("Mappls: Callback function running.");
+    console.log("Mappls: Initializing map...");
     
-    // Check if the div actually exists
-    var mapDiv = document.getElementById('map');
-    if (!mapDiv) {
-        console.error("Mappls: DIV with id 'map' not found!");
-        return;
-    }
+    // Explicitly define the map with the 'map' layer
+    var map = new mappls.Map('map', { 
+        center: [25, 50], 
+        zoom: 3,
+        layer: 'map' 
+    });
 
-    try {
-        var map = new mappls.Map('map', { 
-            center: [25, 50], 
-            zoom: 3 
-        });
+    map.addListener('load', function() {
+        console.log("Mappls: Map layer loaded.");
+        var locs = [
+            [40.9650, -5.6629], [31.2529, 34.7915], 
+            [30.7046, 76.7179], [26.7606, 83.3732]
+        ];
         
-        map.addListener('load', function() {
-            console.log("Mappls: Map successfully loaded.");
-            var locs = [
-                [40.9650, -5.6629], [31.2529, 34.7915], 
-                [30.7046, 76.7179], [26.7606, 83.3732]
-            ];
-            locs.forEach(function(c) {
-                new mappls.Marker({map: map, position: c}).addTo(map);
-            });
+        locs.forEach(function(c) {
+            new mappls.Marker({map: map, position: c}).addTo(map);
         });
-    } catch (e) {
-        console.error("Mappls: Critical error during map initialization:", e);
-    }
+    });
+
+    // Capture specific map errors
+    map.addListener('error', function(e) {
+        console.error("Mappls: Map encountered an error:", e);
+    });
   }
 </script>
