@@ -96,31 +96,30 @@ permalink: /contact/
 
 <script src="https://apis.mappls.com/map_v3/map?layer=map&callback=initMap&key=sbtapoochnlzbfrgxtxnxuxfhvzouiidfutn"></script>
 <script>
-  function initMap() {
-    console.log("Mappls: Initializing map...");
+  // Global initializer
+  window.initMap = function() {
+    console.log("Mappls: Callback triggered.");
     
-    // We explicitly set the map style to default
-    var map = new mappls.Map('map', { 
+    // Check multiple possible namespaces where the library might be hiding
+    var mapInstance = window.mappls || window.MapmyIndia;
+    
+    if (!mapInstance) {
+        console.error("Mappls: Library failed to attach to window.");
+        return;
+    }
+
+    var map = new mapInstance.Map('map', { 
         center: [25, 50], 
         zoom: 3,
-        // Adding the style parameter can help resolve blank rendering issues
-        style: 'mappls_map' 
+        layer: 'map' 
     });
 
     map.addListener('load', function() {
-        console.log("Mappls: Map layer loaded.");
-        var locs = [
-            [40.9650, -5.6629], [31.2529, 34.7915], 
-            [30.7046, 76.7179], [26.7606, 83.3732]
-        ];
-        
+        console.log("Mappls: Map loaded.");
+        var locs = [[40.9650, -5.6629], [31.2529, 34.7915], [30.7046, 76.7179], [26.7606, 83.3732]];
         locs.forEach(function(c) {
-            new mappls.Marker({map: map, position: c}).addTo(map);
+            new mapInstance.Marker({map: map, position: c}).addTo(map);
         });
     });
-
-    map.addListener('error', function(e) {
-        console.error("Mappls: Critical error during map rendering:", e);
-    });
-  }
+  };
 </script>
