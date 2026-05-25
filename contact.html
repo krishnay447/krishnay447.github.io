@@ -99,11 +99,12 @@ permalink: /contact/
   function initMap() {
     console.log("Mappls: Initializing map...");
     
-    // Explicitly define the map with the 'map' layer
+    // We explicitly set the map style to default
     var map = new mappls.Map('map', { 
         center: [25, 50], 
         zoom: 3,
-        layer: 'map' 
+        // Adding the style parameter can help resolve blank rendering issues
+        style: 'mappls_map' 
     });
 
     map.addListener('load', function() {
@@ -118,9 +119,8 @@ permalink: /contact/
         });
     });
 
-    // Capture specific map errors
     map.addListener('error', function(e) {
-        console.error("Mappls: Map encountered an error:", e);
+        console.error("Mappls: Critical error during map rendering:", e);
     });
   }
 </script>
