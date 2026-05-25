@@ -94,7 +94,13 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
 .inst-card { background: #fff; padding: 15px; border-radius: 10px; border: 1px solid var(--border); display: flex; flex-direction: column; }
 .prof-highlight { color: var(--primary-dark); font-weight: 700; }
 .work-desc { font-size: 0.85em; color: #555; margin: 8px 0; }
-.tag { padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+
+/* BUTTONS */
+.research-btn { display: flex; align-items: stretch; border-radius: 4px; text-decoration: none; height: 40px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.btn-left { background: #555; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
+.btn-right-scholar { background: #4285F4; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
+.btn-right-orcid { background: #A6CE39; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
+.symbol-row-compact { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 30px 0; }
 
 @media (max-width: 900px) { 
   .impact-row { grid-template-columns: 1fr; } 
@@ -142,9 +148,17 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
           <a href="mailto:ashok@chemistry.iitd.ac.in" class="email-btn">Email</a>
         </div>
         <div class="advisor-item">
-            <div><span class="advisor-name">Prof. Enrique Diez</span><br><small style="color:#666">POSTDOC SUPERVISOR</small></div>
-            <a href="mailto:enrisa@usal.es" class="email-btn">Email</a>
-          </div>
+          <div><span class="advisor-name">Dr. Menaka Jha</span><br><small style="color:var(--primary)">PHD SUPERVISOR</small></div>
+          <a href="mailto:menaka100jha@gmail.com" class="email-btn">Email</a>
+        </div>
+        <div class="advisor-item">
+          <div><span class="advisor-name">Dr. Ariela Burg</span><br><small style="color:var(--primary)">POSTDOC SUPERVISOR</small></div>
+          <a href="mailto:arielab@sce.ac.il" class="email-btn">Email</a>
+        </div>
+        <div class="advisor-item">
+          <div><span class="advisor-name">Prof. Enrique Diez</span><br><small style="color:#666">POSTDOC SUPERVISOR</small></div>
+          <a href="mailto:enrisa@usal.es" class="email-btn">Email</a>
+        </div>
       </div>
     </div>
 
@@ -182,4 +196,15 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
       </div>
     </div>
   </div>
+</div>
+
+<div class="symbol-row-compact">
+  <a class="research-btn" href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
+    <div class="btn-left">GOOGLE SCHOLAR</div>
+    <div class="btn-right-scholar">PROFILE</div>
+  </a>
+  <a class="research-btn" href="https://orcid.org/0000-0002-9063-7851" target="_blank">
+    <div class="btn-left">ORCID</div>
+    <div class="btn-right-orcid">ID</div>
+  </a>
 </div>
