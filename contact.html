@@ -11,7 +11,7 @@ permalink: /contact/
   :root { --primary:#1e88e5; --bg:#f7f9fc; --card-bg: #fff; --border:#dce3ef; --ink:#2a3440; }
   body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; padding: 0; }
 
-  /* HERO & NAV */
+  /* Hero & Nav */
   .hero-header { position:relative; width:100%; max-width:1150px; margin:20px auto; border-radius:14px; overflow:hidden; box-shadow:0 8px 25px rgba(0,0,0,0.1); }
   .hero-header img { width:100%; height:220px; object-fit:cover; display:block; }
   .hero-title { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:800; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.6); background:linear-gradient(to top, rgba(0,0,0,0.4), transparent); }
@@ -21,22 +21,21 @@ permalink: /contact/
   .nav-bar a, .dropdown-toggle { text-decoration: none; color: #1565c0 !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
   .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: #e3f2fd; color: #1e88e5 !important; }
 
-  /* DROPDOWN */
+  /* Dropdown & Grid */
   .dropdown { position: relative; }
   .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
   .dropdown:hover .dropdown-content { display: block; }
   .dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); padding: 5px; }
   .dropdown-menu-box a { display: block; padding: 10px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-decoration: none; text-align: left; }
-
-  /* GRID */
   .grid-container { max-width: 1150px; margin: 0 auto; padding: 0 15px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; align-items: start; }
   .card { background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 20px; }
   
-  /* GALLERY - RESPONSIVE */
+  .wa-btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #25d366; color: #fff !important; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 14px; }
+  .wa-btn:hover { background: #128c7e; }
   .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 20px; }
   .gallery-item { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); height: 120px; }
   .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-  
+
   @media (max-width: 900px) { .grid-container { grid-template-columns: 1fr; } }
 </style>
 
@@ -67,14 +66,15 @@ permalink: /contact/
 <div class="grid-container">
   <aside>
     <div class="card" style="text-align: center;">
-        <img src="/assets/profile.jpg" alt="Krishna Kumar Yadav" style="width:160px; height:160px; object-fit:cover; border-radius:50%; margin-bottom:15px; border:4px solid var(--border); display: block; margin-left: auto; margin-right: auto;">
+        <img src="/assets/profile.jpg" alt="Profile" style="width:160px; height:160px; object-fit:cover; border-radius:50%; margin-bottom:15px; border:4px solid var(--border);">
         <h2 style="font-size:1.4em; margin:0;">Dr. Krishna Kumar Yadav</h2>
         <p style="font-size:1em; color:#666; line-height: 1.4;">
             Postdoctoral Fellow<br>
             <b>Department of Fundamental Physics</b><br>
             University of Salamanca, Spain
         </p>
-        <a href="mailto:Krish91phy@usal.es" style="color:var(--primary); font-weight:700; text-decoration: none;"><i class="fas fa-envelope"></i> Krish91phy@usal.es</a>
+        <a href="mailto:Krish91phy@usal.es" style="color:var(--primary); font-weight:700; text-decoration: none; display: block; margin: 10px 0;"><i class="fas fa-envelope"></i> Krish91phy@usal.es</a>
+        <a href="https://wa.me/918765257998" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
     </div>
   </aside>
 
@@ -91,6 +91,15 @@ permalink: /contact/
       </div>
     </div>
   </main>
+</div>
+
+<div align="center" style="margin: 40px 0;">
+  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
+    <img src="https://img.shields.io/badge/GOOGLE_SCHOLAR-PROFILE-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Scholar">
+  </a>
+  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank">
+    <img src="https://img.shields.io/badge/ORCID-ID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID">
+  </a>
 </div>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhNPHC0-XcDYeK1zKi5gkvDXy606pdJMc&callback=initMap"></script>
