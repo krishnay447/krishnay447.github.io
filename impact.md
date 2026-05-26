@@ -168,7 +168,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", Roboto, sans-ser
         <div class="metric-box">Articles <span>51</span></div>
         <div class="metric-box">Chapters <span>13</span></div>
         <div class="metric-box" style="background: #e67e22;">Patents <span>3</span></div>
-        <div class="metric-box" style="background: #2c3e50;">Citations <span>793</span></div>
+        <div class="metric-box" style="background: #2c3e50;">Citations <span>795</span></div>
       </div>
 
       <div class="stat-card">
