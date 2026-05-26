@@ -145,7 +145,9 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 
     <div class="sidebar-card">
         <div class="sidebar-header">🖼 Featured Research</div>
+        <div class="research-label">Microscope Imaging</div>
         <img src="/assets/photo5.jpg" class="sidebar-img" loading="lazy" alt="Research 1">
+        <div class="research-label">Device Fabrication</div>
         <img src="/assets/photo6.jpg" class="sidebar-img" loading="lazy" alt="Research 2">
     </div>
   </aside>
