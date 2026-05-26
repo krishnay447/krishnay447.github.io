@@ -24,9 +24,6 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; }
 .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
 
-/* Active tab style */
-.nav-bar a.active { color: var(--primary) !important; background: var(--nav-hover); border: none !important; }
-
 /* DROPDOWN */
 .dropdown { position: relative; }
 .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px; }
@@ -40,7 +37,7 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .section-title { color: var(--primary-dark); font-weight: 800; margin: 15px 0 5px; border-left: 4px solid var(--primary); padding-left: 10px; font-size: 24px !important; }
 .skill-pill { display: inline-block; padding: 4px 10px; background: #eef6ff; color: var(--primary); border-radius: 20px; font-size: 15px; font-weight: 600; margin: 2px; border: 1px solid #d0e3ff; }
 
-/* Sidebar Sections - Each is now a separate card */
+/* SIDEBAR CARDS - Isolated */
 .sidebar-card {
     background: #ffffff;
     border: 1px solid #dce3ef;
@@ -49,14 +46,16 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
     padding: 15px;
     margin-bottom: 20px;
 }
-.sidebar-header { font-weight: 800; color: var(--primary-dark); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e2ecff; display: block; }
+.sidebar-header { font-weight: 800; color: var(--primary-dark); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e2ecff; display: block; font-size: 1.1em; }
 
 .news-list { margin: 0; padding: 0; list-style: none; color: #334e68; }
 .news-list li { padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 15px; line-height: 1.4; }
 
 .tool-links a { display: block; padding: 8px 0; color: var(--primary-dark); font-weight: 700; text-decoration: none; font-size: 15px; }
 
-.sidebar-img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 10px; }
+/* Research Images styling */
+.research-label { font-weight: 700; color: #555; margin-bottom: 5px; font-size: 14px; }
+.sidebar-img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 15px; }
 
 /* GALLERY */
 .gallery-wrap { max-width: 1150px; margin: 30px auto 0; padding: 0 15px; }
@@ -79,7 +78,7 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 
 <nav class="nav-bar">
   <div class="nav-inner">
-    <a href="/" class="active">🏠 Home</a>
+    <a href="/">🏠 Home</a>
     <a href="/experience/">👨‍🔬 Experience</a>
     <a href="/impact/">📈 Impact</a>
     <div class="dropdown">
@@ -146,8 +145,8 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 
     <div class="sidebar-card">
         <div class="sidebar-header">🖼 Featured Research</div>
-        <img src="/assets/photo1.jpg" class="sidebar-img" loading="lazy" alt="Research 1">
-        <img src="/assets/photo2.jpg" class="sidebar-img" loading="lazy" alt="Research 2">
+        <img src="/assets/photo5.jpg" class="sidebar-img" loading="lazy" alt="Research 1">
+        <img src="/assets/photo6.jpg" class="sidebar-img" loading="lazy" alt="Research 2">
     </div>
   </aside>
 </div>
