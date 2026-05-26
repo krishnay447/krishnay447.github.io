@@ -18,11 +18,14 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .hero-header img { width: 100%; height: 260px; object-fit: cover; display: block; }
 .hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(24px,4vw,36px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
 
-/* NAVIGATION BAR - Consistent Size */
-.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
-.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 8px 20px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: #e3f2fd; color: var(--primary) !important; }
+/* NAVIGATION BAR */
+.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 20px; max-width: 1150px; padding: 0 10px; }
+.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 30px; padding: 8px 20px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
+.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; }
+.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
+
+/* Active tab style */
+.nav-bar a.active { color: var(--primary) !important; background: var(--nav-hover); border: none !important; }
 
 /* DROPDOWN */
 .dropdown { position: relative; }
@@ -37,15 +40,23 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .section-title { color: var(--primary-dark); font-weight: 800; margin: 15px 0 5px; border-left: 4px solid var(--primary); padding-left: 10px; font-size: 24px !important; }
 .skill-pill { display: inline-block; padding: 4px 10px; background: #eef6ff; color: var(--primary); border-radius: 20px; font-size: 15px; font-weight: 600; margin: 2px; border: 1px solid #d0e3ff; }
 
-/* SIDEBAR */
-.news-sidebar { background: linear-gradient(135deg,#ffffff 0%,#f5f9ff 100%); border: 1px solid #cfe0ff; border-radius: 16px; box-shadow: 0 8px 26px rgba(30,136,229,.08); overflow: hidden; }
-.news-header { padding: 10px 14px; border-bottom: 1px dashed #cfe0ff; font-weight: 800; color: var(--primary-dark); }
-.news-scroll { height: 280px; overflow: hidden; position: relative; }
-.news-list { position: absolute; width: 100%; margin: 0; padding: 0 14px; list-style: none; color: #334e68; animation: scroll-up 22s linear infinite; box-sizing: border-box; }
-.news-list li { padding: 8px 0; border-bottom: 1px dashed #e2ecff; font-size: 14px; line-height: 1.3; }
-.tool-links { padding: 10px 14px; border-top: 2px solid #e2ecff; }
-.tool-links a { display: block; padding: 4px 0; color: var(--primary-dark); font-weight: 700; text-decoration: none; font-size: 14px; }
-@keyframes scroll-up { 0% { top: 100%; } 100% { top: -180%; } }
+/* Sidebar Sections - Each is now a separate card */
+.sidebar-card {
+    background: #ffffff;
+    border: 1px solid #dce3ef;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.sidebar-header { font-weight: 800; color: var(--primary-dark); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e2ecff; display: block; }
+
+.news-list { margin: 0; padding: 0; list-style: none; color: #334e68; }
+.news-list li { padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 15px; line-height: 1.4; }
+
+.tool-links a { display: block; padding: 8px 0; color: var(--primary-dark); font-weight: 700; text-decoration: none; font-size: 15px; }
+
+.sidebar-img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 10px; }
 
 /* GALLERY */
 .gallery-wrap { max-width: 1150px; margin: 30px auto 0; padding: 0 15px; }
@@ -53,12 +64,8 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 .gallery-item { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); height: 160px; background: #fff; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
 
-/* BUTTONS */
-.symbol-row-compact { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 30px 0; }
-.research-btn { display: flex; align-items: stretch; border-radius: 4px; text-decoration: none; height: 40px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.btn-left { background: #555; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
-.btn-right-scholar { background: #4285F4; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
-.btn-right-orcid { background: #A6CE39; color: #fff; padding: 0 15px; display: flex; align-items: center; font-size: 14px; font-weight: 700; }
+/* FOOTER */
+.footer-wrap { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); margin-top: 40px; color: #666; font-size: 14px; }
 
 @media (max-width: 1024px) { .main-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
 </style>
@@ -66,13 +73,13 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 <body>
 
 <div class="hero-header">
-  <img src="/assets/header.jpg" alt="Header banner" />
+  <img src="/assets/header.jpg" loading="lazy" alt="Header banner" />
   <div class="hero-title">Krishna Kumar Yadav</div>
 </div>
 
 <nav class="nav-bar">
   <div class="nav-inner">
-    <a href="/">🏠 Home</a>
+    <a href="/" class="active">🏠 Home</a>
     <a href="/experience/">👨‍🔬 Experience</a>
     <a href="/impact/">📈 Impact</a>
     <div class="dropdown">
@@ -117,21 +124,30 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
     </div>
   </section>
 
-  <aside class="news-sidebar">
-    <div class="news-header">📢 Latest News</div>
-    <div class="news-scroll">
-      <ul class="news-list">
-        <li><b>Jan 2026:</b> Installed spectrometer for 2D analysis.</li>
-        <li><b>Dec 2025:</b> MnFe<sub>2</sub>O<sub>4</sub> study published.</li>
-        <li><b>Nov 2025:</b> Talk at AMatS Spain on Schottky junctions.</li>
-      </ul>
+  <aside>
+    <div class="sidebar-card">
+        <div class="sidebar-header">📢 Latest News</div>
+        <ul class="news-list">
+            <li><b>Jan 2026:</b> Installed spectrometer for 2D analysis.</li>
+            <li><b>Dec 2025:</b> MnFe<sub>2</sub>O<sub>4</sub> study published.</li>
+            <li><b>Nov 2025:</b> Talk at AMatS Spain on Schottky junctions.</li>
+        </ul>
     </div>
-    <div class="tool-links">
-        <div class="news-header" style="border-bottom:none; padding-left:0;">⚡ Try My Tools</div>
-        <a href="https://photosensor-459111164189.us-west1.run.app/" target="_blank">🚀 PhotoSensor Pro</a>
-        <a href="https://band-aligner-459111164189.us-west1.run.app/" target="_blank">⚛️ BandGap Aligner</a>
-        <a href="https://sbh-laboratory-pro-459111164189.us-west1.run.app/" target="_blank">🌡 SBH & Activation Lab</a>
-        <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank">🎨 AcadeFig Pro</a>
+
+    <div class="sidebar-card">
+        <div class="sidebar-header">⚡ Computational Research Suite</div>
+        <div class="tool-links">
+            <a href="https://photosensor-459111164189.us-west1.run.app/" target="_blank">🚀 PhotoSensor Pro</a>
+            <a href="https://band-aligner-459111164189.us-west1.run.app/" target="_blank">⚛️ BandGap Aligner</a>
+            <a href="https://sbh-laboratory-pro-459111164189.us-west1.run.app/" target="_blank">🌡 SBH & Activation Lab</a>
+            <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank">🎨 AcadeFig Pro</a>
+        </div>
+    </div>
+
+    <div class="sidebar-card">
+        <div class="sidebar-header">🖼 Featured Research</div>
+        <img src="/assets/photo1.jpg" class="sidebar-img" loading="lazy" alt="Research 1">
+        <img src="/assets/photo2.jpg" class="sidebar-img" loading="lazy" alt="Research 2">
     </div>
   </aside>
 </div>
@@ -139,23 +155,22 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 <div class="gallery-wrap">
   <h3 class="section-title" style="border-left: none; padding-left: 0; text-align: center; border-bottom: 3px solid var(--primary); display: table; margin: 15px auto 20px; padding-bottom: 5px;">📸 Research & Lab Gallery</h3>
   <div class="gallery-grid">
-    <div class="gallery-item"><img src="/assets/photo1.jpg" alt="Lab 1"></div>
-    <div class="gallery-item"><img src="/assets/photo2.jpg" alt="Lab 2"></div>
-    <div class="gallery-item"><img src="/assets/photo3.jpg" alt="Lab 3"></div>
-    <div class="gallery-item"><img src="/assets/photo4.jpg" alt="Lab 4"></div>
+    <div class="gallery-item"><img src="/assets/photo1.jpg" loading="lazy" alt="Lab 1"></div>
+    <div class="gallery-item"><img src="/assets/photo2.jpg" loading="lazy" alt="Lab 2"></div>
+    <div class="gallery-item"><img src="/assets/photo3.jpg" loading="lazy" alt="Lab 3"></div>
+    <div class="gallery-item"><img src="/assets/photo4.jpg" loading="lazy" alt="Lab 4"></div>
   </div>
 </div>
 
-<div class="symbol-row-compact">
-  <a class="research-btn" href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
-    <div class="btn-left">GOOGLE SCHOLAR</div>
-    <div class="btn-right-scholar">PROFILE</div>
-  </a>
-  <a class="research-btn" href="https://orcid.org/0000-0002-9063-7851" target="_blank">
-    <div class="btn-left">ORCID</div>
-    <div class="btn-right-orcid">ID</div>
-  </a>
-</div>
+<footer class="footer-wrap">
+    <p><b>Dr. Krishna Kumar Yadav</b></p>
+    <div style="margin: 10px 0;">
+        <a href="mailto:Krish91phy@usal.es" target="_blank" rel="noopener noreferrer" style="color:var(--primary); margin: 0 10px; text-decoration:none;">Email</a>
+        <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener noreferrer" style="color:var(--primary); margin: 0 10px; text-decoration:none;">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener noreferrer" style="color:var(--primary); margin: 0 10px; text-decoration:none;">ORCID</a>
+    </div>
+    <p>&copy; 2026 Krishna Kumar Yadav. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
