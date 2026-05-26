@@ -55,7 +55,7 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
 
 /* Research Images styling */
 .research-label { font-weight: 700; color: #555; margin-bottom: 5px; font-size: 14px; }
-.sidebar-img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 15px; }
+.sidebar-img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 15px; }
 
 /* GALLERY */
 .gallery-wrap { max-width: 1150px; margin: 30px auto 0; padding: 0 15px; }
