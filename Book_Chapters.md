@@ -57,16 +57,16 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
 
 <nav class="nav-bar">
   <div class="nav-inner">
-    <a href="/">🏠 Home</a>
-    <a href="/experience/">👨‍🔬 Experience</a>
-    <a href="/impact/">📈 Impact</a>
+    <a href="/"> Home</a>
+    <a href="/experience/"> Experience</a>
+    <a href="/impact/"> Impact</a>
     <div class="dropdown">
-      <span class="dropdown-toggle">📚 Publications ▾</span>
+      <span class="dropdown-toggle"> Publications ▾</span>
       <div class="dropdown-content">
         <div class="dropdown-menu-box">
-          <a href="/patents/">📜 Patents</a>
-          <a href="/Book_Chapters/">📖 Chapters</a>
-          <a href="/publications/">📝 Articles</a>
+          <a href="/patents/"> Patents</a>
+          <a href="/Book_Chapters/"> Chapters</a>
+          <a href="/publications/"> Articles</a>
         </div>
       </div>
     </div>
