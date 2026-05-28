@@ -137,7 +137,7 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
         <div class="sidebar-header">⚡ Computational Research Suite</div>
         <div class="tool-links">
             <a href="https://photosensor-459111164189.us-west1.run.app/" target="_blank">🚀 PhotoSensor Pro</a>
-            <a href="https://band-aligner-459111164189.us-west1.run.app/" target="_blank">⚛️ BandGap Aligner</a>
+            <a href="https://fermi-studio-459111164189.us-west1.run.app/" target="_blank">⚛️ BandGap Aligner</a>
             <a href="https://sbh-laboratory-pro-459111164189.us-west1.run.app/" target="_blank">🌡 SBH & Activation Lab</a>
             <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank">🎨 AcadeFig Pro</a>
         </div>
