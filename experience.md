@@ -85,7 +85,7 @@ body{ background:var(--bg) !important; font-family: "Segoe UI", sans-serif; colo
         </div>
       </div>
     </div>
-    <a href="/contact/">📬 Contact</a>
+    <a href="/contact/"> Contact</a>
   </div>
 </nav>
 
