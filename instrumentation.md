@@ -99,7 +99,7 @@ body{ background:var(--bg) !important; }
   <a href="/instrumentation/">🔬 Instrumentation</a> |
   <a href="/impact/">📈 Impact</a> |
   <span class="dropdown">
-    <a class="dropdown-toggle">📚 Publications ▾</a>
+    <a class="dropdown-toggle"> Publications ▾</a>
     <span class="dropdown-content" role="menu" aria-label="Publications submenu">
       <a href="/patents/">1. Patents</a>
       <a href="/Book_Chapters/">2. Book Chapters</a>
