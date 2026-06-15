@@ -134,12 +134,13 @@ body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; co
     </div>
 
     <div class="sidebar-card">
-        <div class="sidebar-header">⚡ Computational Research Suite</div>
+        <div class="sidebar-header">⚡ Digital Tools Suite</div>
         <div class="tool-links">
             <a href="https://photosensor-459111164189.us-west1.run.app/" target="_blank">🚀 PhotoSensor</a>
             <a href="https://fermi-studio-459111164189.us-west1.run.app/" target="_blank">⚛️ BandGap Aligner</a>
             <a href="https://charge-transport-explorer-459111164189.us-west1.run.app/" target="_blank">🌡 Device Physics Analyzer</a>
             <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank">🎨 AcadeFig Pro</a>
+            <a href="https://pdf-utility-hub-459111164189.us-west1.run.app" target="_blank">📄 PDF Utility Hub</a>
         </div>
     </div>
 
