@@ -98,6 +98,9 @@ a{ color:var(--accent); }
       <a class="contact-link" href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
       <a class="contact-link" href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
       <a href="https://wa.me/918765257998" class="wa-btn" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <div style="margin-top:16px; padding-top:14px; border-top:1px solid var(--border); font-size:13.5px; color:var(--muted);">
+        Website visits: <b id="visitCount" style="color:var(--accent); font-size:15px;">&hellip;</b>
+      </div>
     </div>
   </aside>
 
@@ -144,5 +147,11 @@ document.addEventListener('DOMContentLoaded', function() {
   locations.forEach(function(loc) {
     L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(loc.label);
   });
+
+  // Free visit counter (counts this visit and shows the site-wide total)
+  fetch('https://abacus.jasoncameron.dev/hit/krishnay447-github-io/site-visits')
+    .then(function(r){ return r.json(); })
+    .then(function(d){ document.getElementById('visitCount').textContent = d.value.toLocaleString(); })
+    .catch(function(){ document.getElementById('visitCount').textContent = '–'; });
 });
 </script>
