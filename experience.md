@@ -132,7 +132,7 @@ a{ color:var(--accent); }
       <h3>Cleanroom Fabrication (2D Materials)</h3>
       <p>Extensive experience in cleanroom fabrication processes, including photolithography, e-beam lithography, and thin-film deposition, optimized for 2D heterostructure assembly.</p>
     </div>
-    <p style="font-size:14px; color:var(--muted);">Full instrumentation details are on the <a href="/instrumentation/">Instrumentation page</a>.</p>
+    <p style="font-size:14px; color:var(--muted);">Full instrumentation details are on the <a href="/impact/">Impact page</a>.</p>
   </div>
 
   <div>
