@@ -4,121 +4,145 @@ title: Contact
 permalink: /contact/
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 
 <style>
-  .markdown-body > h1:first-child { display: none !important; }
-  :root { --primary:#1e88e5; --bg:#f7f9fc; --card-bg: #fff; --border:#dce3ef; --ink:#2a3440; }
-  body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; padding: 0; }
+/* ===== Clean Academic Theme ===== */
+.markdown-body > h1:first-child { display: none !important; }
+.markdown-body { overflow: visible !important; }
+:root{
+  --accent:#1a5490; --accent-dark:#123c66; --ink:#1f2937; --muted:#5b6572;
+  --border:#e3e8ef; --bg-soft:#f7f9fb; --heading:#1c2e40;
+}
+body{ background:#fff !important; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; margin:0; padding:0; line-height:1.65; }
+h1,h2,h3{ font-family:Georgia,"Times New Roman",serif; color:var(--heading); font-weight:600; }
+a{ color:var(--accent); }
 
-  /* Hero & Nav */
-  .hero-header { position:relative; width:100%; max-width:1150px; margin:20px auto; border-radius:14px; overflow:hidden; box-shadow:0 8px 25px rgba(0,0,0,0.1); }
-  .hero-header img { width:100%; height:220px; object-fit:cover; display:block; }
-  .hero-title { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:800; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.6); background:linear-gradient(to top, rgba(0,0,0,0.4), transparent); }
-  
-  .nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
-  .nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 8px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-  .nav-bar a, .dropdown-toggle { text-decoration: none; color: #1565c0 !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
-  .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: #e3f2fd; color: #1e88e5 !important; }
+/* NAV */
+.site-nav{ position:sticky; top:0; z-index:1000; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); }
+.nav-inner{ max-width:1000px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.brand{ font-family:Georgia,serif; font-size:20px; font-weight:700; color:var(--heading) !important; text-decoration:none; }
+.nav-links{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.nav-links a, .dropdown-toggle{ color:var(--ink) !important; text-decoration:none; font-size:15px; font-weight:600; padding:6px 12px; border-radius:6px; }
+.nav-links a:hover, .dropdown:hover .dropdown-toggle{ background:var(--bg-soft); color:var(--accent) !important; }
+.dropdown{ position:relative; display:inline-block; }
+.dropdown-content{ display:none; position:absolute; top:100%; right:0; min-width:190px; z-index:1001; padding-top:8px; }
+.dropdown:hover .dropdown-content{ display:block; }
+.dropdown-menu-box{ background:#fff; border:1px solid var(--border); border-radius:8px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:6px; }
+.dropdown-menu-box a{ display:block; padding:9px 14px; font-size:14px; color:var(--ink) !important; text-decoration:none; border-radius:6px; }
+.dropdown-menu-box a:hover{ background:var(--bg-soft); color:var(--accent) !important; }
 
-  /* Dropdown & Grid */
-  .dropdown { position: relative; }
-  .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
-  .dropdown:hover .dropdown-content { display: block; }
-  .dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); padding: 5px; }
-  .dropdown-menu-box a { display: block; padding: 10px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-decoration: none; text-align: left; }
-  .grid-container { max-width: 1150px; margin: 0 auto; padding: 0 15px; display: grid; grid-template-columns: 350px 1fr; gap: 20px; align-items: start; }
-  .card { background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 20px; }
-  
-  .wa-btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #25d366; color: #fff !important; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 14px; }
-  .wa-btn:hover { background: #128c7e; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 20px; }
-  .gallery-item { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); height: 120px; }
-  .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+/* PAGE HEAD */
+.page-head{ max-width:1000px; margin:44px auto 10px; padding:0 20px; }
+.page-head h1{ font-size:34px; margin:0 0 6px; }
+.page-head p{ color:var(--muted); margin:0; font-size:16.5px; }
 
-  @media (max-width: 900px) { .grid-container { grid-template-columns: 1fr; } }
+/* LAYOUT */
+.grid-container{ max-width:1000px; margin:26px auto 0; padding:0 20px; display:grid; grid-template-columns:330px 1fr; gap:28px; align-items:start; }
+.card{ background:#fff; border:1px solid var(--border); border-radius:12px; padding:26px; }
+.profile-card{ text-align:center; }
+.profile-card img{ width:150px; height:150px; object-fit:cover; border-radius:50%; margin-bottom:14px; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.08); }
+.profile-card h2{ font-size:21px; margin:0 0 6px; }
+.profile-card p{ font-size:14.5px; color:var(--muted); line-height:1.5; margin:0 0 12px; }
+.contact-link{ display:block; margin:8px 0; font-weight:600; text-decoration:none; font-size:15px; }
+.wa-btn{ display:inline-block; margin-top:8px; padding:9px 20px; background:var(--accent); color:#fff !important; border-radius:8px; text-decoration:none; font-weight:700; font-size:14px; }
+.wa-btn:hover{ background:var(--accent-dark); }
+
+#map{ width:100%; height:400px; border-radius:10px; border:1px solid var(--border); z-index:1; }
+.map-note{ font-size:13px; color:var(--muted); margin-top:8px; }
+.gallery-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:12px; margin-top:16px; }
+.gallery-grid figure{ margin:0; }
+.gallery-grid img{ width:100%; height:110px; object-fit:cover; border-radius:8px; border:1px solid var(--border); }
+.gallery-grid figcaption{ font-size:12px; color:var(--muted); text-align:center; margin-top:4px; }
+
+/* FOOTER */
+.site-footer{ border-top:1px solid var(--border); margin-top:56px; padding:32px 20px 40px; text-align:center; color:var(--muted); font-size:14px; }
+.site-footer a{ margin:0 10px; font-weight:600; text-decoration:none; }
+
+@media (max-width:900px){ .grid-container{ grid-template-columns:1fr; } }
 </style>
 
-<div class="hero-header">
-  <img src="/assets/header7.jpg" alt="Contact banner">
-  <div class="hero-title">Contact & Network</div>
-</div>
-
-<nav class="nav-bar">
+<nav class="site-nav">
   <div class="nav-inner">
-    <a href="/"> Home</a>
-    <a href="/experience/"> Experience</a>
-    <a href="/impact/"> Impact</a>
-    <div class="dropdown">
-      <span class="dropdown-toggle"> Publications ▾</span>
-      <div class="dropdown-content">
-        <div class="dropdown-menu-box">
-          <a href="/patents/"> Patents</a>
-          <a href="/Book_Chapters/"> Chapters</a>
-          <a href="/publications/"> Articles</a>
-        </div>
+    <a class="brand" href="/">Krishna K. Yadav</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/experience/">Experience</a>
+      <a href="/impact/">Impact</a>
+      <div class="dropdown">
+        <a href="/publications/" class="dropdown-toggle">Publications &#9662;</a>
+        <div class="dropdown-content"><div class="dropdown-menu-box">
+          <a href="/publications/">Journal Articles</a>
+          <a href="/Book_Chapters/">Book Chapters</a>
+          <a href="/patents/">Patents</a>
+        </div></div>
       </div>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
     </div>
-    <a href="/contact/"> Contact</a>
   </div>
 </nav>
 
+<div class="page-head">
+  <h1>Contact</h1>
+  <p>Get in touch, or explore my research journey across three countries.</p>
+</div>
+
 <div class="grid-container">
   <aside>
-    <div class="card" style="text-align: center;">
-        <img src="/assets/profile.jpg" alt="Profile" style="width:160px; height:160px; object-fit:cover; border-radius:50%; margin-bottom:15px; border:4px solid var(--border);">
-        <h2 style="font-size:1.4em; margin:0;">Dr. Krishna Kumar Yadav</h2>
-        <p style="font-size:1em; color:#666; line-height: 1.4;">
-            Postdoctoral Fellow<br>
-            <b>Department of Fundamental Physics</b><br>
-            University of Salamanca, Spain
-        </p>
-        <a href="mailto:Krish91phy@usal.es" style="color:var(--primary); font-weight:700; text-decoration: none; display: block; margin: 10px 0;"><i class="fas fa-envelope"></i> Krish91phy@usal.es</a>
-        <a href="https://wa.me/918765257998" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    <div class="card profile-card">
+      <img src="/assets/profile.jpg" alt="Dr. Krishna Kumar Yadav">
+      <h2>Dr. Krishna Kumar Yadav</h2>
+      <p>Postdoctoral Fellow<br><b>Department of Fundamental Physics</b><br>University of Salamanca, Spain</p>
+      <a class="contact-link" href="mailto:Krish91phy@usal.es">Krish91phy@usal.es</a>
+      <a class="contact-link" href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="contact-link" href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://wa.me/918765257998" class="wa-btn" target="_blank" rel="noopener">Chat on WhatsApp</a>
     </div>
   </aside>
 
   <main>
     <div class="card">
-      <h3 style="margin-top:0;">📍 Research Network</h3>
-      <div id="map" style="width: 100%; height: 400px; background-color: #e0e0e0; border-radius: 12px; margin-top: 15px;"></div>
-      
+      <h3 style="margin-top:0;">Research Network</h3>
+      <div id="map"></div>
+      <p class="map-note">Gorakhpur (roots) &rarr; Mohali (PhD) &rarr; Beer Sheva (postdoc) &rarr; Salamanca (current)</p>
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="/assets/gorakhpur.jpg" alt="Gorakhpur"></div>
-        <div class="gallery-item"><img src="/assets/mohali.jpg" alt="Mohali"></div>
-        <div class="gallery-item"><img src="/assets/beersheba.jpg" alt="Beersheba"></div>
-        <div class="gallery-item"><img src="/assets/salamanca.jpg" alt="Salamanca"></div>
+        <figure><img src="/assets/gorakhpur.jpg" alt="Gorakhpur"><figcaption>Gorakhpur</figcaption></figure>
+        <figure><img src="/assets/mohali.jpg" alt="Mohali"><figcaption>Mohali</figcaption></figure>
+        <figure><img src="/assets/beersheba.jpg" alt="Beer Sheva"><figcaption>Beer Sheva</figcaption></figure>
+        <figure><img src="/assets/salamanca.jpg" alt="Salamanca"><figcaption>Salamanca</figcaption></figure>
       </div>
     </div>
   </main>
 </div>
 
-<div align="center" style="margin: 40px 0;">
-  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank">
-    <img src="https://img.shields.io/badge/GOOGLE_SCHOLAR-PROFILE-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Scholar">
-  </a>
-  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank">
-    <img src="https://img.shields.io/badge/ORCID-ID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID">
-  </a>
-</div>
+<footer class="site-footer">
+  <b style="color:var(--heading);">Dr. Krishna Kumar Yadav</b><br>
+  <div style="margin:10px 0;">
+    <a href="mailto:Krish91phy@usal.es">Email</a>
+    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
+  </div>
+  &copy; 2026 Krishna Kumar Yadav. All rights reserved.
+</footer>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=....&callback=initMap"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-  function initMap() {
-    var locations = [
-      { lat: 40.9650, lng: -5.6629, label: "Salamanca" },
-      { lat: 31.2529, lng: 34.7915, label: "Beer Sheva" },
-      { lat: 30.7046, lng: 76.7179, label: "Mohali" },
-      { lat: 26.7606, lng: 83.3732, label: "Gorakhpur" }
-    ];
-    var map = new google.maps.Map(document.getElementById('map'), { zoom: 3, center: { lat: 25, lng: 50 } });
-    locations.forEach(function(loc) {
-      new google.maps.Marker({ 
-        position: { lat: loc.lat, lng: loc.lng }, 
-        map: map, 
-        title: loc.label,
-        optimized: false // This fixes the white square pin issue
-      });
-    });
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  var map = L.map('map', { scrollWheelZoom: false }).setView([33, 30], 3);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  var locations = [
+    { lat: 40.9650, lng: -5.6629, label: "<b>Salamanca, Spain</b><br>Postdoc (2024–Present)<br>University of Salamanca" },
+    { lat: 31.2529, lng: 34.7915, label: "<b>Beer Sheva, Israel</b><br>Postdoc (2022–2024)<br>Shamoon College of Engineering" },
+    { lat: 30.7046, lng: 76.7179, label: "<b>Mohali, India</b><br>PhD & Research Associate (2016–2022)<br>INST Mohali" },
+    { lat: 26.7606, lng: 83.3732, label: "<b>Gorakhpur, India</b><br>Hometown" }
+  ];
+  locations.forEach(function(loc) {
+    L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(loc.label);
+  });
+});
 </script>
