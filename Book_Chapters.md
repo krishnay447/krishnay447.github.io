@@ -4,78 +4,89 @@ title: Book Chapters
 permalink: /Book_Chapters/
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 <style>
-/* 1. GLOBAL STYLES */
+/* ===== Clean Academic Theme ===== */
 .markdown-body > h1:first-child { display: none !important; }
-
+.markdown-body { overflow: visible !important; }
 :root{
-  --primary:#1e88e5; --primary-dark:#1565c0; --nav-hover:#e3f2fd;
-  --bg:#f7f9fc; --border:#dce3ef; --ink:#2a3440;
+  --accent:#1a5490; --accent-dark:#123c66; --ink:#1f2937; --muted:#5b6572;
+  --border:#e3e8ef; --bg-soft:#f7f9fb; --heading:#1c2e40;
 }
-body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+body{ background:#fff !important; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; margin:0; padding:0; line-height:1.65; }
+h1,h2,h3{ font-family:Georgia,"Times New Roman",serif; color:var(--heading); font-weight:600; }
+a{ color:var(--accent); }
 
-/* 2. HERO BANNER */
-.hero-header{ position:relative; width:100%; max-width:1150px; margin:20px auto; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
-.hero-header img{ width:100%; height:260px; object-fit:cover; display:block; }
-.hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(28px,4vw,40px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
+/* NAV */
+.site-nav{ position:sticky; top:0; z-index:1000; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); }
+.nav-inner{ max-width:1000px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.brand{ font-family:Georgia,serif; font-size:20px; font-weight:700; color:var(--heading) !important; text-decoration:none; }
+.nav-links{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.nav-links a, .dropdown-toggle{ color:var(--ink) !important; text-decoration:none; font-size:15px; font-weight:600; padding:6px 12px; border-radius:6px; }
+.nav-links a:hover, .dropdown:hover .dropdown-toggle{ background:var(--bg-soft); color:var(--accent) !important; }
+.dropdown{ position:relative; display:inline-block; }
+.dropdown-content{ display:none; position:absolute; top:100%; right:0; min-width:190px; z-index:999; padding-top:8px; }
+.dropdown:hover .dropdown-content{ display:block; }
+.dropdown-menu-box{ background:#fff; border:1px solid var(--border); border-radius:8px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:6px; }
+.dropdown-menu-box a{ display:block; padding:9px 14px; font-size:14px; color:var(--ink) !important; text-decoration:none; border-radius:6px; }
+.dropdown-menu-box a:hover{ background:var(--bg-soft); color:var(--accent) !important; }
 
-/* 3. NAVIGATION BAR */
-.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
-.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 8px 15px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap; }
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
+/* PAGE HEAD */
+.page-head{ max-width:900px; margin:44px auto 10px; padding:0 20px; }
+.page-head h1{ font-size:34px; margin:0 0 6px; }
+.page-head p{ color:var(--muted); margin:0; font-size:16.5px; }
+.sub-nav{ max-width:900px; margin:10px auto 0; padding:0 20px; font-size:14.5px; }
+.sub-nav a{ font-weight:600; text-decoration:none; margin-right:14px; }
 
-/* DROPDOWN */
-.dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 160px; z-index: 9999; padding-top: 10px; }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
-.dropdown-menu-box a { display: block; padding: 10px; font-size: 14px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
+/* SEARCH & FILTER */
+.search-container{ max-width:900px; margin:22px auto 6px; padding:0 20px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+#yearInput{ flex:1 1 220px; max-width:320px; padding:10px 16px; border-radius:8px; border:1px solid var(--border); font-size:14.5px; outline:none; background:var(--bg-soft); box-sizing:border-box; }
+#yearInput:focus{ border-color:var(--accent); background:#fff; }
+.filter-btn{ padding:8px 16px; border:1px solid var(--border); background:#fff; color:var(--muted); border-radius:8px; cursor:pointer; font-weight:600; font-size:13px; }
+.filter-btn:hover, .filter-btn.active{ background:var(--accent); color:#fff; border-color:var(--accent); }
 
-/* 4. SEARCH & FILTER - RESPONSIVE */
-.search-container { max-width: 950px; margin: 15px auto; padding: 0 15px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-#yearInput { padding: 8px 15px; border-radius: 8px; border: 1px solid var(--border); flex: 1 1 200px; max-width: 300px; font-size: 14px; outline: none; }
-.filter-btn { padding: 8px 16px; border: 1px solid var(--border); background: #fff; color: #666; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; }
-.filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+/* CHAPTER CARDS */
+.chapter-container{ max-width:900px; margin:14px auto 0; padding:0 20px; }
+.chapter-card{ background:#fff; border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin-bottom:12px; transition:border-color 0.15s; }
+.chapter-card:hover{ border-color:var(--accent); }
+.chapter-year-label{ float:right; background:var(--bg-soft); color:var(--accent); padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:800; border:1px solid var(--border); margin-left:10px; }
+.chapter-title{ color:var(--heading); font-size:16px; font-weight:700; margin-bottom:6px; line-height:1.45; display:block; }
+.chapter-authors{ font-size:13.5px; color:var(--muted); margin-bottom:6px; }
+.chapter-meta{ font-size:13px; color:#6b7280; font-style:italic; border-top:1px solid var(--bg-soft); padding-top:6px; margin-top:6px; }
 
-/* 5. CHAPTER CARDS */
-.chapter-container { max-width: 950px; margin: 0 auto; padding: 0 15px; }
-.chapter-card { background: #fff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 15px; display: block; transition: 0.2s; }
-.chapter-card:hover { border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.chapter-year-label { display: block; float: right; background: #e3f2fd; color: var(--primary); padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 800; margin-left: 10px; }
-.chapter-title { color: var(--primary-dark); font-size: 17px; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
-.chapter-authors { font-size: 14px; color: #555; margin-bottom: 6px; }
-.chapter-meta { font-size: 13px; color: #888; font-style: italic; border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px; }
+/* FOOTER */
+.site-footer{ border-top:1px solid var(--border); margin-top:56px; padding:32px 20px 40px; text-align:center; color:var(--muted); font-size:14px; }
+.site-footer a{ margin:0 10px; font-weight:600; text-decoration:none; }
 </style>
 
-<div class="hero-header">
-  <img src="/assets/header7.jpg" alt="Banner">
-  <div class="hero-title">Knowledge Sharing</div>
-</div>
-
-<nav class="nav-bar">
+<nav class="site-nav">
   <div class="nav-inner">
-    <a href="/"> Home</a>
-    <a href="/experience/"> Experience</a>
-    <a href="/impact/"> Impact</a>
-    <div class="dropdown">
-      <span class="dropdown-toggle"> Publications ▾</span>
-      <div class="dropdown-content">
-        <div class="dropdown-menu-box">
-          <a href="/patents/"> Patents</a>
-          <a href="/Book_Chapters/"> Chapters</a>
-          <a href="/publications/"> Articles</a>
-        </div>
+    <a class="brand" href="/">Krishna K. Yadav</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/experience/">Experience</a>
+      <a href="/impact/">Impact</a>
+      <div class="dropdown">
+        <a href="/publications/" class="dropdown-toggle">Publications &#9662;</a>
+        <div class="dropdown-content"><div class="dropdown-menu-box">
+          <a href="/publications/">Journal Articles</a>
+          <a href="/Book_Chapters/">Book Chapters</a>
+          <a href="/patents/">Patents</a>
+        </div></div>
       </div>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
     </div>
-    <a href="/contact/"> Contact</a>
   </div>
 </nav>
 
+<div class="page-head">
+  <h1>Book Chapters</h1>
+  <p>Authored chapters in edited volumes from ACS, RSC, Springer, Elsevier, Wiley, De Gruyter, and CRC Press.</p>
+</div>
+<div class="sub-nav">Also see: <a href="/publications/">Journal Articles</a> <a href="/patents/">Patents</a></div>
+
 <div class="search-container">
-  <input type="text" id="yearInput" onkeyup="filterBySearch()" placeholder="🔍 Search Title or Year...">
+  <input type="text" id="yearInput" onkeyup="filterBySearch()" placeholder="Search title or year...">
   <button class="filter-btn active" onclick="filterByYear('all', this)">All</button>
   <button class="filter-btn" onclick="filterByYear('2025', this)">2025</button>
   <button class="filter-btn" onclick="filterByYear('2024', this)">2024</button>
@@ -84,34 +95,33 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
 </div>
 
 <div class="chapter-container" id="chapterList">
-  <h2 style="color: var(--primary-dark); border-left: 5px solid var(--primary); padding-left: 15px; margin: 30px 0;">📖 Authored Book Chapters</h2>
 
   <div class="chapter-card" data-year="2025">
     <span class="chapter-year-label">2025</span>
     <span class="chapter-title">Chemical Waste-Derived Carbon Nanomaterials</span>
-    <div class="chapter-authors">Deepak Kumar Chauhan, Kritika Sood, Venugopala Rao Battula, <b>Krishna K Yadav</b></div>
-    <div class="chapter-meta">ACS Symposium Series, Vol. 1494, pp. 203–224 | ISBN: 9780841296619</div>
+    <div class="chapter-authors">Deepak Kumar Chauhan, Kritika Sood, Venugopala Rao Battula, <b>Krishna K. Yadav</b></div>
+    <div class="chapter-meta">ACS Symposium Series, Vol. 1494, pp. 203&ndash;224 | ISBN: 9780841296619</div>
   </div>
 
   <div class="chapter-card" data-year="2024">
     <span class="chapter-year-label">2024</span>
     <span class="chapter-title">Potentiometric Devices for Biomarkers</span>
     <div class="chapter-authors">Arushi Arora, <b>Krishna K. Yadav</b></div>
-    <div class="chapter-meta">Detection Science Series, RSC, pp. 146–165 | ISBN: 978-1-83767-323-0</div>
+    <div class="chapter-meta">Detection Science Series, RSC, pp. 146&ndash;165 | ISBN: 978-1-83767-323-0</div>
   </div>
 
   <div class="chapter-card" data-year="2024">
     <span class="chapter-year-label">2024</span>
     <span class="chapter-title">Scalable and Cost-Effective Synthesis of 2D Materials</span>
-    <div class="chapter-authors"><b>Krishna K. Yadav</b>, Sunaina, S Rana, SK Guchhait</div>
-    <div class="chapter-meta">2D Materials: Sensing Applications, pp. 1–19 | ISBN: 978-981-97-6258-3</div>
+    <div class="chapter-authors"><b>Krishna K. Yadav</b>, Sunaina, S. Rana, S.K. Guchhait</div>
+    <div class="chapter-meta">2D Materials: Sensing Applications, pp. 1&ndash;19 | ISBN: 978-981-97-6258-3</div>
   </div>
 
   <div class="chapter-card" data-year="2024">
     <span class="chapter-year-label">2024</span>
     <span class="chapter-title">Quantum Dots/One-Dimensional (1D) Composites</span>
-    <div class="chapter-authors">S Rana, VM Gaikwad, <b>Krishna K. Yadav</b></div>
-    <div class="chapter-meta">Springer Nature Switzerland, pp. 177–191 | ISBN: 978-3-031-54779-9</div>
+    <div class="chapter-authors">S. Rana, V.M. Gaikwad, <b>Krishna K. Yadav</b></div>
+    <div class="chapter-meta">Springer Nature Switzerland, pp. 177&ndash;191 | ISBN: 978-3-031-54779-9</div>
   </div>
 
   <div class="chapter-card" data-year="2024">
@@ -125,7 +135,7 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
     <span class="chapter-year-label">2024</span>
     <span class="chapter-title">Application of waste-synthesized nanoparticles in energy</span>
     <div class="chapter-authors"><b>Krishna K. Yadav</b>, Supriya Rana, Sunaina</div>
-    <div class="chapter-meta">Elsevier, pp. 319–340 | ISBN: 9780443223365</div>
+    <div class="chapter-meta">Elsevier, pp. 319&ndash;340 | ISBN: 9780443223365</div>
   </div>
 
   <div class="chapter-card" data-year="2024">
@@ -138,57 +148,56 @@ body { background:var(--bg) !important; font-family: "Segoe UI", Tahoma, Geneva,
   <div class="chapter-card" data-year="2023">
     <span class="chapter-year-label">2023</span>
     <span class="chapter-title">Advanced fiber materials in optical and photonic applications</span>
-    <div class="chapter-authors">R Wadhwa, A Arora, <b>Krishna K. Yadav</b></div>
-    <div class="chapter-meta">Walter de Gruyter GmbH & Co KG, p. 191 | ISBN: 9783110992892</div>
+    <div class="chapter-authors">R. Wadhwa, A. Arora, <b>Krishna K. Yadav</b></div>
+    <div class="chapter-meta">Walter de Gruyter GmbH &amp; Co KG, p. 191 | ISBN: 9783110992892</div>
   </div>
 
   <div class="chapter-card" data-year="2023">
     <span class="chapter-year-label">2023</span>
     <span class="chapter-title">Overview of advanced fiber materials</span>
-    <div class="chapter-authors">R Wadhwa, A Arora, S Rana, <b>Krishna K. Yadav</b></div>
-    <div class="chapter-meta">Walter de Gruyter GmbH & Co KG, p. 1 | ISBN: 9783110992892</div>
+    <div class="chapter-authors">R. Wadhwa, A. Arora, S. Rana, <b>Krishna K. Yadav</b></div>
+    <div class="chapter-meta">Walter de Gruyter GmbH &amp; Co KG, p. 1 | ISBN: 9783110992892</div>
   </div>
 
   <div class="chapter-card" data-year="2023">
     <span class="chapter-year-label">2023</span>
     <span class="chapter-title">Chemically Modified Carbon Nanotubes in 3D and 4D Printing</span>
-    <div class="chapter-authors"><b>Krishna K. Yadav</b>, A Arora, S Jangra, M Jha</div>
-    <div class="chapter-meta">Wiley‑VCH GmbH, pp. 419–439 | ISBN: 9783527838790</div>
+    <div class="chapter-authors"><b>Krishna K. Yadav</b>, A. Arora, S. Jangra, M. Jha</div>
+    <div class="chapter-meta">Wiley-VCH GmbH, pp. 419&ndash;439 | ISBN: 9783527838790</div>
   </div>
 
   <div class="chapter-card" data-year="2022">
     <span class="chapter-year-label">2022</span>
     <span class="chapter-title">Application of Surface Modified Carbon Nanotubes in Energy</span>
-    <div class="chapter-authors"><b>Krishna K. Yadav</b>, N Khan, M Jha</div>
-    <div class="chapter-meta">American Chemical Society, pp. 101–119 | ISBN: 9780841297463</div>
+    <div class="chapter-authors"><b>Krishna K. Yadav</b>, N. Khan, M. Jha</div>
+    <div class="chapter-meta">American Chemical Society, pp. 101&ndash;119 | ISBN: 9780841297463</div>
   </div>
 </div>
 
-<div align="center" style="margin: 40px 0;">
-  <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
-  <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
-</div>
+<footer class="site-footer">
+  <b style="color:var(--heading);">Dr. Krishna Kumar Yadav</b><br>
+  <div style="margin:10px 0;">
+    <a href="mailto:Krish91phy@usal.es">Email</a>
+    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
+  </div>
+  &copy; 2026 Krishna Kumar Yadav. All rights reserved.
+</footer>
 
 <script>
 function filterByYear(year, btn) {
   const cards = document.querySelectorAll('.chapter-card');
-  const buttons = document.querySelectorAll('.filter-btn');
-  buttons.forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('yearInput').value = '';
-
   cards.forEach(card => {
     card.style.display = (year === 'all' || card.getAttribute('data-year') === year) ? 'block' : 'none';
   });
 }
-
 function filterBySearch() {
   const input = document.getElementById('yearInput').value.toUpperCase();
-  const cards = document.querySelectorAll('.chapter-card');
-  const buttons = document.querySelectorAll('.filter-btn');
-  buttons.forEach(b => b.classList.remove('active'));
-
-  cards.forEach(card => {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.chapter-card').forEach(card => {
     card.style.display = (card.textContent || card.innerText).toUpperCase().includes(input) ? 'block' : 'none';
   });
 }
