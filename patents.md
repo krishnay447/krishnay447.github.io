@@ -4,124 +4,121 @@ title: Patents
 permalink: /patents/
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 <style>
-  /* 1. GLOBAL STYLES */
-  .markdown-body > h1:first-child { display: none !important; }
-  :root { 
-    --primary:#1e88e5; --primary-dark:#1565c0; --nav-hover:#e3f2fd; 
-    --bg:#f0f4f8; --border:#dce3ef; --ink:#2a3440;
-    --card-shadow: 0 10px 25px rgba(0,0,0,0.08); 
-  }
-  body { background: var(--bg) !important; font-family: "Segoe UI", Roboto, sans-serif; color: var(--ink); margin: 0; padding: 0; }
+/* ===== Clean Academic Theme ===== */
+.markdown-body > h1:first-child { display: none !important; }
+.markdown-body { overflow: visible !important; }
+:root{
+  --accent:#1a5490; --accent-dark:#123c66; --ink:#1f2937; --muted:#5b6572;
+  --border:#e3e8ef; --bg-soft:#f7f9fb; --heading:#1c2e40;
+}
+body{ background:#fff !important; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; margin:0; padding:0; line-height:1.65; }
+h1,h2,h3{ font-family:Georgia,"Times New Roman",serif; color:var(--heading); font-weight:600; }
+a{ color:var(--accent); }
 
-  /* 2. NAVIGATION BAR - RESPONSIVE */
-  .nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 25px; max-width: 1150px; padding: 0 10px; }
-  .nav-inner { 
-    display: flex; align-items: center; justify-content: center; flex-wrap: wrap; 
-    gap: 15px; padding: 8px 15px; background: #ffffff; 
-    border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border);
-  }
-  .nav-bar a, .dropdown-toggle { 
-    text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; 
-    padding: 8px 12px; border-radius: 8px; transition: 0.2s; display: inline-flex; 
-    align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; white-space: nowrap;
-  }
-  .nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
+/* NAV */
+.site-nav{ position:sticky; top:0; z-index:1000; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); }
+.nav-inner{ max-width:1000px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.brand{ font-family:Georgia,serif; font-size:20px; font-weight:700; color:var(--heading) !important; text-decoration:none; }
+.nav-links{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.nav-links a, .dropdown-toggle{ color:var(--ink) !important; text-decoration:none; font-size:15px; font-weight:600; padding:6px 12px; border-radius:6px; }
+.nav-links a:hover, .dropdown:hover .dropdown-toggle{ background:var(--bg-soft); color:var(--accent) !important; }
+.dropdown{ position:relative; display:inline-block; }
+.dropdown-content{ display:none; position:absolute; top:100%; right:0; min-width:190px; z-index:999; padding-top:8px; }
+.dropdown:hover .dropdown-content{ display:block; }
+.dropdown-menu-box{ background:#fff; border:1px solid var(--border); border-radius:8px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:6px; }
+.dropdown-menu-box a{ display:block; padding:9px 14px; font-size:14px; color:var(--ink) !important; text-decoration:none; border-radius:6px; }
+.dropdown-menu-box a:hover{ background:var(--bg-soft); color:var(--accent) !important; }
 
-  /* DROPDOWN */
-  .dropdown { position: relative; }
-  .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px; }
-  .dropdown:hover .dropdown-content { display: block; }
-  .dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
-  .dropdown-menu-box a { display: block; padding: 10px 15px; font-size: 15px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
+/* PAGE HEAD */
+.page-head{ max-width:900px; margin:44px auto 10px; padding:0 20px; }
+.page-head h1{ font-size:34px; margin:0 0 6px; }
+.page-head p{ color:var(--muted); margin:0; font-size:16.5px; }
+.sub-nav{ max-width:900px; margin:10px auto 0; padding:0 20px; font-size:14.5px; }
+.sub-nav a{ font-weight:600; text-decoration:none; margin-right:14px; }
 
-  /* 3. PATENT GRID SYSTEM - RESPONSIVE */
-  .patent-section { max-width: 1000px; margin: 40px auto; padding: 0 15px; }
-  .patent-card { background: #ffffff; border-radius: 20px; margin-bottom: 30px; display: flex; flex-wrap: wrap; overflow: hidden; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.05); }
-  .patent-info { flex: 1; padding: 30px; min-width: 280px; }
-  .patent-visual { flex: 0 0 300px; background: #f8fafc; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 200px; border-left: 1px solid #f1f5f9; }
-  
-  .patent-tag { display: inline-block; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; }
-  .tag-granted { background: #e8f5e9; color: #2e7d32; }
-  .tag-pending { background: #fff3e0; color: #ef6c00; }
-  .patent-title { font-size: 20px; color: var(--primary-dark); font-weight: 700; margin-bottom: 15px; line-height: 1.3; }
-  .meta-item { font-size: 14px; margin-bottom: 8px; color: #555; display: flex; gap: 10px; line-height: 1.6; }
-  .cert-frame { max-width: 100%; border-radius: 12px; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-  
-  @media (max-width: 768px) { 
-    .patent-visual { border-left: none; border-top: 1px solid #f1f5f9; flex: 1 1 100%; } 
-  }
+/* PATENT CARDS */
+.patent-container{ max-width:900px; margin:22px auto 0; padding:0 20px; }
+.eyebrow{ font-size:12.5px; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent); font-weight:700; margin:30px 0 12px; }
+.patent-card{ background:#fff; border:1px solid var(--border); border-radius:10px; padding:20px 22px; margin-bottom:16px; }
+.status-badge{ display:inline-block; padding:3px 12px; border-radius:20px; font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:10px; }
+.status-granted{ background:#e8f5ee; color:#1c7a45; border:1px solid #bfe3cf; }
+.status-pending{ background:#fdf3e3; color:#9a6314; border:1px solid #f3ddb3; }
+.patent-title{ color:var(--heading); font-size:17px; font-weight:700; display:block; margin-bottom:8px; line-height:1.45; }
+.patent-meta{ font-size:14px; color:#3d4754; margin-bottom:4px; }
+.patent-meta b{ color:var(--heading); }
+.patent-img{ margin-top:12px; }
+.patent-img img{ max-width:260px; width:100%; border-radius:8px; border:1px solid var(--border); }
+
+/* FOOTER */
+.site-footer{ border-top:1px solid var(--border); margin-top:56px; padding:32px 20px 40px; text-align:center; color:var(--muted); font-size:14px; }
+.site-footer a{ margin:0 10px; font-weight:600; text-decoration:none; }
 </style>
 
-<div style="position:relative; width:100%; max-width:1150px; margin:20px auto; border-radius:20px; overflow:hidden; box-shadow:var(--card-shadow);">
-  <img src="/assets/header7.jpg" style="width:100%; height:220px; object-fit:cover;">
-  <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:white; background:rgba(0,0,0,0.4);">
-    <h1 style="font-size: clamp(30px, 6vw, 45px); margin:0; text-shadow:2px 2px 10px rgba(0,0,0,0.5);">Patents & IP</h1>
-  </div>
-</div>
-
-<nav class="nav-bar">
+<nav class="site-nav">
   <div class="nav-inner">
-    <a href="/">🏠 Home</a>
-    <a href="/experience/">👨‍🔬 Experience</a>
-    <a href="/impact/">📈 Impact</a>
-    <div class="dropdown">
-      <span class="dropdown-toggle">📚 Publications ▾</span>
-      <div class="dropdown-content">
-        <div class="dropdown-menu-box">
-          <a href="/patents/">📜 Patents</a>
-          <a href="/Book_Chapters/">📖 Chapters</a>
-          <a href="/publications/">📝 Articles</a>
-        </div>
+    <a class="brand" href="/">Krishna K. Yadav</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/experience/">Experience</a>
+      <a href="/impact/">Impact</a>
+      <div class="dropdown">
+        <a href="/publications/" class="dropdown-toggle">Publications &#9662;</a>
+        <div class="dropdown-content"><div class="dropdown-menu-box">
+          <a href="/publications/">Journal Articles</a>
+          <a href="/Book_Chapters/">Book Chapters</a>
+          <a href="/patents/">Patents</a>
+        </div></div>
       </div>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
     </div>
-    <a href="/contact/">📬 Contact</a>
   </div>
 </nav>
 
-<div class="patent-section">
-  <h2 style="color: #2c3e50; margin-bottom: 30px; font-weight: 800; border-left: 6px solid var(--primary); padding-left: 15px;">🥇 Granted Portfolio</h2>
+<div class="page-head">
+  <h1>Patents &amp; Intellectual Property</h1>
+  <p>Granted patents and ongoing applications.</p>
+</div>
+<div class="sub-nav">Also see: <a href="/publications/">Journal Articles</a> <a href="/Book_Chapters/">Book Chapters</a></div>
+
+<div class="patent-container">
+  <p class="eyebrow">Granted</p>
 
   <div class="patent-card">
-    <div class="patent-info">
-      <span class="patent-tag tag-granted"><i class="fas fa-check-circle"></i> Granted</span>
-      <div class="patent-title">A Process for Producing La<sub>2</sub>FeMnO<sub>6</sub> (LFMO) From Iron Ore Slime and Applications Thereof</div>
-      <div class="meta-item"><i class="fas fa-fingerprint"></i> <div><strong>Patent No:</strong> 482517</div></div>
-      <div class="meta-item"><i class="fas fa-calendar-alt"></i> <div><strong>Grant Date:</strong> 14/12/2023</div></div>
-      <div class="meta-item"><i class="fas fa-users"></i> <div><strong>Team:</strong> S. Sarkar, T.K. Ghosh, M. Jha, S. Guchhait, K. Sood, <b>Krishna Yadav</b>, Ankush</div></div>
-    </div>
-    <div class="patent-visual">
-      <a href="/assets/Patent1.jpg" target="_blank"><img src="/assets/Patent1.jpg" class="cert-frame" alt="Patent 1"></a>
-    </div>
+    <span class="status-badge status-granted">Granted</span>
+    <span class="patent-title">A Process for Producing La<sub>2</sub>FeMnO<sub>6</sub> (LFMO) From Iron Ore Slime and Applications Thereof</span>
+    <div class="patent-meta"><b>Patent No:</b> 482517</div>
+    <div class="patent-meta"><b>Grant Date:</b> 14/12/2023</div>
+    <div class="patent-meta"><b>Team:</b> S. Sarkar, T.K. Ghosh, M. Jha, S. Guchhait, K. Sood, <b>Krishna Yadav</b>, Ankush</div>
+    <div class="patent-img"><a href="/assets/Patent1.jpg" target="_blank" rel="noopener"><img src="/assets/Patent1.jpg" alt="Patent certificate 482517"></a></div>
   </div>
 
   <div class="patent-card">
-    <div class="patent-info">
-      <span class="patent-tag tag-granted"><i class="fas fa-check-circle"></i> Granted</span>
-      <div class="patent-title">Process of Preparing Silica-Iron Oxide From Iron Ore Slime</div>
-      <div class="meta-item"><i class="fas fa-fingerprint"></i> <div><strong>Patent No:</strong> 577043</div></div>
-      <div class="meta-item"><i class="fas fa-calendar-alt"></i> <div><strong>Grant Date:</strong> 31/12/2025</div></div>
-      <div class="meta-item"><i class="fas fa-users"></i> <div><strong>Team:</strong> S. Sarkar, N. Kundu, T.K. Ghosh, M. Jha, S.K. Guchhait, <b>Krishna Yadav</b>, Sunaina, A. Arora</div></div>
-    </div>
-    <div class="patent-visual">
-      <a href="/assets/Patent2.jpg" target="_blank"><img src="/assets/Patent2.jpg" class="cert-frame" alt="Patent 2"></a>
-    </div>
+    <span class="status-badge status-granted">Granted</span>
+    <span class="patent-title">Process of Preparing Silica-Iron Oxide From Iron Ore Slime</span>
+    <div class="patent-meta"><b>Patent No:</b> 577043</div>
+    <div class="patent-meta"><b>Grant Date:</b> 31/12/2025</div>
+    <div class="patent-meta"><b>Team:</b> S. Sarkar, N. Kundu, T.K. Ghosh, M. Jha, S.K. Guchhait, <b>Krishna Yadav</b>, Sunaina, A. Arora</div>
+    <div class="patent-img"><a href="/assets/Patent2.jpg" target="_blank" rel="noopener"><img src="/assets/Patent2.jpg" alt="Patent certificate 577043"></a></div>
   </div>
 
-  <h2 style="color: #2c3e50; margin-top: 50px; margin-bottom: 30px; font-weight: 800; border-left: 6px solid #ef6c00; padding-left: 15px;">🚀 Ongoing Applications</h2>
+  <p class="eyebrow">Ongoing Applications</p>
+
   <div class="patent-card">
-    <div class="patent-info" style="flex: 2;">
-      <span class="patent-tag tag-pending"><i class="fas fa-clock"></i> Pending</span>
-      <div class="patent-title">Conversion of wastepaper to nanostructured CaCO<sub>3</sub> for de-fluorination of water</div>
-      <div class="meta-item"><i class="fas fa-file-invoice"></i> <div><strong>App No:</strong> 202311017356</div></div>
-      <div class="meta-item"><i class="fas fa-users"></i> <div><strong>Team:</strong> M. Jha, R. Wadhwa, Sunaina, Ankush, <b>Krishna Yadav</b>, S.K. Guchhait</div></div>
-    </div>
-  </div>
-
-  <div align="center" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
-    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank"><img src="https://img.shields.io/badge/Google_Scholar-Profile-red?style=for-the-badge&logo=google-scholar" alt="Scholar"></a>
-    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank"><img src="https://img.shields.io/badge/ORCID-iD-A6CE39?style=for-the-badge&logo=orcid" alt="ORCID"></a>
+    <span class="status-badge status-pending">Pending</span>
+    <span class="patent-title">Conversion of wastepaper to nanostructured CaCO<sub>3</sub> for de-fluorination of water</span>
+    <div class="patent-meta"><b>Application No:</b> 202311017356</div>
+    <div class="patent-meta"><b>Team:</b> M. Jha, R. Wadhwa, Sunaina, Ankush, <b>Krishna Yadav</b>, S.K. Guchhait</div>
   </div>
 </div>
+
+<footer class="site-footer">
+  <b style="color:var(--heading);">Dr. Krishna Kumar Yadav</b><br>
+  <div style="margin:10px 0;">
+    <a href="mailto:Krish91phy@usal.es">Email</a>
+    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
+  </div>
+  &copy; 2026 Krishna Kumar Yadav. All rights reserved.
+</footer>
