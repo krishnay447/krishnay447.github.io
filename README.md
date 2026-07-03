@@ -1,178 +1,186 @@
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+title: Dr. Krishna Kumar Yadav
+---
+
 <style>
-/* Reset and Base Styles */
+/* ===== Clean Academic Theme ===== */
 .markdown-body > h1:first-child { display: none !important; }
+.markdown-body { overflow: visible !important; }
 :root{
-  --primary:#1e88e5; --primary-dark:#0d47a1; 
-  --nav-hover:#e3f2fd; --bg:#f7f9fc;
-  --border:#dce3ef; --ink:#2a3440;
+  --accent:#1a5490; --accent-dark:#123c66; --ink:#1f2937; --muted:#5b6572;
+  --border:#e3e8ef; --bg-soft:#f7f9fb; --heading:#1c2e40;
 }
-html { scroll-behavior: smooth; }
-body { background: var(--bg) !important; font-family: "Segoe UI", sans-serif; color: var(--ink); margin: 0; padding: 0; }
+body{ background:#fff !important; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; margin:0; padding:0; line-height:1.65; }
+h1,h2,h3{ font-family:Georgia,"Times New Roman",serif; color:var(--heading); font-weight:600; }
+a{ color:var(--accent); }
 
-/* HERO BANNER */
-.hero-header { position: relative; width: 100%; max-width: 1150px; margin: 20px auto; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-.hero-header img { width: 100%; height: 260px; object-fit: cover; display: block; }
-.hero-title{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:clamp(24px,4vw,36px); font-weight:700; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,0.55); background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.20)); }
+/* NAV */
+.site-nav{ position:sticky; top:0; z-index:1000; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); }
+.nav-inner{ max-width:1000px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.brand{ font-family:Georgia,serif; font-size:20px; font-weight:700; color:var(--heading) !important; text-decoration:none; }
+.nav-links{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.nav-links a, .dropdown-toggle{ color:var(--ink) !important; text-decoration:none; font-size:15px; font-weight:600; padding:6px 12px; border-radius:6px; }
+.nav-links a:hover, .dropdown:hover .dropdown-toggle{ background:var(--bg-soft); color:var(--accent) !important; }
+.dropdown{ position:relative; display:inline-block; }
+.dropdown-content{ display:none; position:absolute; top:100%; right:0; min-width:190px; z-index:999; padding-top:8px; }
+.dropdown:hover .dropdown-content{ display:block; }
+.dropdown-menu-box{ background:#fff; border:1px solid var(--border); border-radius:8px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:6px; }
+.dropdown-menu-box a{ display:block; padding:9px 14px; font-size:14px; color:var(--ink) !important; text-decoration:none; border-radius:6px; }
+.dropdown-menu-box a:hover{ background:var(--bg-soft); color:var(--accent) !important; }
 
-/* NAVIGATION BAR */
-.nav-bar { position: sticky; top: 10px; z-index: 10000; margin: 0 auto 20px; max-width: 1150px; padding: 0 10px; }
-.nav-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 30px; padding: 8px 20px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); border: 1px solid var(--border); }
-.nav-bar a, .dropdown-toggle { text-decoration: none; color: var(--primary-dark) !important; font-weight: 800; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; border: none; background: none; }
-.nav-bar a:hover, .dropdown:hover .dropdown-toggle { background: var(--nav-hover); color: var(--primary) !important; }
+/* INTRO */
+.intro{ max-width:1000px; margin:48px auto 12px; padding:0 20px; display:flex; gap:36px; align-items:center; flex-wrap:wrap; }
+.intro img{ width:190px; height:190px; object-fit:cover; border-radius:50%; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.08); }
+.intro h1{ font-size:36px; margin:0 0 6px; }
+.intro .role{ font-size:17px; color:var(--muted); margin:0 0 4px; }
+.intro .affil{ font-size:16px; color:var(--muted); margin:0 0 14px; }
+.link-row a{ display:inline-block; margin:0 14px 6px 0; font-weight:600; font-size:15px; text-decoration:none; border-bottom:1px solid transparent; }
+.link-row a:hover{ border-bottom-color:var(--accent); }
 
-/* DROPDOWN */
-.dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 180px; z-index: 9999; padding-top: 10px; }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-menu-box { background: #fff; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.12); overflow: hidden; padding: 5px; }
-.dropdown-menu-box a { display: block; padding: 10px 15px; font-size: 15px; color: var(--ink) !important; font-weight: 700; text-align: left; text-decoration: none; }
+/* LAYOUT */
+.main-grid{ max-width:1000px; margin:28px auto 0; padding:0 20px; display:grid; grid-template-columns:1fr 300px; gap:36px; align-items:start; }
+.eyebrow{ font-size:12.5px; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent); font-weight:700; margin:34px 0 8px; }
+.eyebrow:first-child{ margin-top:0; }
+section h2{ font-size:24px; margin:0 0 12px; }
+.focus-item{ padding:14px 0; border-bottom:1px solid var(--border); }
+.focus-item:last-child{ border-bottom:none; }
+.focus-item b{ color:var(--heading); }
+.pill{ display:inline-block; padding:4px 12px; background:var(--bg-soft); border:1px solid var(--border); color:var(--accent-dark); border-radius:20px; font-size:13.5px; font-weight:600; margin:3px 4px 3px 0; }
 
-/* MAIN CONTENT */
-.main-grid { display: grid; grid-template-columns: 1fr 340px; gap: 20px; max-width: 1150px; margin: 0 auto; padding: 0 15px; align-items: start; }
-.bio-section { font-size: 20px !important; line-height: 1.5; }
-.section-title { color: var(--primary-dark); font-weight: 800; margin: 15px 0 5px; border-left: 4px solid var(--primary); padding-left: 10px; font-size: 24px !important; }
-.skill-pill { display: inline-block; padding: 4px 10px; background: #eef6ff; color: var(--primary); border-radius: 20px; font-size: 15px; font-weight: 600; margin: 2px; border: 1px solid #d0e3ff; }
-
-/* SIDEBAR CARDS - Isolated */
-.sidebar-card {
-    background: #ffffff;
-    border: 1px solid #dce3ef;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    padding: 15px;
-    margin-bottom: 20px;
-}
-.sidebar-header { font-weight: 800; color: var(--primary-dark); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e2ecff; display: block; font-size: 1.1em; }
-
-.news-list { margin: 0; padding: 0; list-style: none; color: #334e68; }
-.news-list li { padding: 10px 0; border-bottom: 1px dashed #e2ecff; font-size: 15px; line-height: 1.4; }
-
-.tool-links a { display: block; padding: 8px 0; color: var(--primary-dark); font-weight: 700; text-decoration: none; font-size: 15px; }
-
-/* Research Images styling */
-.research-label { font-weight: 700; color: #555; margin-bottom: 5px; font-size: 14px; }
-.sidebar-img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 15px; }
+/* SIDEBAR */
+.side-card{ background:var(--bg-soft); border:1px solid var(--border); border-radius:10px; padding:20px; margin-bottom:22px; }
+.side-card h3{ font-size:17px; margin:0 0 12px; }
+.news-list{ list-style:none; margin:0; padding:0; }
+.news-list li{ padding:9px 0; border-bottom:1px solid var(--border); font-size:14px; line-height:1.5; }
+.news-list li:last-child{ border-bottom:none; }
+.news-date{ color:var(--accent); font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:0.5px; display:block; }
+.tool-links a{ display:block; padding:7px 0; font-size:14.5px; font-weight:600; text-decoration:none; border-bottom:1px solid var(--border); }
+.tool-links a:last-child{ border-bottom:none; }
 
 /* GALLERY */
-.gallery-wrap { max-width: 1150px; margin: 30px auto 0; padding: 0 15px; }
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 15px; }
-.gallery-item { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); height: 160px; background: #fff; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-wrap{ max-width:1000px; margin:44px auto 0; padding:0 20px; }
+.gallery-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:14px; }
+.gallery-grid img{ width:100%; height:150px; object-fit:cover; border-radius:8px; border:1px solid var(--border); }
 
 /* FOOTER */
-.footer-wrap { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); margin-top: 40px; color: #666; font-size: 14px; }
+.site-footer{ border-top:1px solid var(--border); margin-top:56px; padding:32px 20px 40px; text-align:center; color:var(--muted); font-size:14px; }
+.site-footer a{ margin:0 10px; font-weight:600; text-decoration:none; }
 
-@media (max-width: 1024px) { .main-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width:900px){
+  .main-grid{ grid-template-columns:1fr; }
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); }
+  .intro{ justify-content:center; text-align:center; }
+}
 </style>
-</head>
-<body>
 
-<div class="hero-header">
-  <img src="/assets/header.jpg" loading="lazy" alt="Header banner" />
-  <div class="hero-title">Krishna Kumar Yadav</div>
-</div>
-
-<nav class="nav-bar">
+<nav class="site-nav">
   <div class="nav-inner">
-    <a href="/"> Home</a>
-    <a href="/experience/"> Experience</a>
-    <a href="/impact/"> Impact</a>
-    <div class="dropdown">
-      <span class="dropdown-toggle"> Publications ▾</span>
-      <div class="dropdown-content">
-        <div class="dropdown-menu-box">
-          <a href="/patents/"> Patents</a>
-          <a href="/Book_Chapters/"> Chapters</a>
-          <a href="/publications/"> Articles</a>
-        </div>
+    <a class="brand" href="/">Krishna K. Yadav</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/experience/">Experience</a>
+      <a href="/impact/">Impact</a>
+      <div class="dropdown">
+        <a href="/publications/" class="dropdown-toggle">Publications &#9662;</a>
+        <div class="dropdown-content"><div class="dropdown-menu-box">
+          <a href="/publications/">Journal Articles</a>
+          <a href="/Book_Chapters/">Book Chapters</a>
+          <a href="/patents/">Patents</a>
+        </div></div>
       </div>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
     </div>
-    <a href="/contact/"> Contact</a>
   </div>
 </nav>
 
-<div class="main-grid">
-  <section class="bio-section" style="text-align: justify;">
-    <h3 class="section-title">🔵 Who I Am</h3>
-    <p>I am a dedicated researcher in <b>nanotechnology and advanced materials</b>, specializing in the synthesis of nanostructured materials and their application in next-generation electronics. My expertise spans the <b>mechanical and chemical exfoliation of 2D materials</b>, the precise <b>fabrication of optoelectronic and field-effect transistor (FET) devices</b>, and the utilization of advanced characterization techniques like <b>KPFM and Raman spectroscopy</b>.</p>
-    
-    <h3 class="section-title">🟢 Current Work</h3>
-    <ul>
-      <li><b>Device Fabrication & FETs:</b> Developing high-performance field-effect transistors (FET) utilizing 2D material architectures to study charge transport and contact resistance.</li>
-      <li><b>Photodetector Optimization:</b> Engineering 2D-material-based photodetectors to achieve high responsivity and external quantum efficiency through precise interface and contact engineering.</li>
-      <li><b>Nanoscale Characterization:</b> Employing <b>Dip-Pen Nanolithography (DPN)</b> and <b>Atomic Force Microscopy (AFM/KPFM)</b> to pattern surfaces and study the electronic behavior of 2D heterostructures.</li>
-    </ul>
+<div class="intro">
+  <img src="/assets/profile.jpg" alt="Dr. Krishna Kumar Yadav">
+  <div>
+    <h1>Dr. Krishna Kumar Yadav</h1>
+    <p class="role">Postdoctoral Researcher &middot; Nanotechnology &amp; 2D Material Devices</p>
+    <p class="affil">Department of Fundamental Physics, University of Salamanca, Spain</p>
+    <div class="link-row">
+      <a href="mailto:Krish91phy@usal.es">Email</a>
+      <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
+      <a href="/cv/"><b>Download CV &rarr;</b></a>
+    </div>
+  </div>
+</div>
 
-    <h3 class="section-title">🔮 Future Vision</h3>
-    <ul>
-      <li>Leveraging the unique properties of 2D heterostructures to develop ultra-sensitive, flexible, and high-speed optoelectronic devices.</li>
-      <li>Implementing machine learning and AI-driven data analysis to accelerate the optimization of device architectures, particularly in photodetectors and sensors.</li>
-      <li>Industries scale fabrication of a short channel device based on TMDS for very high on off ratio.</li>
-    </ul>
-    
-    <h4 class="section-title" style="border-left-color:#c2d9ff; font-size:20px !important;">🛠 Technical Toolkit</h4>
+<div class="main-grid">
+  <section>
+    <p class="eyebrow">About</p>
+    <p>I am a researcher in <b>nanotechnology and advanced materials</b>, specializing in the synthesis of nanostructured materials and their application in next-generation electronics. My expertise spans the <b>mechanical and chemical exfoliation of 2D materials</b>, the precise <b>fabrication of optoelectronic and field-effect transistor (FET) devices</b>, and advanced characterization techniques such as <b>KPFM and Raman spectroscopy</b>.</p>
+
+    <p class="eyebrow">Current Research</p>
+    <div class="focus-item"><b>Device Fabrication &amp; FETs.</b> Developing high-performance field-effect transistors based on 2D material architectures to study charge transport and contact resistance.</div>
+    <div class="focus-item"><b>Photodetector Optimization.</b> Engineering 2D-material photodetectors for high responsivity and external quantum efficiency through precise interface and contact engineering.</div>
+    <div class="focus-item"><b>Nanoscale Characterization.</b> Employing Dip-Pen Nanolithography (DPN) and Atomic Force Microscopy (AFM/KPFM) to pattern surfaces and study the electronic behavior of 2D heterostructures.</div>
+
+    <p class="eyebrow">Future Directions</p>
+    <p>My long-term goals include developing ultra-sensitive, flexible, and high-speed optoelectronic devices from 2D heterostructures; applying machine learning to accelerate device-architecture optimization for photodetectors and sensors; and industry-scale fabrication of short-channel TMDC devices with very high on/off ratios.</p>
+
+    <p class="eyebrow">Technical Toolkit</p>
     <div>
-        <span class="skill-pill">KPFM/FFM</span>
-        <span class="skill-pill">Exfoliation</span>
-        <span class="skill-pill">Cold Field Emission</span>
-        <span class="skill-pill">AI for Science</span>
+      <span class="pill">KPFM / FFM</span>
+      <span class="pill">2D Material Exfoliation</span>
+      <span class="pill">Cold Field Emission</span>
+      <span class="pill">Cleanroom Nanofabrication</span>
+      <span class="pill">Raman Spectroscopy</span>
+      <span class="pill">AI for Science</span>
     </div>
   </section>
 
   <aside>
-    <div class="sidebar-card">
-        <div class="sidebar-header">📢 Latest News</div>
-        <ul class="news-list">
-            <li><b>Jan 2026:</b> Installed spectrometer for 2D analysis.</li>
-            <li><b>Dec 2025:</b> MnFe<sub>2</sub>O<sub>4</sub> study published.</li>
-            <li><b>Nov 2025:</b> Talk at AMatS Spain on Schottky junctions.</li>
-        </ul>
+    <div class="side-card">
+      <h3>Latest News</h3>
+      <ul class="news-list">
+        <li><span class="news-date">Jan 2026</span> Installed a spectrometer for 2D material thickness analysis.</li>
+        <li><span class="news-date">Dec 2025</span> MnFe<sub>2</sub>O<sub>4</sub> electrocatalysis study published.</li>
+        <li><span class="news-date">Nov 2025</span> Invited talk at AMatS Spain on Schottky junctions.</li>
+      </ul>
     </div>
 
-    <div class="sidebar-card">
-        <div class="sidebar-header">⚡ Digital Tools Suite</div>
-        <div class="tool-links">
-            <a href="https://photosensor-459111164189.us-west1.run.app/" target="_blank">🚀 PhotoSensor</a>
-            <a href="https://fermi-studio-459111164189.us-west1.run.app/" target="_blank">⚛️ BandGap Aligner</a>
-            <a href="https://charge-transport-explorer-459111164189.us-west1.run.app/" target="_blank">🌡 Device Physics Analyzer</a>
-            <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank">🎨 AcadeFig Pro</a>
-            <a href="https://pdf-utility-hub-459111164189.us-west1.run.app" target="_blank">📄 PDF Utility Hub</a>
-        </div>
+    <div class="side-card">
+      <h3>Digital Tools Suite</h3>
+      <div class="tool-links">
+        <a href="https://photosensor-459111164189.us-west1.run.app/" target="_blank" rel="noopener">PhotoSensor</a>
+        <a href="https://fermi-studio-459111164189.us-west1.run.app/" target="_blank" rel="noopener">BandGap Aligner</a>
+        <a href="https://charge-transport-explorer-459111164189.us-west1.run.app/" target="_blank" rel="noopener">Device Physics Analyzer</a>
+        <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank" rel="noopener">AcadeFig Pro</a>
+        <a href="https://pdf-utility-hub-459111164189.us-west1.run.app" target="_blank" rel="noopener">PDF Utility Hub</a>
+      </div>
     </div>
 
-    <div class="sidebar-card">
-        <div class="sidebar-header">🖼 Featured Research</div>
-        <div class="research-label">Microscope Imaging</div>
-        <img src="/assets/photo5.jpg" class="sidebar-img" loading="lazy" alt="Research 1">
-        <div class="research-label">Device Fabrication</div>
-        <img src="/assets/photo6.jpg" class="sidebar-img" loading="lazy" alt="Research 2">
+    <div class="side-card">
+      <h3>Featured Research</h3>
+      <p style="font-size:13px; color:var(--muted); margin:0 0 6px;">Microscope imaging</p>
+      <img src="/assets/photo5.jpg" alt="Microscope imaging" style="width:100%; height:140px; object-fit:cover; border-radius:8px; border:1px solid var(--border); margin-bottom:12px;">
+      <p style="font-size:13px; color:var(--muted); margin:0 0 6px;">Device fabrication</p>
+      <img src="/assets/photo6.jpg" alt="Device fabrication" style="width:100%; height:140px; object-fit:cover; border-radius:8px; border:1px solid var(--border);">
     </div>
   </aside>
 </div>
 
 <div class="gallery-wrap">
-  <h3 class="section-title" style="border-left: none; padding-left: 0; text-align: center; border-bottom: 3px solid var(--primary); display: table; margin: 15px auto 20px; padding-bottom: 5px;">📸 Research & Lab Gallery</h3>
+  <p class="eyebrow">Research &amp; Lab Gallery</p>
   <div class="gallery-grid">
-    <div class="gallery-item"><img src="/assets/photo1.jpg" loading="lazy" alt="Lab 1"></div>
-    <div class="gallery-item"><img src="/assets/photo2.jpg" loading="lazy" alt="Lab 2"></div>
-    <div class="gallery-item"><img src="/assets/photo3.jpg" loading="lazy" alt="Lab 3"></div>
-    <div class="gallery-item"><img src="/assets/photo4.jpg" loading="lazy" alt="Lab 4"></div>
+    <img src="/assets/photo1.jpg" alt="Lab 1">
+    <img src="/assets/photo2.jpg" alt="Lab 2">
+    <img src="/assets/photo3.jpg" alt="Lab 3">
+    <img src="/assets/photo4.jpg" alt="Lab 4">
   </div>
 </div>
 
-<footer class="footer-wrap">
-    <p><b>Dr. Krishna Kumar Yadav</b></p>
-    <div style="margin: 10px 0;">
-        <a href="mailto:Krish91phy@usal.es" target="_blank" rel="noopener noreferrer" style="color:var(--primary); margin: 0 10px; text-decoration:none;">Email</a>
-        <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener noreferrer" style="color:var(--primary); margin: 0 10px; text-decoration:none;">Google Scholar</a>
-        <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener noreferrer" style="color:var(--primary); margin: 0 10px; text-decoration:none;">ORCID</a>
-    </div>
-    <p>&copy; 2026 Krishna Kumar Yadav. All rights reserved.</p>
+<footer class="site-footer">
+  <b style="color:var(--heading);">Dr. Krishna Kumar Yadav</b><br>
+  <div style="margin:10px 0;">
+    <a href="mailto:Krish91phy@usal.es">Email</a>
+    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
+  </div>
+  &copy; 2026 Krishna Kumar Yadav. All rights reserved.
 </footer>
-
-</body>
-</html>
