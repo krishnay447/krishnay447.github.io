@@ -96,7 +96,7 @@ a{ color:var(--accent); }
 
 <div class="page-head">
   <h1>Academic Impact</h1>
-  <p>Publication metrics, mentorship, and research collaborations.</p>
+  <p>Publication metrics, mentorship, collaborations, and instrumentation expertise.</p>
 </div>
 
 <div class="metrics">
@@ -154,6 +154,31 @@ a{ color:var(--accent); }
       <span class="person-name">Prof. Santanu Ghosh</span>
       <p>Research on field emission and nanostructures throughout doctoral studies.</p>
       <a href="mailto:santanu1@physics.iitd.ac.in" class="email-btn">Email</a>
+    </div>
+  </div>
+</div>
+
+<div class="collab-wrap">
+  <p class="eyebrow">Instrumentation &amp; Development</p>
+  <div style="background:var(--bg-soft); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:8px; padding:16px 20px; margin-bottom:16px; font-size:14.5px;">
+    <b>Modified Optical Microscopy.</b> I actively develop and modify scientific setups to meet specific research needs &mdash; including integrating a high-resolution spectrometer into an optical microscope, enabling precise, non-destructive <b>2D material thickness determination</b> through localized spectral analysis.
+  </div>
+  <div class="collab-grid">
+    <div class="collab-card">
+      <span class="person-name">Thermal Analysis</span>
+      <p><b>DSC</b> for heat flow and phase transitions (<a href="https://doi.org/10.1002/wer.1307" target="_blank" rel="noopener">example study</a>), <b>TGA</b> for weight change vs. temperature, and high-temperature <b>furnaces</b> for synthesis and annealing.</p>
+    </div>
+    <div class="collab-card">
+      <span class="person-name">Electrical &amp; Field Emission</span>
+      <p>Field emission characterization including <b>I&ndash;V measurements in diode configuration</b> for cold cathodes (<a href="https://doi.org/10.1016/j.apsusc.2020.146652" target="_blank" rel="noopener">example study</a>); <b>Metrohm</b> and <b>PalmSens</b> workstations for electrochemical sensing and cyclic voltammetry.</p>
+    </div>
+    <div class="collab-card">
+      <span class="person-name">Structural &amp; Morphological</span>
+      <p><b>XRD</b> including high-temperature XRD, <b>SEM</b> (JEOL JSM-IT 300) and <b>AFM</b> for surface topology, and <b>BET</b> surface-area analysis (QuantaChrome).</p>
+    </div>
+    <div class="collab-card">
+      <span class="person-name">Spectroscopy</span>
+      <p>Confocal and micro-<b>Raman</b> spectroscopy for vibrational mode analysis; <b>UV-Vis-NIR</b> in IR/DRS mode.</p>
     </div>
   </div>
 </div>
