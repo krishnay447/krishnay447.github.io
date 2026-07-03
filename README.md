@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Dr. Krishna Kumar Yadav
+permalink: /
 ---
 
 <style>
