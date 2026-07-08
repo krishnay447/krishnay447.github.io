@@ -103,7 +103,7 @@ a{ color:var(--accent); }
   <div class="metric"><div class="num">51</div><div class="label">Journal Articles</div></div>
   <div class="metric"><div class="num">13</div><div class="label">Book Chapters</div></div>
   <div class="metric"><div class="num">3</div><div class="label">Patents</div></div>
-  <div class="metric"><div class="num">812</div><div class="label">Citations</div></div>
+  <div class="metric"><div class="num">810+</div><div class="label">Citations</div></div>
 </div>
 
 <div class="split">
