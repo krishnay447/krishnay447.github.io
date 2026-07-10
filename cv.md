@@ -5,218 +5,398 @@ permalink: /cv/
 ---
 
 <style>
-/* ===== Clean Academic Theme ===== */
-.markdown-body > h1:first-child { display: none !important; }
-.markdown-body { overflow: visible !important; }
-:root{
-  --accent:#1a5490; --accent-dark:#123c66; --ink:#1f2937; --muted:#5b6572;
-  --border:#e3e8ef; --bg-soft:#f7f9fb; --heading:#1c2e40;
-}
-body{ background:#fff !important; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; margin:0; padding:0; line-height:1.6; }
-h1,h2,h3{ font-family:Georgia,"Times New Roman",serif; color:var(--heading); font-weight:600; }
-a{ color:var(--accent); }
+  :root {
+    --cv-accent: #1f3864;
+    --cv-accent-light: #3f5b8c;
+    --cv-text: #2b2b2b;
+    --cv-muted: #5a5a5a;
+    --cv-border: #dfe3ea;
+    --cv-bg-soft: #f6f8fb;
+  }
 
-/* NAV */
-.site-nav{ position:sticky; top:0; z-index:1000; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); }
-.nav-inner{ max-width:1000px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
-.brand{ font-family:Georgia,serif; font-size:20px; font-weight:700; color:var(--heading) !important; text-decoration:none; }
-.nav-links{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
-.nav-links a, .dropdown-toggle{ color:var(--ink) !important; text-decoration:none; font-size:15px; font-weight:600; padding:6px 12px; border-radius:6px; }
-.nav-links a:hover, .dropdown:hover .dropdown-toggle{ background:var(--bg-soft); color:var(--accent) !important; }
-.dropdown{ position:relative; display:inline-block; }
-.dropdown-content{ display:none; position:absolute; top:100%; right:0; min-width:190px; z-index:999; padding-top:8px; }
-.dropdown:hover .dropdown-content{ display:block; }
-.dropdown-menu-box{ background:#fff; border:1px solid var(--border); border-radius:8px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:6px; }
-.dropdown-menu-box a{ display:block; padding:9px 14px; font-size:14px; color:var(--ink) !important; text-decoration:none; border-radius:6px; }
-.dropdown-menu-box a:hover{ background:var(--bg-soft); color:var(--accent) !important; }
+  .cv-wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+    color: var(--cv-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
 
-/* CV LAYOUT */
-.cv-wrap{ max-width:840px; margin:40px auto 0; padding:0 24px; }
-.cv-header{ text-align:center; border-bottom:2px solid var(--heading); padding-bottom:18px; margin-bottom:8px; }
-.cv-header h1{ font-size:32px; margin:0 0 4px; }
-.cv-header .cv-role{ font-size:16px; color:var(--muted); margin:0 0 8px; }
-.cv-header .cv-contact{ font-size:13.5px; color:var(--muted); }
-.cv-header .cv-contact a{ text-decoration:none; font-weight:600; }
-.print-row{ text-align:center; margin:16px 0 4px; }
-.print-btn{ display:inline-block; background:var(--accent); color:#fff !important; border:none; padding:10px 24px; border-radius:8px; font-size:14.5px; font-weight:700; cursor:pointer; text-decoration:none; }
-.print-btn:hover{ background:var(--accent-dark); }
-.print-hint{ font-size:12.5px; color:var(--muted); margin-top:6px; }
+  .cv-header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--cv-accent);
+  }
 
-.cv-section{ margin-top:30px; }
-.cv-section h2{ font-size:19px; text-transform:uppercase; letter-spacing:1.5px; border-bottom:1px solid var(--border); padding-bottom:6px; margin:0 0 14px; }
-.cv-item{ margin-bottom:14px; }
-.cv-item .cv-line{ display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
-.cv-item b{ color:var(--heading); font-size:15.5px; }
-.cv-date{ color:var(--muted); font-size:14px; white-space:nowrap; font-weight:600; }
-.cv-sub{ font-size:14px; color:var(--muted); }
-.cv-desc{ font-size:14px; color:#3d4754; margin-top:3px; }
+  .cv-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+    color: var(--cv-accent);
+    margin: 0 0 0.35rem;
+  }
 
-.cv-metrics{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:4px; }
-.cv-metric{ background:var(--bg-soft); border:1px solid var(--border); border-radius:8px; padding:12px; text-align:center; }
-.cv-metric .n{ font-family:Georgia,serif; font-size:24px; font-weight:700; color:var(--accent-dark); }
-.cv-metric .l{ font-size:11.5px; text-transform:uppercase; letter-spacing:0.8px; color:var(--muted); }
+  .cv-header .cv-title {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--cv-muted);
+    margin-bottom: 0.5rem;
+  }
 
-.cv-pub{ font-size:14px; margin-bottom:10px; padding-left:22px; text-indent:-22px; }
-.cv-pub a{ font-weight:600; text-decoration:none; font-size:13px; }
-.skill-row{ font-size:14px; margin-bottom:8px; }
-.skill-row b{ color:var(--heading); }
-.two-col{ display:grid; grid-template-columns:1fr 1fr; gap:6px 24px; font-size:14px; }
+  .cv-header .cv-affil {
+    font-size: 0.95rem;
+    color: var(--cv-muted);
+    margin-bottom: 0.75rem;
+  }
 
-/* FOOTER */
-.site-footer{ border-top:1px solid var(--border); margin-top:56px; padding:32px 20px 40px; text-align:center; color:var(--muted); font-size:14px; }
-.site-footer a{ margin:0 10px; font-weight:600; text-decoration:none; }
+  .cv-header .cv-links a {
+    color: var(--cv-accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 0.4rem;
+  }
+  .cv-header .cv-links a:hover { text-decoration: underline; }
 
-@media (max-width:700px){ .cv-metrics{ grid-template-columns:repeat(2,1fr); } .two-col{ grid-template-columns:1fr; } }
+  .cv-download {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.55rem 1.3rem;
+    background: var(--cv-accent);
+    color: #fff !important;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+  }
+  .cv-download:hover { background: var(--cv-accent-light); }
 
-/* PRINT: turns this page into a clean PDF */
-@media print{
-  .site-nav, .site-footer, .print-row{ display:none !important; }
-  body{ font-size:12px; }
-  .cv-wrap{ max-width:100%; margin:0; padding:0; }
-  a{ color:#000 !important; text-decoration:none !important; }
-  .cv-metric{ border:1px solid #999; }
-  .cv-section{ page-break-inside:avoid; }
-}
+  .cv-section {
+    margin-bottom: 2.25rem;
+  }
+
+  .cv-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    color: var(--cv-accent);
+    border-bottom: 2px solid var(--cv-border);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .cv-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+  .cv-metric {
+    background: var(--cv-bg-soft);
+    border: 1px solid var(--cv-border);
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+  }
+  .cv-metric .num {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cv-accent);
+  }
+  .cv-metric .label {
+    font-size: 0.82rem;
+    color: var(--cv-muted);
+  }
+
+  .cv-entry {
+    margin-bottom: 1.1rem;
+  }
+  .cv-entry .role {
+    font-weight: 700;
+    color: var(--cv-text);
+  }
+  .cv-entry .dates {
+    float: right;
+    font-style: italic;
+    color: var(--cv-muted);
+    font-size: 0.9rem;
+  }
+  .cv-entry .org {
+    color: var(--cv-muted);
+  }
+  .cv-entry .desc {
+    font-size: 0.92rem;
+    color: var(--cv-muted);
+    margin-top: 0.2rem;
+  }
+
+  .cv-pub-list {
+    list-style: none;
+    counter-reset: pub-counter;
+    padding: 0;
+  }
+  .cv-pub-list li {
+    counter-increment: pub-counter;
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.85rem;
+    font-size: 0.94rem;
+  }
+  .cv-pub-list li::before {
+    content: counter(pub-counter) ".";
+    position: absolute;
+    left: 0;
+    color: var(--cv-accent);
+    font-weight: 700;
+  }
+  .cv-pub-list li a {
+    color: var(--cv-accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .cv-pub-list li a:hover { text-decoration: underline; }
+
+  .cv-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .cv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .cv-tags .tag-group {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+  .cv-tags .tag-group h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cv-muted);
+    margin: 0 0 0.4rem;
+  }
+  .cv-tags .tag {
+    display: inline-block;
+    background: var(--cv-bg-soft);
+    border: 1px solid var(--cv-border);
+    color: var(--cv-accent);
+    font-size: 0.82rem;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    margin: 0 0.35rem 0.35rem 0;
+  }
+
+  .cv-ref-card {
+    border: 1px solid var(--cv-border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.85rem;
+    background: var(--cv-bg-soft);
+  }
+  .cv-ref-card .name { font-weight: 700; }
+  .cv-ref-card .affil { font-size: 0.88rem; color: var(--cv-muted); }
+  .cv-ref-card .email { font-size: 0.88rem; }
+  .cv-ref-card .email a { color: var(--cv-accent); text-decoration: none; }
+
+  .cv-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--cv-border);
+    font-size: 0.85rem;
+    color: var(--cv-muted);
+  }
+  .cv-footer a { color: var(--cv-accent); text-decoration: none; }
+
+  @media (max-width: 700px) {
+    .cv-metrics { grid-template-columns: repeat(2, 1fr); }
+    .cv-grid-2 { grid-template-columns: 1fr; }
+    .cv-entry .dates { float: none; display: block; }
+  }
+
+  @media print {
+    .cv-download, .cv-nav { display: none !important; }
+    .cv-wrap { max-width: 100%; padding: 0; }
+    .cv-section { break-inside: avoid; }
+    .cv-header { border-bottom: 2px solid #000; }
+    .cv-metric, .cv-ref-card, .tag { border-color: #999 !important; background: #fff !important; }
+  }
 </style>
-
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a class="brand" href="/">Krishna K. Yadav</a>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/experience/">Experience</a>
-      <a href="/impact/">Impact</a>
-      <div class="dropdown">
-        <a href="/publications/" class="dropdown-toggle">Publications &#9662;</a>
-        <div class="dropdown-content"><div class="dropdown-menu-box">
-          <a href="/publications/">Journal Articles</a>
-          <a href="/Book_Chapters/">Book Chapters</a>
-          <a href="/patents/">Patents</a>
-        </div></div>
-      </div>
-      <a href="/cv/">CV</a>
-      <a href="/contact/">Contact</a>
-    </div>
-  </div>
-</nav>
 
 <div class="cv-wrap">
 
   <div class="cv-header">
     <h1>Dr. Krishna Kumar Yadav</h1>
-    <p class="cv-role">Postdoctoral Researcher &mdash; Nanotechnology &amp; 2D Material Devices</p>
-    <div class="cv-contact">
-      Department of Fundamental Physics, University of Salamanca, Spain<br>
-      <a href="mailto:Krish91phy@usal.es">Krish91phy@usal.es</a> &middot;
-      <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a> &middot;
-      <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID: 0000-0002-9063-7851</a>
+    <div class="cv-title">Postdoctoral Researcher — Nanotechnology &amp; 2D Material Devices</div>
+    <div class="cv-affil">Department of Fundamental Physics, University of Salamanca, Spain</div>
+    <div class="cv-links">
+      <a href="mailto:krishphy25@gmail.com">Email</a>|
+      <a href="http://surl.li/fhzfyb" target="_blank" rel="noopener">Google Scholar</a>|
+      <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
     </div>
-  </div>
-
-  <div class="print-row">
-    <a class="print-btn" href="javascript:window.print()">Download as PDF</a>
-    <div class="print-hint">Opens your print dialog &mdash; choose "Save as PDF" as the destination.</div>
+    <a class="cv-download" href="{{ '/assets/Krishna_Kumar_Yadav_CV.pdf' | relative_url }}" download>Download PDF ↓</a>
   </div>
 
   <div class="cv-section">
     <h2>Research Profile</h2>
-    <p style="font-size:14.5px; margin:0;">Researcher in nanotechnology and advanced materials specializing in the synthesis, transfer, and device integration of 2D materials (graphene, TMDCs, black phosphorus). Expertise spans mechanical and chemical exfoliation, cleanroom nanofabrication (photolithography, e-beam lithography, thin-film deposition), fabrication of optoelectronic devices and field-effect transistors, and advanced characterization (KPFM, Raman spectroscopy, Dip-Pen Nanolithography, field emission).</p>
+    <p>
+      I specialize in the synthesis, transfer, and device integration of 2D materials — including graphene and
+      Transition Metal Dichalcogenides (TMDCs, e.g. MoTe₂, SnS₂) and black phosphorus — combined with advanced
+      cleanroom nanofabrication and micro/nanolithography. My work focuses on optimizing device physics for
+      high-performance optoelectronic devices, field-effect transistors (FETs), and planar terahertz detectors
+      (log-periodic and bowtie antenna architectures). I also work on electrochemical sensing and
+      electrocatalysis/energy-storage systems built on engineered nanomaterials.
+    </p>
   </div>
 
   <div class="cv-section">
     <h2>Research Metrics</h2>
     <div class="cv-metrics">
-      <div class="cv-metric"><div class="n">51</div><div class="l">Journal Articles</div></div>
-      <div class="cv-metric"><div class="n">13</div><div class="l">Book Chapters</div></div>
-      <div class="cv-metric"><div class="n">3</div><div class="l">Patents</div></div>
-      <div class="cv-metric"><div class="n">800+</div><div class="l">Citations</div></div>
+      <div class="cv-metric"><span class="num">51</span><span class="label">Journal Articles</span></div>
+      <div class="cv-metric"><span class="num">13</span><span class="label">Book Chapters</span></div>
+      <div class="cv-metric"><span class="num">3</span><span class="label">Patents (2 Granted)</span></div>
+      <div class="cv-metric"><span class="num">4</span><span class="label">Institutions / 3 Countries</span></div>
     </div>
   </div>
 
   <div class="cv-section">
     <h2>Research Positions</h2>
-    <div class="cv-item">
-      <div class="cv-line"><b>Postdoctoral Fellow</b><span class="cv-date">2024 &ndash; Present</span></div>
-      <div class="cv-sub">Department of Fundamental Physics, University of Salamanca, Spain</div>
-      <div class="cv-desc">Fabrication of 2D-material FETs and photodetectors; charge transport and contact resistance studies; integration of a high-resolution spectrometer into optical microscopy for non-destructive 2D thickness determination.</div>
+
+    <div class="cv-entry">
+      <span class="dates">Sep 2024 – Present</span>
+      <div class="role">Postdoctoral Researcher</div>
+      <div class="org">Department of Fundamental Physics, University of Salamanca, Spain</div>
     </div>
-    <div class="cv-item">
-      <div class="cv-line"><b>Postdoctoral Fellow</b><span class="cv-date">2022 &ndash; 2024</span></div>
-      <div class="cv-sub">Shamoon College of Engineering, Beer Sheva, Israel</div>
-      <div class="cv-desc">Dip-Pen Nanolithography patterning of meta-chemical surfaces; electrochemical sensors for heavy-metal detection based on black phosphorus and functional inks.</div>
+
+    <div class="cv-entry">
+      <span class="dates">Nov 2022 – Aug 2024</span>
+      <div class="role">Postdoctoral Researcher</div>
+      <div class="org">Shamoon College of Engineering, Beer-Sheva, Israel</div>
+      <div class="desc">Dip-Pen Nanolithography printing over screen-printed electrodes for real-time electrochemical sensing of heavy metals.</div>
     </div>
-    <div class="cv-item">
-      <div class="cv-line"><b>Research Associate</b><span class="cv-date">2021 &ndash; 2022</span></div>
-      <div class="cv-sub">Institute of Nano Science and Technology (INST), Mohali, India</div>
-      <div class="cv-desc">Engineered 2D materials and nanostructures for field emission and energy applications.</div>
+
+    <div class="cv-entry">
+      <span class="dates">Jun 2021 – Oct 2022</span>
+      <div class="role">Institute Postdoctoral Fellow</div>
+      <div class="org">Institute of Nano Science &amp; Technology (INST), Mohali, India</div>
+      <div class="desc">Understanding the role of 2D materials for field emission.</div>
     </div>
-    <div class="cv-item">
-      <div class="cv-line"><b>PhD Scholar, Nanotechnology</b><span class="cv-date">2016 &ndash; 2021</span></div>
-      <div class="cv-sub">Institute of Nano Science and Technology (INST), Mohali, India &mdash; Supervisors: Prof. Ashok K. Ganguli &amp; Dr. Menaka Jha</div>
-      <div class="cv-desc">Synthesis and stabilization of rare-earth hexaboride nanostructures and 2D materials for cold-cathode field emission; waste-derived functional nanomaterials for energy and environment.</div>
+
+    <div class="cv-entry">
+      <span class="dates">Jan 2018 – Jun 2021</span>
+      <div class="role">Senior Research Fellow (SRF), CSIR-India — Ph.D. Research</div>
+      <div class="org">Institute of Nano Science &amp; Technology (INST), Mohali, India</div>
+      <div class="desc">Ph.D. (2021): Nanostructured Metal Borides — Synthesis and Their Applications. Supervisors: Dr. Menaka Jha &amp; Prof. Ashok K. Ganguli.</div>
     </div>
   </div>
 
   <div class="cv-section">
     <h2>Selected First-Author Publications</h2>
-    <p style="font-size:13px; color:var(--muted); margin:0 0 12px;">Full list of 51 articles: <a href="/publications/">krishnay447.github.io/publications</a></p>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Electrochemical Sensor Based on Black Phosphorus for Antimony Detection Using Dip-Pen Nanolithography: The Role of Dwell Time. <i>Small Methods</i>, 2402157 (2025). <a href="https://doi.org/10.1002/smtd.202402157" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Development of Meta-Chemical Surface by Dip-Pen Nanolithography for Precise Electrochemical Lead Sensing. <i>Small Methods</i>, 8, 1&ndash;9 (2024). <a href="https://doi.org/10.1002/smtd.202301118" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Black Phosphorus/Dysprosium Hexaboride-Based Heterostructured Films for Field Emission Technologies. <i>ACS Applied Nano Materials</i>, 7, 9942&ndash;9949 (2024). <a href="https://doi.org/10.1021/acsanm.3c06152" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Er<sub>2</sub>FeCrO<sub>6</sub>: Emerging efficient nanomaterials for multiferroics. <i>Materials Chemistry and Physics</i>, 317, 129198 (2024). <a href="https://doi.org/10.1016/j.matchemphys.2024.129198" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Understanding the role of sheet thickness on field emission from engineered hexagonal tin disulphide. <i>Applied Surface Science</i>, 606, 154816 (2022). <a href="https://doi.org/10.1016/j.apsusc.2022.154816" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Design of a new process for stabilization of La<sub>x</sub>Gd<sub>1-x</sub>B<sub>6</sub> nanorods and their Field Emission properties. <i>Materials Science and Engineering: B</i>, 282, 115759 (2022). <a href="https://doi.org/10.1016/j.mseb.2022.115759" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Efficient metal-free supercapacitor based on graphene oxide derived from waste rice. <i>Current Research in Green and Sustainable Chemistry</i>, 4, 100075 (2021). <a href="https://doi.org/10.1016/j.crgsc.2021.100075" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Utilization of waste coir fibre architecture to synthesize porous graphene oxide: An efficient energy storage material. <i>Journal of Cleaner Production</i>, 276, 124240 (2020). <a href="https://doi.org/10.1016/j.jclepro.2020.124240" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., Excellent Field Emission from Ultrafine Vertically Aligned Nanorods of NdB<sub>6</sub> on Silicon Substrate. <i>Applied Surface Science</i>, 526, 146652 (2020). <a href="https://doi.org/10.1016/j.apsusc.2020.146652" target="_blank" rel="noopener">DOI</a></div>
-    <div class="cv-pub"><b>K.K. Yadav</b> et al., A new Process for Stabilization of Vertically Aligned GdB<sub>6</sub> nanorods and their Field Emission Properties. <i>CrystEngComm</i>, 22, 5473&ndash;5480 (2020). <a href="https://doi.org/10.1039/D0CE00591F" target="_blank" rel="noopener">DOI</a></div>
+    <ol class="cv-pub-list">
+      <li>Krishna K. Yadav, et al. <strong>Room-Temperature Photodetector Performance of Monolayer 2H-MoTe₂: Effects of Trap Density and Contact Barrier.</strong> Submitted to <em>Small</em>. <span style="color:var(--cv-muted);">(under review)</span></li>
+      <li>Krishna K. Yadav, et al. <strong>Robust Sliding-Induced Electrostatic Domain Patterns in Exfoliated ReS₂ Flakes.</strong> Submitted to <em>2D Materials</em>. <span style="color:var(--cv-muted);">(under review)</span></li>
+      <li>Krishna K. Yadav, Dror Shamir, Haya Kornweitz, Lonia Friedlander, Moshe Zohar, Ariela Burg. <strong>Electrochemical Sensor Based on Black Phosphorus for Antimony Detection Using Dip-Pen Nanolithography: The Role of Dwell Time.</strong> <em>Small Methods</em>, 2025, 2402157. (IF ~9.1)</li>
+      <li>Krishna K. Yadav, Sunaina, S. Saini, R. Wadhwa, S. Devi, S. Ghosh, M. Jha. <strong>Black Phosphorus/Dysprosium Hexaboride-Based Heterostructured Films for Field Emission Technologies.</strong> <em>ACS Applied Nano Materials</em>, 2024, 7, 9942–9949. (IF ~5.5)</li>
+      <li>Krishna K. Yadav, R. Wadhwa, V.M. Gaikwad. <strong>Er₂FeCrO₆: Emerging Efficient Nanomaterials for Multiferroics.</strong> <em>Materials Chemistry and Physics</em>, 2024, 317, 129198. (IF ~4.7)</li>
+      <li>Krishna K. Yadav, Dror Shamir, Haya Kornweitz, Yael Peled, Moshe Zohar, Ariela Burg. <strong>Development of Meta-Chemical Surface by Dip-Pen Nanolithography for Precise Electrochemical Lead Sensing.</strong> <em>Small Methods</em>, 2024, 8, 1–9. (IF ~9.1)</li>
+      <li>Krishna K. Yadav, G. Kumar, S. Rana, S. Ghosh, M. Jha. <strong>Understanding the Role of Sheet Thickness on Field Emission from Engineered Hexagonal Tin Disulphide.</strong> <em>Applied Surface Science</em>, 2022, 606, 154816. (IF ~6.9)</li>
+      <li>Krishna K. Yadav, Gulshan Kumar, Ankush, S. Ghosh, Menaka Jha. <strong>Design of a New Process for Stabilization of La<sub>x</sub>Gd<sub>1-x</sub>B₆ Nanorods and Their Field Emission Properties.</strong> <em>Materials Science and Engineering: B</em>, 2022, 282, 115759. (IF ~4.6)</li>
+      <li>Krishna K. Yadav, Harish Singh, Supriya Rana, Sunaina, Heena Sammi, S.T. Nishanthi, Menaka Jha. <strong>Utilization of Waste Coir Fibre Architecture to Synthesize Porous Graphene Oxide and Their Derivatives.</strong> <em>Journal of Cleaner Production</em>, 2020, 276, 124240. (IF ~10)</li>
+    </ol>
+    <p style="font-size:0.9rem;"><a href="{{ '/publications/' | relative_url }}">→ View the complete list of 51 publications</a></p>
   </div>
 
   <div class="cv-section">
     <h2>Patents</h2>
-    <div class="cv-pub">A Process for Producing La<sub>2</sub>FeMnO<sub>6</sub> (LFMO) From Iron Ore Slime and Applications Thereof. Patent No. 482517, granted 14/12/2023 (India).</div>
-    <div class="cv-pub">Process of Preparing Silica-Iron Oxide From Iron Ore Slime. Patent No. 577043, granted 31/12/2025 (India).</div>
-    <div class="cv-pub">Conversion of wastepaper to nanostructured CaCO<sub>3</sub> for de-fluorination of water. Application No. 202311017356 (pending).</div>
+    <ol class="cv-pub-list">
+      <li>Santanu Sarkar, Tamal Kanti Ghosh, Supriya Sarkar, Menaka Jha, Sujeet Kumar, Kritika Sood, <strong>Krishna Yadav</strong>, Ankush. <em>A Process for Producing La₂FeMnO₆ from Iron Ore Slime and Applications Thereof.</em> Patent No. 482517 (Granted).</li>
+      <li>Santanu Sarkar, Niloy Kundu, Tamal Kanti Ghosh, Menaka Jha, Sujit Ghuchait, <strong>Krishna Yadav</strong>, Sunaina, Arushi Arora. <em>Process of Preparing Silica-Iron Oxide from Iron Ore Slime.</em> Patent No. 577043 (Granted).</li>
+      <li>Menaka Jha, Ritika Wadhwa, Sunaina, Ankush, <strong>Krishna Yadav</strong>, Sujit Kumar Guchhait. <em>Process of Conversion of Wastepaper to Nanostructured CaCO₃ and Their Application in De-fluorination of Contaminated Water.</em> Application No. 202311017356 (Filed).</li>
+    </ol>
   </div>
 
   <div class="cv-section">
     <h2>Technical Skills</h2>
-    <div class="skill-row"><b>2D Materials:</b> Mechanical &amp; chemical exfoliation, heterostructure assembly and transfer, thickness determination via localized spectral analysis.</div>
-    <div class="skill-row"><b>Nanofabrication:</b> Cleanroom processing, photolithography, e-beam lithography, thin-film deposition, Dip-Pen Nanolithography.</div>
-    <div class="skill-row"><b>Device Physics:</b> FET fabrication and characterization, photodetector optimization (responsivity, EQE), contact engineering, field emission (I&ndash;V, diode configuration).</div>
-    <div class="skill-row"><b>Characterization:</b> AFM/KPFM/FFM, confocal &amp; micro-Raman, SEM (JEOL JSM-IT 300), XRD (incl. high-temperature), BET, DSC, TGA, UV-Vis-NIR (DRS).</div>
-    <div class="skill-row"><b>Electrochemistry:</b> Metrohm and PalmSens workstations, cyclic voltammetry, electrochemical sensing.</div>
-    <div class="skill-row"><b>Software &amp; Tools:</b> AI-assisted data analysis; developer of the Photocurrent Detector Tool (automated response-time and EQE extraction) and a suite of web-based device-physics tools.</div>
+    <div class="cv-tags">
+      <div class="tag-group">
+        <h3>2D Material Synthesis &amp; Transfer</h3>
+        <span class="tag">Graphene</span><span class="tag">TMDCs (MoTe₂, SnS₂)</span><span class="tag">Black Phosphorus</span><span class="tag">h-BN Heterostructures</span>
+      </div>
+      <div class="tag-group">
+        <h3>Cleanroom Nanofabrication &amp; Lithography</h3>
+        <span class="tag">Dip-Pen Nanolithography (DPN)</span><span class="tag">Optical Lithography</span><span class="tag">Wire Bonding</span>
+      </div>
+      <div class="tag-group">
+        <h3>Device Physics &amp; Integration</h3>
+        <span class="tag">FETs</span><span class="tag">Optoelectronic Devices</span><span class="tag">Engineered Metal Contacts</span><span class="tag">Planar THz Detectors (Log-Periodic / Bowtie)</span>
+      </div>
+      <div class="tag-group">
+        <h3>Characterization</h3>
+        <span class="tag">AFM (multi-mode)</span><span class="tag">Raman Spectroscopy</span><span class="tag">SEM</span><span class="tag">XRD / HT-XRD</span><span class="tag">Frictional Force &amp; Transverse Shear Microscopy</span>
+      </div>
+      <div class="tag-group">
+        <h3>Sensing</h3>
+        <span class="tag">Electrochemical Heavy-Metal Sensors</span><span class="tag">Field-Emission Sensing</span>
+      </div>
+      <div class="tag-group">
+        <h3>Electrocatalysis &amp; Energy</h3>
+        <span class="tag">Water Splitting</span><span class="tag">Supercapacitors</span><span class="tag">Photoelectrochemical Systems</span>
+      </div>
+    </div>
   </div>
 
   <div class="cv-section">
     <h2>Mentorship</h2>
-    <div class="two-col">
-      <span>Dr. Heena Sammi &mdash; Master's Project</span>
-      <span>Rub&eacute;n Bastida Vadillo &mdash; Master's Project</span>
-      <span>Alex Bellido Escribano &mdash; Master's Project</span>
-      <span>Priyanka Goyal &mdash; B.Sc. Supervision</span>
+    <div class="cv-entry">
+      <div class="role">Rubén Bastida Vadillo</div>
+      <div class="desc">2025–2026, TFG, Spain — Co-supervised with Ana Pérez Rodríguez. “Fabrication and Characterization of MoTe₂/NbSe₂ Heterostructures for High-Performance Photodetectors,” NanoLab, University of Salamanca.</div>
+    </div>
+    <div class="cv-entry">
+      <div class="role">Alex Bellido Escribano</div>
+      <div class="desc">2025–2026, TFG, Spain — Co-supervised with Mario Amado Montero. “New Techniques for Obtaining Ultrapure Graphene,” NanoLab, University of Salamanca.</div>
+    </div>
+    <div class="cv-entry">
+      <div class="role">Ahmed Belal Salik Usmani</div>
+      <div class="desc">Aug 2021 – May 2022, M.Tech Internship, with Dr. Menaka Jha. “Supercapacitive Performance of Graphene Derived from Waste Pine Tree Leaves,” INST, Mohali, India.</div>
+    </div>
+    <div class="cv-entry">
+      <div class="role">Supriya Rana, Nausad Khan, Kritika Sood, Ritika Wadhwa (Ph.D. students, 2017–2021)</div>
+      <div class="desc">Co-mentored with Dr. Menaka Jha, INST Mohali — topics spanning electrocatalytic Fe₂O₃, MoS₂ energy applications, valuable-materials recovery, and monoclinic zirconia photoelectrochemistry.</div>
     </div>
   </div>
 
   <div class="cv-section">
     <h2>References</h2>
-    <div class="two-col">
-      <span><b>Prof. Enrique Diez</b><br>University of Salamanca<br><a href="mailto:enrisa@usal.es">enrisa@usal.es</a></span>
-      <span><b>Dr. Ariela Burg</b><br>Shamoon College of Engineering<br><a href="mailto:arielab@sce.ac.il">arielab@sce.ac.il</a></span>
-      <span><b>Prof. Ashok K. Ganguli</b><br>IIT Delhi<br><a href="mailto:ashok@chemistry.iitd.ac.in">ashok@chemistry.iitd.ac.in</a></span>
-      <span><b>Dr. Menaka Jha</b><br>INST Mohali<br><a href="mailto:menaka100jha@gmail.com">menaka100jha@gmail.com</a></span>
+    <div class="cv-grid-2">
+      <div class="cv-ref-card">
+        <div class="name">Prof. Ashok K. Ganguli</div>
+        <div class="affil">Director, IISER Berhampur; Indian Institute of Technology, New Delhi, India</div>
+        <div class="email"><a href="mailto:ashok@chemistry.iitd.ac.in">ashok@chemistry.iitd.ac.in</a></div>
+      </div>
+      <div class="cv-ref-card">
+        <div class="name">Dr. Menaka Jha</div>
+        <div class="affil">Scientist, Institute of Nano Science &amp; Technology, Mohali, India</div>
+        <div class="email"><a href="mailto:menaka100jha@gmail.com">menaka100jha@gmail.com</a></div>
+      </div>
+      <div class="cv-ref-card">
+        <div class="name">Prof. Ariela Burg</div>
+        <div class="affil">Dept. of Chemical Engineering, Sami Shamoon College of Engineering, Beer-Sheva, Israel</div>
+        <div class="email"><a href="mailto:arielab@sce.ac.il">arielab@sce.ac.il</a></div>
+      </div>
+      <div class="cv-ref-card">
+        <div class="name">Prof. Dr. Enrique Díez Fernández</div>
+        <div class="affil">Dept. of Fundamental Physics, University of Salamanca, Spain</div>
+        <div class="email"><a href="mailto:enrisa@usal.es">enrisa@usal.es</a></div>
+      </div>
     </div>
   </div>
 
-</div>
-
-<footer class="site-footer">
-  <b style="color:var(--heading);">Dr. Krishna Kumar Yadav</b><br>
-  <div style="margin:10px 0;">
-    <a href="mailto:Krish91phy@usal.es">Email</a>
-    <a href="https://scholar.google.com/citations?user=DsDWPX4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-    <a href="https://orcid.org/0000-0002-9063-7851" target="_blank" rel="noopener">ORCID</a>
+  <div class="cv-footer">
+    <p>Dr. Krishna Kumar Yadav — Department of Fundamental Physics, University of Salamanca, Spain</p>
+    <p><a href="mailto:krishphy25@gmail.com">krishphy25@gmail.com</a> · <a href="http://surl.li/fhzfyb">Google Scholar</a> · <a href="https://orcid.org/0000-0002-9063-7851">ORCID</a></p>
   </div>
-  &copy; 2026 Krishna Kumar Yadav. All rights reserved.
-</footer>
+
+</div>
