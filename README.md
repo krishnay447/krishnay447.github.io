@@ -152,7 +152,7 @@ section h2{ font-size:24px; margin:0 0 12px; }
         <a href="https://fermi-studio-459111164189.us-west1.run.app/" target="_blank" rel="noopener">BandGap Aligner</a>
         <a href="https://charge-transport-explorer-459111164189.us-west1.run.app/" target="_blank" rel="noopener">Device Physics Analyzer</a>
         <a href="https://acadefig-459111164189.us-west1.run.app/" target="_blank" rel="noopener">AcadeFig Pro</a>
-        <a href="https://pagecraft-1.ai.studio" target="_blank" rel="noopener">PDF Utility Hub</a>
+        <a href="https://pagecraft.ai.studio" target="_blank" rel="noopener">PDF Utility Hub</a>
       </div>
     </div>
 
